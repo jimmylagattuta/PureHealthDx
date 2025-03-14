@@ -7,25 +7,25 @@ function HeroSection() {
       <picture>
         {/* Mobile Image (Default) */}
         <source
-          srcSet="https://i.postimg.cc/bvHDGQcm/captain-alvarado-mobile.webp"
+          srcSet="https://i.postimg.cc/HkMXXdZn/i-Stock-1820756302-4-1-1.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
         {/* Tablet Image */}
         <source
-          srcSet="https://i.postimg.cc/YCrJK72j/captain-alvarado-tablet.webp"
+          srcSet="https://i.postimg.cc/QCS0LhGh/i-Stock-1820756302-3-1-1-1.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
         {/* Desktop Image */}
         <source
-          srcSet="https://i.postimg.cc/44rfgmjy/captain-alvarado-desktop.webp"
+          srcSet="https://i.postimg.cc/k4L7Q3hM/i-Stock-1820756302-2-1.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
         {/* Fallback Image */}
         <img
-          src="https://i.postimg.cc/15gRdfWn/captain-alvarado-default.webp"
+          src="https://i.postimg.cc/k4L7Q3hM/i-Stock-1820756302-2-1.webp"
           alt="Handyman Services - Captain Alvarado"
           width="auto"
           height="100%"
