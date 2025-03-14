@@ -1,0 +1,144 @@
+/* Mobile-first styling */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.review-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 95%; /* Fit well on mobile */
+    width: 100%; /* Expand to full width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.review-avatar-initial {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #2c3e50; /* Placeholder color */
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.review-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.verified-icon {
+    color: #0f9d58; /* Green color for verification */
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.review-icon {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 4rem;
+    color: rgba(44, 62, 80, 0.15); /* Faded gold */
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia, serif';
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+.review-rating {
+    color: #2c3e50; /* Gold color */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.review-link {
+    color: #0073bb; /* Yelp blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.review-link:hover {
+    text-decoration: underline;
+}
+
+/* Center single review */
+.review-container.single-review .review-card {
+    width: 30%; /* Take one-third of the screen */
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+    .review-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .review-card {
+        width: 48%; /* Two cards per row */
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+    .review-container {
+        gap: 25px;
+    }
+
+    .review-card {
+        width: 30%; /* Three cards per row */
+        padding: 30px;
+        margin-top: 40px;
+    }
+}

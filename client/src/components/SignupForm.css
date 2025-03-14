@@ -1,0 +1,899 @@
+/* Base styles for all screens */
+.signup-form-overlay,
+.login-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.95); /* Semi-transparent background with the new navy blue color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure it sits above everything else */
+}
+
+.signup-form-overlay form,
+.login-form-overlay form {
+  background-color: var(--background-color);
+  padding: 10px;
+  border-radius: 10px;
+  width: 65%;
+  max-width: 270px;
+  box-shadow: 0 0 10px rgba(44, 62, 80, 0.5);
+}
+.signup-form-overlay label,
+.login-form-overlay label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 0.8em;
+}
+
+.signup-form-overlay input,
+.login-form-overlay input {
+  width: 100%;
+  padding: 6px; /* Slightly increased padding */
+  margin-bottom: 8px; /* Slightly increased margin */
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-color); 
+  color: var(--text-color);
+  font-size: 0.8em; /* Slightly increased font size */
+  box-sizing: border-box;
+  outline: none;
+}
+
+.signup-form-overlay button[type="submit"],
+.login-form-overlay button[type="submit"] {
+  width: 100%;
+  padding: 6px; /* Slightly increased padding */
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form-overlay button[type="submit"]:hover,
+.login-form-overlay button[type="submit"]:hover {
+  background-color: var(--navbar-link-hover-color);
+}
+
+.signup-form-overlay button[type="button"],
+.login-form-overlay button[type="button"] {
+  width: 100%;
+  padding: 6px; /* Slightly increased padding */
+  margin-top: 8px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--navbar-bg-color);
+  border-radius: 5px;
+  font-size: 0.8em; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form-overlay button[type="button"]:hover,
+.login-form-overlay button[type="button"]:hover {
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+}
+
+/* Close button styling - X button */
+.close-signup-button,
+.close-login-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002; /* Ensure it stays on top */
+}
+
+.close-signup-button .bar,
+.close-login-button .bar {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: all 0.3s ease;
+}
+
+.close-signup-button .bar:nth-child(1),
+.close-login-button .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-signup-button .bar:nth-child(2),
+.close-login-button .bar:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.signin-btn,
+.signup-btn {
+  background-color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.7em;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px; /* Set a fixed height for the button */
+  padding: 6px; /* Slightly increased padding */
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Ensure spinner does not overflow */
+  display: flex; /* Flexbox to center spinner/text */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.submit-btn.loading {
+  background-color: var(--navbar-bg-color); /* Same background color */
+}
+
+.submit-btn:hover {
+  background-color: var(--navbar-link-hover-color);
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 50%;
+  border-top: 2px solid var(--white-color); /* Spinner color */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ensure the spinner is centered inside the button */
+.submit-btn .spinner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Add some padding to the form elements for better spacing */
+form label,
+form input,
+form button {
+  margin-bottom: 0px;
+}
+
+.account-container {
+  position: relative;
+}
+
+.username {
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 1em;
+  padding: 10px;
+}
+
+.logout-button {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  transition: max-height 0.3s ease-in-out;
+  padding: 10px;
+  cursor: pointer;
+}
+/* Adjustments for larger screens */
+@media (min-width: 861px) {
+  .signup-form-overlay,
+  .login-form-overlay {
+    position: fixed;
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: 350px; /* Set a fixed width for the form */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: flex-start; /* Align content to the top */
+    z-index: 10000; /* Ensure it sits above everything else */
+    background-color: rgba(44, 62, 80, 0.95); /* Semi-transparent background with the new navy blue color */
+    left: unset;
+  }
+
+  .signup-form-overlay form,
+  .login-form-overlay form {
+    width: 100%; /* Ensure form takes full width inside the container */
+    padding: 20px;
+    height: auto; /* Form adjusts height based on content */
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.5); /* Update shadow color to match new theme */
+    border-radius: 10px;
+    margin: auto 0; /* Center the form vertically within the overlay */
+  }
+  .close-signup-button,
+  .close-login-button {
+    position: absolute;
+    top: 20px !important; /* Adjust top positioning */
+    right: 20px !important; /* Adjust right positioning */
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002; /* Ensure it stays on top */
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+    position: absolute;
+    width: 100%;
+    height: 4px !important;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 1024px) {
+  .signup-form-overlay,
+  .login-form-overlay {
+    position: fixed;
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: 600px; /* Set a fixed width for the form */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: flex-start; /* Align content to the top */
+    z-index: 10000; /* Ensure it sits above everything else */
+        background-color: rgba(44, 62, 80, 0.95); /* Semi-transparent background with the new navy blue color */
+
+    left: unset;
+  }
+
+  .signup-form-overlay form,
+  .login-form-overlay form {
+    width: 100%; /* Ensure form takes full width inside the container */
+    padding: 20px;
+    height: auto; /* Form adjusts height based on content */
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.5);
+    border-radius: 10px;
+    margin: auto 0; /* Center the form vertically within the overlay */
+  }
+  .close-signup-button,
+  .close-login-button {
+    position: absolute;
+    top: 20px !important; /* Adjust top positioning */
+    right: 20px !important; /* Adjust right positioning */
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002; /* Ensure it stays on top */
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+    position: absolute;
+    width: 100%;
+    height: 4px !important;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+  .signup-form-overlay form,
+  .login-form-overlay form {
+      width: 95% !important;
+      max-width: 450px !important; /* Increased max-width */
+      padding: 40px !important; /* Increased padding */
+      height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+  }
+
+  .signup-form-overlay label,
+  .login-form-overlay label {
+      font-size: 1.6em !important; /* Increased font size */
+      margin-bottom: 15px !important;
+      width: 60% !important;
+      text-align: left !important;
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+      width: 100% !important;
+      padding: 18px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-bottom: 18px !important;
+  }
+
+  .signup-form-overlay button[type="submit"],
+  .login-form-overlay button[type="submit"] {
+      padding: 20px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-top: 18px !important;
+      height: 60px !important;
+  }
+
+  .signup-form-overlay button[type="button"],
+  .login-form-overlay button[type="button"] {
+      padding: 18px !important; /* Increased padding */
+      margin-top: 22px !important;
+      font-size: 1.5em !important; /* Increased font size */
+  }
+
+  .close-signup-button,
+  .close-login-button {
+      position: absolute !important;
+      top: 20px !important; /* Increased spacing */
+      right: 20px !important;
+      width: 70px !important; /* Increased size */
+      height: 70px !important; /* Increased size */
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 10002 !important;
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+      position: absolute !important;
+      width: 100% !important;
+      height: 6px !important; /* Increased thickness */
+      background-color: var(--white-color) !important;
+      transition: all 0.3s ease !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .signup-form-overlay,
+  .login-form-overlay {
+    position: fixed;
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: 600px; /* Set a fixed width for the form */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: flex-start; /* Align content to the top */
+    z-index: 10000; /* Ensure it sits above everything else */
+        background-color: rgba(44, 62, 80, 0.95); /* Semi-transparent background with the new navy blue color */
+
+    left: unset;
+  }
+
+  .signup-form-overlay form,
+  .login-form-overlay form {
+    width: 100%; /* Ensure form takes full width inside the container */
+    padding: 20px;
+    height: auto; /* Form adjusts height based on content */
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.5);
+    border-radius: 10px;
+    margin: auto 0; /* Center the form vertically within the overlay */
+  }
+  .close-signup-button,
+  .close-login-button {
+    position: absolute;
+    top: 20px !important; /* Adjust top positioning */
+    right: 20px !important; /* Adjust right positioning */
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002; /* Ensure it stays on top */
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+    position: absolute;
+    width: 100%;
+    height: 4px !important;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+  .signup-form-overlay form,
+  .login-form-overlay form {
+      width: 95% !important;
+      max-width: 450px !important; /* Increased max-width */
+      padding: 40px !important; /* Increased padding */
+      height: 70% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+  }
+
+  .signup-form-overlay label,
+  .login-form-overlay label {
+      font-size: 1.2em !important; /* Increased font size */
+      margin-bottom: 15px !important;
+      width: 60% !important;
+      text-align: left !important;
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+      width: 100% !important;
+      padding: 18px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-bottom: 18px !important;
+  }
+
+  .signup-form-overlay button[type="submit"],
+  .login-form-overlay button[type="submit"] {
+      padding: 20px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-top: 18px !important;
+      height: 60px !important;
+  }
+
+  .signup-form-overlay button[type="button"],
+  .login-form-overlay button[type="button"] {
+      padding: 18px !important; /* Increased padding */
+      margin-top: 22px !important;
+      font-size: 1.5em !important; /* Increased font size */
+  }
+
+  .close-signup-button,
+  .close-login-button {
+      position: absolute !important;
+      top: 20px !important; /* Increased spacing */
+      right: 20px !important;
+      width: 30px !important; /* Increased size */
+      height: 30px !important; /* Increased size */
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 10002 !important;
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+      position: absolute !important;
+      width: 100% !important;
+      height: 2px !important; /* Increased thickness */
+      background-color: var(--white-color) !important;
+      transition: all 0.3s ease !important;
+  }
+}
+
+
+
+
+/* Other existing styles */
+.signup-form-overlay label,
+.login-form-overlay label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 0.8em;
+}
+
+.signup-form-overlay input,
+.login-form-overlay input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 0.8em;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.signup-form-overlay button[type="submit"],
+.login-form-overlay button[type="submit"] {
+  width: 100%;
+  padding: 6px;
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form-overlay button[type="submit"]:hover,
+.login-form-overlay button[type="submit"]:hover {
+  background-color: var(--navbar-link-hover-color);
+}
+
+.signup-form-overlay button[type="button"],
+.login-form-overlay button[type="button"] {
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--navbar-bg-color);
+  border-radius: 5px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form-overlay button[type="button"]:hover,
+.login-form-overlay button[type="button"]:hover {
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+}
+
+/* Close button styling - X button */
+.close-signup-button,
+.close-login-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002; /* Ensure it stays on top */
+}
+
+.close-signup-button .bar,
+.close-login-button .bar {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: all 0.3s ease;
+}
+
+.close-signup-button .bar:nth-child(1),
+.close-login-button .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-signup-button .bar:nth-child(2),
+.close-login-button .bar:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.signin-btn,
+.signup-btn {
+  background-color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 1em;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px; /* Set a fixed height for the button */
+  padding: 6px;
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Ensure spinner does not overflow */
+  display: flex; /* Flexbox to center spinner/text */
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn.loading {
+  background-color: var(--navbar-bg-color); /* Same background color */
+}
+
+.submit-btn:hover {
+  background-color: var(--navbar-link-hover-color);
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 50%;
+  border-top: 2px solid var(--white-color); /* Spinner color */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ensure the spinner is centered inside the button */
+.submit-btn .spinner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Additional account and logout styles */
+.account-container {
+  position: relative;
+}
+
+.username {
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 1em;
+  padding: 10px;
+}
+
+.logout-button {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--navbar-bg-color);
+  color: var(--white-color);
+  transition: max-height 0.3s ease-in-out;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 601px) and (max-width: 860px) {
+  .signup-form-overlay form,
+  .login-form-overlay form {
+      width: 95% !important;
+      max-width: 700px !important; /* Increased max-width */
+      padding: 40px !important; /* Increased padding */
+      height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+  }
+
+  .signup-form-overlay label,
+  .login-form-overlay label {
+      font-size: 1.6em !important; /* Increased font size */
+      margin-bottom: 15px !important;
+      width: 60% !important;
+      text-align: left !important;
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+      width: 100% !important;
+      padding: 18px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-bottom: 18px !important;
+  }
+
+  .signup-form-overlay button[type="submit"],
+  .login-form-overlay button[type="submit"] {
+      padding: 20px !important; /* Increased padding */
+      font-size: 1.6em !important; /* Increased font size */
+      margin-top: 18px !important;
+      height: 60px !important;
+  }
+
+  .signup-form-overlay button[type="button"],
+  .login-form-overlay button[type="button"] {
+      padding: 18px !important; /* Increased padding */
+      margin-top: 22px !important;
+      font-size: 1.5em !important; /* Increased font size */
+  }
+
+  .close-signup-button,
+  .close-login-button {
+      position: absolute !important;
+      top: 20px !important; /* Increased spacing */
+      right: 20px !important;
+      width: 70px !important; /* Increased size */
+      height: 70px !important; /* Increased size */
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 10002 !important;
+  }
+
+  .close-signup-button .bar,
+  .close-login-button .bar {
+      position: absolute !important;
+      width: 100% !important;
+      height: 6px !important; /* Increased thickness */
+      background-color: var(--white-color) !important;
+      transition: all 0.3s ease !important;
+  }
+}
+/* Maximum adjustments for form elements on screens around 430px */
+@media (min-width: 400px) and (max-width: 600px) {
+  .signup-form-overlay form,
+  .login-form-overlay form {
+      width: 85% !important; /* Full width of the screen */
+      max-width: 430px !important; /* Adjust max-width */
+      padding: 40px 20px !important; /* Increase padding */
+      height: auto !important; /* Let the form expand in height */
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important; /* Center content vertically */
+  }
+
+  
+  .signup-form-overlay .form-group,
+  .login-form-overlay .form-group {
+    flex-direction: column;
+  }
+
+  .signup-form-overlay label,
+  .login-form-overlay label {
+      font-size: 1.7em !important; /* Further increase font size for labels */
+      margin-bottom: 0px !important;
+      width: 100% !important; /* Labels take full width */
+      text-align: left !important; /* Keep text aligned to the left */
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+      width: 100% !important; /* Full width for inputs */
+      padding: 18px !important; /* Further increase padding for inputs */
+      font-size: 1.7em !important; /* Further increase font size for inputs */
+      margin-bottom: 10px !important;
+  }
+
+  .signup-form-overlay button[type="submit"],
+  .login-form-overlay button[type="submit"] {
+      padding: 22px !important; /* Further increase padding for buttons */
+      font-size: 1.7em !important; /* Further increase font size for buttons */
+      margin-top: 10px !important;
+  }
+
+  .signup-form-overlay button[type="button"],
+  .login-form-overlay button[type="button"] {
+      padding: 20px !important; /* Increase padding for secondary buttons */
+      margin-top: 25px !important; /* Increase spacing between buttons */
+      font-size: 1.5em !important; /* Larger font size for secondary buttons */
+  }
+  .submit-btn {
+    width: 100%;
+    height: 60px !important; /* Set a fixed height for the button */
+    padding: 6px; /* Slightly increased padding */
+    background-color: var(--navbar-bg-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8em; /* Slightly increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensure spinner does not overflow */
+    display: flex; /* Flexbox to center spinner/text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  .close-signup-button,
+  .close-login-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002; /* Ensure it stays on top */
+  }
+  .close-signup-button .bar,
+  .close-login-button .bar {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+}
+/* Adjustments for wider and smaller form elements only for screens above 240px */
+@media (min-width: 241px) {
+  .signup-form-overlay form,
+  .login-form-overlay form {
+      width: 75%; /* Increase width for wider form */
+      max-width: 320px; /* Increase max-width for larger form */
+  }
+
+  .signup-form-overlay .form-group,
+  .login-form-overlay .form-group {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 8px; /* Reduce space between form groups */
+  }
+
+  .signup-form-overlay label,
+  .login-form-overlay label {
+      font-size: 0.7em; /* Smaller font size */
+      width: 25%; /* Adjust label width */
+      padding-right: 8px; /* Reduce padding between label and input */
+      text-align: right;
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+      width: 70%; /* Adjust input width */
+      padding: 4px; /* Reduce padding for inputs */
+      font-size: 0.7em; /* Smaller font size */
+  }
+
+  .signup-form-overlay button[type="submit"],
+  .login-form-overlay button[type="submit"] {
+      padding: 8px; /* Adjust padding */
+      font-size: 0.8em; /* Smaller font size */
+  }
+
+  .signup-form-overlay button[type="button"],
+  .login-form-overlay button[type="button"] {
+      padding: 6px; /* Reduce padding */
+      margin-top: 6px; /* Adjust margin */
+      font-size: 0.7em; /* Smaller font size */
+  }
+  .submit-btn {
+    width: 100%;
+    height: 30px; /* Set a fixed height for the button */
+    padding: 6px; /* Slightly increased padding */
+    background-color: var(--navbar-bg-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8em; /* Slightly increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensure spinner does not overflow */
+    display: flex; /* Flexbox to center spinner/text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+}
+/* Adjust form alignment and spacing for smaller screens */
+@media (max-width: 240px) {
+  .signup-form-overlay label,
+  .login-form-overlay label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  .signup-form-overlay input,
+  .login-form-overlay input {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,381 @@
+/* Container for the map */
+.map-container {
+    height: 80vh; /* Adjusted height to fit more map */
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Floating detail box, small size for mobile */
+.office-details {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    font-size: 0.6em;
+}
+
+.office-details h3 {
+    padding: 0px;
+    margin: 2px 0px 5px 0px;
+}
+
+/* Flexbox layout for address and map icon */
+.address-info, .phone-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.office-details p {
+    margin: 1px 0;
+    font-size: 0.8em; /* Smaller font for mobile */
+}
+
+.office-details a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.office-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* Marker style - increased size */
+.map-marker {
+
+
+}
+
+/* Marker icon - increased size */
+.map-marker i {
+    margin-right: 5px;
+    position: absolute;
+    transform: translate(0%, -100%); /* Center horizontally and move up vertically */
+}
+
+.map-marker span {
+}
+
+/* Keep the zoom control at the top-right corner */
+.gm-style .gmnoprint.gm-bundled-control {
+    top: -10px !important; /* Distance from the top */
+    right: 10px !important; /* Distance from the right */
+    left: unset !important; /* Ensure it's not positioned on the left */
+    bottom: unset !important; /* Ensure it's not positioned on the bottom */
+    transform: scale(0.5); /* Smaller zoom control */
+}
+
+/* Keep the fullscreen control smaller and positioned */
+.gm-style .gm-fullscreen-control {
+    top: -20px !important; /* Distance from the top */
+    left: -18px !important; /* Adjusted to fit with your layout */
+    right: unset !important;
+    bottom: unset !important;
+    transform: scale(0.6); /* Smaller fullscreen control */
+}
+
+/* Office list box at the bottom, floated over the map */
+.office-list {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Adjusted spacing between office boxes */
+    padding: 0; /* Remove padding */
+    border-radius: 0px; /* No border radius, making the list a solid square */
+    box-shadow: none; /* No shadow for a clean solid look */
+}
+/* Base styling for all office boxes */
+.office-box {
+    background-color: rgba(8, 0, 0, 1); /* White with some transparency */
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    position: relative; /* Make this box a relative container for positioning */
+    overflow: hidden; /* Ensure the background image doesn't overflow */
+    z-index: 2; /* Ensure content is above the background image */
+    white-space: normal; /* Allow text to wrap */
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.01s ease; /* Transition for box-shadow */
+}
+
+/* Text styling for all office boxes */
+.office-box p {
+    margin: 0;
+    font-size: 0.6em; /* Decrease font size further */
+    font-weight: bold;
+    line-height: 1.1em; /* Adjust line height for readability */
+    word-break: break-word; /* Break long words if necessary */
+    z-index: 2; /* Ensure the text is above the background */
+    color: white;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
+
+}
+
+/* Increase font size and move text up on hover */
+.office-box:hover p {
+    font-size: 0.7em;
+    transform: translateY(-5px);
+}
+
+/* On click (active state), reduce or remove the box-shadow */
+.office-box:active {
+    box-shadow: none; /* Remove the shadow on click */
+    transform: translateY(2px); /* Slightly move the box down to mimic a press effect */
+}
+
+/* Background image for Long Beach */
+.office-box.long-beach::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/mB6Lo8H.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Place the image behind the content */
+    opacity: 0.6; /* Adjust transparency for readability */
+}
+
+/* Background image for Georgia */
+.office-box.georgia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/WoTdzUQ.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Place the image behind the content */
+    opacity: 0.6; /* Adjust transparency for readability */
+}
+
+@media (min-width: 300px) {
+    .office-details {
+        top: 20px;
+    }
+    .gm-style .gmnoprint.gm-bundled-control {
+        top: 60px !important; /* Distance from the right */
+        right: 0px !important; /* Distance from the right */
+    }
+}
+
+@media (min-width: 350px) {
+    /* Expand the height for larger screens */
+    .map-container {
+        height: 60vh; /* More map height for larger screens */
+    }
+
+    .map-marker i {
+        margin-right: 5px;
+        position: absolute;
+        transform: translate(0%, -100%);
+        font-size: 2em; /* Larger marker icon */
+    }
+    
+    /* Increase size of office details */
+    .office-details {
+        padding: 10px;
+        width: 180px; /* Slightly wider details box for readability */
+        font-size: 0.95em;
+        top: 50px;
+    }
+    
+    /* Adjust the font size and spacing for office details text */
+    .office-details p {
+        font-size: 0.85em;
+        margin: 5px 0;
+    }
+    
+    /* Adjust font size for headings inside the office details */
+    .office-details h3 {
+        font-size: 1.1em;
+        margin-bottom: 6px;
+    }
+
+    /* Make the zoom controls and fullscreen button more prominent */
+    .gm-style .gmnoprint.gm-bundled-control,
+    .gm-style .gm-fullscreen-control {
+        transform: scale(1); /* Larger control elements */
+    }
+
+    .gm-style .gm-fullscreen-control {
+        top: -10px !important; /* Distance from the top */
+        left: -10px !important; /* Adjusted to fit with your layout */
+    }
+
+    .gm-style .gmnoprint.gm-bundled-control {
+        top: -10px !important; /* Distance from the right */
+        right: 30px !important; /* Distance from the right */
+    }
+
+   /* Adjust office box size for visibility */
+    .office-box {
+        width: 80px;
+        height: 80px;
+        font-size: 1.1em;
+    }
+
+    /* Increase font size inside office box */
+    .office-box p {
+        font-size: 0.7em;
+        line-height: 1.2em; /* Adjust for readability */
+    }
+
+    /* Larger hover effect for office box */
+    .office-box:hover p {
+        font-size: 1em;
+    }
+
+    /* Expand gap between office boxes */
+    .office-list {
+        gap: 20px;
+    }
+}
+
+/* Adjustments for screens 786px and above */
+@media (min-width: 786px) {
+    /* Increase map height for larger screens */
+    .map-container {
+        height: 60vh; /* Provide more height for the map */
+    }
+
+    /* Increase office box size for better visibility */
+    .office-box {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9em; /* Larger font inside the office boxes */
+    }
+
+    /* Adjust text inside office boxes */
+    .office-box p {
+        font-size: 1em;
+        line-height: 1.3em; /* Slightly taller line height for readability */
+    }
+
+    /* Increase the gap between office boxes */
+    .office-list {
+        gap: 25px;
+    }
+
+    /* Larger office details box */
+    .office-details {
+        padding: 12px;
+        width: 220px; /* Larger box for office details */
+        font-size: 1em;
+        top: 60px; /* Adjust top position for better alignment */
+    }
+
+    /* Adjust font size for the office details heading */
+    .office-details h3 {
+        font-size: 1.3em;
+    }
+
+    /* Make the marker icon larger */
+    .map-marker i {
+        font-size: 2.5em; /* Increase icon size */
+    }
+}
+
+/* Adjustments for screens 1024px and above */
+@media (min-width: 1024px) {
+    /* Increase map height for larger screens */
+    .map-container {
+        height: 70vh; /* Provide more height for the map */
+    }
+
+    /* Increase office box size for better visibility */
+    .office-box {
+        width: 200px;
+        height: 200px;
+        font-size: 1.5em; /* Larger font inside the office boxes */
+    }
+
+    /* Adjust text inside office boxes */
+    .office-box p {
+        font-size: 1.1em;
+        line-height: 1.4em; /* Slightly taller line height for readability */
+    }
+
+    /* Increase the gap between office boxes */
+    .office-list {
+        gap: 30px; /* More space between the office boxes */
+    }
+
+    /* Larger office details box */
+    .office-details {
+        padding: 14px;
+        width: 340px; /* Larger box for office details */
+        font-size: 1.3em; /* Increase font size for better readability */
+        top: 120px; /* Adjust top position for better alignment */
+        left: 300px
+    }
+
+    /* Adjust font size for the office details heading */
+    .office-details h3 {
+        font-size: 1.4em;
+    }
+
+    .office-details a {
+        font-size: 2rem;
+    }
+
+    /* Make the marker icon larger */
+    .map-marker i {
+        font-size: 4em; /* Increase icon size */
+    }
+
+    /* Make the zoom controls and fullscreen button more prominent */
+    .gm-style .gmnoprint.gm-bundled-control,
+    .gm-style .gm-fullscreen-control {
+        transform: scale(1.2); /* Larger control elements */
+    }
+
+    .gm-style .gm-fullscreen-control {
+        top: 0px !important; /* Adjust distance from the top */
+        left: 0px !important; /* Adjust left position */
+    }
+
+    .gm-style .gmnoprint.gm-bundled-control {
+        top: 0px !important; /* Adjust distance from the top */
+        right: 40px !important; /* Adjust distance from the right */
+    }
+}
+
+@media (min-width: 1400px) {
+    /* Increase office box size for better visibility */
+    .office-details {
+        left: 400px;
+    }
+    .office-box {
+        width: 160px;
+        height: 160px;
+        font-size: 1.3em; /* Larger font inside the office boxes */
+    }
+    .address-info, .phone-info {
+        display: flex;
+        justify-content: space-between;
+    }
+}

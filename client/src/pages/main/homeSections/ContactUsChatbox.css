@@ -1,0 +1,119 @@
+.contact-section {
+    background-color: var(--white-color);
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-section-header h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.75rem;
+  }
+  
+  .contact-section-header p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .contact-form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .contact-form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .contact-form-group input,
+  .contact-form-group textarea {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #f8f8f8;
+  }
+  
+  .contact-form-group input:focus,
+  .contact-form-group textarea:focus {
+    outline: none;
+    border-color: var(--navbar-link-hover-color);
+  }
+  
+  .contact-form-group textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+  .error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  
+  .contact-form-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: left;
+  }
+  
+  .contact-form-agreement label {
+    cursor: pointer;
+  }
+  
+  .contact-form-agreement input[type="checkbox"] {
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  
+  .contact-submit-button {
+    background-color: var(--navbar-link-hover-color);
+    color: var(--white-color);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .contact-submit-button:hover {
+    background-color: #16a085; /* Darker teal */
+  }
+  
+  .contact-submitted-message {
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contact-submitted-message h3 {
+    color: var(--navbar-link-hover-color);
+    margin-bottom: 10px;
+  }
+  

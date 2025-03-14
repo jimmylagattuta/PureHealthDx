@@ -1,0 +1,43 @@
+.office-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .office-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  
+  .office-card-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .office-card-info {
+    padding: 10px 0;
+  }
+  
+  .office-card-info h2 {
+    font-size: 18px;
+    color: var(--blue);
+  }
+  
+  .office-card-info p {
+    font-size: 14px;
+    color: var(--grey-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .office-card {
+      width: 100%;
+    }
+  }
+  

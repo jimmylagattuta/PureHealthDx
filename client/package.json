@@ -1,0 +1,83 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "axios": "^1.2.1",
+    "dotenv": "^16.4.5",
+    "eslint-config-react-app": "^7.0.1",
+    "final-form": "^4.20.10",
+    "google-map-react": "^2.2.1",
+    "heroku-deploy": "file:..",
+    "react-bootstrap": "^2.7.4",
+    "react-dropdown": "^1.11.0",
+    "react-final-form": "^6.5.9",
+    "react-google-recaptcha": "^3.1.0",
+    "react-icons": "^5.3.0",
+    "source-map-explorer": "^2.5.3",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
+    "compression": "^1.8.0",
+    "i18next": "^24.2.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^15.4.1",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "engines": {
+    "node": "18.17.0"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "cross-env PORT=4000 NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "critical": "^7.2.1",
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.48.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-webpack-plugin": "^3.2.0",
+    "shx": "^0.3.4",
+    "source-map-explorer": "^2.5.3",
+    "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "workbox-webpack-plugin": "^7.3.0"
+  }
+}

@@ -1,0 +1,143 @@
+/* Container for the SEOFriendlyHomepage component */
+.seo-homepage {
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #2c3e50;
+  }
+  
+  /* Main heading specific to SEOFriendlyHomepage */
+  .seo-homepage h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Section container styles */
+  .seo-homepage section {
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sub-headings inside sections */
+  .seo-homepage h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Paragraph styles */
+  .seo-homepage p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* -----------------------------------------
+     Keywords Section Styles
+  -----------------------------------------*/
+  .seo-homepage .keywords ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .seo-homepage .keywords li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .keywords {
+    width: 300px;            /* Adjust as needed */
+    border: 1px solid #ccc;  /* Light border for clarity */
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px 0;          /* Spacing above/below */
+    background-color: #fff;  /* White background */
+  }
+  
+  .keywords h2 {
+    margin-top: 0;           /* Remove default top margin */
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .scrollable-keywords {
+    max-height: 200px;       /* Fixed height to enable scrolling */
+    overflow-y: scroll;      /* Vertical scrollbar when content exceeds max-height */
+    padding-right: 5px;      /* Space to avoid overlapping scrollbar */
+  }
+  
+  .scrollable-keywords ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;      /* Indent bullets */
+  }
+  
+  .scrollable-keywords li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  
+  /* -----------------------------------------
+     Media Queries for Responsive Design
+  -----------------------------------------*/
+  
+  /* Tablets: 768px and up */
+  @media (min-width: 768px) {
+    .seo-homepage {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .seo-homepage h1 {
+      font-size: 2.2rem;
+    }
+    
+    .seo-homepage h2 {
+      font-size: 1.6rem;
+    }
+    
+    .seo-homepage p {
+      font-size: 1.1rem;
+    }
+    
+    .seo-homepage section {
+      padding: 20px;
+    }
+    
+    .seo-homepage .keywords li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Desktops: 1024px and up */
+  @media (min-width: 1024px) {
+    .seo-homepage {
+      max-width: 960px;
+    }
+    
+    .seo-homepage h1 {
+      font-size: 2.5rem;
+    }
+    
+    .seo-homepage h2 {
+      font-size: 1.8rem;
+    }
+    
+    .seo-homepage p {
+      font-size: 1.2rem;
+    }
+    
+    .seo-homepage section {
+      padding: 25px;
+    }
+    
+    .seo-homepage .keywords li {
+      font-size: 1.1rem;
+    }
+  }
+  

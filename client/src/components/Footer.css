@@ -1,0 +1,144 @@
+/* Footer styles */
+
+.contact-info {
+    background-color: #2c3e50; /* Dark background for a footer look */
+    padding: 20px 10px; /* Smaller padding for mobile screens */
+    color: #ffffff; /* White text color for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid #e7a61a; /* Gold border at the top */
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+    gap: 8px; /* Gap between buttons */
+    font-size: 0.9rem;
+  }
+  
+  .contact-info a {
+    color: #e7a61a; /* Gold color for links */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Slight letter spacing */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .contact-info a:hover {
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.05); /* Subtle scale on hover */
+  }
+  
+  .contact-button {
+    background-color: #444444; /* Dark gray background for buttons */
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    margin-bottom: 8px;
+    height: 40px; /* Set a fixed height for the buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+    overflow: hidden; /* Hide overflowing text */
+  }
+  
+  .contact-button:hover {
+    background-color: #e7a61a; /* Gold on hover */
+  }
+  
+  .footer-info {
+    background-color: #2c3e50;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  .footer-info .copyright,
+  .footer-info .powered-by {
+    margin: 5px 0;
+  }
+  
+  .footer-info .divider {
+    margin: 0 10px;
+    border-left: 1px solid #ffffff; /* Divider between the items */
+    height: 20px;
+    display: none;
+  }
+  /* For screens 320px and above */
+@media (min-width: 320px) {
+    .contact-info {
+        padding: 30px 20px; /* Increase padding */
+        gap: 10px; /* Increase space between items */
+    }
+
+    .contact-button {
+        padding: 10px 15px; /* Larger padding for bigger screens */
+        max-width: 240px; /* Slightly larger width */
+    }
+
+    .contact-info a {
+        letter-spacing: 1.2px; /* Increase letter spacing for readability */
+    }
+}
+  /* For screens 768px and above */
+  @media (min-width: 768px) {
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-around; /* Space between buttons */
+        padding: 40px 50px;
+    }
+
+    .contact-button {
+        padding: 12px 20px;
+        max-width: 260px; /* Larger button width */
+    }
+
+    .contact-info a {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px; /* More elegant letter spacing */
+    }
+    .footer-info {
+      font-size: 1rem;
+      padding: 20px;
+      display: flex; /* Flexbox layout for row alignment */
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .footer-info .copyright,
+    .footer-info .powered-by {
+      margin: 0 10px; /* Add space between the items */
+    }
+  
+    .footer-info .divider {
+      margin: 0 10px;
+      display: block;
+    }
+  }
+  
+  /* For screens 1024px and above */
+  @media (min-width: 1024px) {
+    .footer-info {
+      font-size: 1.1rem;
+    }
+    .contact-info {
+        padding: 50px 100px; /* More padding for larger screens */
+        gap: 30px; /* More spacing between buttons */
+    }
+
+    .contact-button {
+        font-size: 1.2rem; /* Increase button font size */
+        padding: 15px 30px;
+        max-width: 300px; /* Larger button width */
+    }
+
+    .contact-info a {
+        font-size: 1.3rem; /* Larger font for larger screens */
+    }
+
+  }
+  

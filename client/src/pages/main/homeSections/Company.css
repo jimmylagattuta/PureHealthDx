@@ -1,0 +1,155 @@
+@keyframes line-expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Custom line for the reveal effect */
+.custom-line {
+  border: none;
+  border-top: 1px solid white; /* Line color */
+  width: 100%; /* Start with 0 width */
+  margin: 20px auto;
+  opacity: 1; /* Start invisible */
+}
+
+/* Trigger the line animation once the section is revealed */
+.company-diagonal-section.reveal .custom-line {
+  opacity: 1; /* Make the line visible */
+}
+
+/* Base styling for mobile-first design */
+.company-diagonal-section {
+  position: relative;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f5f5f5;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #2c3e50;
+}
+.diagonal-reveal {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.95); /* More transparent background for glass effect */
+  transform: skewX(-45deg);
+  z-index: 2;
+  backdrop-filter: blur(15px) saturate(150%); /* Increased blur for frosted effect */
+  -webkit-backdrop-filter: blur(15px) saturate(150%); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass look */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.company-diagonal-section.reveal .diagonal-reveal {
+  left: 200%;
+}
+
+.company-content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  padding: 0 10px;
+}
+
+.company-diagonal-section.reveal .company-content {
+  opacity: 1;
+}
+
+.company-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.company-description {
+  font-size: 1em;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Adjustments for screens 430px and up */
+@media (min-width: 300px) {
+.company-diagonal-section {
+  height: 60vh;
+}
+}
+
+@media (min-width: 430px) and (max-width: 767px) {
+  .company-diagonal-section {
+    padding: 30px 10px; /* Reduce top padding */
+    justify-content: flex-start; /* Move content to the top */
+    height: 30vh;
+  }
+
+  .company-title {
+    font-size: 2.2em; /* Adjust title size */
+    margin-bottom: 10px; /* Reduce margin below title */
+  }
+
+  .company-description {
+    font-size: 1.1em; /* Slightly increase description size */
+    line-height: 1.4;  /* Adjust line height */
+    padding: 0 10px;   /* Adjust padding */
+  }
+}
+
+@media (min-width: 768px) {
+  .company-diagonal-section {
+    padding: 50px 40px;
+    height: min-content;
+  }
+
+  .company-title {
+    font-size: 3.2em;
+  }
+
+  .company-description {
+    font-size: 1.5em;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .company-diagonal-section {
+    padding: 50px 40px;
+    height: min-content;
+  }
+
+  .company-title {
+    font-size: 3.2em;
+  }
+
+  .company-description {
+    font-size: 2em;
+    padding: 0 40px;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .company-diagonal-section {
+    padding: 20px 10px;
+    height: min-content;
+  }
+
+  .company-title {
+    font-size: 1.2em;
+  }
+
+  .company-description {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+}
+
+

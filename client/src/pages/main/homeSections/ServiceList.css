@@ -1,0 +1,145 @@
+/* Scoped to ServiceList component */
+.service-list-section {
+  --background-color: #f5f5f5;
+  --text-color: #ffffff; /* Change text color to white for contrast */
+  --navbar-bg-color: #2c3e50;
+  --navbar-link-hover-color: #1abc9c;
+  --white-color: #ffffff;
+  --blue-color: linear-gradient(135deg, #264653, #2a9d8f);
+  --blue-color-two: linear-gradient(135deg, #2a9d8f, #264653);
+  --blue-color-three: linear-gradient(45deg, #2a9d8f, #264653);
+  
+  background-color: var(--background-color);
+  background-image: url('https://i.imgur.com/YA8w0SN.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 10px; /* Add padding to the left and right */
+  text-align: center;
+}
+
+.service-list-title {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.title-symbol {
+  color: var(--navbar-link-hover-color);
+  font-size: 2rem;
+  margin-bottom: 40px; /* Add space below the cart icon */
+}
+
+.service-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 10px; /* Prevents images from touching the screen edges */
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--white-color);
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 180px; /* Ensure images stay smaller on smaller screens */
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.service-name {
+  color: var(--navbar-bg-color); /* Use the dark navy blue for text contrast */
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  .service-item {
+    max-width: 200px;
+  }
+
+  .service-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .service-list-title {
+    color: var(--text-color);
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .title-symbol {
+    color: var(--navbar-link-hover-color);
+    font-size: 3rem;
+    margin-bottom: 60px; /* Add space below the cart icon */
+  }
+  .service-list-grid {
+    justify-content: center;
+  }
+  
+  .service-item {
+    max-width: 220px;
+  }
+
+  .service-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1569px) {
+  .service-item {
+    max-width: 300px; /* Increase the max width for larger screens */
+  }
+
+  .service-name {
+    font-size: 1.5rem; /* Increase the font size for the service names */
+  }
+
+  .service-list-title {
+    font-size: 3.5rem; /* Increase the title size */
+  }
+
+  .title-symbol {
+    font-size: 3.5rem; /* Increase the size of the cart icon */
+  }
+
+  .service-list-grid {
+    gap: 10px; /* Increase the gap between items */
+  }
+}
+
+/* Add this at the bottom of your CSS file */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards; /* Fading up animation */
+  opacity: 0; /* Make sure items are invisible initially */
+  transform: translateY(20px); /* Start slightly lower */
+}

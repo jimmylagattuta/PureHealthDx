@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: <%= ENV['CAPTAIN_ALVARADOS_HANDYMAN_DATABASE_PASSWORD'] %>
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: captain_alvarados_handyman_development
+
+test:
+  <<: *default
+  database: captain_alvarados_handyman_test
+
+production:
+  <<: *default
+  database: captain_alvarados_handyman_production
+  url: <%= ENV['DATABASE_URL'] %>
