@@ -99,7 +99,7 @@ function Navbar() {
             />
           </div>
           <div className="company-name-desktop" onClick={() => handleNavItemClick('/')}>
-            BCB Carts
+            Captain Alvarado's Handyman
           </div>
         </div>
 

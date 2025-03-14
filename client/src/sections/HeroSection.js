@@ -7,26 +7,26 @@ function HeroSection() {
       <picture>
         {/* Mobile Image (Default) */}
         <source
-          srcSet="https://i.postimg.cc/bvHDGQcm/d-Rbh-Xia-1-1-1.webp"
+          srcSet="https://i.postimg.cc/bvHDGQcm/captain-alvarado-mobile.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
         {/* Tablet Image */}
         <source
-          srcSet="https://i.postimg.cc/YCrJK72j/i-Stock-2162952560-1-2-1-1-1.webp"
+          srcSet="https://i.postimg.cc/YCrJK72j/captain-alvarado-tablet.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
         {/* Desktop Image */}
         <source
-          srcSet="https://i.postimg.cc/44rfgmjy/i-Stock-2162952560-1-1.webp"
+          srcSet="https://i.postimg.cc/44rfgmjy/captain-alvarado-desktop.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
-        {/* Fallback */}
+        {/* Fallback Image */}
         <img
-          src="https://i.postimg.cc/15gRdfWn/i-Stock-1069988650-4-1.webp"
-          alt="Hero"
+          src="https://i.postimg.cc/15gRdfWn/captain-alvarado-default.webp"
+          alt="Handyman Services - Captain Alvarado"
           width="auto"
           height="100%"
           loading="eager"
@@ -37,16 +37,16 @@ function HeroSection() {
         <div className="hero-text-bg">
           <div className="hero-content-title">
             <div className="line"></div>
-            <h1 className="company-name">BCB Carts</h1>
+            <h1 className="company-name">Captain Alvarado's Handyman</h1>
             <div className="line"></div>
           </div>
-          <h1 className="slogan">Your Trusted Partner in Leisure-Filled Electric Vehicles</h1>
+          <h1 className="slogan">Reliable & Affordable Handyman Services</h1>
           <p className="hero-paragraph">
-            At BCB Carts, we are committed to providing dependable electric carts and honest service for both personal and business needs. With a focused team and trusted mechanics, we offer tailored solutions—from cart sales and rentals to installations and upgrades—ensuring you enjoy a ride you can count on.
+            Captain Alvarado’s Handyman provides expert home repairs, plumbing, painting, and moving services across **San Luis Obispo County**. With a strong work ethic and dedication to quality, we ensure your home improvement projects are done right.
           </p>
-          <h1 className="subslogan">Get in Contact Today!</h1>
-          {/* Using a Link that goes to the LocationsPage with a hash */}
-          <Link to="/locations#contactForm" className="cta-button">
+          <h1 className="subslogan">Need a Hand? Get in Touch Today!</h1>
+          {/* Updated Link for Contact */}
+          <Link to="/contact" className="cta-button">
             Contact Us
           </Link>
         </div>
