@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.bcbcarts.com/</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Sales Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/sales</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Rentals Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/rentals</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Parts Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/parts</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/services</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Help Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/help</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.bcbcarts.com/contact</loc>
+    <lastmod>2025-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
