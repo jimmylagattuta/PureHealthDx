@@ -91,11 +91,11 @@ function Navbar() {
         <div className="navbar-brand">
           <div className="navbar-logo" onClick={() => handleNavItemClick('/')}>
             <img
-              src="https://i.postimg.cc/Qx1Xxjrb/BCBLogo-1.webp"
+              src="https://i.postimg.cc/8zTwpFPD/Screenshot-2025-03-14-020908-1.webp"
               alt="Company Logo"
               loading="eager"
-              height="75"
-              width="85"
+              height="65"
+              width="35"
             />
           </div>
           <div className="company-name-desktop" onClick={() => handleNavItemClick('/')}>
