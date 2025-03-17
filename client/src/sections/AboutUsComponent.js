@@ -8,8 +8,8 @@ function AboutUsComponent() {
       {/* Image Container */}
       <div className="about-image-container">
         <img
-          src="https://i.postimg.cc/N0gJ2k2M/i-Stock-1328601529-1-1.webp"
-          alt="About Us"
+          src="https://i.postimg.cc/ryRx3Mq9/i-Stock-588965276-1.webp"
+          alt="About Captain Alvarado's Handyman"
           loading="lazy"
           className="about-image"
           height="56"
@@ -23,17 +23,15 @@ function AboutUsComponent() {
           <div className="about-us-line"></div>
           <h1 className="about-us-name">ABOUT US</h1>
         </div>
-        <p className="about-us-company-name">
-          BCB Carts
+        <p className="about-us-company-name">Captain Alvarado's Handyman</p>
+        <p className="about-us-paragraph">
+          At Captain Alvarado's Handyman, we take pride in providing high-quality, reliable, and affordable handyman services across San Luis Obispo County. From home repairs and plumbing fixes to painting, moving assistance, and clean-outs, we are your trusted partner for all things maintenance and improvement.
         </p>
         <p className="about-us-paragraph">
-          At BCB Carts, we’re committed to providing dependable and stylish electric cart solutions for both leisure and business needs. Our dedicated team and trusted mechanics work together to deliver personalized services—from cart sales and rentals to professional installations and custom upgrades.
-        </p>
-        <p className="about-us-paragraph">
-          Proudly serving customers throughout Southern California and beyond, we continuously strive to expand our service areas and enhance our offerings, ensuring your ride is always smooth and reliable.
+          With years of experience and a commitment to excellence, our skilled team ensures every project is completed with professionalism and attention to detail. No job is too small—we handle each task with care, making sure your home or business stays in top shape.
         </p>
         <Link to="/about-us" className="about-us-button">
-          Learn More About BCB Carts
+          Learn More About Captain Alvarado's Handyman
         </Link>
       </div>
     </section>

@@ -6,11 +6,11 @@ export const servicesData = {
     mainContent:
       "Captain Alvarado's Handyman offers expert home repair services, covering everything from drywall patching and minor electrical fixes to general maintenance. Our goal is to help homeowners keep their houses in the best condition possible. No job is too small—we handle every task with professionalism and care.",
     images: {
-      hero: "https://i.imgur.com/ZifuC4m.webp",
-      desktopHero: "https://i.imgur.com/ZifuC4m.webp",
-      section: "https://i.imgur.com/ZifuC4m.webp",
-      overlay1: "https://i.imgur.com/ZifuC4m.webp",
-      overlay2: "https://i.imgur.com/ZifuC4m.webp"
+      hero: "https://i.postimg.cc/wTCkB3jM/i-Stock-586932394-1-1.webp",
+      desktopHero: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
+      section: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
+      overlay1: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
+      overlay2: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp"
     },
     whyChooseTitle: "Why Choose Our Home Repair Services?",
     whyChooseContent:
@@ -24,8 +24,8 @@ export const servicesData = {
     providerTitle: "Our Handyman Team",
     providerContent:
       "Our experienced handyman professionals are skilled in various trades, ensuring that your repairs are completed efficiently and correctly.",
-    whyChooseBg: "https://i.imgur.com/ZifuC4m.webp",
-    desktopWhyChooseBg: "https://i.imgur.com/ZifuC4m.webp"
+    whyChooseBg: "https://i.postimg.cc/YS64xC7X/i-Stock-480476713-1-1-1.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/mDVt0ptC/i-Stock-480476713-2-1.webp"
   },
 
   "plumbing": {

@@ -48,7 +48,7 @@ function Contact() {
       setIsSubmitting(true);
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        const response = await fetch('https://bcb-carts-f625407d6d04.herokuapp.com/contact', {
+        const response = await fetch('https://captainalvaradohandyman.com/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -78,8 +78,8 @@ function Contact() {
   return (
     <div className="contact-section">
       <div className="contact-section-header">
-        <h2>Send A Message To BCB Carts</h2>
-        <p>If you have any inquiries, concerns, or comments regarding BCB Carts, please fill out the short contact form below.</p>
+        <h2>Contact Captain Alvarado's Handyman</h2>
+        <p>If you have any inquiries, concerns, or comments regarding our handyman services, please fill out the short contact form below.</p>
       </div>
       {!submitted ? (
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -138,7 +138,7 @@ function Contact() {
             {errors.phone && <span className="error-message">{errors.phone}</span>}
           </div>
           <div className="contact-form-group">
-            <label htmlFor="message">Comments</label>
+            <label htmlFor="message">Your Message</label>
             <textarea
               id="message"
               name="message"
@@ -159,12 +159,12 @@ function Contact() {
               required
             />
             <label htmlFor="agreement">
-              By clicking, I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
+              By submitting this form, I understand that my information will be used to contact me regarding my inquiry.
             </label>
             {errors.agreement && <span className="error-message">{errors.agreement}</span>}
           </div>
           <button type="submit" className="contact-submit-button" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send"}
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </form>
       ) : (

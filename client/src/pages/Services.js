@@ -21,7 +21,7 @@ const Services = () => {
   if (!service) {
     return (
       <div className="service-page">
-        <p className="small-heading">BCB Carts</p>
+        <p className="small-heading">Captain Alvarado's Handyman</p>
         <h1>Service Not Found</h1>
         <p>We couldn’t find the service you’re looking for.</p>
         <Link to="/services">Go back to all services</Link>
@@ -44,38 +44,29 @@ const Services = () => {
     "@type": "Service",
     "name": service.title,
     "description": service.shortDescription,
-    "url": `https://bcbcarts.com/services/${serviceId}`,
+    "url": `https://captainalvaradohandyman.com/services/${serviceId}`,
     "image": service.images.desktopHero || service.images.hero,
     "areaServed": [
-      // LA/OC cities
-      "Long Beach",
-      "Seal Beach",
-      "Huntington Beach",
-      "San Pedro",
-      "Lakewood",
-      "Irvine",
-      "Anaheim",
-      "Santa Ana",
-      "Newport Beach",
-      "Costa Mesa",
-      "Fullerton",
-      "Garden Grove",
-      "Westminster",
-      "Tustin",
-      "Brea",
-      "Placentia",
-      "Cypress",
-      "Buena Park"
+      "San Luis Obispo",
+      "Paso Robles",
+      "Atascadero",
+      "Grover Beach",
+      "Nacimiento Lake",
+      "Arroyo Grande",
+      "Morro Bay",
+      "Los Osos",
+      "Pismo Beach",
+      "Cayucos"
     ],
     "provider": {
       "@type": "Organization",
-      "name": "BCB Carts",
-      "url": "https://bcbcarts.com",
-      "logo": "https://i.postimg.cc/vT5Y3Jbb/BCBLogo-1.webp"
+      "name": "Captain Alvarado's Handyman",
+      "url": "https://captainalvaradohandyman.com",
+      "logo": "https://i.imgur.com/YCrJK72j.webp"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://bcbcarts.com/services/${serviceId}`
+      "@id": `https://captainalvaradohandyman.com/services/${serviceId}`
     }
   };
 
@@ -96,34 +87,26 @@ const Services = () => {
           <div className="services-hero-overlay">
             <div className="services-hero-content-title">
               <div className="line"></div>
-              <h1 className="company-name-services">BCB Carts</h1>
+              <h1 className="company-name-services">Captain Alvarado's Handyman</h1>
               <div className="line"></div>
             </div>
-            <h1>{service.title}</h1>
-            <p>{service.shortDescription}</p>
+
+            <div className="black-background">
+              <h1 className="hero-title">{service.title}</h1>
+              <p className="hero-description">{service.shortDescription}</p>
+            </div>
+            
             <Link to="/locations#contactForm" className="cta-button">
               Book an Appointment
             </Link>
           </div>
         </div>
 
-        {/* Overlay Images (mobile only) */}
-        {!isDesktop && (
-          <div className="overlay-images">
-            <img src={service.images.overlay1} alt="Overlay 1" className="image1" />
-            <img src={service.images.overlay2} alt="Overlay 2" className="image2" />
-          </div>
-        )}
-
         {/* MAIN CONTENT SECTION */}
         <div className="service-content">
           <div className="content-section">
             <img
-              src={
-                isDesktop
-                  ? "https://i.postimg.cc/wTH3RwQL/i-Stock-944550986-2.webp"
-                  : service.images.section
-              }
+              src={isDesktop ? "https://i.postimg.cc/wTH3RwQL/i-Stock-944550986-2.webp" : service.images.section}
               alt={service.title}
               className="content-image"
             />
@@ -131,26 +114,16 @@ const Services = () => {
             <div className="service-content-with-title">
               <h1 id="services-title-small">{service.title}</h1>
               <div className="content-text">
-                {service.mainContent
-                  .split("\n\n")
-                  .filter((paragraph) => paragraph.trim() !== "")
-                  .map((paragraph, index) => (
-                    <p key={index}>{paragraph.trim()}</p>
-                  ))}
+                {service.mainContent.split("\n\n").map((paragraph, index) => (
+                  <p key={index}>{paragraph.trim()}</p>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* INFO SECTION with background image + dark overlay */}
-        <div
-          className="info-section"
-          style={{
-            backgroundImage: `url(${whyChooseBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        {/* INFO SECTION */}
+        <div className="info-section" style={{ backgroundImage: `url(${whyChooseBg})` }}>
           <div className="info-overlay">
             <h2 className="info-title">{service.whyChooseTitle}</h2>
             <p className="info-text">{service.whyChooseContent}</p>
@@ -180,26 +153,19 @@ const Services = () => {
       {/* CONTACT FORM */}
       <Contact />
 
-      {/* LOCATIONS LIST BELOW THE CONTACT FORM */}
+      {/* LOCATIONS LIST */}
       <div className="locations-list-container">
         <h2 className="locations-list-title">Available at these Locations</h2>
         <div className="locations-grid">
-          {Object.entries(locationsData).map(([key, loc]) => {
-            const bgImage = loc.desktopImage || loc.heroImage;
-            return (
-              <Link to={`/locations/${key}`} className="location-card" key={key}>
-                <div
-                  className="location-image"
-                  style={{ backgroundImage: `url(${bgImage})` }}
-                ></div>
-                <div className="location-content">
-                  <h3>{loc.name}</h3>
-                  {/* If you want to show address (if any) */}
-                  {loc.address !== "Service Area" && <p>{loc.address}</p>}
-                </div>
-              </Link>
-            );
-          })}
+          {Object.entries(locationsData).map(([key, loc]) => (
+            <Link to={`/locations/${key}`} className="location-card" key={key}>
+              <div className="location-image" style={{ backgroundImage: `url(${loc.desktopImage || loc.heroImage})` }}></div>
+              <div className="location-content">
+                <h3>{loc.name}</h3>
+                {loc.address !== "Service Area" && <p>{loc.address}</p>}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 

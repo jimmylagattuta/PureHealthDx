@@ -14,8 +14,8 @@ class ContactMailer < ApplicationMailer
   
       mail(
         to: 'jimmy.lagattuta@gmail.com', # Replace with your receiving email
-        cc: 'mebcb@yahoo.com',
-        subject: 'BCB Carts: New Submission for BCB Carts Contact Us Form'
+        cc: 'Elgatofrmcuba81@gmail.com',
+        subject: "CAH: New Submission for Captain Alvarado's Handyman Contact Us Form"
       )
     end
   end

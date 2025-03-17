@@ -16,47 +16,32 @@ const AboutUs = () => {
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "BCB Carts",
-    "url": "https://bcbcarts.com/about-us",
-    "logo": "https://i.postimg.cc/vT5Y3Jbb/BCBLogo-1.webp",
+    "name": "Captain Alvarado's Handyman",
+    "url": "https://captainalvaradohandyman.com/about-us",
+    "logo": "https://i.imgur.com/YCrJK72j.webp",
     "description":
-      "BCB Carts specializes in providing high-quality electric carts and allied services. With locations in Long Beach, California, and Griffin, GA, we are dedicated to offering top-notch solutions for your low-speed vehicle needs. Your Trusted Partner in Leisure-Filled Electric Vehicles.",
+      "Captain Alvarado's Handyman provides expert home repair, plumbing, painting, moving assistance, and clean-out services throughout San Luis Obispo County. Reliable, affordable, and professional solutions for your home and business needs.",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-323-333-3471",
+      "telephone": "805-635-1774",
       "contactType": "Customer Service",
       "availableLanguage": ["English"]
     },
     "areaServed": [
-      "Long Beach",
-      "Seal Beach",
-      "Huntington Beach",
-      "San Pedro",
-      "Lakewood",
-      "Irvine",
-      "Anaheim",
-      "Santa Ana",
-      "Newport Beach",
-      "Costa Mesa",
-      "Cypress",
-      "Buena Park",
-      "La Palma",
-      "La Mirada",
-      "Fullerton",
-      "Garden Grove",
-      "Tustin",
-      "Brea",
-      "La Habra",
-      "Westminster",
-      "Placentia",
-      "Bellflower",
-      "Downey",
-      "Paramount",
-      "Griffin, GA"
+      "San Luis Obispo",
+      "Paso Robles",
+      "Atascadero",
+      "Grover Beach",
+      "Nacimiento Lake",
+      "Arroyo Grande",
+      "Morro Bay",
+      "Los Osos",
+      "Pismo Beach",
+      "Cayucos"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Electric Cart Services",
+      "name": "Handyman Services",
       "itemListElement": servicesArray.map((service, index) => ({
         "@type": "Offer",
         "position": index + 1,
@@ -64,7 +49,7 @@ const AboutUs = () => {
           "@type": "Service",
           "name": service.title,
           "description": service.shortDescription,
-          "url": `https://bcbcarts.com/services/${service.id}`
+          "url": `https://captainalvaradohandyman.com/services/${service.id}`
         }
       }))
     }
@@ -81,9 +66,9 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="aboutus-hero">
         <div className="aboutus-hero-overlay">
-          <h1 className="aboutus-hero-title">Welcome to BCB Carts!</h1>
+          <h1 className="aboutus-hero-title">Welcome to Captain Alvarado's Handyman!</h1>
           <p className="aboutus-hero-subtitle">
-            Your Trusted Partner in Leisure-Filled Electric Vehicles
+            Reliable, Professional, and Affordable Handyman Services
           </p>
         </div>
       </section>
@@ -95,32 +80,24 @@ const AboutUs = () => {
           <div className="aboutus-card">
             <h3>Why Choose Us</h3>
             <p>
-              With years of experience in the electric cart industry, we understand
-              the unique needs of our customers. At BCB Carts, our commitment is to
-              deliver excellence in every transaction—ensuring quality, reliability,
-              and style in every cart.
+              With extensive experience in home repairs and maintenance, Captain Alvarado's Handyman is committed to delivering high-quality services with professionalism and care. We understand the importance of keeping your home in top shape, and we’re here to help.
             </p>
           </div>
           <div className="aboutus-card">
             <h3>How We Can Help You</h3>
             <p>
-              Whether you’re looking to buy, rent, or repair an electric cart, our expert
-              team offers a comprehensive range of services tailored to your specific
-              requirements. We’re here to provide the right solution for every need.
+              Whether you need minor plumbing repairs, a fresh coat of paint, moving assistance, or a complete home clean-out, our skilled team is ready to tackle your home improvement projects. We offer reliable and affordable solutions tailored to your needs.
             </p>
           </div>
           <div className="aboutus-card">
             <h3>See the Difference</h3>
             <p>
-              Our dedication to quality and customer satisfaction means every electric
-              cart we service is optimized for performance, safety, and style. Experience
-              the BCB Carts difference today.
+              Our attention to detail and dedication to customer satisfaction sets us apart. Every repair, installation, and project we handle is done with precision and care, ensuring lasting results.
             </p>
           </div>
         </div>
       </section>
 
-     
       {/* Services for SEO */}
       <section className="aboutus-services">
         <h2 className="aboutus-services-title">Our Services</h2>
