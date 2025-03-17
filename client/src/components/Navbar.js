@@ -1,20 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { servicesData } from '../data';
+import { servicesData, projectsData } from '../data';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [servicesSubMenuOpen, setServicesSubMenuOpen] = useState(false);
+  const [projectsSubMenuOpen, setProjectsSubMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
   const navigate = useNavigate();
   const location = useLocation();
-  const hoverTimeout = useRef(null);
+  const servicesHoverTimeout = useRef(null);
+  const projectsHoverTimeout = useRef(null);
 
   // Toggle entire mobile menu
   const toggleMenu = () => {
     if (isMobile) {
       setIsOpen(!isOpen);
-      if (isOpen) setSubMenuOpen(false);
+      if (isOpen) {
+        setServicesSubMenuOpen(false);
+        setProjectsSubMenuOpen(false);
+      }
     }
   };
 
@@ -22,7 +27,8 @@ function Navbar() {
   const handleNavItemClick = (path) => {
     navigate(path);
     setIsOpen(false);
-    setSubMenuOpen(false);
+    setServicesSubMenuOpen(false);
+    setProjectsSubMenuOpen(false);
   };
 
   // Scroll to Contact Form if on the same page, otherwise navigate
@@ -35,25 +41,43 @@ function Navbar() {
       navigate(`/contact${targetHash}`);
     }
     setIsOpen(false);
-    setSubMenuOpen(false);
+    setServicesSubMenuOpen(false);
+    setProjectsSubMenuOpen(false);
   };
 
-  // Handle Services submenu for mobile (click to toggle)
+  // Services submenu handlers
   const handleServicesClick = () => {
-    if (isMobile) setSubMenuOpen(!subMenuOpen);
+    if (isMobile) setServicesSubMenuOpen(!servicesSubMenuOpen);
   };
 
-  // Handle Services submenu for desktop (hover to open)
   const handleServicesEnter = () => {
     if (!isMobile) {
-      clearTimeout(hoverTimeout.current);
-      setSubMenuOpen(true);
+      clearTimeout(servicesHoverTimeout.current);
+      setServicesSubMenuOpen(true);
     }
   };
 
   const handleServicesLeave = () => {
     if (!isMobile) {
-      hoverTimeout.current = setTimeout(() => setSubMenuOpen(false), 300);
+      servicesHoverTimeout.current = setTimeout(() => setServicesSubMenuOpen(false), 300);
+    }
+  };
+
+  // Projects submenu handlers
+  const handleProjectsClick = () => {
+    if (isMobile) setProjectsSubMenuOpen(!projectsSubMenuOpen);
+  };
+
+  const handleProjectsEnter = () => {
+    if (!isMobile) {
+      clearTimeout(projectsHoverTimeout.current);
+      setProjectsSubMenuOpen(true);
+    }
+  };
+
+  const handleProjectsLeave = () => {
+    if (!isMobile) {
+      projectsHoverTimeout.current = setTimeout(() => setProjectsSubMenuOpen(false), 300);
     }
   };
 
@@ -64,7 +88,8 @@ function Navbar() {
       setIsMobile(mobileView);
       if (!mobileView) {
         setIsOpen(false);
-        setSubMenuOpen(false);
+        setServicesSubMenuOpen(false);
+        setProjectsSubMenuOpen(false);
       }
     };
     window.addEventListener('resize', handleResize);
@@ -108,7 +133,7 @@ function Navbar() {
             onMouseLeave={handleServicesLeave}
           >
             Services
-            {subMenuOpen && (
+            {servicesSubMenuOpen && (
               <ul
                 className="sub-nav-menu show"
                 onMouseEnter={handleServicesEnter}
@@ -127,6 +152,32 @@ function Navbar() {
             )}
           </li>
 
+          <li
+            className="nav-item projects-link"
+            onClick={handleProjectsClick}
+            onMouseEnter={handleProjectsEnter}
+            onMouseLeave={handleProjectsLeave}
+          >
+            Projects
+            {projectsSubMenuOpen && (
+              <ul
+                className="sub-nav-menu show"
+                onMouseEnter={handleProjectsEnter}
+                onMouseLeave={handleProjectsLeave}
+              >
+                {Object.entries(projectsData).map(([key, project]) => (
+                  <li
+                    key={key}
+                    className="sub-nav-item"
+                    onClick={() => handleNavItemClick(`/projects/${key}`)}
+                  >
+                    {project.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
           <li className="nav-item pricing-link" onClick={() => handleNavItemClick('/pricing')}>
             Pricing
           </li>
@@ -135,7 +186,6 @@ function Navbar() {
             Reviews
           </li>
 
-          {/* Removed Locations Link */}
           <li className="nav-item faq-link" onClick={() => handleNavItemClick('/faq')}>
             FAQ
           </li>

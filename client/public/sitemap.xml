@@ -3,117 +3,137 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://captainalvaradoshandyman.com/</loc>
+    <loc>https://lightningseo.dev/</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Core Pages -->
   <url>
-    <loc>https://captainalvaradoshandyman.com/about</loc>
+    <loc>https://lightningseo.dev/about</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/contact</loc>
+    <loc>https://lightningseo.dev/contact</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/privacy-policy</loc>
+    <loc>https://lightningseo.dev/privacy-policy</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/faq</loc>
+    <loc>https://lightningseo.dev/faq</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <!-- Services Pages -->
   <url>
-    <loc>https://captainalvaradoshandyman.com/services/home-repairs</loc>
+    <loc>https://lightningseo.dev/services/on-page-seo</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/services/plumbing</loc>
+    <loc>https://lightningseo.dev/services/technical-seo</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/services/painting</loc>
+    <loc>https://lightningseo.dev/services/local-seo</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/services/moving</loc>
+    <loc>https://lightningseo.dev/services/content-seo</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/services/clean-outs</loc>
+    <loc>https://lightningseo.dev/services/link-building</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/seo-audit</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/seo-consulting</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/web-development</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/web-app</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/mobile-app</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lightningseo.dev/services/watch-app</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Service Area Pages -->
+  <!-- Projects Pages -->
   <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/san-luis-obispo</loc>
+    <loc>https://lightningseo.dev/projects</loc>
     <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/paso-robles</loc>
+    <loc>https://lightningseo.dev/projects/project-alpha</loc>
     <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/atascadero</loc>
+    <loc>https://lightningseo.dev/projects/project-beta</loc>
     <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/grover-beach</loc>
+    <loc>https://lightningseo.dev/projects/project-gamma</loc>
     <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/nacimiento-lake</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/arroyo-grande</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/morro-bay</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/los-osos</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/pismo-beach</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://captainalvaradoshandyman.com/service-areas/cayucos</loc>
-    <lastmod>2025-03-16</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Blog Section (If Applicable) -->
   <url>
-    <loc>https://captainalvaradoshandyman.com/blog</loc>
+    <loc>https://lightningseo.dev/blog</loc>
     <lastmod>2025-03-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-
 </urlset>

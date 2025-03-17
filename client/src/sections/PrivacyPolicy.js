@@ -4,27 +4,27 @@ import FooterComponent from "../sections/FooterComponent"; // adjust the path if
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
-  // Build the JSON‑LD rich snippet for the Privacy Policy & TOS page.
+  // Build the JSON‑LD rich snippet for the Privacy Policy & Terms page.
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Privacy Policy & Terms and Conditions",
-    "url": "https://captainalvaradohandyman.com/privacy-policy",
-    "description": "Review the Privacy Policy and Terms and Conditions for Captain Alvarado's Handyman to learn how we handle your personal data and what rules apply when using our services.",
+    "url": "https://lightningseo.dev/privacy",
+    "description": "Review the Privacy Policy and Terms and Conditions for Lightning SEO to learn how we handle your personal data and what rules apply when using our digital marketing and web solutions services.",
     "publisher": {
       "@type": "Organization",
-      "name": "Captain Alvarado's Handyman",
+      "name": "Lightning SEO",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://i.postimg.cc/8zTwpFPD/Screenshot-2025-03-14-020908-1.webp"
+        "url": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
       },
-      "email": "elgatofrmcuba81@gmail.com",
+      "email": "jimmy.lagattuta@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "San Luis Obispo County",
-        "addressLocality": "San Luis Obispo",
+        "streetAddress": "Digital Headquarters",
+        "addressLocality": "California",
         "addressRegion": "CA",
-        "postalCode": "93401",
+        "postalCode": "90001",
         "addressCountry": "US"
       }
     },
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
             This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use our Service and explains your privacy rights and how the law protects you.
           </p>
           <p>
-            We use your personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.
+            We use your personal data to provide and improve our digital marketing, SEO, and web solutions services. By using our Service, you agree to the collection and use of information in accordance with this Privacy Policy.
           </p>
           <h2>Interpretation and Definitions</h2>
           <h3>Interpretation</h3>
@@ -61,10 +61,10 @@ const PrivacyPolicy = () => {
               <strong>Account:</strong> A unique account created for you to access our Service or parts of our Service.
             </li>
             <li>
-              <strong>Business:</strong> Refers to Captain Alvarado's Handyman, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
+              <strong>Business:</strong> Refers to Lightning SEO, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
             </li>
             <li>
-              <strong>Company:</strong> Refers to Captain Alvarado's Handyman.
+              <strong>Company:</strong> Refers to Lightning SEO.
             </li>
           </ul>
           <p>
@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
               <strong>Country:</strong> Refers to the United States.
             </li>
             <li>
-              <strong>Company:</strong> Refers to Captain Alvarado's Handyman.
+              <strong>Company:</strong> Refers to Lightning SEO.
             </li>
           </ul>
           <p>
@@ -104,8 +104,8 @@ const PrivacyPolicy = () => {
             If you have any questions about these Terms and Conditions, you can contact us:
           </p>
           <p>
-            <a href="mailto:elgatofrmcuba81@gmail.com">
-              By email {" "}
+            <a href="mailto:jimmy.lagattuta@gmail.com">
+              By email
             </a>
           </p>
         </div>

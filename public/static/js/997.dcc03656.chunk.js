@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkclient=self.webpackChunkclient||[]).push([[997],{997:(e,n,i)=>{i.r(n),i.d(n,{default:()=>c});i(483);var s=i(723);const c=()=>(0,s.jsxs)("div",{className:"pricing-page",style:{padding:"2rem",textAlign:"center"},children:[(0,s.jsx)("h1",{children:"Pricing"}),(0,s.jsx)("p",{children:"This page is under construction. Stay tuned for our affordable SEO pricing plans!"})]})}}]);
-//# sourceMappingURL=997.dcc03656.chunk.js.map

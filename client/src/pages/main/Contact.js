@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import { useLocation } from 'react-router-dom';
+import "./Contact.css";
+import FooterComponent from "../../sections/FooterComponent";
 
 function Contact() {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -76,106 +79,109 @@ function Contact() {
   };
 
   return (
-    <div className="contact-section">
-      <div className="contact-section-header">
-        <h2>Contact Lightning SEO</h2>
-        <p>
-          If you have any inquiries about our SEO, web development, mobile app, or Apple Watch app services, please fill out the short contact form below.
-        </p>
-      </div>
-      {!submitted ? (
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="contact-form-row">
-            <div className="contact-form-group">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                placeholder="First Name"
-                required
-              />
-              {errors.firstName && <span className="error-message">{errors.firstName}</span>}
-            </div>
-            <div className="contact-form-group">
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                placeholder="Last Name"
-                required
-              />
-              {errors.lastName && <span className="error-message">{errors.lastName}</span>}
-            </div>
-          </div>
-          <div className="contact-form-group">
-            <label htmlFor="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="Email Address"
-              required
-            />
-            {errors.email && <span className="error-message">{errors.email}</span>}
-          </div>
-          <div className="contact-form-group">
-            <label htmlFor="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              placeholder="Phone Number (e.g. +123456789)"
-              required
-            />
-            {errors.phone && <span className="error-message">{errors.phone}</span>}
-          </div>
-          <div className="contact-form-group">
-            <label htmlFor="message">Your Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              placeholder="Type your message here..."
-              required
-            />
-            {errors.message && <span className="error-message">{errors.message}</span>}
-          </div>
-          <div className="contact-form-agreement">
-            <input
-              type="checkbox"
-              id="agreement"
-              name="agreement"
-              checked={formData.agreement}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="agreement">
-              By submitting this form, I consent to having Lightning SEO contact me regarding my inquiry.
-            </label>
-            {errors.agreement && <span className="error-message">{errors.agreement}</span>}
-          </div>
-          <button type="submit" className="contact-submit-button" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      ) : (
-        <div className="contact-submitted-message">
-          <h3>Thank You!</h3>
-          <p>Your message has been sent successfully. We will get back to you shortly.</p>
+    <>
+      <div className="contact-section">
+        <div className="contact-section-header">
+          <h2>Contact Lightning SEO</h2>
+          <p>
+            If you have any inquiries about our SEO, web development, mobile app, or Apple Watch app services, please fill out the short contact form below.
+          </p>
         </div>
-      )}
-    </div>
+        {!submitted ? (
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-form-row">
+              <div className="contact-form-group">
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  placeholder="First Name"
+                  required
+                />
+                {errors.firstName && <span className="error-message">{errors.firstName}</span>}
+              </div>
+              <div className="contact-form-group">
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  placeholder="Last Name"
+                  required
+                />
+                {errors.lastName && <span className="error-message">{errors.lastName}</span>}
+              </div>
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Email Address"
+                required
+              />
+              {errors.email && <span className="error-message">{errors.email}</span>}
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder="Phone Number (e.g. +123456789)"
+                required
+              />
+              {errors.phone && <span className="error-message">{errors.phone}</span>}
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Type your message here..."
+                required
+              />
+              {errors.message && <span className="error-message">{errors.message}</span>}
+            </div>
+            <div className="contact-form-agreement">
+              <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                checked={formData.agreement}
+                onChange={handleInputChange}
+                required
+              />
+              <label htmlFor="agreement">
+                By submitting this form, I consent to having LightningSEO.dev contact me regarding my inquiry.
+              </label>
+              {errors.agreement && <span className="error-message">{errors.agreement}</span>}
+            </div>
+            <button type="submit" className="contact-submit-button" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        ) : (
+          <div className="contact-submitted-message">
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We will get back to you shortly.</p>
+          </div>
+        )}
+      </div>
+      {location.pathname === "/contact" && <FooterComponent />}
+    </>
   );
 }
 
