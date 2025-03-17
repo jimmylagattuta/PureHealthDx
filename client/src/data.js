@@ -35,11 +35,11 @@ export const servicesData = {
     mainContent:
       "We provide quick and efficient plumbing services, ensuring your home's water systems function smoothly. Whether it's a dripping faucet, a clogged drain, or minor pipe repairs, Captain Alvarado's Handyman is here to help.",
     images: {
-      hero: "https://i.imgur.com/Nq4e2IE.webp",
-      desktopHero: "https://i.imgur.com/Nq4e2IE.webp",
-      section: "https://i.imgur.com/Nq4e2IE.webp",
-      overlay1: "https://i.imgur.com/Nq4e2IE.webp",
-      overlay2: "https://i.imgur.com/Nq4e2IE.webp"
+      hero: "https://i.postimg.cc/C1qzKCM6/i-Stock-1485512746-1-1.webp",
+      desktopHero: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
+      section: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
+      overlay1: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
+      overlay2: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp"
     },
     whyChooseTitle: "Why Choose Our Plumbing Services?",
     whyChooseContent:
@@ -53,8 +53,8 @@ export const servicesData = {
     providerTitle: "Our Plumbing Experts",
     providerContent:
       "Our handyman team is trained in minor plumbing work, ensuring quick and effective solutions for your home’s plumbing needs.",
-    whyChooseBg: "https://i.imgur.com/Nq4e2IE.webp",
-    desktopWhyChooseBg: "https://i.imgur.com/Nq4e2IE.webp"
+    whyChooseBg: "https://i.postimg.cc/Pfb5F5CZ/i-Stock-1485512746-2-2-1.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/FKfKPbSs/i-Stock-1485512746-2-2.webp"
   },
 
   "painting": {
@@ -64,9 +64,9 @@ export const servicesData = {
     mainContent:
       "Whether you need a fresh coat of paint for a single room or an entire home makeover, we provide expert painting services with high-quality materials and precision.",
     images: {
-      hero: "https://i.imgur.com/E9JX8mU.webp",
-      desktopHero: "https://i.imgur.com/E9JX8mU.webp",
-      section: "https://i.imgur.com/E9JX8mU.webp",
+      hero: "https://i.postimg.cc/SsFmDBqD/i-Stock-2176183036-1-1-1-1.webp",
+      desktopHero: "https://i.postimg.cc/jjVVby9j/i-Stock-2176183036-2-1.webp",
+      section: "https://i.postimg.cc/hvXMv5QR/i-Stock-614845014-1-1.webp",
       overlay1: "https://i.imgur.com/E9JX8mU.webp",
       overlay2: "https://i.imgur.com/E9JX8mU.webp"
     },
@@ -82,8 +82,8 @@ export const servicesData = {
     providerTitle: "Our Painting Team",
     providerContent:
       "Our skilled painters take care of every detail, ensuring smooth and even coats with professional results.",
-    whyChooseBg: "https://i.imgur.com/E9JX8mU.webp",
-    desktopWhyChooseBg: "https://i.imgur.com/E9JX8mU.webp"
+    whyChooseBg: "https://i.postimg.cc/fRNFqM03/i-Stock-902771206-2-1.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/Y2PbZMTr/i-Stock-902771206-1.webp"
   },
 
   "moving": {
@@ -93,9 +93,9 @@ export const servicesData = {
     mainContent:
       "Moving can be stressful, but Captain Alvarado's Handyman is here to help! Whether you need assistance moving furniture within your home or loading and unloading a truck, we've got you covered.",
     images: {
-      hero: "https://i.imgur.com/3dPB1DX.webp",
-      desktopHero: "https://i.imgur.com/3dPB1DX.webp",
-      section: "https://i.imgur.com/3dPB1DX.webp",
+      hero: "https://i.postimg.cc/QxLnVjm6/i-Stock-2172319807-1.webp",
+      desktopHero: "https://i.postimg.cc/DZLLN3GZ/i-Stock-2172319807-3-1-1.webp",
+      section: "https://i.postimg.cc/6qhR9VYx/i-Stock-2172319807-3-1-2.webp",
       overlay1: "https://i.imgur.com/3dPB1DX.webp",
       overlay2: "https://i.imgur.com/3dPB1DX.webp"
     },
@@ -111,8 +111,8 @@ export const servicesData = {
     providerTitle: "Our Moving Team",
     providerContent:
       "Our team ensures that your belongings are handled with care and moved safely.",
-    whyChooseBg: "https://i.imgur.com/3dPB1DX.webp",
-    desktopWhyChooseBg: "https://i.imgur.com/3dPB1DX.webp"
+    whyChooseBg: "https://i.postimg.cc/zB8GqsM3/i-Stock-1822186572-2-1.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/sDV7T8gj/i-Stock-2172319807-3-2.webp"
   },
 
   "clean-outs": {
@@ -122,9 +122,9 @@ export const servicesData = {
     mainContent:
       "We offer professional clean-out services to help you remove junk, unwanted items, and clutter from garages, basements, attics, and rental properties. Whether you're preparing for a move or just need to declutter, we've got you covered.",
     images: {
-      hero: "https://i.imgur.com/Bu0AY4h.webp",
-      desktopHero: "https://i.imgur.com/Bu0AY4h.webp",
-      section: "https://i.imgur.com/Bu0AY4h.webp",
+      hero: "https://i.postimg.cc/B6S4rxLK/i-Stock-1652006029-1.webp",
+      desktopHero: "https://i.postimg.cc/gcBm7LYx/i-Stock-1652006029-2-1.webp",
+      section: "https://i.postimg.cc/nVshpGS4/i-Stock-2165677306-1.webp",
       overlay1: "https://i.imgur.com/Bu0AY4h.webp",
       overlay2: "https://i.imgur.com/Bu0AY4h.webp"
     },
@@ -140,8 +140,8 @@ export const servicesData = {
     providerTitle: "Our Clean-Out Crew",
     providerContent:
       "Our clean-out specialists are efficient and respectful, making the process quick and stress-free.",
-    whyChooseBg: "https://i.imgur.com/Bu0AY4h.webp",
-    desktopWhyChooseBg: "https://i.imgur.com/Bu0AY4h.webp"
+    whyChooseBg: "https://i.postimg.cc/PqrdcW88/i-Stock-2168980280-2.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/qMyBCMTg/i-Stock-2165677306-2-1.webp"
   }
 };
 export const locationsData = {
@@ -256,8 +256,8 @@ export const locationsData = {
   "arroyo-grande": {
     name: "Arroyo Grande",
     address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/Nq4e2IE.webp",
-    desktopImage: "https://i.imgur.com/Nq4e2IE.webp",
+    heroImage: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
+    desktopImage: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
     description:
       "Reliable handyman services in Arroyo Grande for home repairs, plumbing, painting, and moving assistance.",
     phone: "805-635-1774",
