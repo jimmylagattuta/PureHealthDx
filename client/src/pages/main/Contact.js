@@ -51,7 +51,7 @@ function Contact() {
       setIsSubmitting(true);
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        const response = await fetch('https://lightningseo.dev/contact', {
+        const response = await fetch('https://www.lightningseo.dev/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
