@@ -145,29 +145,11 @@ export const servicesData = {
   }
 };
 export const locationsData = {
-  "san-luis-obispo-county": {
-    name: "San Luis Obispo County",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/YCrJK72j.webp",
-    desktopImage: "https://i.imgur.com/YCrJK72j.webp",
-    description:
-      "Serving all cities in San Luis Obispo County with expert handyman services, including repairs, plumbing, painting, moving, and clean-outs.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
-  },
-
   "san-luis-obispo": {
     name: "San Luis Obispo",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/YCrJK72j.webp",
-    desktopImage: "https://i.imgur.com/YCrJK72j.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/nV3jF1JT/i-Stock-2094556981-2.webp",
+    desktopImage: "https://i.postimg.cc/nV3jF1JT/i-Stock-2094556981-2.webp",
     description:
       "Handyman services in San Luis Obispo for home repairs, plumbing, painting, moving, and more. Call now for fast and reliable service!",
     phone: "805-635-1774",
@@ -183,9 +165,9 @@ export const locationsData = {
 
   "paso-robles": {
     name: "Paso Robles",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/44rfgmjy.webp",
-    desktopImage: "https://i.imgur.com/44rfgmjy.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/qqFv8jBT/i-Stock-1049489054-1.webp",
+    desktopImage: "https://i.postimg.cc/qqFv8jBT/i-Stock-1049489054-1.webp",
     description:
       "Serving Paso Robles with top-quality handyman services, from home repairs to painting and plumbing solutions.",
     phone: "805-635-1774",
@@ -201,9 +183,9 @@ export const locationsData = {
 
   "atascadero": {
     name: "Atascadero",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/3dPB1DX.webp",
-    desktopImage: "https://i.imgur.com/3dPB1DX.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/G3gtwhF5/i-Stock-516959924-1.webp",
+    desktopImage: "https://i.postimg.cc/G3gtwhF5/i-Stock-516959924-1.webp",
     description:
       "Professional handyman services in Atascadero. We handle repairs, painting, plumbing, and moving assistance.",
     phone: "805-635-1774",
@@ -219,9 +201,9 @@ export const locationsData = {
 
   "grover-beach": {
     name: "Grover Beach",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/E9JX8mU.webp",
-    desktopImage: "https://i.imgur.com/E9JX8mU.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/TYZP17Hj/i-Stock-1393888873-1.webp",
+    desktopImage: "https://i.postimg.cc/TYZP17Hj/i-Stock-1393888873-1.webp",
     description:
       "Offering handyman services in Grover Beach, including plumbing, painting, and general repairs.",
     phone: "805-635-1774",
@@ -237,9 +219,9 @@ export const locationsData = {
 
   "nacimiento-lake": {
     name: "Nacimiento Lake",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/Bu0AY4h.webp",
-    desktopImage: "https://i.imgur.com/Bu0AY4h.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/MTTwdVFK/i-Stock-2128926068-2.webp",
+    desktopImage: "https://i.postimg.cc/MTTwdVFK/i-Stock-2128926068-2.webp",
     description:
       "Handyman services around Nacimiento Lake, specializing in repairs, painting, plumbing, and more.",
     phone: "805-635-1774",
@@ -256,8 +238,8 @@ export const locationsData = {
   "arroyo-grande": {
     name: "Arroyo Grande",
     address: "Service Area - No Physical Address",
-    heroImage: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
-    desktopImage: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
+    heroImage: "https://i.postimg.cc/4dSgMyDv/i-Stock-2199487207-1.webp",
+    desktopImage: "https://i.postimg.cc/4dSgMyDv/i-Stock-2199487207-1.webp",
     description:
       "Reliable handyman services in Arroyo Grande for home repairs, plumbing, painting, and moving assistance.",
     phone: "805-635-1774",
@@ -273,9 +255,9 @@ export const locationsData = {
 
   "morro-bay": {
     name: "Morro Bay",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/fwKirq6.webp",
-    desktopImage: "https://i.imgur.com/fwKirq6.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/Kc1kYM82/i-Stock-1214555403-1.webp",
+    desktopImage: "https://i.postimg.cc/Kc1kYM82/i-Stock-1214555403-1.webp",
     description:
       "Professional handyman solutions in Morro Bay. We provide expert repairs, painting, plumbing, and more.",
     phone: "805-635-1774",
@@ -291,9 +273,9 @@ export const locationsData = {
 
   "los-osos": {
     name: "Los Osos",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/opzf9qa.webp",
-    desktopImage: "https://i.imgur.com/opzf9qa.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/9Qhr1gtm/i-Stock-1155447718-1.webp",
+    desktopImage: "https://i.postimg.cc/9Qhr1gtm/i-Stock-1155447718-1.webp",
     description:
       "Providing handyman services in Los Osos, including plumbing, painting, repairs, and moving help.",
     phone: "805-635-1774",
@@ -309,9 +291,9 @@ export const locationsData = {
 
   "pismo-beach": {
     name: "Pismo Beach",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/6ujl0oA.webp",
-    desktopImage: "https://i.imgur.com/6ujl0oA.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/Xv2qjjMq/i-Stock-1024663932-1.webp",
+    desktopImage: "https://i.postimg.cc/Xv2qjjMq/i-Stock-1024663932-1.webp",
     description:
       "Serving Pismo Beach with handyman services, from home repairs to painting and plumbing.",
     phone: "805-635-1774",
@@ -327,9 +309,9 @@ export const locationsData = {
 
   "cayucos": {
     name: "Cayucos",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.imgur.com/3dPB1DX.webp",
-    desktopImage: "https://i.imgur.com/3dPB1DX.webp",
+    address: "Service Area",
+    heroImage: "https://i.postimg.cc/J0Xz5jsH/i-Stock-1454116303-1.webp",
+    desktopImage: "https://i.postimg.cc/J0Xz5jsH/i-Stock-1454116303-1.webp",
     description:
       "Handyman services in Cayucos, specializing in painting, plumbing, repairs, and moving help.",
     phone: "805-635-1774",

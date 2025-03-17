@@ -6,19 +6,19 @@ function PlaquesComponent() {
     {
       title: "Why Choose Us",
       description:
-        "At BCB Carts, our focus is on providing reliable electric carts with honest, personalized service. We take pride in our attention to detail and commitment to quality, ensuring you get a ride that meets your needs.",
+        "At Captain Alvarado's Handyman, we prioritize quality craftsmanship, reliability, and affordability. With years of experience, we ensure that every project is completed with precision and care, giving you peace of mind.",
       icon: "https://i.postimg.cc/d0TXq3Ff/i-Stock-2151690936-1.webp",
     },
     {
       title: "How We Can Help You",
       description:
-        "Our team works closely with you to understand your requirements, whether you're buying, renting, or upgrading an electric cart. We tailor our services to deliver solutions that fit your lifestyle or business perfectly.",
+        "From minor home repairs to plumbing, painting, and moving assistance, our team provides a wide range of handyman services tailored to meet your needs. We take pride in delivering professional and efficient solutions for homeowners.",
       icon: "https://i.postimg.cc/NMWrYD13/i-Stock-2151690936-2.webp",
     },
     {
       title: "See the Difference",
       description:
-        "Quality matters. With a focus on meticulous maintenance and custom upgrades, we ensure every cart meets high standards of performance and style. Discover the BCB Carts difference through our attentive service.",
+        "We stand out by offering meticulous attention to detail, timely service, and customer satisfaction as our top priorities. Discover the Captain Alvarado’s Handyman difference with our expert solutions designed for your home.",
       icon: "https://i.postimg.cc/FzVcZcLw/i-Stock-2151690936-3.webp",
     },
   ];

@@ -5,55 +5,37 @@ import "./OurServicesComponent.css";
 function OurServicesComponent() {
   const navigate = useNavigate();
 
-  const treatments = [
+  const services = [
     {
-      title: "Cart Sales",
-      description: `Discover our premium electric carts for sale. Our selection combines performance and style, perfectly suited for personal enjoyment or business use.`,
-      link: "/services/cart-sales",
-      image: "https://i.postimg.cc/LsnyV6vK/i-Stock-1473284753-1.webp",
+      title: "Home Repairs",
+      description: "Reliable home repair services to keep your property in top shape. We fix everything from drywall to small electrical issues.",
+      link: "/services/home-repairs",
+      image: "https://i.postimg.cc/Njq22z27/i-Stock-586932394-4-1-1.webp",
     },
     {
-      title: "Cart Rentals",
-      description: `Experience hassle-free electric cart rentals for events, resorts, or daily operations. Enjoy reliable vehicles and competitive rates tailored to your needs.`,
-      link: "/services/cart-rentals",
-      image: "https://i.postimg.cc/kG9FLnN5/i-Stock-2084733637-1-1-1.webp",
+      title: "Plumbing Services",
+      description: "Expert plumbing solutions for minor leaks, faucet installations, drain unclogging, and general plumbing repairs.",
+      link: "/services/plumbing",
+      image: "https://i.postimg.cc/C1qzKCM6/i-Stock-1485512746-1-1.webp",
     },
     {
-      title: "Installs",
-      description: `Our professional installation service ensures that your new or upgraded electric cart is set up safely and efficiently, so you can hit the road with confidence.`,
-      link: "/services/installs",
-      image: "https://i.postimg.cc/SKfKDkKd/i-Stock-2160725825-1-1-1.webp",
+      title: "Painting Services",
+      description: "Interior and exterior painting services to refresh your home with a clean, professional finish.",
+      link: "/services/painting",
+      image: "https://i.postimg.cc/SsFmDBqD/i-Stock-2176183036-1-1-1-1.webp",
     },
     {
-      title: "Lithium Battery Upgrades",
-      description: `Upgrade your electric cart with advanced lithium battery solutions for extended run times, faster charging, and improved overall performance.`,
-      link: "/services/lithium",
-      image: "https://i.postimg.cc/zGnDG8TN/i-Stock-1423584811-1-1.webp",
+      title: "Moving Assistance",
+      description: "Reliable moving help, including furniture relocation, packing assistance, and heavy lifting.",
+      link: "/services/moving",
+      image: "https://i.postimg.cc/QxLnVjm6/i-Stock-2172319807-1.webp",
     },
     {
-      title: "Parts & Accessories",
-      description: `Keep your electric cart in peak condition with our wide selection of quality parts and accessories, designed to enhance performance and longevity.`,
-      link: "/services/parts",
-      image: "https://i.postimg.cc/zvb8Zrq9/i-Stock-1347150429-1-1.webp",
-    },
-    {
-      title: "Pressure Wash",
-      description: `Revitalize your electric cart with our professional pressure wash services that remove dirt and grime, ensuring a clean, attractive appearance.`,
-      link: "/services/pressure-wash",
-      image: "https://i.postimg.cc/VLtmKmGt/i-Stock-1782267405-1-1.webp",
-    },
-    {
-      title: "Custom Weld",
-      description: `Enhance your cart’s design and performance with our custom weld and fabrication services, tailored to your unique vision and requirements.`,
-      link: "/services/custom-weld",
-      image: "https://i.postimg.cc/G2Nnj5vz/i-Stock-1359352103-1-1.webp",
-    },
-    {
-      title: "Electronics",
-      description: `Modernize your ride with cutting-edge electronics upgrades. From advanced control systems to integrated audio, transform your cart into a smart, efficient vehicle.`,
-      link: "/services/electronics",
-      image: "https://i.postimg.cc/4xZytYfy/i-Stock-2174489444-1-1.webp",
-    },
+      title: "Clean-Out Services",
+      description: "Fast and efficient clean-out services for garages, attics, rental properties, and more.",
+      link: "/services/clean-outs",
+      image: "https://i.postimg.cc/B6S4rxLK/i-Stock-1652006029-1.webp",
+    }
   ];
 
   return (
@@ -65,35 +47,35 @@ function OurServicesComponent() {
         <div style={{ backgroundColor: "rgb(37, 54, 53)" }} className="line"></div>
       </div>
 
-      <p className="our-services-slogan">Drive with Confidence, Ride with Style.</p>
+      <p className="our-services-slogan">Quality Work, Honest Service, Affordable Prices.</p>
 
       {/* Cards */}
-      {treatments.map((treatment, index) => (
+      {services.map((service, index) => (
         <div
           key={index}
           className="service-card"
-          onClick={() => navigate(treatment.link)}
+          onClick={() => navigate(service.link)}
         >
           {/* FRONT (Desktop Default) */}
           <div className="service-front">
             <img
-              src={treatment.image}
-              alt={treatment.title}
+              src={service.image}
+              alt={service.title}
               className="service-image"
             />
-            <h2 className="service-title">{treatment.title}</h2>
-            <p className="service-link">Learn More About {treatment.title}</p>
+            <h2 className="service-title">{service.title}</h2>
+            <p className="service-link">Learn More About {service.title}</p>
           </div>
 
           {/* BACK (Desktop Hover, Mobile Default) */}
           <div className="service-back">
             <img
-              src={treatment.image}
-              alt={treatment.title}
+              src={service.image}
+              alt={service.title}
               className="service-image-back"
             />
-            <p className="service-description">{treatment.description}</p>
-            <p className="service-link">Learn More About {treatment.title}</p>
+            <p className="service-description">{service.description}</p>
+            <p className="service-link">Learn More About {service.title}</p>
           </div>
         </div>
       ))}

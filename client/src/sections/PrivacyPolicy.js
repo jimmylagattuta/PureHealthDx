@@ -9,26 +9,26 @@ const PrivacyPolicy = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Privacy Policy & Terms and Conditions",
-    "url": "https://bcbcarts.com/privacy-policy",
-    "description": "Review the Privacy Policy and Terms and Conditions for BCB Carts to learn how we handle your personal data and what rules apply when using our services.",
+    "url": "https://captainalvaradohandyman.com/privacy-policy",
+    "description": "Review the Privacy Policy and Terms and Conditions for Captain Alvarado's Handyman to learn how we handle your personal data and what rules apply when using our services.",
     "publisher": {
       "@type": "Organization",
-      "name": "BCB Carts",
+      "name": "Captain Alvarado's Handyman",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.bcbcarts.com/BCBLogo.jpg"
+        "url": "https://i.postimg.cc/8zTwpFPD/Screenshot-2025-03-14-020908-1.webp"
       },
-      "email": "mebcb@yahoo.com",
+      "email": "elgatofrmcuba81@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Main Street",
-        "addressLocality": "Long Beach",
+        "streetAddress": "San Luis Obispo County",
+        "addressLocality": "San Luis Obispo",
         "addressRegion": "CA",
-        "postalCode": "90802",
+        "postalCode": "93401",
         "addressCountry": "US"
       }
     },
-    "dateModified": "2022-08-04"
+    "dateModified": "2025-03-16"
   };
 
   return (
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
         <div className="privacy-policy-content">
           {/* Privacy Policy Section */}
           <h1>Privacy Policy</h1>
-          <p className="last-updated">Last updated: August 04, 2022</p>
+          <p className="last-updated">Last updated: March 16, 2025</p>
           <p>
             This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use our Service and explains your privacy rights and how the law protects you.
           </p>
@@ -61,12 +61,11 @@ const PrivacyPolicy = () => {
               <strong>Account:</strong> A unique account created for you to access our Service or parts of our Service.
             </li>
             <li>
-              <strong>Business:</strong> Refers to BCB Carts, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
+              <strong>Business:</strong> Refers to Captain Alvarado's Handyman, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
             </li>
             <li>
-              <strong>Company:</strong> Refers to BCB Carts.
+              <strong>Company:</strong> Refers to Captain Alvarado's Handyman.
             </li>
-            {/* Additional definitions as needed */}
           </ul>
           <p>
             ... (Privacy Policy content continues) ...
@@ -74,7 +73,7 @@ const PrivacyPolicy = () => {
 
           {/* Terms & Conditions Section */}
           <h1>Terms and Conditions</h1>
-          <p className="last-updated">Last updated: August 04, 2022</p>
+          <p className="last-updated">Last updated: March 16, 2025</p>
           <p>
             Please read these Terms and Conditions carefully before using our Service.
           </p>
@@ -95,9 +94,8 @@ const PrivacyPolicy = () => {
               <strong>Country:</strong> Refers to the United States.
             </li>
             <li>
-              <strong>Company:</strong> Refers to BCB Carts.
+              <strong>Company:</strong> Refers to Captain Alvarado's Handyman.
             </li>
-            {/* Additional definitions as needed */}
           </ul>
           <p>
             ... (Terms & Conditions content continues) ...
@@ -106,9 +104,8 @@ const PrivacyPolicy = () => {
             If you have any questions about these Terms and Conditions, you can contact us:
           </p>
           <p>
-            By email:{" "}
-            <a href="mailto:mebcb@yahoo.com">
-              mebcb@yahoo.com
+            <a href="mailto:elgatofrmcuba81@gmail.com">
+              By email {" "}
             </a>
           </p>
         </div>
