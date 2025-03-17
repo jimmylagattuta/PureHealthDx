@@ -14,8 +14,7 @@ class ContactMailer < ApplicationMailer
   
       mail(
         to: 'jimmy.lagattuta@gmail.com', # Replace with your receiving email
-        cc: 'Elgatofrmcuba81@gmail.com',
-        subject: "CAH: New Submission for Captain Alvarado's Handyman Contact Us Form"
+        subject: "LSD: New Submission for LightningSEO.dev Contact Us Form"
       )
     end
   end
