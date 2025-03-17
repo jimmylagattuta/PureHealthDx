@@ -48,7 +48,7 @@ function Contact() {
       setIsSubmitting(true);
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        const response = await fetch('https://www.captainalvaradoshandyman.com/contact', {
+        const response = await fetch('https://lightningseo.dev/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -59,13 +59,13 @@ function Contact() {
 
         if (response.ok) {
           setSubmitted(true);
-          console.log('Email sent successfully:', formData);
+          console.log('Message sent successfully:', formData);
         } else {
-          console.error('Email sending failed', response);
+          console.error('Message sending failed', response);
           alert('There was an error sending your message. Please try again later.');
         }
       } catch (error) {
-        console.error('Error sending email:', error);
+        console.error('Error sending message:', error);
         alert('There was an error sending your message. Please try again later.');
       } finally {
         setIsSubmitting(false);
@@ -78,8 +78,10 @@ function Contact() {
   return (
     <div className="contact-section">
       <div className="contact-section-header">
-        <h2>Contact Captain Alvarado's Handyman</h2>
-        <p>If you have any inquiries, concerns, or comments regarding our handyman services, please fill out the short contact form below.</p>
+        <h2>Contact Lightning SEO</h2>
+        <p>
+          If you have any inquiries about our SEO, web development, mobile app, or Apple Watch app services, please fill out the short contact form below.
+        </p>
       </div>
       {!submitted ? (
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -159,7 +161,7 @@ function Contact() {
               required
             />
             <label htmlFor="agreement">
-              By submitting this form, I understand that my information will be used to contact me regarding my inquiry.
+              By submitting this form, I consent to having Lightning SEO contact me regarding my inquiry.
             </label>
             {errors.agreement && <span className="error-message">{errors.agreement}</span>}
           </div>

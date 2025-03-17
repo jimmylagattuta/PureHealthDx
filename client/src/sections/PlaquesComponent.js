@@ -6,19 +6,19 @@ function PlaquesComponent() {
     {
       title: "Why Choose Us",
       description:
-        "At Captain Alvarado's Handyman, we prioritize quality craftsmanship, reliability, and affordability. With years of experience, we ensure that every project is completed with precision and care, giving you peace of mind.",
+        "At Lightning SEO, we prioritize innovative strategies, data-driven insights, and measurable results. With years of industry experience, we deliver digital solutions that are reliable, affordable, and designed to drive your online growth.",
       icon: "https://i.postimg.cc/d0TXq3Ff/i-Stock-2151690936-1.webp",
     },
     {
       title: "How We Can Help You",
       description:
-        "From minor home repairs to plumbing, painting, and moving assistance, our team provides a wide range of handyman services tailored to meet your needs. We take pride in delivering professional and efficient solutions for homeowners.",
+        "From comprehensive SEO audits and technical optimizations to custom website development, mobile app creation, and Apple Watch app development, our team offers a full suite of digital services tailored to boost your online presence and drive results.",
       icon: "https://i.postimg.cc/NMWrYD13/i-Stock-2151690936-2.webp",
     },
     {
       title: "See the Difference",
       description:
-        "We stand out by offering meticulous attention to detail, timely service, and customer satisfaction as our top priorities. Discover the Captain Alvarado’s Handyman difference with our expert solutions designed for your home.",
+        "We stand out with our commitment to innovation, meticulous attention to detail, and exceptional customer service. Experience the Lightning SEO difference that transforms your digital presence and propels sustainable growth.",
       icon: "https://i.postimg.cc/FzVcZcLw/i-Stock-2151690936-3.webp",
     },
   ];

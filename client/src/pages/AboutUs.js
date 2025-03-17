@@ -16,32 +16,21 @@ const AboutUs = () => {
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Captain Alvarado's Handyman",
-    "url": "https://captainalvaradohandyman.com/about-us",
-    "logo": "https://i.imgur.com/YCrJK72j.webp",
+    "name": "Lightning SEO",
+    "url": "https://lightningseo.dev/about-us",
+    "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp",
     "description":
-      "Captain Alvarado's Handyman provides expert home repair, plumbing, painting, moving assistance, and clean-out services throughout San Luis Obispo County. Reliable, affordable, and professional solutions for your home and business needs.",
+      "Lightning SEO is a full-service digital marketing agency specializing in affordable, high-performance SEO solutions, custom website development, mobile app development, and Apple Watch app development. We deliver measurable growth and a robust online presence for businesses of all sizes.",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "805-635-1774",
+      "telephone": "+1-000-000-0000",
       "contactType": "Customer Service",
-      "availableLanguage": ["English"]
+      "availableLanguage": ["English"],
+      "email": "jimmy.lagattuta@gmail.com"
     },
-    "areaServed": [
-      "San Luis Obispo",
-      "Paso Robles",
-      "Atascadero",
-      "Grover Beach",
-      "Nacimiento Lake",
-      "Arroyo Grande",
-      "Morro Bay",
-      "Los Osos",
-      "Pismo Beach",
-      "Cayucos"
-    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Handyman Services",
+      "name": "Digital Services",
       "itemListElement": servicesArray.map((service, index) => ({
         "@type": "Offer",
         "position": index + 1,
@@ -49,7 +38,7 @@ const AboutUs = () => {
           "@type": "Service",
           "name": service.title,
           "description": service.shortDescription,
-          "url": `https://captainalvaradohandyman.com/services/${service.id}`
+          "url": `https://lightningseo.dev/services/${service.id}`
         }
       }))
     }
@@ -66,9 +55,9 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="aboutus-hero">
         <div className="aboutus-hero-overlay">
-          <h1 className="aboutus-hero-title">Welcome to Captain Alvarado's Handyman!</h1>
+          <h1 className="aboutus-hero-title">Welcome to Lightning SEO!</h1>
           <p className="aboutus-hero-subtitle">
-            Reliable, Professional, and Affordable Handyman Services
+            Affordable, High-Performance Digital Solutions for Your Business
           </p>
         </div>
       </section>
@@ -78,27 +67,27 @@ const AboutUs = () => {
         <h2 className="aboutus-heading">About Us</h2>
         <div className="aboutus-content">
           <div className="aboutus-card">
-            <h3>Why Choose Us</h3>
+            <h3>Why Choose Lightning SEO</h3>
             <p>
-              With extensive experience in home repairs and maintenance, Captain Alvarado's Handyman is committed to delivering high-quality services with professionalism and care. We understand the importance of keeping your home in top shape, and we’re here to help.
+              At Lightning SEO, we blend innovative SEO strategies with advanced digital development to help your business thrive online. Our mission is to deliver measurable results through data-driven insights and tailored solutions that drive traffic and conversions.
             </p>
           </div>
           <div className="aboutus-card">
-            <h3>How We Can Help You</h3>
+            <h3>Our Approach</h3>
             <p>
-              Whether you need minor plumbing repairs, a fresh coat of paint, moving assistance, or a complete home clean-out, our skilled team is ready to tackle your home improvement projects. We offer reliable and affordable solutions tailored to your needs.
+              We begin with a comprehensive analysis of your current digital presence, followed by a custom strategy that combines on-page, technical, and local SEO with modern website and app development. Every solution is designed to maximize performance, boost search rankings, and engage your target audience.
             </p>
           </div>
           <div className="aboutus-card">
-            <h3>See the Difference</h3>
+            <h3>The Difference We Make</h3>
             <p>
-              Our attention to detail and dedication to customer satisfaction sets us apart. Every repair, installation, and project we handle is done with precision and care, ensuring lasting results.
+              Our commitment to quality, transparency, and continuous improvement sets us apart. We work closely with you to ensure that every project not only meets but exceeds your expectations—helping you achieve a strong online presence and sustainable growth.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services for SEO */}
+      {/* Our Services Section */}
       <section className="aboutus-services">
         <h2 className="aboutus-services-title">Our Services</h2>
         <div className="aboutus-services-grid">
@@ -118,6 +107,7 @@ const AboutUs = () => {
           ))}
         </div>
       </section>
+
       <Contact />
       <FooterComponent />
     </div>

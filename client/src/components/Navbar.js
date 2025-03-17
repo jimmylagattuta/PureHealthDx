@@ -14,9 +14,7 @@ function Navbar() {
   const toggleMenu = () => {
     if (isMobile) {
       setIsOpen(!isOpen);
-      if (isOpen) {
-        setSubMenuOpen(false);
-      }
+      if (isOpen) setSubMenuOpen(false);
     }
   };
 
@@ -27,50 +25,39 @@ function Navbar() {
     setSubMenuOpen(false);
   };
 
-  // New handler for "Send Us An Email!" that checks current pathname
+  // Scroll to Contact Form if on the same page, otherwise navigate
   const handleContactClick = () => {
     const targetHash = "#contactForm";
-    if (location.pathname.startsWith("/locations")) {
-      // If already on locations page, scroll smoothly to contact form
+    if (location.pathname.startsWith("/contact")) {
       const element = document.getElementById("contactForm");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      if (element) element.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Otherwise, navigate to locations page with hash
-      navigate(`/locations${targetHash}`);
+      navigate(`/contact${targetHash}`);
     }
     setIsOpen(false);
     setSubMenuOpen(false);
   };
 
-  // For mobile: click on "Services" toggles sub-menu
+  // Handle Services submenu for mobile (click to toggle)
   const handleServicesClick = () => {
-    if (isMobile) {
-      setSubMenuOpen(!subMenuOpen);
-    }
+    if (isMobile) setSubMenuOpen(!subMenuOpen);
   };
 
-  // For desktop: hover over "Services" or its submenu to show it
+  // Handle Services submenu for desktop (hover to open)
   const handleServicesEnter = () => {
     if (!isMobile) {
-      if (hoverTimeout.current) {
-        clearTimeout(hoverTimeout.current);
-      }
+      clearTimeout(hoverTimeout.current);
       setSubMenuOpen(true);
     }
   };
 
-  // For desktop: add a delay before closing the submenu
   const handleServicesLeave = () => {
     if (!isMobile) {
-      hoverTimeout.current = setTimeout(() => {
-        setSubMenuOpen(false);
-      }, 300);
+      hoverTimeout.current = setTimeout(() => setSubMenuOpen(false), 300);
     }
   };
 
-  // On window resize, determine if we're in mobile view
+  // Update mobile state on window resize
   useEffect(() => {
     const handleResize = () => {
       const mobileView = window.innerWidth < 769;
@@ -87,23 +74,23 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Brand: Logo + Desktop Company Name (clickable to home) */}
+        {/* Brand: Logo + Company Name */}
         <div className="navbar-brand">
           <div className="navbar-logo" onClick={() => handleNavItemClick('/')}>
             <img
-              src="https://i.postimg.cc/8zTwpFPD/Screenshot-2025-03-14-020908-1.webp"
-              alt="Company Logo"
+              src="https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
+              alt="Lightning SEO Logo"
               loading="eager"
               height="65"
-              width="35"
+              width="85"
             />
           </div>
           <div className="company-name-desktop" onClick={() => handleNavItemClick('/')}>
-            Captain Alvarado's Handyman
+            LightningSEO.dev
           </div>
         </div>
 
-        {/* Mobile burger icon (hidden on desktop) */}
+        {/* Mobile Menu Icon */}
         {isMobile && (
           <div className="menu-icon" onClick={toggleMenu}>
             <div className={isOpen ? 'bar change' : 'bar'}></div>
@@ -112,7 +99,7 @@ function Navbar() {
           </div>
         )}
 
-        {/* Main Nav Menu: visible if open on mobile, or always on desktop */}
+        {/* Navigation Links */}
         <ul className={`nav-menu ${isOpen || !isMobile ? 'active' : ''}`}>
           <li
             className="nav-item services-link"
@@ -140,10 +127,15 @@ function Navbar() {
             )}
           </li>
 
-          <li className="nav-item locations-link" onClick={() => handleNavItemClick('/locations')}>
-            Locations
+          <li className="nav-item pricing-link" onClick={() => handleNavItemClick('/pricing')}>
+            Pricing
           </li>
 
+          <li className="nav-item reviews-link" onClick={() => handleNavItemClick('/reviews')}>
+            Reviews
+          </li>
+
+          {/* Removed Locations Link */}
           <li className="nav-item faq-link" onClick={() => handleNavItemClick('/faq')}>
             FAQ
           </li>
@@ -153,7 +145,7 @@ function Navbar() {
           </li>
 
           <li className="nav-item book-appointment" onClick={handleContactClick}>
-            Send Us An Email!
+            Free SEO Audit
           </li>
         </ul>
       </div>

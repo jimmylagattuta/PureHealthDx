@@ -1,149 +1,182 @@
-export const servicesData = {
-  "home-repairs": {
-    title: "Home Repairs",
-    shortDescription:
-      "Reliable home repair services to keep your property in top shape. We fix everything from drywall to small electrical issues.",
-    mainContent:
-      "Captain Alvarado's Handyman offers expert home repair services, covering everything from drywall patching and minor electrical fixes to general maintenance. Our goal is to help homeowners keep their houses in the best condition possible. No job is too small—we handle every task with professionalism and care.",
-    images: {
-      hero: "https://i.postimg.cc/Njq22z27/i-Stock-586932394-4-1-1.webp",
-      desktopHero: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
-      section: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
-      overlay1: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
-      overlay2: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp"
-    },
-    whyChooseTitle: "Why Choose Our Home Repair Services?",
-    whyChooseContent:
-      "We provide fast, reliable, and affordable handyman services to keep your home in excellent condition. With years of experience, we guarantee quality work.",
-    helpTitle: "Our Home Repair Solutions",
-    helpList: [
-      "Drywall patching & repairs",
-      "Minor electrical & plumbing fixes",
-      "General home maintenance"
-    ],
-    providerTitle: "Our Handyman Team",
-    providerContent:
-      "Our experienced handyman professionals are skilled in various trades, ensuring that your repairs are completed efficiently and correctly.",
-    whyChooseBg: "https://i.postimg.cc/YS64xC7X/i-Stock-480476713-1-1-1.webp",
-    desktopWhyChooseBg: "https://i.postimg.cc/mDVt0ptC/i-Stock-480476713-2-1.webp"
+export const projectsData = {
+  "project-alpha": {
+    name: "Project Alpha",
+    address: "E-Commerce Website",
+    heroImage: "https://yourdomain.com/path-to-project-alpha-hero.webp",
+    desktopImage: "https://yourdomain.com/path-to-project-alpha-desktop.webp",
+    description:
+      "Project Alpha is a state-of-the-art e-commerce website developed with a focus on responsive design, high performance, and integrated SEO strategies. The project features seamless navigation and optimized content to drive online sales and conversions.",
+    phone: "N/A",
+    email: "info@projectalpha.com",
+    website: "https://projectalpha.com",
+    servicesOffered: [
+      "Website Development",
+      "On-Page SEO",
+      "Technical SEO",
+      "Content Strategy"
+    ]
   },
-
-  "plumbing": {
-    title: "Plumbing Services",
-    shortDescription:
-      "Expert plumbing solutions for minor leaks, faucet installations, drain unclogging, and general plumbing repairs.",
-    mainContent:
-      "We provide quick and efficient plumbing services, ensuring your home's water systems function smoothly. Whether it's a dripping faucet, a clogged drain, or minor pipe repairs, Captain Alvarado's Handyman is here to help.",
-    images: {
-      hero: "https://i.postimg.cc/C1qzKCM6/i-Stock-1485512746-1-1.webp",
-      desktopHero: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
-      section: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
-      overlay1: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp",
-      overlay2: "https://i.postimg.cc/L5k5tH1t/i-Stock-1485512746-2-1.webp"
-    },
-    whyChooseTitle: "Why Choose Our Plumbing Services?",
-    whyChooseContent:
-      "We specialize in minor plumbing repairs with a fast response time and affordable pricing, so you don’t have to call an expensive plumber for small jobs.",
-    helpTitle: "Our Plumbing Solutions",
-    helpList: [
-      "Fixing leaks and drips",
-      "Unclogging drains",
-      "Replacing faucets and fixtures"
-    ],
-    providerTitle: "Our Plumbing Experts",
-    providerContent:
-      "Our handyman team is trained in minor plumbing work, ensuring quick and effective solutions for your home’s plumbing needs.",
-    whyChooseBg: "https://i.postimg.cc/Pfb5F5CZ/i-Stock-1485512746-2-2-1.webp",
-    desktopWhyChooseBg: "https://i.postimg.cc/FKfKPbSs/i-Stock-1485512746-2-2.webp"
+  "project-beta": {
+    name: "Project Beta",
+    address: "Mobile & Web App",
+    heroImage: "https://yourdomain.com/path-to-project-beta-hero.webp",
+    desktopImage: "https://yourdomain.com/path-to-project-beta-desktop.webp",
+    description:
+      "Project Beta is a cross-platform mobile and web application designed for a tech startup. This project includes native mobile app development and a dynamic web application, all optimized with best-practice SEO techniques to boost visibility and user engagement.",
+    phone: "N/A",
+    email: "info@projectbeta.com",
+    website: "https://projectbeta.com",
+    servicesOffered: [
+      "Mobile App Development",
+      "Web Application Development",
+      "SEO Consulting"
+    ]
   },
-
-  "painting": {
-    title: "Painting Services",
-    shortDescription:
-      "Interior and exterior painting services to refresh your home with a clean, professional finish.",
-    mainContent:
-      "Whether you need a fresh coat of paint for a single room or an entire home makeover, we provide expert painting services with high-quality materials and precision.",
-    images: {
-      hero: "https://i.postimg.cc/SsFmDBqD/i-Stock-2176183036-1-1-1-1.webp",
-      desktopHero: "https://i.postimg.cc/jjVVby9j/i-Stock-2176183036-2-1.webp",
-      section: "https://i.postimg.cc/hvXMv5QR/i-Stock-614845014-1-1.webp",
-      overlay1: "https://i.imgur.com/E9JX8mU.webp",
-      overlay2: "https://i.imgur.com/E9JX8mU.webp"
-    },
-    whyChooseTitle: "Why Choose Our Painting Services?",
-    whyChooseContent:
-      "We provide high-quality, even paint coverage with expert precision, making sure your home looks fresh and new.",
-    helpTitle: "Our Painting Services",
-    helpList: [
-      "Interior wall painting",
-      "Exterior home painting",
-      "Trim, door, and detail work"
-    ],
-    providerTitle: "Our Painting Team",
-    providerContent:
-      "Our skilled painters take care of every detail, ensuring smooth and even coats with professional results.",
-    whyChooseBg: "https://i.postimg.cc/fRNFqM03/i-Stock-902771206-2-1.webp",
-    desktopWhyChooseBg: "https://i.postimg.cc/Y2PbZMTr/i-Stock-902771206-1.webp"
-  },
-
-  "moving": {
-    title: "Moving Assistance",
-    shortDescription:
-      "Reliable moving help, including furniture relocation, packing assistance, and heavy lifting.",
-    mainContent:
-      "Moving can be stressful, but Captain Alvarado's Handyman is here to help! Whether you need assistance moving furniture within your home or loading and unloading a truck, we've got you covered.",
-    images: {
-      hero: "https://i.postimg.cc/QxLnVjm6/i-Stock-2172319807-1.webp",
-      desktopHero: "https://i.postimg.cc/DZLLN3GZ/i-Stock-2172319807-3-1-1.webp",
-      section: "https://i.postimg.cc/6qhR9VYx/i-Stock-2172319807-3-1-2.webp",
-      overlay1: "https://i.imgur.com/3dPB1DX.webp",
-      overlay2: "https://i.imgur.com/3dPB1DX.webp"
-    },
-    whyChooseTitle: "Why Choose Our Moving Help?",
-    whyChooseContent:
-      "We offer affordable, reliable moving services without the hassle of expensive moving companies.",
-    helpTitle: "Our Moving Services",
-    helpList: [
-      "Furniture relocation",
-      "Heavy lifting & loading",
-      "Packing & organization"
-    ],
-    providerTitle: "Our Moving Team",
-    providerContent:
-      "Our team ensures that your belongings are handled with care and moved safely.",
-    whyChooseBg: "https://i.postimg.cc/zB8GqsM3/i-Stock-1822186572-2-1.webp",
-    desktopWhyChooseBg: "https://i.postimg.cc/sDV7T8gj/i-Stock-2172319807-3-2.webp"
-  },
-
-  "clean-outs": {
-    title: "Clean-Out Services",
-    shortDescription:
-      "Fast and efficient clean-out services for garages, attics, rental properties, and more.",
-    mainContent:
-      "We offer professional clean-out services to help you remove junk, unwanted items, and clutter from garages, basements, attics, and rental properties. Whether you're preparing for a move or just need to declutter, we've got you covered.",
-    images: {
-      hero: "https://i.postimg.cc/B6S4rxLK/i-Stock-1652006029-1.webp",
-      desktopHero: "https://i.postimg.cc/gcBm7LYx/i-Stock-1652006029-2-1.webp",
-      section: "https://i.postimg.cc/nVshpGS4/i-Stock-2165677306-1.webp",
-      overlay1: "https://i.imgur.com/Bu0AY4h.webp",
-      overlay2: "https://i.imgur.com/Bu0AY4h.webp"
-    },
-    whyChooseTitle: "Why Choose Our Clean-Out Services?",
-    whyChooseContent:
-      "We provide fast, professional clean-outs for homes, rental properties, and storage spaces, ensuring a hassle-free experience.",
-    helpTitle: "Our Clean-Out Services",
-    helpList: [
-      "Garage & attic clean-outs",
-      "Rental property clean-ups",
-      "Junk removal & hauling"
-    ],
-    providerTitle: "Our Clean-Out Crew",
-    providerContent:
-      "Our clean-out specialists are efficient and respectful, making the process quick and stress-free.",
-    whyChooseBg: "https://i.postimg.cc/PqrdcW88/i-Stock-2168980280-2.webp",
-    desktopWhyChooseBg: "https://i.postimg.cc/qMyBCMTg/i-Stock-2165677306-2-1.webp"
+  "project-gamma": {
+    name: "Project Gamma",
+    address: "Corporate Website & App",
+    heroImage: "https://yourdomain.com/path-to-project-gamma-hero.webp",
+    desktopImage: "https://yourdomain.com/path-to-project-gamma-desktop.webp",
+    description:
+      "Project Gamma is a comprehensive digital transformation project for a corporate client. It features a modern corporate website and a complementary mobile app, both built with a focus on performance, responsive design, and robust SEO to drive sustainable growth.",
+    phone: "N/A",
+    email: "info@projectgamma.com",
+    website: "https://projectgamma.com",
+    servicesOffered: [
+      "Website Development",
+      "Mobile App Development",
+      "Technical SEO",
+      "Digital Marketing"
+    ]
   }
 };
+
+
+export const servicesData = {
+  "on-page-seo": {
+    title: "On-Page SEO Optimization",
+    shortDescription: "Optimize your website’s content, meta tags, and structure for higher search engine rankings.",
+    mainContent:
+      "Our on-page SEO service includes thorough keyword research, meta tag optimization, content restructuring, and strategic internal linking to boost your site’s visibility and engagement.",
+    images: {
+      hero: "https://example.com/on-page-seo-hero.webp",
+      desktopHero: "https://example.com/on-page-seo-desktop.webp",
+      section: "https://example.com/on-page-seo-section.webp"
+    }
+  },
+  "technical-seo": {
+    title: "Technical SEO & Website Performance",
+    shortDescription: "Improve your website’s technical health and speed for better crawlability and user experience.",
+    mainContent:
+      "We address issues like slow loading times, mobile responsiveness, structured data, and crawl errors to ensure your website meets the technical criteria for top search rankings.",
+    images: {
+      hero: "https://example.com/technical-seo-hero.webp",
+      desktopHero: "https://example.com/technical-seo-desktop.webp",
+      section: "https://example.com/technical-seo-section.webp"
+    }
+  },
+  "local-seo": {
+    title: "Local SEO Solutions",
+    shortDescription: "Boost your local visibility with targeted strategies that drive nearby traffic.",
+    mainContent:
+      "Our local SEO service optimizes your Google My Business profile, builds local citations, and leverages geo-specific keywords to make your business visible to local customers.",
+    images: {
+      hero: "https://example.com/local-seo-hero.webp",
+      desktopHero: "https://example.com/local-seo-desktop.webp",
+      section: "https://example.com/local-seo-section.webp"
+    }
+  },
+  "content-seo": {
+    title: "Content SEO & Strategy",
+    shortDescription: "Develop and optimize content that resonates with your audience and search engines.",
+    mainContent:
+      "We create a customized content strategy that includes keyword-rich articles, engaging blog posts, and optimized landing pages to improve organic traffic and user retention.",
+    images: {
+      hero: "https://example.com/content-seo-hero.webp",
+      desktopHero: "https://example.com/content-seo-desktop.webp",
+      section: "https://example.com/content-seo-section.webp"
+    }
+  },
+  "link-building": {
+    title: "Link Building & Off-Page SEO",
+    shortDescription: "Enhance your site’s authority with high-quality backlinks from trusted sources.",
+    mainContent:
+      "Our link building service focuses on acquiring quality backlinks through strategic outreach, guest posting, and influencer partnerships to boost your domain authority.",
+    images: {
+      hero: "https://example.com/link-building-hero.webp",
+      desktopHero: "https://example.com/link-building-desktop.webp",
+      section: "https://example.com/link-building-section.webp"
+    }
+  },
+  "seo-audit": {
+    title: "Comprehensive SEO Audits",
+    shortDescription: "Identify opportunities and issues with an in-depth SEO analysis.",
+    mainContent:
+      "Our SEO audits cover both on-page and technical aspects, providing detailed insights and actionable recommendations to improve your website’s performance and search engine rankings.",
+    images: {
+      hero: "https://example.com/seo-audit-hero.webp",
+      desktopHero: "https://example.com/seo-audit-desktop.webp",
+      section: "https://example.com/seo-audit-section.webp"
+    }
+  },
+  "seo-consulting": {
+    title: "SEO Consulting & Strategy Development",
+    shortDescription: "Tailor-made SEO strategies to meet your unique business goals.",
+    mainContent:
+      "We offer personalized SEO consulting, including competitive analysis, strategy formulation, and continuous performance tracking to ensure your SEO efforts deliver measurable results.",
+    images: {
+      hero: "https://example.com/seo-consulting-hero.webp",
+      desktopHero: "https://example.com/seo-consulting-desktop.webp",
+      section: "https://example.com/seo-consulting-section.webp"
+    }
+  },
+  "web-development": {
+    title: "Website Development & Design",
+    shortDescription: "Create a responsive, engaging, and SEO-friendly website that represents your brand.",
+    mainContent:
+      "Our website development service focuses on building modern, visually appealing websites that are optimized for search engines and user experience. We tailor designs to your brand, ensuring functionality across all devices.",
+    images: {
+      hero: "https://example.com/web-development-hero.webp",
+      desktopHero: "https://example.com/web-development-desktop.webp",
+      section: "https://example.com/web-development-section.webp"
+    }
+  },
+  "web-app": {
+    title: "Web Application Development",
+    shortDescription: "Develop robust web applications tailored to your business needs.",
+    mainContent:
+      "Our web app development service includes everything from front-end design to back-end functionality. We create scalable, secure, and feature-rich web applications that streamline operations and engage users.",
+    images: {
+      hero: "https://example.com/web-app-hero.webp",
+      desktopHero: "https://example.com/web-app-desktop.webp",
+      section: "https://example.com/web-app-section.webp"
+    }
+  },
+  "mobile-app": {
+    title: "Mobile Application Development",
+    shortDescription: "Design and develop mobile apps that deliver an exceptional user experience.",
+    mainContent:
+      "Our mobile app development service covers both iOS and Android platforms, ensuring native performance and design consistency. We build apps that not only look great but are also intuitive and responsive.",
+    images: {
+      hero: "https://example.com/mobile-app-hero.webp",
+      desktopHero: "https://example.com/mobile-app-desktop.webp",
+      section: "https://example.com/mobile-app-section.webp"
+    }
+  },
+  "watch-app": {
+    title: "Apple Watch App Development",
+    shortDescription: "Build companion apps for Apple Watch to extend your digital ecosystem.",
+    mainContent:
+      "Our watchOS app development service focuses on creating sleek and functional apps for the Apple Watch. Leveraging Swift and SwiftUI, we build watch apps that integrate seamlessly with your existing iOS solutions, offering unique experiences right on the wrist.",
+    images: {
+      hero: "https://example.com/watch-app-hero.webp",
+      desktopHero: "https://example.com/watch-app-desktop.webp",
+      section: "https://example.com/watch-app-section.webp"
+    }
+  }
+};
+
+
 export const locationsData = {
   "san-luis-obispo": {
     name: "San Luis Obispo",

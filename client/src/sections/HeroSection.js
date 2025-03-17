@@ -7,26 +7,26 @@ function HeroSection() {
       <picture>
         {/* Mobile Image (Default) */}
         <source
-          srcSet="https://i.postimg.cc/HkMXXdZn/i-Stock-1820756302-4-1-1.webp"
+          srcSet="https://i.postimg.cc/c4RftRhP/i-Stock-1094589946-1-1-1.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
         {/* Tablet Image */}
         <source
-          srcSet="https://i.postimg.cc/QCS0LhGh/i-Stock-1820756302-3-1-1-1.webp"
+          srcSet="https://i.postimg.cc/7Zq035Qh/i-Stock-1094589946-1-1.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
         {/* Desktop Image */}
         <source
-          srcSet="https://i.postimg.cc/k4L7Q3hM/i-Stock-1820756302-2-1.webp"
+          srcSet="https://i.postimg.cc/wxJmnXC3/i-Stock-1094589946-2-2.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
         {/* Fallback Image */}
         <img
-          src="https://i.postimg.cc/k4L7Q3hM/i-Stock-1820756302-2-1.webp"
-          alt="Handyman Services - Captain Alvarado"
+          src="https://i.postimg.cc/wxJmnXC3/i-Stock-1094589946-2-2.webp"
+          alt="Lightning-fast web experiences"
           width="auto"
           height="100%"
           loading="eager"
@@ -37,15 +37,18 @@ function HeroSection() {
         <div className="hero-text-bg">
           <div className="hero-content-title">
             <div className="line"></div>
-            <h1 className="company-name">Captain Alvarado's Handyman</h1>
+            <h1 className="company-name">LightningSEO.dev</h1>
             <div className="line"></div>
           </div>
-          <h1 className="slogan">Reliable & Affordable Handyman Services</h1>
+          <h1>
+            Don’t Blink—Experience <span className="highlight">Affordable, Lightning-Fast</span> Web Magic
+          </h1>
           <p className="hero-paragraph">
-            Captain Alvarado’s Handyman provides expert home repairs, plumbing, painting, and moving services across **San Luis Obispo County**. With a strong work ethic and dedication to quality, we ensure your home improvement projects are done right.
+            Our websites load in a flash, delivering seamless, engaging experiences that outpace the rest. Our speed earns Google’s applause—ensuring your site takes center stage.
           </p>
-          <h1 className="subslogan">Need a Hand? Get in Touch Today!</h1>
-          {/* Updated Link for Contact */}
+          <h1 className="subslogan">
+            Ready to upgrade your online presence?
+          </h1>
           <Link to="/contact" className="cta-button">
             Contact Us
           </Link>
