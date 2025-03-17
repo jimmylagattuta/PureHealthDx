@@ -4,74 +4,116 @@
   <!-- Home Page -->
   <url>
     <loc>https://captainalvaradoshandyman.com/</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>1.0</priority>
   </url>
 
   <!-- Core Pages -->
   <url>
     <loc>https://captainalvaradoshandyman.com/about</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/contact</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/privacy-policy</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/faq</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- Service Pages -->
+  <!-- Services Pages -->
   <url>
     <loc>https://captainalvaradoshandyman.com/services/home-repairs</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/services/plumbing</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/services/painting</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/services/moving</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/services/clean-outs</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- Service Area Pages -->
   <url>
     <loc>https://captainalvaradoshandyman.com/service-areas/san-luis-obispo</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/service-areas/paso-robles</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/service-areas/atascadero</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/service-areas/grover-beach</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://captainalvaradoshandyman.com/service-areas/nacimiento-lake</loc>
-    <lastmod>2025-03-14</lastmod>
+    <lastmod>2025-03-16</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/service-areas/arroyo-grande</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/service-areas/morro-bay</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/service-areas/los-osos</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/service-areas/pismo-beach</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://captainalvaradoshandyman.com/service-areas/cayucos</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog Section (If Applicable) -->
+  <url>
+    <loc>https://captainalvaradoshandyman.com/blog</loc>
+    <lastmod>2025-03-16</lastmod>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
