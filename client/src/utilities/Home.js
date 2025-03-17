@@ -26,136 +26,100 @@ const Home = ({ scrollToContact, reviews }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Build the rich snippet using Schema.org types for Captain Alvarado's Handyman.
   const richSnippet = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "HomeAndConstructionBusiness",
     "name": "Captain Alvarado's Handyman",
-    "url": "https://bcbcarts.com",
-    "logo": "https://www.bcbcarts.com/BCBLogo.jpg",
-    "description": "At Captain Alvarado's Handyman, we specialize in providing high-quality electric carts for leisure and business use. Our services include cart sales, rentals, professional installs, lithium battery upgrades, parts & accessories, pressure wash, custom welds, and electronics upgrades.",
+    "url": "https://captainalvaradohandyman.com",
+    "logo": "https://i.postimg.cc/8zTwpFPD/Screenshot-2025-03-14-020908-1.webp",
+    "description": "Captain Alvarado's Handyman provides expert home repairs, plumbing, painting, moving assistance, and clean-out services in San Luis Obispo County and surrounding areas.",
     "founder": {
       "@type": "Person",
-      "name": "Brandon",  // Update with the actual founder's name if desired
-      "jobTitle": "Founder"
+      "name": "Brandon Alvarado",
+      "jobTitle": "Founder & Lead Handyman"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-323-333-3471",
+      "telephone": "+1-805-835-1774",
       "contactType": "Customer Service",
-      "availableLanguage": ["English"],
+      "availableLanguage": ["English", "Spanish"],
       "areaServed": [
-        "Long Beach",
-        "Seal Beach",
-        "Huntington Beach",
-        "San Pedro",
-        "Lakewood",
-        "Irvine",
-        "Anaheim",
-        "Santa Ana",
-        "Newport Beach",
-        "Costa Mesa",
-        "Cypress",
-        "Buena Park"
+        "San Luis Obispo",
+        "Paso Robles",
+        "Atascadero",
+        "Grover Beach",
+        "Nacimiento Lake",
+        "Arroyo Grande",
+        "Morro Bay",
+        "Los Osos",
+        "Pismo Beach",
+        "Cayucos"
       ]
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Electric Cart Services",
+      "name": "Handyman Services",
       "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
+          "@type": "Offer",
+          "itemOffered": {
             "@type": "Service",
-            "name": "Cart Sales",
-            "description": "Discover our premium cart sales featuring high-performance, stylish, and reliable electric carts.",
-            "url": "https://bcbcarts.com/services/cart-sales"
+            "name": "Home Repairs",
+            "description": "General home maintenance, drywall patching, minor electrical fixes, and small repairs.",
+            "url": "https://captainalvaradohandyman.com/services/home-repairs"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
+          "@type": "Offer",
+          "itemOffered": {
             "@type": "Service",
-            "name": "Cart Rentals",
-            "description": "Flexible rental options for events, resorts, or daily use.",
-            "url": "https://bcbcarts.com/services/cart-rentals"
+            "name": "Plumbing Services",
+            "description": "Fixing leaks, unclogging drains, replacing faucets, and minor plumbing solutions.",
+            "url": "https://captainalvaradohandyman.com/services/plumbing"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
+          "@type": "Offer",
+          "itemOffered": {
             "@type": "Service",
-            "name": "Installs",
-            "description": "Expert installation services ensuring optimal performance and safety.",
-            "url": "https://bcbcarts.com/services/installs"
+            "name": "Painting Services",
+            "description": "Interior and exterior painting, touch-ups, and refinishing.",
+            "url": "https://captainalvaradohandyman.com/services/painting"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
+          "@type": "Offer",
+          "itemOffered": {
             "@type": "Service",
-            "name": "Lithium Upgrades",
-            "description": "Upgrade to advanced lithium battery systems for longer run times and faster charging.",
-            "url": "https://bcbcarts.com/services/lithium"
+            "name": "Moving Assistance",
+            "description": "Furniture moving, heavy lifting, and packing assistance.",
+            "url": "https://captainalvaradohandyman.com/services/moving"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
+          "@type": "Offer",
+          "itemOffered": {
             "@type": "Service",
-            "name": "Parts & Accessories",
-            "description": "High-quality parts and accessories to keep your cart running at its best.",
-            "url": "https://bcbcarts.com/services/parts"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "Service",
-            "name": "Pressure Wash",
-            "description": "Professional cleaning services to revitalize your electric cart.",
-            "url": "https://bcbcarts.com/services/pressure-wash"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "Service",
-            "name": "Custom Weld",
-            "description": "Bespoke fabrication solutions to enhance your cart’s design and performance.",
-            "url": "https://bcbcarts.com/services/custom-weld"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "item": {
-            "@type": "Service",
-            "name": "Electronics",
-            "description": "Modern upgrades to integrate advanced controls, sound systems, and more.",
-            "url": "https://bcbcarts.com/services/electronics"
+            "name": "Clean-Out Services",
+            "description": "Garage, attic, and rental property clean-outs, junk removal.",
+            "url": "https://captainalvaradohandyman.com/services/clean-outs"
           }
         }
       ]
     }
   };
+  
+
   return (
     <div>
         <Helmet>
             <script type="application/ld+json">
             {JSON.stringify(richSnippet)}
             </script>
-            <title>Captain Alvarado's Handyman - Your Trusted Partner in Electric Carts</title>
+            <title>BCB Carts - Your Trusted Partner in Electric Carts</title>
             <meta
             name="description"
-            content="Discover Captain Alvarado's Handyman – your trusted partner in leisure-filled electric vehicles. We offer premium cart sales, rentals, installs, lithium upgrades, parts, pressure wash, custom weld, and electronics upgrades."
+            content="Discover BCB Carts – your trusted partner in leisure-filled electric vehicles. We offer premium cart sales, rentals, installs, lithium upgrades, parts, pressure wash, custom weld, and electronics upgrades."
             />
         </Helmet>
       {/* Eager-load only Intro */}
