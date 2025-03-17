@@ -29,7 +29,7 @@ function HowItWorksComponent() {
         ></div>
       </div>
       <h2 id="how-it-works-title" className="hiw-title">
-        How Do I Get Started with Lightning SEO?
+        How Do I Get Started with LightningSEO.dev?
       </h2>
       <p className="hiw-subtitle">
         Ready to boost your online presence? Follow our simple, three-step process to get started with our comprehensive digital marketing solutions.

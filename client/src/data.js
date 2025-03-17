@@ -51,130 +51,142 @@ export const projectsData = {
   }
 };
 
-
 export const servicesData = {
   "on-page-seo": {
     title: "On-Page SEO Optimization",
     shortDescription: "Optimize your website’s content, meta tags, and structure for higher search engine rankings.",
-    mainContent:
-      "Our on-page SEO service includes thorough keyword research, meta tag optimization, content restructuring, and strategic internal linking to boost your site’s visibility and engagement.",
+    mainContent: "Our on-page SEO service includes thorough keyword research, meta tag optimization, content restructuring, and strategic internal linking to boost your site’s visibility and engagement.",
     images: {
-      hero: "https://example.com/on-page-seo-hero.webp",
-      desktopHero: "https://example.com/on-page-seo-desktop.webp",
-      section: "https://example.com/on-page-seo-section.webp"
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
+
   "technical-seo": {
     title: "Technical SEO & Website Performance",
-    shortDescription: "Improve your website’s technical health and speed for better crawlability and user experience.",
-    mainContent:
-      "We address issues like slow loading times, mobile responsiveness, structured data, and crawl errors to ensure your website meets the technical criteria for top search rankings.",
+    shortDescription: "Improve your website’s technical health and speed for better search rankings.",
+    mainContent: "We address slow loading times, mobile responsiveness, structured data, and crawl errors to ensure your website meets Google's best practices.",
     images: {
-      hero: "https://example.com/technical-seo-hero.webp",
-      desktopHero: "https://example.com/technical-seo-desktop.webp",
-      section: "https://example.com/technical-seo-section.webp"
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
-  "local-seo": {
-    title: "Local SEO Solutions",
-    shortDescription: "Boost your local visibility with targeted strategies that drive nearby traffic.",
-    mainContent:
-      "Our local SEO service optimizes your Google My Business profile, builds local citations, and leverages geo-specific keywords to make your business visible to local customers.",
-    images: {
-      hero: "https://example.com/local-seo-hero.webp",
-      desktopHero: "https://example.com/local-seo-desktop.webp",
-      section: "https://example.com/local-seo-section.webp"
-    }
-  },
+
   "content-seo": {
     title: "Content SEO & Strategy",
     shortDescription: "Develop and optimize content that resonates with your audience and search engines.",
-    mainContent:
-      "We create a customized content strategy that includes keyword-rich articles, engaging blog posts, and optimized landing pages to improve organic traffic and user retention.",
+    mainContent: "We craft keyword-rich articles, engaging blog posts, and optimized landing pages to improve organic traffic and user engagement.",
     images: {
-      hero: "https://example.com/content-seo-hero.webp",
-      desktopHero: "https://example.com/content-seo-desktop.webp",
-      section: "https://example.com/content-seo-section.webp"
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
-  "link-building": {
-    title: "Link Building & Off-Page SEO",
-    shortDescription: "Enhance your site’s authority with high-quality backlinks from trusted sources.",
-    mainContent:
-      "Our link building service focuses on acquiring quality backlinks through strategic outreach, guest posting, and influencer partnerships to boost your domain authority.",
-    images: {
-      hero: "https://example.com/link-building-hero.webp",
-      desktopHero: "https://example.com/link-building-desktop.webp",
-      section: "https://example.com/link-building-section.webp"
-    }
-  },
+
   "seo-audit": {
     title: "Comprehensive SEO Audits",
     shortDescription: "Identify opportunities and issues with an in-depth SEO analysis.",
-    mainContent:
-      "Our SEO audits cover both on-page and technical aspects, providing detailed insights and actionable recommendations to improve your website’s performance and search engine rankings.",
+    mainContent: "Our SEO audits cover on-page and technical factors, providing actionable insights for improving your website’s performance.",
     images: {
-      hero: "https://example.com/seo-audit-hero.webp",
-      desktopHero: "https://example.com/seo-audit-desktop.webp",
-      section: "https://example.com/seo-audit-section.webp"
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
+
   "seo-consulting": {
     title: "SEO Consulting & Strategy Development",
     shortDescription: "Tailor-made SEO strategies to meet your unique business goals.",
-    mainContent:
-      "We offer personalized SEO consulting, including competitive analysis, strategy formulation, and continuous performance tracking to ensure your SEO efforts deliver measurable results.",
+    mainContent: "We offer personalized SEO consulting, including competitive analysis, strategy development, and performance tracking.",
     images: {
-      hero: "https://example.com/seo-consulting-hero.webp",
-      desktopHero: "https://example.com/seo-consulting-desktop.webp",
-      section: "https://example.com/seo-consulting-section.webp"
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
+
+  "link-building": {
+    title: "Link Building & Off-Page SEO",
+    shortDescription: "Enhance your site’s authority with high-quality backlinks from trusted sources.",
+    mainContent: "We acquire high-quality backlinks through strategic outreach, guest posting, and influencer partnerships to boost your rankings.",
+    images: {
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+    }
+  },
+
+  "local-seo": {
+    title: "Local SEO Solutions",
+    shortDescription: "Boost your local visibility with targeted strategies that drive nearby traffic.",
+    mainContent: "We optimize your Google My Business profile, build local citations, and leverage geo-specific keywords to reach local customers.",
+    images: {
+      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+    }
+  },
+
   "web-development": {
     title: "Website Development & Design",
     shortDescription: "Create a responsive, engaging, and SEO-friendly website that represents your brand.",
-    mainContent:
-      "Our website development service focuses on building modern, visually appealing websites that are optimized for search engines and user experience. We tailor designs to your brand, ensuring functionality across all devices.",
+    mainContent: "Our web development service focuses on building visually appealing websites optimized for search engines and user experience.",
     images: {
-      hero: "https://example.com/web-development-hero.webp",
-      desktopHero: "https://example.com/web-development-desktop.webp",
-      section: "https://example.com/web-development-section.webp"
+      hero: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp",
+      desktopHero: "https://i.postimg.cc/wMJCKbkF/i-Stock-1961517902-1-2.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
   "web-app": {
     title: "Web Application Development",
     shortDescription: "Develop robust web applications tailored to your business needs.",
-    mainContent:
-      "Our web app development service includes everything from front-end design to back-end functionality. We create scalable, secure, and feature-rich web applications that streamline operations and engage users.",
+    mainContent: "We create scalable, secure, and feature-rich web applications to streamline operations and engage users.",
     images: {
-      hero: "https://example.com/web-app-hero.webp",
-      desktopHero: "https://example.com/web-app-desktop.webp",
-      section: "https://example.com/web-app-section.webp"
+      hero: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp",
+      desktopHero: "https://i.postimg.cc/wMJCKbkF/i-Stock-1961517902-1-2.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
+
   "mobile-app": {
     title: "Mobile Application Development",
     shortDescription: "Design and develop mobile apps that deliver an exceptional user experience.",
-    mainContent:
-      "Our mobile app development service covers both iOS and Android platforms, ensuring native performance and design consistency. We build apps that not only look great but are also intuitive and responsive.",
+    mainContent: "We develop native iOS and Android apps with a focus on performance and intuitive UI.",
     images: {
-      hero: "https://example.com/mobile-app-hero.webp",
-      desktopHero: "https://example.com/mobile-app-desktop.webp",
-      section: "https://example.com/mobile-app-section.webp"
+      hero: "https://i.postimg.cc/tRMQsWf9/i-Stock-1961529307-1-2.webp",
+      desktopHero: "https://i.postimg.cc/053FkxMQ/i-Stock-1961529307-2-1-1.webp",
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
     }
   },
   "watch-app": {
-    title: "Apple Watch App Development",
-    shortDescription: "Build companion apps for Apple Watch to extend your digital ecosystem.",
+    title: "Smart Watch App Development",
+    shortDescription: "Build companion apps for Smart Watches to extend your digital ecosystem.",
     mainContent:
-      "Our watchOS app development service focuses on creating sleek and functional apps for the Apple Watch. Leveraging Swift and SwiftUI, we build watch apps that integrate seamlessly with your existing iOS solutions, offering unique experiences right on the wrist.",
+      "Our watchOS and Android Play Store app development service focuses on creating sleek and functional apps for the Apple Watch. Leveraging Swift and SwiftUI, we build watch apps that integrate seamlessly with your existing iOS solutions, offering unique experiences right on the wrist.",
     images: {
-      hero: "https://example.com/watch-app-hero.webp",
-      desktopHero: "https://example.com/watch-app-desktop.webp",
-      section: "https://example.com/watch-app-section.webp"
+      hero: "https://i.postimg.cc/NfTKb1Wx/i-Stock-2055845781-1.webp", // Updated Mobile Image
+      desktopHero: "https://i.postimg.cc/GtxZhg4Q/i-Stock-2055845781-2-1.webp", // Updated Desktop Image
+      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp", // Universal Content Image
+      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
+      section: "https://i.postimg.cc/NfTKb1Wx/i-Stock-2055845781-1.webp",
+      desktopSection: "https://i.postimg.cc/GtxZhg4Q/i-Stock-2055845781-2-1.webp"
     }
   }
 };
+
+
 
 
 export const locationsData = {

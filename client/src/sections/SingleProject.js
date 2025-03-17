@@ -27,7 +27,7 @@ const SingleProject = ({ project }) => {
     "image": projectImage,
     "creator": {
       "@type": "Organization",
-      "name": "Lightning SEO",
+      "name": "LightningSEO.dev",
       "url": "https://lightningseo.dev",
       "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
     }

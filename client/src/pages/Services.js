@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { servicesData } from "../data"; // Note: updated servicesData now includes your SEO and development services
+import { servicesData } from "../data"; 
 import Contact from "../pages/main/Contact";
 import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
@@ -21,7 +21,7 @@ const Services = () => {
   if (!service) {
     return (
       <div className="service-page">
-        <p className="small-heading">Lightning SEO</p>
+        <p className="small-heading">LightningSEO.dev</p>
         <h1>Service Not Found</h1>
         <p>We couldn’t find the service you’re looking for.</p>
         <Link to="/services">Go back to all services</Link>
@@ -29,14 +29,11 @@ const Services = () => {
     );
   }
 
-  // Determine hero images
-  const heroImage = isDesktop && service.images.desktopHero
-    ? service.images.desktopHero
-    : service.images.hero;
-
-  const whyChooseBg = isDesktop && service.desktopWhyChooseBg
-    ? service.desktopWhyChooseBg
-    : service.whyChooseBg;
+  // Ensure hero and content images are different
+  const heroImage = isDesktop ? service.images.desktopHero : service.images.hero;
+  const contentImage = isDesktop ? service.images.desktopContent : service.images.content;
+  const sectionImage = isDesktop ? service.images.desktopSection : service.images.section;
+  const whyChooseBg = isDesktop && service.desktopWhyChooseBg ? service.desktopWhyChooseBg : service.whyChooseBg;
 
   // Schema.org snippet
   const richSnippet = {
@@ -45,10 +42,10 @@ const Services = () => {
     "name": service.title,
     "description": service.shortDescription,
     "url": `https://lightningseo.dev/services/${serviceId}`,
-    "image": service.images.desktopHero || service.images.hero,
+    "image": heroImage, // Ensuring different image for structured data
     "provider": {
       "@type": "Organization",
-      "name": "Lightning SEO",
+      "name": "LightningSEO.dev",
       "url": "https://lightningseo.dev",
       "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
     },
@@ -75,7 +72,7 @@ const Services = () => {
           <div className="services-hero-overlay">
             <div className="services-hero-content-title">
               <div className="line"></div>
-              <h1 className="company-name-services">Lightning SEO</h1>
+              <h1 className="company-name-services">LightningSEO.dev</h1>
               <div className="line"></div>
             </div>
 
@@ -94,7 +91,7 @@ const Services = () => {
         <div className="service-content">
           <div className="content-section">
             <img
-              src={isDesktop ? service.images.desktopHero : service.images.section}
+              src={contentImage}
               alt={service.title}
               className="content-image"
             />

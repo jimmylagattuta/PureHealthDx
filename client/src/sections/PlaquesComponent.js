@@ -6,7 +6,7 @@ function PlaquesComponent() {
     {
       title: "Why Choose Us",
       description:
-        "At Lightning SEO, we prioritize innovative strategies, data-driven insights, and measurable results. With years of industry experience, we deliver digital solutions that are reliable, affordable, and designed to drive your online growth.",
+        "At LightningSEO.dev, we prioritize innovative strategies, data-driven insights, and measurable results. With years of industry experience, we deliver digital solutions that are reliable, affordable, and designed to drive your online growth.",
       icon: "https://i.postimg.cc/d0TXq3Ff/i-Stock-2151690936-1.webp",
     },
     {
@@ -18,7 +18,7 @@ function PlaquesComponent() {
     {
       title: "See the Difference",
       description:
-        "We stand out with our commitment to innovation, meticulous attention to detail, and exceptional customer service. Experience the Lightning SEO difference that transforms your digital presence and propels sustainable growth.",
+        "We stand out with our commitment to innovation, meticulous attention to detail, and exceptional customer service. Experience the LightningSEO.dev difference that transforms your digital presence and propels sustainable growth.",
       icon: "https://i.postimg.cc/FzVcZcLw/i-Stock-2151690936-3.webp",
     },
   ];

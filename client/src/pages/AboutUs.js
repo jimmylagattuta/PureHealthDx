@@ -16,11 +16,11 @@ const AboutUs = () => {
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Lightning SEO",
+    "name": "LightningSEO.dev",
     "url": "https://lightningseo.dev/about-us",
     "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp",
     "description":
-      "Lightning SEO is a full-service digital marketing agency specializing in affordable, high-performance SEO solutions, custom website development, mobile app development, and Apple Watch app development. We deliver measurable growth and a robust online presence for businesses of all sizes.",
+      "LightningSEO.dev is a full-service digital marketing agency specializing in affordable, high-performance SEO solutions, custom website development, mobile app development, and Apple Watch app development. We deliver measurable growth and a robust online presence for businesses of all sizes.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-000-000-0000",
@@ -55,7 +55,7 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="aboutus-hero">
         <div className="aboutus-hero-overlay">
-          <h1 className="aboutus-hero-title">Welcome to Lightning SEO!</h1>
+          <h1 className="aboutus-hero-title">Welcome to LightningSEO.dev!</h1>
           <p className="aboutus-hero-subtitle">
             Affordable, High-Performance Digital Solutions for Your Business
           </p>
@@ -67,9 +67,9 @@ const AboutUs = () => {
         <h2 className="aboutus-heading">About Us</h2>
         <div className="aboutus-content">
           <div className="aboutus-card">
-            <h3>Why Choose Lightning SEO</h3>
+            <h3>Why Choose LightningSEO.dev</h3>
             <p>
-              At Lightning SEO, we blend innovative SEO strategies with advanced digital development to help your business thrive online. Our mission is to deliver measurable results through data-driven insights and tailored solutions that drive traffic and conversions.
+              At LightningSEO.dev, we blend innovative SEO strategies with advanced digital development to help your business thrive online. Our mission is to deliver measurable results through data-driven insights and tailored solutions that drive traffic and conversions.
             </p>
           </div>
           <div className="aboutus-card">

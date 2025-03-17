@@ -21,13 +21,13 @@ function FooterComponent() {
           <div className="fancy-brand-row">
             <img
               src="https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
-              alt="Lightning SEO Logo"
+              alt="LightningSEO.dev Logo"
               className="fancy-brand-logo"
               height="40"
               width="40"
             />
             <div className="fancy-text-group">
-              <h1 className="fancy-brand-title">Lightning SEO</h1>
+              <h1 className="fancy-brand-title">LightningSEO.dev</h1>
               <h2 className="fancy-brand-subtitle">
                 Affordable Digital Marketing &amp; Web Solutions
               </h2>
@@ -42,6 +42,7 @@ function FooterComponent() {
             <li><a href="/">Home</a></li>
             <li><a href="/about-us">About Us</a></li>
             <li><a href="/services">Services</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/reviews">Reviews</a></li>
             <li><a href="/contact">Contact Us</a></li>
@@ -84,7 +85,7 @@ function FooterComponent() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>© 2025 Lightning SEO. All Rights Reserved.</p>
+        <p>© 2025 LightningSEO.dev. All Rights Reserved.</p>
         <ul className="footer-bottom-links">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>

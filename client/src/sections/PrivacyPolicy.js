@@ -10,10 +10,10 @@ const PrivacyPolicy = () => {
     "@type": "WebPage",
     "name": "Privacy Policy & Terms and Conditions",
     "url": "https://lightningseo.dev/privacy",
-    "description": "Review the Privacy Policy and Terms and Conditions for Lightning SEO to learn how we handle your personal data and what rules apply when using our digital marketing and web solutions services.",
+    "description": "Review the Privacy Policy and Terms and Conditions for LightningSEO.dev to learn how we handle your personal data and what rules apply when using our digital marketing and web solutions services.",
     "publisher": {
       "@type": "Organization",
-      "name": "Lightning SEO",
+      "name": "LightningSEO.dev",
       "logo": {
         "@type": "ImageObject",
         "url": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
@@ -61,10 +61,10 @@ const PrivacyPolicy = () => {
               <strong>Account:</strong> A unique account created for you to access our Service or parts of our Service.
             </li>
             <li>
-              <strong>Business:</strong> Refers to Lightning SEO, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
+              <strong>Business:</strong> Refers to LightningSEO.dev, the legal entity that collects consumers’ personal information and determines the purposes and means of processing that information.
             </li>
             <li>
-              <strong>Company:</strong> Refers to Lightning SEO.
+              <strong>Company:</strong> Refers to LightningSEO.dev.
             </li>
           </ul>
           <p>
@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
               <strong>Country:</strong> Refers to the United States.
             </li>
             <li>
-              <strong>Company:</strong> Refers to Lightning SEO.
+              <strong>Company:</strong> Refers to LightningSEO.dev.
             </li>
           </ul>
           <p>

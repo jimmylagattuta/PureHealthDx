@@ -73,7 +73,7 @@ function ProjectsPage() {
       )}
       <div className="projects-page-container">
         <div className="contact-header">
-          <p className="small-heading">Lightning SEO Projects</p>
+          <p className="small-heading">LightningSEO.dev Projects</p>
           <h2 className="main-heading">Explore Our Work</h2>
           <p className="sub-text">
             Discover the innovative websites and applications we’ve developed for our clients. Our projects showcase our expertise in digital marketing, SEO, and cutting-edge web and app development.

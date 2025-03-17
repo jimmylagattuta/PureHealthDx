@@ -10,31 +10,64 @@ function OurServicesComponent() {
       title: "On-Page SEO",
       description: "Optimize your website content and meta tags for improved search engine rankings.",
       link: "/services/on-page-seo",
-      image: "https://example.com/on-page-seo-hero.webp"
+      image: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      color: "#E3F2FD" // Light Blue
     },
     {
       title: "Technical SEO",
       description: "Improve site speed, mobile responsiveness, and overall performance.",
       link: "/services/technical-seo",
-      image: "https://example.com/technical-seo-hero.webp"
+      image: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      color: "#FCE4EC" // Light Pink
+    },
+    {
+      title: "Content SEO",
+      description: "Develop and optimize content that resonates with your audience and search engines.",
+      link: "/services/content-seo",
+      image: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
+      color: "#E8F5E9" // Light Green
+    },
+    {
+      title: "Local SEO",
+      description: "Boost your local visibility with targeted strategies that drive nearby traffic.",
+      link: "/services/local-seo",
+      image: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      color: "#FFF3E0" // Light Orange
+    },
+    {
+      title: "Link Building",
+      description: "Enhance your site’s authority with high-quality backlinks from trusted sources.",
+      link: "/services/link-building",
+      image: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
+      color: "#EDE7F6" // Light Purple
     },
     {
       title: "Website Development",
       description: "Build responsive, SEO-friendly websites that represent your brand.",
       link: "/services/web-development",
-      image: "https://example.com/web-development-hero.webp"
+      image: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp", // Same as Web App Development
+      color: "#FFEBEE" // Light Red
+    },
+    {
+      title: "Web App Development",
+      description: "Develop robust web applications tailored to your business needs.",
+      link: "/services/web-app",
+      image: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp",
+      color: "#F1F8E9" // Light Yellow-Green
     },
     {
       title: "Mobile App Development",
       description: "Create intuitive mobile applications for iOS and Android platforms.",
       link: "/services/mobile-app",
-      image: "https://example.com/mobile-app-hero.webp"
+      image: "https://i.postimg.cc/tRMQsWf9/i-Stock-1961529307-1-2.webp",
+      color: "#FBE9E7" // Soft Coral
     },
     {
       title: "Apple Watch App Development",
       description: "Extend your ecosystem with sleek, functional apps for Apple Watch.",
       link: "/services/watch-app",
-      image: "https://example.com/watch-app-hero.webp"
+      image: "https://i.postimg.cc/NfTKb1Wx/i-Stock-2055845781-1.webp", // Corrected Apple Watch Image
+      color: "#E0F7FA" // Light Cyan
     }
   ];
 
@@ -56,6 +89,7 @@ function OurServicesComponent() {
             key={index}
             className="service-card"
             onClick={() => navigate(service.link)}
+            style={{ backgroundColor: service.color }}
           >
             {/* FRONT (Desktop Default) */}
             <div className="service-front">

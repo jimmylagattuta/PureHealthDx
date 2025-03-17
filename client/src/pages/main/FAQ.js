@@ -4,14 +4,14 @@ import "./FAQ.css";
 import Contact from "./Contact"; // Adjust path as necessary
 import FooterComponent from "../../sections/FooterComponent"; // Adjust path as necessary
 
-// In-depth FAQ data for Lightning SEO covering SEO, web development, mobile apps, and Apple Watch app development
+// In-depth FAQ data for LightningSEO.dev covering SEO, web development, mobile apps, and Apple Watch app development
 const faqData = [
   {
     question: "What is SEO and why is it important for my business?",
     answer: "SEO (Search Engine Optimization) improves your website's visibility on search engines, driving more organic traffic, increasing brand awareness, and ultimately boosting conversions. It involves optimizing content, site structure, and technical aspects to rank higher for targeted keywords."
   },
   {
-    question: "What services does Lightning SEO offer?",
+    question: "What services does LightningSEO.dev offer?",
     answer: "We offer a full suite of digital services including on-page SEO, technical SEO, local SEO, content strategy, link building, comprehensive SEO audits, and consulting, as well as custom website development, web application development, mobile app development, and Apple Watch app development."
   },
   {
@@ -203,7 +203,7 @@ const faqData = [
     answer: "Yes, we set up tools like Google Analytics and Search Console to monitor your website’s performance, track user behavior, and measure the effectiveness of your digital marketing efforts."
   },
   {
-    question: "How can I schedule a consultation with Lightning SEO?",
+    question: "How can I schedule a consultation with LightningSEO.dev?",
     answer: "Simply reach out via our contact form or email jimmy.lagattuta@gmail.com to schedule a free consultation and SEO audit to discuss your project needs."
   }
 ];
@@ -232,8 +232,8 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>FAQs - Lightning SEO</title>
-        <meta name="description" content="Find in-depth answers to frequently asked questions about our SEO, web development, mobile app, and Apple Watch app services at Lightning SEO." />
+        <title>FAQs - LightningSEO.dev</title>
+        <meta name="description" content="Find in-depth answers to frequently asked questions about our SEO, web development, mobile app, and Apple Watch app services at LightningSEO.dev." />
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
         </script>

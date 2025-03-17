@@ -23,14 +23,14 @@ const Home = ({ scrollToContact, reviews }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Rich snippet updated for Lightning SEO digital services
+  // Rich snippet updated for LightningSEO.dev digital services
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Lightning SEO",
+    "name": "LightningSEO.dev",
     "url": "https://lightningseo.dev",
     "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp",
-    "description": "Lightning SEO offers affordable, high-performance digital marketing solutions including expert SEO, website development, mobile app development, and Apple Watch app development to boost your online presence.",
+    "description": "LightningSEO.dev offers affordable, high-performance digital marketing solutions including expert SEO, website development, mobile app development, and Apple Watch app development to boost your online presence.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-000-000-0000",
@@ -97,10 +97,10 @@ const Home = ({ scrollToContact, reviews }) => {
         <script type="application/ld+json">
           {JSON.stringify(richSnippet)}
         </script>
-        <title>Lightning SEO | Affordable Digital Marketing & Web Solutions</title>
+        <title>LightningSEO.dev | Affordable Digital Marketing & Web Solutions</title>
         <meta
           name="description"
-          content="Lightning SEO offers affordable, high-performance digital marketing solutions including expert SEO, website development, mobile app development, and Apple Watch app development to boost your online presence."
+          content="LightningSEO.dev offers affordable, high-performance digital marketing solutions including expert SEO, website development, mobile app development, and Apple Watch app development to boost your online presence."
         />
       </Helmet>
       

@@ -9,7 +9,7 @@ function AboutUsComponent() {
       <div className="about-image-container">
         <img
           src="https://i.postimg.cc/9MGmfGw1/i-Stock-1062386108-1.webp"
-          alt="About Lightning SEO"
+          alt="About LightningSEO.dev"
           loading="lazy"
           className="about-image"
           height="56"
@@ -36,7 +36,7 @@ function AboutUsComponent() {
           With years of experience and a commitment to innovation, our skilled team leverages data-driven strategies and advanced technologies to drive measurable results for our clients. We pride ourselves on transforming online challenges into growth opportunities, helping your brand not only compete but thrive.
         </p>
         <Link to="/about-us" className="about-us-button">
-          Learn More About Lightning SEO
+          Learn More About LightningSEO.dev
         </Link>
       </div>
     </section>
