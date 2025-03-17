@@ -1,10 +1,10 @@
 class Api::JobsController < ApplicationController
     def index
-        render json: "BCB Carts Yelp Reviews Controller"
+        render json: "Captain Alvarado's Handyman Yelp Reviews Controller"
     end
 
     def pull_yelp_cache
-        puts "Started Yelp cache pull for BCB Carts in Long Beach, CA"
+        puts "Started Yelp cache pull for Captain Alvarado's Handyman in Long Beach, CA"
         reviews = YelpCached.cached_yelp_reviews
         puts "Fetched Yelp reviews: #{reviews}"
         render json: reviews

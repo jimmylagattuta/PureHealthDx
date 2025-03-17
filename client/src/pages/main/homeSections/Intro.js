@@ -40,7 +40,7 @@ export default function Intro({ scrollToContact }) {
     <div className="hero-section">
       <div className="hero-overlay">
         <div className="hero-text">
-          <h1>Welcome to BCB Carts!</h1>
+          <h1>Welcome to Captain Alvarado's Handyman!</h1>
           <p>Your Trusted Partner in Leisure-Filled Electric Vehicles</p>
           <button className="hero-button" onClick={scrollToContact}>
             Contact Us

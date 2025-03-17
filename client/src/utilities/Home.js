@@ -26,14 +26,14 @@ const Home = ({ scrollToContact, reviews }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Build the rich snippet using Schema.org types for BCB Carts.
+  // Build the rich snippet using Schema.org types for Captain Alvarado's Handyman.
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "BCB Carts",
+    "name": "Captain Alvarado's Handyman",
     "url": "https://bcbcarts.com",
     "logo": "https://www.bcbcarts.com/BCBLogo.jpg",
-    "description": "At BCB Carts, we specialize in providing high-quality electric carts for leisure and business use. Our services include cart sales, rentals, professional installs, lithium battery upgrades, parts & accessories, pressure wash, custom welds, and electronics upgrades.",
+    "description": "At Captain Alvarado's Handyman, we specialize in providing high-quality electric carts for leisure and business use. Our services include cart sales, rentals, professional installs, lithium battery upgrades, parts & accessories, pressure wash, custom welds, and electronics upgrades.",
     "founder": {
       "@type": "Person",
       "name": "Brandon",  // Update with the actual founder's name if desired
@@ -152,10 +152,10 @@ const Home = ({ scrollToContact, reviews }) => {
             <script type="application/ld+json">
             {JSON.stringify(richSnippet)}
             </script>
-            <title>BCB Carts - Your Trusted Partner in Electric Carts</title>
+            <title>Captain Alvarado's Handyman - Your Trusted Partner in Electric Carts</title>
             <meta
             name="description"
-            content="Discover BCB Carts – your trusted partner in leisure-filled electric vehicles. We offer premium cart sales, rentals, installs, lithium upgrades, parts, pressure wash, custom weld, and electronics upgrades."
+            content="Discover Captain Alvarado's Handyman – your trusted partner in leisure-filled electric vehicles. We offer premium cart sales, rentals, installs, lithium upgrades, parts, pressure wash, custom weld, and electronics upgrades."
             />
         </Helmet>
       {/* Eager-load only Intro */}

@@ -6,10 +6,10 @@ function SEOFriendlyHomepage() {
     <div className="seo-homepage">
       {/* 🏷️ Meta Tags for SEO */}
       <head>
-        <title>BCB Carts | Electric Cart Sales, Rentals, and Repairs in Long Beach</title>
+        <title>Captain Alvarado's Handyman | Electric Cart Sales, Rentals, and Repairs in Long Beach</title>
         <meta
           name="description"
-          content="BCB Carts offers electric cart sales, rentals, and repairs in Long Beach, Seal Beach, Huntington Beach, San Pedro, and Lakewood. Explore custom carts, lithium upgrades, and event rentals."
+          content="Captain Alvarado's Handyman offers electric cart sales, rentals, and repairs in Long Beach, Seal Beach, Huntington Beach, San Pedro, and Lakewood. Explore custom carts, lithium upgrades, and event rentals."
         />
         <meta
           name="keywords"
@@ -18,7 +18,7 @@ function SEOFriendlyHomepage() {
       </head>
 
       {/* 🏷️ H1 Heading for SEO */}
-      <h1>BCB Carts | Electric Cart Sales, Rentals, and Repairs</h1>
+      <h1>Captain Alvarado's Handyman | Electric Cart Sales, Rentals, and Repairs</h1>
 
       {/* 🛒 Cart Sales Section */}
       <section>
@@ -56,7 +56,7 @@ function SEOFriendlyHomepage() {
       <section>
         <h2>What Our Customers Say</h2>
         <p>
-          "Fantastic service from BCB Carts! Bought a custom electric cart for Huntington Beach and couldn't be happier." - Emily S.
+          "Fantastic service from Captain Alvarado's Handyman! Bought a custom electric cart for Huntington Beach and couldn't be happier." - Emily S.
         </p>
       </section>
 
@@ -64,7 +64,7 @@ function SEOFriendlyHomepage() {
       <section>
         <h2>Contact Us Today</h2>
         <p>
-          Ready to buy, rent, or repair a golf cart? Contact BCB Carts now!
+          Ready to buy, rent, or repair a golf cart? Contact Captain Alvarado's Handyman now!
         </p>
       </section>
 

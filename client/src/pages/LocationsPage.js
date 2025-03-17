@@ -94,7 +94,7 @@ function LocationsPage() {
       )}
       <div className="locations-page-container">
         <div className="contact-header">
-          <p className="small-heading">BCB Carts</p>
+          <p className="small-heading">Captain Alvarado's Handyman</p>
           <h2 className="main-heading">Find a Location Near You</h2>
           <p className="sub-text">
             We proudly serve customers across our key markets. Whether you're in Long Beach, CA or Griffin, GA, we're here to help you get the electric cart solutions you need.

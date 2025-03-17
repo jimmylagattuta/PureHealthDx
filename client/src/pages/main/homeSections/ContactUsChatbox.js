@@ -78,8 +78,8 @@ const ContactUsChatbox = forwardRef((props, ref) => {
   return (
     <div className="contact-section" ref={ref}>
       <div className="contact-section-header">
-        <h2>Send A Message To BCB Carts</h2>
-        <p>If you have any inquiries, concerns, or comments regarding BCB Carts, please fill out the short contact form below.</p>
+        <h2>Send A Message To Captain Alvarado's Handyman</h2>
+        <p>If you have any inquiries, concerns, or comments regarding Captain Alvarado's Handyman, please fill out the short contact form below.</p>
       </div>
       {!submitted ? (
         <form className="contact-form" onSubmit={handleSubmit}>

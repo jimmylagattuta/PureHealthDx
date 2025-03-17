@@ -27,7 +27,7 @@ function Company() {
       <div className="diagonal-reveal"></div>
       <div className="company-content">
         <hr className="custom-line" /> {/* Line added above */}
-        <h2 className="company-title">At BCB Carts</h2>
+        <h2 className="company-title">At Captain Alvarado's Handyman</h2>
         <p className="company-description">
             We specialize in providing high-quality electric carts and allied services. With locations in Long Beach, California, and Griffin or Locust Grove, Georgia, we are dedicated to offering top-notch solutions for your low-speed vehicle needs.
         </p>
