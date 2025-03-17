@@ -166,7 +166,7 @@ const Home = ({ scrollToContact, reviews }) => {
       {/* Conditionally render everything else */}
       {loadRest && (
         <Suspense fallback={<div>Loading...</div>}>
-          <LazySocial />
+          {/* <LazySocial /> */}
           <AboutUsComponent />
           <Contact />
           <PlaquesComponent />
