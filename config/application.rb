@@ -13,7 +13,6 @@ module LightSEODev
 
     # config.middleware.use ForceWWW
 
-    
     config.api_only = true
     config.middleware.use Rack::Deflater
 
