@@ -6,7 +6,7 @@ export const servicesData = {
     mainContent:
       "Captain Alvarado's Handyman offers expert home repair services, covering everything from drywall patching and minor electrical fixes to general maintenance. Our goal is to help homeowners keep their houses in the best condition possible. No job is too small—we handle every task with professionalism and care.",
     images: {
-      hero: "https://i.postimg.cc/wTCkB3jM/i-Stock-586932394-1-1.webp",
+      hero: "https://i.postimg.cc/Njq22z27/i-Stock-586932394-4-1-1.webp",
       desktopHero: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
       section: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
       overlay1: "https://i.postimg.cc/cCbG3w5V/i-Stock-586932394-2-1-1.webp",
