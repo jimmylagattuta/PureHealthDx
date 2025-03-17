@@ -44,14 +44,14 @@ Rails.application.configure do
   }
 
   # Specify the asset host for serving images, stylesheets, and JavaScripts
-  config.asset_host = "http://www.captainalvaradoshandyman.com"
+  config.asset_host = "http://www.lightningseo.dev"
 
   # Set Active Storage service (local storage by default)
   config.active_storage.service = :local
 
   # Action Mailer settings
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.asset_host = "https://www.captainalvaradoshandyman.com"
+  config.action_mailer.asset_host = "https://www.lightningseo.dev"
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
