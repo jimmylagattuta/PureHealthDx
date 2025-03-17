@@ -48,7 +48,7 @@ function Contact() {
       setIsSubmitting(true);
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        const response = await fetch('https://captainalvaradohandyman.com/contact', {
+        const response = await fetch('https://captainalvaradoshandyman.com/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
