@@ -54,6 +54,7 @@ const Services = () => {
       "@id": `https://lightningseo.dev/services/${serviceId}`
     }
   };
+  console.log('Service', service);
 
   return (
     <>
@@ -89,22 +90,33 @@ const Services = () => {
 
         {/* MAIN CONTENT SECTION */}
         <div className="service-content">
-          <div className="content-section">
-            <img
-              src={contentImage}
-              alt={service.title}
-              className="content-image"
-            />
+        <div className="content-section">
+  <img src={contentImage} alt={service.title} className="content-image" />
 
-            <div className="service-content-with-title">
-              <h1 id="services-title-small">{service.title}</h1>
-              <div className="content-text">
-                {service.mainContent.split("\n\n").map((paragraph, index) => (
-                  <p key={index}>{paragraph.trim()}</p>
-                ))}
-              </div>
-            </div>
-          </div>
+  <div className="service-content-with-title">
+    <h1 id="services-title-small">{service.title}</h1>
+    
+    <div className="content-text">
+      {typeof service.mainContent === "string" ? (
+        service.mainContent.split("\n\n").map((paragraph, index) => (
+          <p key={index}>{paragraph.trim()}</p>
+        ))
+      ) : (
+        <p>{JSON.stringify(service.mainContent)}</p> // Fallback for object-type content
+      )}
+    </div>
+    {/* ✅ Add Website Link Here */}
+    {service.url && (
+      <p className="service-website">
+        <strong>Website:</strong>{" "}
+        <a href={service.url} target="_blank" rel="noopener noreferrer">
+          {service.url}
+        </a>
+      </p>
+    )}
+  </div>
+</div>
+
         </div>
 
         {/* INFO SECTION */}
@@ -118,9 +130,19 @@ const Services = () => {
                 <>
                   <h3 className="info-subtitle">{service.helpTitle}</h3>
                   <ul className="info-list">
-                    {service.helpList && service.helpList.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
+                    {service.servicesOffered && Array.isArray(service.servicesOffered) && (
+                      <ul className="info-list">
+                        {service.servicesOffered.map((item, i) => (
+                          <li key={i}>
+                            <strong>{item.name}:</strong> {item.description} 
+                            <br />
+                            <a href={item.url} target="_blank" rel="noopener noreferrer">
+                              Learn more
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </ul>
                 </>
               )}

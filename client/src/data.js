@@ -1,55 +1,54 @@
 export const projectsData = {
-  "project-alpha": {
-    name: "Project Alpha",
-    address: "E-Commerce Website",
-    heroImage: "https://yourdomain.com/path-to-project-alpha-hero.webp",
-    desktopImage: "https://yourdomain.com/path-to-project-alpha-desktop.webp",
+  "california-premier-pain-clinics": {
+    name: "California Premier Pain Clinics",
+    address: "Multi-Location Medical Organization",
+    url: "https://californiapremier-5591e4325563.herokuapp.com/",
+    heroImage: "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp",
+    desktopImage: "https://i.postimg.cc/vHW4b7gX/Screenshot-2025-03-17-034825-1-1.webp", // 282x170
+    tabletImage: "https://i.postimg.cc/XqgXc40m/Screenshot-2025-03-17-193758-1-1.webp", // 133x180
+    mobileImage: "https://i.postimg.cc/D0SY1ysy/Screenshot-2025-03-17-200526-1.webp", // 95x200
     description:
-      "Project Alpha is a state-of-the-art e-commerce website developed with a focus on responsive design, high performance, and integrated SEO strategies. The project features seamless navigation and optimized content to drive online sales and conversions.",
-    phone: "N/A",
-    email: "info@projectalpha.com",
-    website: "https://projectalpha.com",
-    servicesOffered: [
-      "Website Development",
-      "On-Page SEO",
-      "Technical SEO",
-      "Content Strategy"
-    ]
+      "At California Premier Pain Clinics, our mission is to help you find relief and regain your quality of life. Our experts craft personalized treatment plans using advanced therapies to ensure the best outcomes for your recovery. Your path to a pain-free life begins here.",
   },
-  "project-beta": {
-    name: "Project Beta",
-    address: "Mobile & Web App",
-    heroImage: "https://yourdomain.com/path-to-project-beta-hero.webp",
-    desktopImage: "https://yourdomain.com/path-to-project-beta-desktop.webp",
+
+  "orthopedics-of-riverside": {
+    name: "Orthopedics of Riverside",
+    address: "Advanced Orthopedic Care in Riverside",
+    url: "https://ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com",
+    heroImage: "https://i.imgur.com/A30o3rv.webp",
+    desktopImage: "https://i.postimg.cc/MpVcq7j5/Screenshot-2025-03-18-162546.webp", // 282x170
+    tabletImage: "https://i.postimg.cc/440ncL6w/Screenshot-2025-03-18-162828.webp", // 133x180
+    mobileImage: "https://i.postimg.cc/t43gL9Lm/Screenshot-2025-03-18-163017.webp", // 95x200
     description:
-      "Project Beta is a cross-platform mobile and web application designed for a tech startup. This project includes native mobile app development and a dynamic web application, all optimized with best-practice SEO techniques to boost visibility and user engagement.",
-    phone: "N/A",
-    email: "info@projectbeta.com",
-    website: "https://projectbeta.com",
-    servicesOffered: [
-      "Mobile App Development",
-      "Web Application Development",
-      "SEO Consulting"
-    ]
+      "Orthopedics of Riverside offers expert orthopedic care, including sports medicine, joint replacements, and physical therapy. Our highly skilled physicians and therapists provide advanced treatments to restore mobility and improve quality of life.",
   },
-  "project-gamma": {
-    name: "Project Gamma",
-    address: "Corporate Website & App",
-    heroImage: "https://yourdomain.com/path-to-project-gamma-hero.webp",
-    desktopImage: "https://yourdomain.com/path-to-project-gamma-desktop.webp",
+
+  "subtitle-tsunami": {
+    name: "SubtitleTsunami",
+    address: "AI-Powered Subtitle Generator",
+    url: "https://www.subtitletsunami.com",
+    heroImage: "https://i.postimg.cc/1379x4vB/Default-Play-1.webp",
+    desktopImage: "https://i.postimg.cc/6qZ7qnmB/Screenshot-2025-03-18-164010.webp", // 282x170
+    tabletImage: "https://i.postimg.cc/YCM424fw/Screenshot-2025-03-18-164216.webp", // 133x180
+    mobileImage: "https://i.postimg.cc/SKtjGg0y/Screenshot-2025-03-18-164359.webp", // 95x200
     description:
-      "Project Gamma is a comprehensive digital transformation project for a corporate client. It features a modern corporate website and a complementary mobile app, both built with a focus on performance, responsive design, and robust SEO to drive sustainable growth.",
-    phone: "N/A",
-    email: "info@projectgamma.com",
-    website: "https://projectgamma.com",
-    servicesOffered: [
-      "Website Development",
-      "Mobile App Development",
-      "Technical SEO",
-      "Digital Marketing"
-    ]
-  }
+      "SubtitleTsunami is an AI-powered tool with a user interface that generates precise and customizable English to Spanish subtitles. Our platform offers editable, high-quality subtitles to enhance your video content, making it more accessible and engaging.",
+  },
+  "captain-alvarados-handyman": {
+  name: "Captain Alvarado's Handyman",
+  address: "San Luis Obispo County, CA, US",
+  url: "https://captainalvaradoshandyman.com",
+  heroImage: "https://i.postimg.cc/FzkSS275/i-Stock-1620004852-3.webp", // Replace with your hero image
+  desktopImage: "https://i.postimg.cc/c1cGyrH3/Screenshot-2025-03-18-170257.webp", // Replace with your desktop image
+  tabletImage: "https://i.postimg.cc/fT24ypYT/Screenshot-2025-03-18-170547-1.webp", // Replace with your tablet image
+  mobileImage: "https://i.postimg.cc/LsPGyswn/Screenshot-2025-03-18-170807.webp", // Replace with your mobile image
+  description:
+    "Reliable handyman services in San Luis Obispo County, specializing in home repairs, plumbing, painting, moving, and clean-outs. Contact us for professional handyman solutions!" 
+}
+
 };
+
+
 
 export const servicesData = {
   "on-page-seo": {

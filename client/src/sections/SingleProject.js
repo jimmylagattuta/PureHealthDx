@@ -1,86 +1,90 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { projectsData } from "../data";
 import "./SingleProject.css";
 
-const SingleProject = ({ project }) => {
-  // Determine if the screen width is 769px or wider.
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
+const SingleProject = () => {
+  const { projectId } = useParams();
+  const project = projectsData[projectId];
 
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 769);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Use desktop image if available and on desktop; else fallback to hero image.
-  const projectImage = isDesktop && project.desktopImage ? project.desktopImage : project.heroImage;
-
-  // Build the rich snippet JSON‑LD object for this project.
-  const richSnippet = {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": project.name,
-    "description": project.description,
-    "url": project.website,
-    "image": projectImage,
-    "creator": {
-      "@type": "Organization",
-      "name": "LightningSEO.dev",
-      "url": "https://lightningseo.dev",
-      "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
-    }
-  };
+  if (!project) {
+    return <div className="sp-error">Project not found</div>;
+  }
 
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(richSnippet)}
-        </script>
+        <title>{project.name} - Project Details</title>
       </Helmet>
-      <div className="sp-project-card">
-        {/* Project Card Row */}
-        <div className="sp-project-cardrow">
-          <div
-            className="sp-project-image"
-            style={{ backgroundImage: `url(${projectImage})` }}
-          >
-            <h2 className="sp-project-name">{project.name}</h2>
+
+      <div className="sp-container">
+        {/* Hero Image & Title */}
+        <div className="sp-hero" style={{ backgroundImage: `url(${project.heroImage})` }}>
+          <h1 className="sp-title">{project.name}</h1>
+        </div>
+
+        {/* Project Description */}
+        <div className="sp-content">
+          <p className="sp-description">{project.description}</p>
+        </div>
+
+        {/* Devices Section (Mobile-First) */}
+        <div className="sp-devices">
+          <div className="sp-device">
+            <div className="sp-screen sp-desktop">
+              <div className="sp-stand"></div>
+              <img src={project.desktopImage} alt="Desktop View" />
+            </div>
+            <p className="sp-device-title sp-desktop-title">💻 DESKTOP VIEW</p>
           </div>
-          <div className="sp-project-info">
-            <p className="sp-project-description">{project.description}</p>
+
+          <div className="sp-device">
+            <div className="sp-screen sp-tablet">
+              <div className="sp-home-button"></div>
+              <img src={project.tabletImage} alt="Tablet View" />
+              <div className="sp-side-buttons"></div>
+            </div>
+            <p className="sp-device-title sp-tablet-title">📱 TABLET VIEW</p>
+          </div>
+
+          <div className="sp-device">
+            <div className="sp-screen sp-mobile">
+              <div className="sp-home-button"></div>
+              <img src={project.mobileImage} alt="Mobile View" />
+              <div className="sp-side-buttons"></div>
+            </div>
+            <p className="sp-device-title sp-mobile-title">📲 MOBILE VIEW</p>
           </div>
         </div>
 
-        {/* Project Details Section */}
-        <div className="sp-project-details">
-          <h3>About {project.name}</h3>
-          <p>{project.description}</p>
-          {project.website && (
-            <p>
-              <strong>Visit Website: </strong>
-              <a href={project.website} target="_blank" rel="noopener noreferrer">
-                {project.website}
+        {/* Conditionally show mailto link for SubtitleTsunami, otherwise normal link */}
+        {project.url && (
+          <div className="sp-website-container">
+            {projectId === "subtitle-tsunami" ? (
+              <a
+                href="mailto:jimmy.lagattuta@gmail.com?subject=Credentials%20Request%20for%20SubtitleTsunami"
+                className="sp-website-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Email for Credentials to Try This App.
               </a>
-            </p>
-          )}
-        </div>
-
-        {/* Services List Section (if applicable) */}
-        {project.servicesOffered && (
-          <div className="sp-services-section">
-            <h3>Services Provided</h3>
-            <ul className="sp-services-list">
-              {project.servicesOffered.map((service, index) => (
-                <li key={index}>{service}</li>
-              ))}
-            </ul>
+            ) : (
+              <a
+                href={project.url}
+                className="sp-website-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Website: {project.name}
+              </a>
+            )}
           </div>
         )}
 
-        <div className="sp-back-button">
+        {/* Back Button */}
+        <div className="sp-back">
           <Link to="/projects">← Back to Projects</Link>
         </div>
       </div>
