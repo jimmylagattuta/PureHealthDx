@@ -19,11 +19,11 @@ const Pricing = () => {
       </header>
       
       <section className="pricing-plans">
-        {/* Website Theme Package */}
+        {/* Website Theme Package - Always first */}
         <div className="plan-card">
           <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-theme-desktop.jpg" />
-            <img src="https://example.com/plan-theme-mobile.jpg" alt="Website Theme Package" />
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/NMSX6Vdc/i-Stock-926685790.webp" />
+            <img src="https://i.postimg.cc/NMSX6Vdc/i-Stock-926685790.webp" alt="Website Theme Package" />
           </picture>
           <h2>Website Theme Package</h2>
           <p className="price">$1,500</p>
@@ -39,8 +39,8 @@ const Pricing = () => {
         {/* Custom Website Design */}
         <div className="plan-card">
           <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-custom-desktop.jpg" />
-            <img src="https://example.com/plan-custom-mobile.jpg" alt="Custom Website Design" />
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/hPqzKVwp/i-Stock-1453026064.webp" />
+            <img src="https://i.postimg.cc/hPqzKVwp/i-Stock-1453026064.webp" alt="Custom Website Design" />
           </picture>
           <h2>Custom Website Design</h2>
           <p className="price">$3,500</p>
@@ -52,12 +52,100 @@ const Pricing = () => {
           </ul>
           <button className="plan-button" onClick={goToContact}>Get Started</button>
         </div>
+        {/* The rest of the plans sorted alphabetically */}
+
+        {/* Free Website + 5% Commission */}
+        <div className="plan-card">
+          <picture className="plan-image">
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/NMpJQgGx/i-Stock-1483031770.webp" />
+            <img src="https://i.postimg.cc/NMpJQgGx/i-Stock-1483031770.webp" alt="Free Website with Commission" />
+          </picture>
+          <h2>Free Website + 5% Commission</h2>
+          <p className="price">No Upfront Cost</p>
+          <ul className="plan-features">
+            <li>Professional, fully responsive website</li>
+            <li>Zero upfront fee</li>
+            <li>5% commission on sales through the site</li>
+            <li>Includes Lightning Fast SEO</li>
+          </ul>
+          <button className="plan-button" onClick={goToContact}>Get Started</button>
+        </div>
+
+        
+        {/* Advanced SEO Package */}
+        <div className="plan-card">
+          <picture className="plan-image">
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/J0Q1rHD2/i-Stock-950615676.webp" />
+            <img src="https://i.postimg.cc/J0Q1rHD2/i-Stock-950615676.webp" alt="Advanced SEO Package" />
+          </picture>
+          <h2>Advanced SEO Package</h2>
+          <p className="price">$1,500/mo</p>
+          <ul className="plan-features">
+            <li>Comprehensive On-Page &amp; Technical SEO</li>
+            <li>Local SEO &amp; Content Strategy</li>
+            <li>Monthly SEO Audit &amp; Advanced Reporting</li>
+            <li>Includes Lightning Fast SEO</li>
+          </ul>
+          <button className="plan-button" onClick={goToContact}>Get Started</button>
+        </div>
+
+        {/* Basic SEO Package */}
+        <div className="plan-card">
+          <picture className="plan-image">
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/VkkNNgFB/i-Stock-1468849447.webp" />
+            <img src="https://i.postimg.cc/VkkNNgFB/i-Stock-1468849447.webp" alt="Basic SEO Package" />
+          </picture>
+          <h2>Basic SEO Package</h2>
+          <p className="price">$800/mo</p>
+          <ul className="plan-features">
+            <li>On-Page SEO Optimization</li>
+            <li>Basic Technical SEO Fixes</li>
+            <li>Monthly Reporting</li>
+            <li>Includes Lightning Fast SEO</li>
+          </ul>
+          <button className="plan-button" onClick={goToContact}>Get Started</button>
+        </div>
+
+
+        {/* Digital Marketing Consulting */}
+        <div className="plan-card">
+          <picture className="plan-image">
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/PqZnfv0Q/i-Stock-2200240773.webp" />
+            <img src="https://i.postimg.cc/PqZnfv0Q/i-Stock-2200240773.webp" alt="Digital Marketing Consulting" />
+          </picture>
+          <h2>Digital Marketing Consulting</h2>
+          <p className="price">$2,000/mo</p>
+          <ul className="plan-features">
+            <li>Custom strategy development</li>
+            <li>Competitive analysis</li>
+            <li>Ongoing support &amp; optimization</li>
+            <li>Includes Lightning Fast SEO</li>
+          </ul>
+          <button className="plan-button" onClick={goToContact}>Get Started</button>
+        </div>
+
+        {/* Social Media Management */}
+        <div className="plan-card">
+          <picture className="plan-image">
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/9QkcQh0C/i-Stock-2187086312.webp" />
+            <img src="https://i.postimg.cc/9QkcQh0C/i-Stock-2187086312.webp" alt="Social Media Management" />
+          </picture>
+          <h2>Social Media Management</h2>
+          <p className="price">$1,200/mo</p>
+          <ul className="plan-features">
+            <li>Content creation &amp; scheduling</li>
+            <li>Engagement &amp; community management</li>
+            <li>Monthly performance reports</li>
+            <li>Includes Lightning Fast SEO</li>
+          </ul>
+          <button className="plan-button" onClick={goToContact}>Get Started</button>
+        </div>
 
         {/* Web Application Development */}
         <div className="plan-card">
           <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-webapp-desktop.jpg" />
-            <img src="https://example.com/plan-webapp-mobile.jpg" alt="Web Application Development" />
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/13m8qsyF/i-Stock-2197058169.webp" />
+            <img src="https://i.postimg.cc/13m8qsyF/i-Stock-2197058169.webp" alt="Web Application Development" />
           </picture>
           <h2>Web Application Development</h2>
           <p className="price">Starting at $4,000</p>
@@ -73,8 +161,8 @@ const Pricing = () => {
         {/* Website Updating Package */}
         <div className="plan-card">
           <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-updating-desktop.jpg" />
-            <img src="https://example.com/plan-updating-mobile.jpg" alt="Website Updating Package" />
+            <source media="(min-width: 768px)" srcSet="https://i.postimg.cc/QdfHgwMy/i-Stock-2197058200.webp" />
+            <img src="https://i.postimg.cc/QdfHgwMy/i-Stock-2197058200.webp" alt="Website Updating Package" />
           </picture>
           <h2>Website Updating Package</h2>
           <p className="price">$250/mo</p>
@@ -85,74 +173,6 @@ const Pricing = () => {
             <li>Includes Lightning Fast SEO</li>
           </ul>
           <button className="plan-button" onClick={goToContact}>Subscribe Now</button>
-        </div>
-
-        {/* Basic SEO Package */}
-        <div className="plan-card">
-          <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-basic-seo-desktop.jpg" />
-            <img src="https://example.com/plan-basic-seo-mobile.jpg" alt="Basic SEO Package" />
-          </picture>
-          <h2>Basic SEO Package</h2>
-          <p className="price">$800/mo</p>
-          <ul className="plan-features">
-            <li>On-Page SEO Optimization</li>
-            <li>Basic Technical SEO Fixes</li>
-            <li>Monthly Reporting</li>
-            <li>Includes Lightning Fast SEO</li>
-          </ul>
-          <button className="plan-button" onClick={goToContact}>Get Started</button>
-        </div>
-
-        {/* Advanced SEO Package */}
-        <div className="plan-card">
-          <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-advanced-seo-desktop.jpg" />
-            <img src="https://example.com/plan-advanced-seo-mobile.jpg" alt="Advanced SEO Package" />
-          </picture>
-          <h2>Advanced SEO Package</h2>
-          <p className="price">$1,500/mo</p>
-          <ul className="plan-features">
-            <li>Comprehensive On-Page &amp; Technical SEO</li>
-            <li>Local SEO &amp; Content Strategy</li>
-            <li>Monthly SEO Audit &amp; Advanced Reporting</li>
-            <li>Includes Lightning Fast SEO</li>
-          </ul>
-          <button className="plan-button" onClick={goToContact}>Get Started</button>
-        </div>
-
-        {/* Social Media Management */}
-        <div className="plan-card">
-          <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-social-desktop.jpg" />
-            <img src="https://example.com/plan-social-mobile.jpg" alt="Social Media Management" />
-          </picture>
-          <h2>Social Media Management</h2>
-          <p className="price">$1,200/mo</p>
-          <ul className="plan-features">
-            <li>Content creation &amp; scheduling</li>
-            <li>Engagement &amp; community management</li>
-            <li>Monthly performance reports</li>
-            <li>Includes Lightning Fast SEO</li>
-          </ul>
-          <button className="plan-button" onClick={goToContact}>Get Started</button>
-        </div>
-
-        {/* Digital Marketing Consulting */}
-        <div className="plan-card">
-          <picture className="plan-image">
-            <source media="(min-width: 768px)" srcSet="https://example.com/plan-consulting-desktop.jpg" />
-            <img src="https://example.com/plan-consulting-mobile.jpg" alt="Digital Marketing Consulting" />
-          </picture>
-          <h2>Digital Marketing Consulting</h2>
-          <p className="price">$2,000/mo</p>
-          <ul className="plan-features">
-            <li>Custom strategy development</li>
-            <li>Competitive analysis</li>
-            <li>Ongoing support &amp; optimization</li>
-            <li>Includes Lightning Fast SEO</li>
-          </ul>
-          <button className="plan-button" onClick={goToContact}>Get Started</button>
         </div>
       </section>
     </div>

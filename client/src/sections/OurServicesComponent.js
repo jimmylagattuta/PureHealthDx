@@ -84,7 +84,9 @@ function OurServicesComponent() {
 
       {/* Service Cards */}
       <div className="services-cards-container">
-        {services.map((service, index) => (
+      {services
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map((service, index) => (
           <div
             key={index}
             className="service-card"

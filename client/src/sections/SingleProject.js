@@ -20,7 +20,10 @@ const SingleProject = () => {
 
       <div className="sp-container">
         {/* Hero Image & Title */}
-        <div className="sp-hero" style={{ backgroundImage: `url(${project.heroImage})` }}>
+        <div
+          className="sp-hero"
+          style={{ backgroundImage: `url(${project.heroImage})` }}
+        >
           <h1 className="sp-title">{project.name}</h1>
         </div>
 
@@ -58,12 +61,12 @@ const SingleProject = () => {
           </div>
         </div>
 
-        {/* Conditionally show mailto link for SubtitleTsunami, otherwise normal link */}
+        {/* Conditionally show mailto link for SubtitleTsunami and LAOSS Scheduler */}
         {project.url && (
           <div className="sp-website-container">
-            {projectId === "subtitle-tsunami" ? (
+            {(projectId === "subtitle-tsunami" || projectId === "laoss-scheduler") ? (
               <a
-                href="mailto:jimmy.lagattuta@gmail.com?subject=Credentials%20Request%20for%20SubtitleTsunami"
+                href={`mailto:jimmy.lagattuta@gmail.com?subject=Credentials%20Request%20for%20${encodeURIComponent(project.name)}`}
                 className="sp-website-link"
                 target="_blank"
                 rel="noopener noreferrer"

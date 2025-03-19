@@ -8,7 +8,7 @@
   }
   
   .pricing-hero {
-    background: url('https://example.com/hero-pricing.webp') no-repeat center center/cover;
+    background: url('https://i.postimg.cc/XN96659j/i-Stock-2155117153-1-1.webp') no-repeat center center/cover;
     height: 300px;
     position: relative;
     display: flex;
@@ -125,11 +125,16 @@
   /* Media Query for Larger Screens */
   @media (min-width: 768px) {
     .pricing-page {
-      padding: 2rem;
+      padding: 2rem 0 2rem 0;
     }
     
     .pricing-hero {
+      background: url('https://i.postimg.cc/gcVQTWPr/i-Stock-2155117153-2-2-1.webp');
       height: 400px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .hero-overlay h1 {
@@ -152,4 +157,14 @@
       min-width: 250px;
     }
   }
-  
+  @media (min-width: 1024px) {
+    .pricing-hero {
+      background: url('https://i.postimg.cc/QtxKZDys/i-Stock-2155117153-3-1-2-1.webp');
+      background-size: cover;
+      height: 400px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
