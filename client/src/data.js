@@ -71,7 +71,7 @@ export const projectsData = {
     name: "LAOSS Scheduler App",
     address: "Los Angeles, CA", // Optional – adjust or remove if not needed
     url: "https://la-orthos-app-da82c790d223.herokuapp.com/",
-    heroImage: "https://i.postimg.cc/2S3Fp4g3/Screenshot-2025-03-18-230916.webp",       // Replace with your actual hero image URL
+    heroImage: "https://i.postimg.cc/BvvqBB7Z/Screenshot-2025-03-18-230916-1-1.webp",       // Replace with your actual hero image URL
     desktopImage: "https://i.postimg.cc/Wb8skZWN/Screenshot-2025-03-18-224428-1.webp", // Replace with your actual desktop image URL
     tabletImage: "https://i.postimg.cc/CxdpnQn7/Screenshot-2025-03-18-225627.webp",   // Replace with your actual tablet image URL
     mobileImage: "https://i.postimg.cc/jjV3qgHL/Screenshot-2025-03-18-225858-1.webp",   // Replace with your actual mobile image URL
