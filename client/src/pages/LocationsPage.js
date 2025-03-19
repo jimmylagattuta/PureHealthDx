@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { locationsData } from "../data";
+import { serviceOfferedData } from "../data";
 import LocationsSection from "../sections/LocationsSection"; // Office list component
 import SingleLocation from "../sections/SingleLocation";
 import Contact from "./main/Contact";
@@ -11,43 +11,21 @@ import "./LocationsPage.css";
 function LocationsPage() {
   const { locationId } = useParams();
   const [submitted, setSubmitted] = useState(false);
-
-  // Determine whether we are showing a single location or all locations.
   const isSingleLocation = Boolean(locationId);
 
-  // Build the rich snippet for all locations if we're on the list page.
+  // For rich snippet on the list page, since serviceOfferedData no longer includes an address,
+  // we'll generate a simpler rich snippet using the available fields.
   let locationsRichSnippet = null;
   if (!isSingleLocation) {
-    const locationsArray = Object.entries(locationsData).map(([key, loc]) => {
-      const addressParts = loc.address ? loc.address.split(",").map(s => s.trim()) : [];
-      let streetAddress = loc.address;
-      let addressLocality = "";
-      let addressRegion = "";
-      let postalCode = "";
-      if (addressParts.length >= 3) {
-        streetAddress = addressParts[0];
-        addressLocality = addressParts[1];
-        const regionPostal = addressParts[2].split(" ");
-        addressRegion = regionPostal[0];
-        postalCode = regionPostal.slice(1).join(" ");
-      }
-      return {
-        "@type": "LocalBusiness",
-        "name": loc.name,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": streetAddress,
-          "addressLocality": addressLocality,
-          "addressRegion": addressRegion,
-          "postalCode": postalCode,
-          "addressCountry": "US"
-        },
-        "telephone": loc.phone,
-        "url": `https://bcbcarts.com/locations/${key}`,
-        "image": loc.desktopImage || loc.heroImage,
-        "description": loc.description
-      };
-    });
+    const locationsArray = Object.entries(serviceOfferedData).map(([key, loc]) => ({
+      "@type": "LocalBusiness",
+      "name": loc.name,
+      "telephone": loc.phone,
+      "url": `https://lightningseo.dev/locations/${key}`,
+      "image": loc.desktopImage || loc.heroImage,
+      "description": loc.description,
+      // Since there’s no physical address, we omit the address property.
+    }));
     locationsRichSnippet = {
       "@context": "https://schema.org",
       "@graph": locationsArray
@@ -57,7 +35,7 @@ function LocationsPage() {
   // Determine content: single location or list
   let officeContent = null;
   if (locationId) {
-    const office = locationsData[locationId];
+    const office = serviceOfferedData[locationId];
     if (office) {
       officeContent = <SingleLocation office={office} />;
     } else {
@@ -69,10 +47,11 @@ function LocationsPage() {
       );
     }
   } else {
+    // Use the LocationsSection component (ensure it's updated to use serviceOfferedData)
     officeContent = <LocationsSection showButton={false} />;
   }
 
-  // Optional: if the URL has a hash, scroll into view.
+  // Optional: scroll to contact form if URL hash is set.
   useEffect(() => {
     if (window.location.hash === "#contactForm") {
       const element = document.getElementById("contactForm");
@@ -94,13 +73,12 @@ function LocationsPage() {
       )}
       <div className="locations-page-container">
         <div className="contact-header">
-          <p className="small-heading">Captain Alvarado's Handyman</p>
-          <h2 className="main-heading">Find a Location Near You</h2>
+          <p className="small-heading">LightningSEO.dev</p>
+          <h2 className="main-heading">Find a Service Area Near You</h2>
           <p className="sub-text">
-            We proudly serve customers across our key markets. Whether you're in Long Beach, CA or Griffin, GA, we're here to help you get the electric cart solutions you need.
+            We proudly serve customers across key markets. Whether you're in Long Beach, CA or Griffin, GA, our service areas are here to help you achieve top-notch SEO results.
           </p>
         </div>
-        {/* (The contact form at the top might be removed if you want to rely solely on the contact section below) */}
         {officeContent}
       </div>
       {/* Contact form wrapped with an id so the page can scroll to it */}

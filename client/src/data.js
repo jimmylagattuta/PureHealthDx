@@ -187,185 +187,137 @@ export const servicesData = {
 
 
 
-
-export const locationsData = {
-  "san-luis-obispo": {
-    name: "San Luis Obispo",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/nV3jF1JT/i-Stock-2094556981-2.webp",
-    desktopImage: "https://i.postimg.cc/nV3jF1JT/i-Stock-2094556981-2.webp",
+export const serviceOfferedData = {
+  "long-beach": {
+    name: "Long Beach",
+    heroImage: "https://i.postimg.cc/yYd5YH3G/i-Stock-1168194115-1-1.webp",
+    desktopImage: "https://i.postimg.cc/yYd5YH3G/i-Stock-1168194115-1-1.webp",
     description:
-      "Handyman services in San Luis Obispo for home repairs, plumbing, painting, moving, and more. Call now for fast and reliable service!",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Serving Long Beach, CA with expert SEO strategies, website optimization, and digital marketing solutions that drive results.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: "Mo-Fr 09:00-18:00"
   },
-
-  "paso-robles": {
-    name: "Paso Robles",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/qqFv8jBT/i-Stock-1049489054-1.webp",
-    desktopImage: "https://i.postimg.cc/qqFv8jBT/i-Stock-1049489054-1.webp",
+  "seal-beach": {
+    name: "Seal Beach",
+    heroImage: "https://i.postimg.cc/CMHYfS1L/i-Stock-660791392-1-1-1.webp",
+    desktopImage: "https://i.postimg.cc/CMHYfS1L/i-Stock-660791392-1-1-1.webp",
     description:
-      "Serving Paso Robles with top-quality handyman services, from home repairs to painting and plumbing solutions.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Providing comprehensive SEO services in Seal Beach, CA to boost your online presence and drive organic traffic.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "atascadero": {
-    name: "Atascadero",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/G3gtwhF5/i-Stock-516959924-1.webp",
-    desktopImage: "https://i.postimg.cc/G3gtwhF5/i-Stock-516959924-1.webp",
+  "huntington-beach": {
+    name: "Huntington Beach",
+    heroImage: "https://i.postimg.cc/g20YWQGc/i-Stock-1018058852-1-1.webp",
+    desktopImage: "https://i.postimg.cc/g20YWQGc/i-Stock-1018058852-1-1.webp",
     description:
-      "Professional handyman services in Atascadero. We handle repairs, painting, plumbing, and moving assistance.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Delivering tailored SEO solutions in Huntington Beach, CA that improve search rankings and digital performance.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "grover-beach": {
-    name: "Grover Beach",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/TYZP17Hj/i-Stock-1393888873-1.webp",
-    desktopImage: "https://i.postimg.cc/TYZP17Hj/i-Stock-1393888873-1.webp",
+  "san-pedro": {
+    name: "San Pedro",
+    heroImage: "https://i.postimg.cc/fb2SsmGp/i-Stock-1357542834-1-1.webp",
+    desktopImage: "https://i.postimg.cc/fb2SsmGp/i-Stock-1357542834-1-1.webp",
     description:
-      "Offering handyman services in Grover Beach, including plumbing, painting, and general repairs.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Offering advanced SEO and online marketing strategies in San Pedro, CA and nearby areas to enhance your brand’s digital footprint.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "nacimiento-lake": {
-    name: "Nacimiento Lake",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/MTTwdVFK/i-Stock-2128926068-2.webp",
-    desktopImage: "https://i.postimg.cc/MTTwdVFK/i-Stock-2128926068-2.webp",
+  "lakewood": {
+    name: "Lakewood",
+    heroImage: "https://i.postimg.cc/3rySPBMM/i-Stock-1288201581-1-1-1.webp",
+    desktopImage: "https://i.postimg.cc/3rySPBMM/i-Stock-1288201581-1-1-1.webp",
     description:
-      "Handyman services around Nacimiento Lake, specializing in repairs, painting, plumbing, and more.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Empowering businesses in Lakewood, CA with cutting-edge SEO techniques, content optimization, and local search strategies.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "arroyo-grande": {
-    name: "Arroyo Grande",
-    address: "Service Area - No Physical Address",
-    heroImage: "https://i.postimg.cc/4dSgMyDv/i-Stock-2199487207-1.webp",
-    desktopImage: "https://i.postimg.cc/4dSgMyDv/i-Stock-2199487207-1.webp",
+  "irvine": {
+    name: "Irvine",
+    heroImage: "https://i.postimg.cc/43ZmVBgr/i-Stock-1192432287-1-1.webp",
+    desktopImage: "https://i.postimg.cc/43ZmVBgr/i-Stock-1192432287-1-1.webp",
     description:
-      "Reliable handyman services in Arroyo Grande for home repairs, plumbing, painting, and moving assistance.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Providing comprehensive SEO services in Irvine, CA including on-page optimization, link building, and performance analytics.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "morro-bay": {
-    name: "Morro Bay",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/Kc1kYM82/i-Stock-1214555403-1.webp",
-    desktopImage: "https://i.postimg.cc/Kc1kYM82/i-Stock-1214555403-1.webp",
+  "anaheim": {
+    name: "Anaheim",
+    heroImage: "https://i.postimg.cc/HLC73TQv/i-Stock-1185569454-1-1.webp",
+    desktopImage: "https://i.postimg.cc/HLC73TQv/i-Stock-1185569454-1-1.webp",
     description:
-      "Professional handyman solutions in Morro Bay. We provide expert repairs, painting, plumbing, and more.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Delivering customized SEO solutions in Anaheim, CA designed to increase online visibility and drive business growth.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "los-osos": {
-    name: "Los Osos",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/9Qhr1gtm/i-Stock-1155447718-1.webp",
-    desktopImage: "https://i.postimg.cc/9Qhr1gtm/i-Stock-1155447718-1.webp",
+  "santa-ana": {
+    name: "Santa Ana",
+    heroImage: "https://i.postimg.cc/htQ9pCNv/i-Stock-1346654769-1-1-1.webp",
+    desktopImage: "https://i.postimg.cc/htQ9pCNv/i-Stock-1346654769-1-1-1.webp",
     description:
-      "Providing handyman services in Los Osos, including plumbing, painting, repairs, and moving help.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Serving Santa Ana, CA with premium SEO services to enhance digital presence and maximize ROI.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "pismo-beach": {
-    name: "Pismo Beach",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/Xv2qjjMq/i-Stock-1024663932-1.webp",
-    desktopImage: "https://i.postimg.cc/Xv2qjjMq/i-Stock-1024663932-1.webp",
+  "newport-beach": {
+    name: "Newport Beach",
+    heroImage: "https://i.postimg.cc/HkFtmGbb/i-Stock-1925763152-1-1.webp",
+    desktopImage: "https://i.postimg.cc/HkFtmGbb/i-Stock-1925763152-1-1.webp",
     description:
-      "Serving Pismo Beach with handyman services, from home repairs to painting and plumbing.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Offering strategic SEO services in Newport Beach, CA to help businesses rank higher and attract quality traffic.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   },
-
-  "cayucos": {
-    name: "Cayucos",
-    address: "Service Area",
-    heroImage: "https://i.postimg.cc/J0Xz5jsH/i-Stock-1454116303-1.webp",
-    desktopImage: "https://i.postimg.cc/J0Xz5jsH/i-Stock-1454116303-1.webp",
+  "costa-mesa": {
+    name: "Costa Mesa",
+    heroImage: "https://i.postimg.cc/9XqCXy3T/i-Stock-1193585935-1-2.webp",
+    desktopImage: "https://i.postimg.cc/9XqCXy3T/i-Stock-1193585935-1-2.webp",
     description:
-      "Handyman services in Cayucos, specializing in painting, plumbing, repairs, and moving help.",
-    phone: "805-635-1774",
-    email: "elgatofrmcuba81@gmail.com",
-    servicesOffered: [
-      "Home Repairs",
-      "Plumbing",
-      "Painting",
-      "Moving Assistance",
-      "Clean-Out Services"
-    ]
+      "Providing efficient SEO and digital marketing solutions in Costa Mesa, CA to elevate your online brand.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
+  },
+  "cypress": {
+    name: "Cypress",
+    heroImage: "https://i.postimg.cc/fTjCYgnN/i-Stock-1201981141-1-1.webp",
+    desktopImage: "https://i.postimg.cc/fTjCYgnN/i-Stock-1201981141-1-1.webp",
+    description:
+      "Delivering quality SEO services in Cypress, CA with data-driven strategies and performance optimization.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
+  },
+  "buena-park": {
+    name: "Buena Park",
+    heroImage: "https://i.postimg.cc/TwF7HyCv/i-Stock-123091243-1-1.webp",
+    desktopImage: "https://i.postimg.cc/TwF7HyCv/i-Stock-123091243-1-1.webp",
+    description:
+      "Empowering Buena Park businesses with innovative SEO solutions and digital marketing expertise.",
+    phone: "8059980074",
+    fax: "",
+    email: "jimmy.lagattuta@gmail.com",
+    hours: ""
   }
 };

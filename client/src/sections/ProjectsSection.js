@@ -25,9 +25,12 @@ function ProjectsSection({ showButton = true }) {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {projects.slice(0, 3).map((project) => (
           <Link key={project.id} to={`/projects/${project.id}`} className="project-card">
-            <div className="project-image" style={{ backgroundImage: `url(${isDesktop ? project.desktopImage : project.heroImage})` }}></div>
+            <div
+              className="project-image"
+              style={{ backgroundImage: `url(${isDesktop ? project.desktopImage : project.heroImage})` }}
+            ></div>
             <div className="project-info">
               <h2 className="project-title">{project.name}</h2>
               <p className="project-description">{project.description}</p>
@@ -38,7 +41,9 @@ function ProjectsSection({ showButton = true }) {
 
       {showButton && (
         <div className="button-container">
-          <Link to="/projects" className="project-section-button">View All Projects</Link>
+          <Link to="/projects" className="project-section-button">
+            View All Projects
+          </Link>
         </div>
       )}
     </section>

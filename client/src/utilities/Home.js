@@ -10,6 +10,7 @@ const PlaquesComponent = lazy(() => import("../sections/PlaquesComponent"));
 const OurServicesComponent = lazy(() => import("../sections/OurServicesComponent"));
 const HowItWorksComponent = lazy(() => import("../sections/HowItWorksComponent"));
 const ProjectsSection = lazy(() => import("../sections/ProjectsSection"));
+const LocationsSection = lazy(() => import("../sections/LocationsSection"));
 
 const Home = ({ scrollToContact, reviews }) => {
   // State to trigger loading of lazy sections
@@ -114,6 +115,7 @@ const Home = ({ scrollToContact, reviews }) => {
           <OurServicesComponent />
           <HowItWorksComponent />
           <ProjectsSection />
+          <LocationsSection />
           <FooterComponent />
         </Suspense>
       )}

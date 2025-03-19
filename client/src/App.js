@@ -6,13 +6,14 @@ import Navbar from "./components/Navbar";
 // Lazy load your routes/components
 const Home = lazy(() => import("./utilities/Home"));
 const Services = lazy(() => import("./pages/Services"));
-const Pricing = lazy(() => import("./pages/Pricing"));       // New Pricing page
-const Reviews = lazy(() => import("./pages/Reviews"));         // New Reviews page
-const Contact = lazy(() => import("./pages/main/Contact"));    // New Contact page
+const Pricing = lazy(() => import("./pages/Pricing"));
+const Reviews = lazy(() => import("./pages/Reviews"));
+const Contact = lazy(() => import("./pages/main/Contact"));
 const FAQ = lazy(() => import("./pages/main/FAQ"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const PrivacyPolicy = lazy(() => import("./sections/PrivacyPolicy"));
-const ProjectsPage = lazy(() => import("./pages/ProjectsPage")); // New Projects page
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const LocationsPage = lazy(() => import("./pages/LocationsPage")); // <-- New route
 
 function App() {
   console.log(process.env.REACT_APP_RECAPTCHA);
@@ -33,7 +34,7 @@ function App() {
             <Route path="/projects/:projectId?" element={<ProjectsPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<PrivacyPolicy />} />
-            {/* Other routes can be added as needed */}
+            <Route path="/locations/:locationId?" element={<LocationsPage />} />
           </Routes>
         </Suspense>
       </main>

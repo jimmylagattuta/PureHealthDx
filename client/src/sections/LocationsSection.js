@@ -1,12 +1,12 @@
 // src/sections/LocationsSection.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { locationsData } from "../data";
+import { serviceOfferedData } from "../data";
 import "./LocationsSection.css";
 
 function LocationsSection({ showButton = true }) {
-  // Convert locationsData (an object) to an array of locations with keys.
-  const locations = Object.entries(locationsData).map(([key, location]) => ({
+  // Convert serviceOfferedData (an object) to an array of locations with keys.
+  const locations = Object.entries(serviceOfferedData).map(([key, location]) => ({
     ...location,
     id: key,
   }));
