@@ -120,273 +120,219 @@ export const projectsData = {
 
 
 export const servicesData = {
-  "on-page-seo": {
-    title: "On-Page SEO Optimization",
-    shortDescription: "Optimize your website’s content, meta tags, and structure for higher search engine rankings.",
-    mainContent: "Our on-page SEO service includes thorough keyword research, meta tag optimization, content restructuring, and strategic internal linking to boost your site’s visibility and engagement.",
+  "trt": {
+    title: "Testosterone Replacement Therapy",
+    titleAbr: "TRT",
+    shortDescription: "Men suffer from low testosterone levels for different reasons. We offer customized TRT programs based on the unique needs of each patient with an evaluation of each patients labs, medical history, general symptoms, sleep patterns, family history, and more.",
+    mainContent: "Our TRT program is designed for men experiencing low testosterone due to aging or hypogonadism. We offer individualized treatment plans with options like injections and topical gels, backed by lab testing and doctor support. Results may begin in 3 to 6 weeks with improvements in energy, libido, and mood.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1742952519/iStock-1306518359_vnvuul.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1742952519/iStock-1306518359_vnvuul.webp",
+      content: "https://i.postimg.cc/XYZ/trt-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/trt-content.webp"
     }
   },
 
-  "technical-seo": {
-    title: "Technical SEO & Website Performance",
-    shortDescription: "Improve your website’s technical health and speed for better search rankings.",
-    mainContent: "We address slow loading times, mobile responsiveness, structured data, and crawl errors to ensure your website meets Google's best practices.",
+  "hrt-women": {
+    title: "Hormone Replacement Therapy for Women",
+    titleAbr: "HRT for Woman",
+    shortDescription: "Hormone Replacement Therapy (HRT) is most often used to treat common menopausal symptoms, including hot flashes, vaginal dryness, fatigue, and vaginal discomfort. We help women test estrogen and testosterone levels and provide a treatment plan.",
+    mainContent: "Our HRT service helps postmenopausal women relieve symptoms like hot flashes, weight gain, and low energy. Through guided estrogen and progesterone therapy, we restore hormonal balance to improve mood, libido, and overall well-being.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743039106/iStock-2186888422_2_kfjglh.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743039106/iStock-2186888422_2_kfjglh.webp",
+      content: "https://i.postimg.cc/XYZ/hrt-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/hrt-content.webp"
     }
   },
 
-  "content-seo": {
-    title: "Content SEO & Strategy",
-    shortDescription: "Develop and optimize content that resonates with your audience and search engines.",
-    mainContent: "We craft keyword-rich articles, engaging blog posts, and optimized landing pages to improve organic traffic and user engagement.",
+  "erectile-dysfunction": {
+    title: "Erectile Dysfunction Treatment",
+    titleAbr: "EDT",
+    shortDescription: "Erectile dysfunction can be treated at any age with hormone therapy and other methods. Treatment depends on your overall health and the underlying cause of the problem. Our specialized providers will work with you to create a treatment plan through the convenience of virtual visits.",
+    mainContent: "We provide discreet and effective treatment plans for ED, including oral medications and testosterone therapy when needed. Our care is tailored to underlying causes such as cardiovascular issues, diabetes, or psychological concerns, helping men restore sexual performance and confidence.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743029940/iStock-2153823097_obstf0.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743029940/iStock-2153823097_obstf0.webp",
+      content: "https://i.postimg.cc/XYZ/ed-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/ed-content.webp"
     }
   },
 
-  "seo-audit": {
-    title: "Comprehensive SEO Audits",
-    shortDescription: "Identify opportunities and issues with an in-depth SEO analysis.",
-    mainContent: "Our SEO audits cover on-page and technical factors, providing actionable insights for improving your website’s performance.",
+  "peptide-therapy": {
+    title: "Peptide Therapy",
+    titleAbr: "PT",
+    shortDescription: "Peptide Therapy is a type of hormone therapy designed to rejuvenate the body’s physical and mental functions by enhancing its peptide levels. Peptide therapy stimulates cellular regrowth to improve your health and reduce the effects of aging on your body.",
+    mainContent: "Peptide therapy uses medically approved amino acid chains to enhance biological function, hormone signaling, metabolism, and more. Our customized protocols address fatigue, aging, muscle growth, libido, and cognitive clarity.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743038615/iStock-1447078930_pwk8zf.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743038615/iStock-1447078930_pwk8zf.webp",
+      content: "https://i.postimg.cc/XYZ/peptides-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/peptides-content.webp"
     }
   },
 
-  "seo-consulting": {
-    title: "SEO Consulting & Strategy Development",
-    shortDescription: "Tailor-made SEO strategies to meet your unique business goals.",
-    mainContent: "We offer personalized SEO consulting, including competitive analysis, strategy development, and performance tracking.",
+  "prp": {
+    title: "Platelet Rich Plasma Therapy (PRP)",
+    titleAbr: "PRPT",
+    shortDescription: "Platelet rich plasma treatments use your plasma to promote healing and repair. PRP contains millions of platelets and tiny cell fragments in the blood that form clots to stop bleeding.",
+    mainContent: "PRP therapy uses your body’s own platelets to stimulate tissue regeneration, reduce pain, and restore function. We treat joint injuries, tendon issues, hair loss, and more with non-invasive, natural platelet injections.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743029769/iStock-1368073677_gd8pt8.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743029769/iStock-1368073677_gd8pt8.webp",
+      content: "https://i.postimg.cc/XYZ/prp-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/prp-content.webp"
     }
   },
 
-  "link-building": {
-    title: "Link Building & Off-Page SEO",
-    shortDescription: "Enhance your site’s authority with high-quality backlinks from trusted sources.",
-    mainContent: "We acquire high-quality backlinks through strategic outreach, guest posting, and influencer partnerships to boost your rankings.",
+  "pain-management": {
+    title: "Pain Management",
+    titleAbr: "PM",
+    shortDescription: "Pain management can treat neck and back injuries. As well as treating joint injuries including shoulders, elbows, wrists, hands, and carpal tunnel in the upper limbs.",
+    mainContent: "We manage pain from neck, back, joint, and soft tissue injuries using PRP, epidurals, and other minimally invasive techniques. Our treatments are designed to restore function and eliminate pain without the need for surgery or heavy medications.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743030468/iStock-2157844684_kc3qui.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743030468/iStock-2157844684_kc3qui.webp",
+      content: "https://i.postimg.cc/XYZ/pain-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/pain-content.webp"
     }
   },
 
-  "local-seo": {
-    title: "Local SEO Solutions",
-    shortDescription: "Boost your local visibility with targeted strategies that drive nearby traffic.",
-    mainContent: "We optimize your Google My Business profile, build local citations, and leverage geo-specific keywords to reach local customers.",
+  "semaglutide-weight-loss": {
+    title: "Semaglutide Weight Loss Program",
+    titleAbr: "SWLP",
+    shortDescription: "Semaglutide is designed to support your weight loss goals by curbing appetite, enhancing metabolism, and promoting healthy lifestyle habits.",
+    mainContent: "Our Semaglutide weight loss program includes a personalized medical review, prescription GLP-1 medication, and continuous support from our wellness providers. Patients often experience reduced appetite, improved metabolism, and measurable weight loss—starting at just $229/month.",
     images: {
-      hero: "https://i.postimg.cc/MGjWdtQZ/i-Stock-1076326738-1-1.webp",
-      desktopHero: "https://i.postimg.cc/DwSgpbyy/i-Stock-1076326738-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
-    }
-  },
-
-  "web-development": {
-    title: "Website Development & Design",
-    shortDescription: "Create a responsive, engaging, and SEO-friendly website that represents your brand.",
-    mainContent: "Our web development service focuses on building visually appealing websites optimized for search engines and user experience.",
-    images: {
-      hero: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp",
-      desktopHero: "https://i.postimg.cc/wMJCKbkF/i-Stock-1961517902-1-2.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
-    }
-  },
-  "web-app": {
-    title: "Web Application Development",
-    shortDescription: "Develop robust web applications tailored to your business needs.",
-    mainContent: "We create scalable, secure, and feature-rich web applications to streamline operations and engage users.",
-    images: {
-      hero: "https://i.postimg.cc/65rkYgqp/i-Stock-1961517902-1-1.webp",
-      desktopHero: "https://i.postimg.cc/wMJCKbkF/i-Stock-1961517902-1-2.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
-    }
-  },
-
-  "mobile-app": {
-    title: "Mobile Application Development",
-    shortDescription: "Design and develop mobile apps that deliver an exceptional user experience.",
-    mainContent: "We develop native iOS and Android apps with a focus on performance and intuitive UI.",
-    images: {
-      hero: "https://i.postimg.cc/tRMQsWf9/i-Stock-1961529307-1-2.webp",
-      desktopHero: "https://i.postimg.cc/053FkxMQ/i-Stock-1961529307-2-1-1.webp",
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp"
-    }
-  },
-  "watch-app": {
-    title: "Smart Watch App Development",
-    shortDescription: "Build companion apps for Smart Watches to extend your digital ecosystem.",
-    mainContent:
-      "Our watchOS and Android Play Store app development service focuses on creating sleek and functional apps for the Apple Watch. Leveraging Swift and SwiftUI, we build watch apps that integrate seamlessly with your existing iOS solutions, offering unique experiences right on the wrist.",
-    images: {
-      hero: "https://i.postimg.cc/NfTKb1Wx/i-Stock-2055845781-1.webp", // Updated Mobile Image
-      desktopHero: "https://i.postimg.cc/GtxZhg4Q/i-Stock-2055845781-2-1.webp", // Updated Desktop Image
-      content: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp", // Universal Content Image
-      desktopContent: "https://i.postimg.cc/yY5tvKX9/i-Stock-1838374800-1-1.webp",
-      section: "https://i.postimg.cc/NfTKb1Wx/i-Stock-2055845781-1.webp",
-      desktopSection: "https://i.postimg.cc/GtxZhg4Q/i-Stock-2055845781-2-1.webp"
+      hero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743030062/iStock-610752618_orlblv.webp",
+      desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/w_200,h_200,c_fill,f_webp/v1743030062/iStock-610752618_orlblv.webp",
+      content: "https://i.postimg.cc/XYZ/semaglutide-content.webp",
+      desktopContent: "https://i.postimg.cc/XYZ/semaglutide-content.webp"
     }
   }
 };
 
 
 
-export const serviceOfferedData = {
-  "long-beach": {
-    name: "Long Beach",
-    heroImage: "https://i.postimg.cc/yYd5YH3G/i-Stock-1168194115-1-1.webp",
-    desktopImage: "https://i.postimg.cc/yYd5YH3G/i-Stock-1168194115-1-1.webp",
+export const locationsData = {
+  "santa-rosa": {
+    name: "Santa Rosa Clinic",
+    address: "864 2nd Street Suite B, Santa Rosa, CA 95404",
+    heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
+    desktopImage: "https://i.postimg.cc/jqLZztZC/i-Stock-1878629507-6.webp", // new desktop image
     description:
-      "Serving Long Beach, CA with expert SEO strategies, website optimization, and digital marketing solutions that drive results.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: "Mo-Fr 09:00-18:00"
+      "Our Santa Rosa clinic offers personalized pain management and comprehensive care to help you achieve lasting relief.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "seal-beach": {
-    name: "Seal Beach",
-    heroImage: "https://i.postimg.cc/CMHYfS1L/i-Stock-660791392-1-1-1.webp",
-    desktopImage: "https://i.postimg.cc/CMHYfS1L/i-Stock-660791392-1-1-1.webp",
+  "sacramento": {
+    name: "Sacramento Clinic",
+    address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
+    heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
+    desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp", // new desktop image for Sacramento
     description:
-      "Providing comprehensive SEO services in Seal Beach, CA to boost your online presence and drive organic traffic.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "Our Sacramento location offers expert consultations and advanced treatments to restore your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "huntington-beach": {
-    name: "Huntington Beach",
-    heroImage: "https://i.postimg.cc/g20YWQGc/i-Stock-1018058852-1-1.webp",
-    desktopImage: "https://i.postimg.cc/g20YWQGc/i-Stock-1018058852-1-1.webp",
+  "stockton": {
+    name: "Stockton Clinic",
+    address: "420 Acacia Street Suite 19, Stockton, CA 95203",
+    heroImage: "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
+    desktopImage: "https://i.postimg.cc/J7YhYyS3/i-Stock-1357814327-2.webp",
     description:
-      "Delivering tailored SEO solutions in Huntington Beach, CA that improve search rankings and digital performance.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "Experience personalized care and effective pain management at our Stockton clinic.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "san-pedro": {
-    name: "San Pedro",
-    heroImage: "https://i.postimg.cc/fb2SsmGp/i-Stock-1357542834-1-1.webp",
-    desktopImage: "https://i.postimg.cc/fb2SsmGp/i-Stock-1357542834-1-1.webp",
+  "modesto": {
+    name: "Modesto Clinic",
+    address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
+    heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
+    desktopImage: "https://i.postimg.cc/qRspJq7R/i-Stock-1343463188-2.webp",
     description:
-      "Offering advanced SEO and online marketing strategies in San Pedro, CA and nearby areas to enhance your brand’s digital footprint.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+    "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "lakewood": {
-    name: "Lakewood",
-    heroImage: "https://i.postimg.cc/3rySPBMM/i-Stock-1288201581-1-1-1.webp",
-    desktopImage: "https://i.postimg.cc/3rySPBMM/i-Stock-1288201581-1-1-1.webp",
+  "hayward": {
+    name: "Hayward Clinic",
+    address: "24700 Calaroga Ave Suite 103, Hayward, CA 94545",
+    heroImage: "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
+    desktopImage: "https://i.postimg.cc/6QwXHwcx/i-Stock-1135194294-2.webp",
     description:
-      "Empowering businesses in Lakewood, CA with cutting-edge SEO techniques, content optimization, and local search strategies.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "Visit our Hayward clinic for expert pain management and compassionate care in a welcoming environment.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "irvine": {
-    name: "Irvine",
-    heroImage: "https://i.postimg.cc/43ZmVBgr/i-Stock-1192432287-1-1.webp",
-    desktopImage: "https://i.postimg.cc/43ZmVBgr/i-Stock-1192432287-1-1.webp",
+  "salinas": {
+    name: "Salinas Clinic",
+    address: "945 N. Blanco Suite A, Salinas, CA 93901",
+    heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
+    desktopImage: "https://i.postimg.cc/KzxtvK5p/i-Stock-1176374269-2.webp",
     description:
-      "Providing comprehensive SEO services in Irvine, CA including on-page optimization, link building, and performance analytics.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "Our Salinas location offers state-of-the-art treatments in a comfortable, patient-friendly setting.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "anaheim": {
-    name: "Anaheim",
-    heroImage: "https://i.postimg.cc/HLC73TQv/i-Stock-1185569454-1-1.webp",
-    desktopImage: "https://i.postimg.cc/HLC73TQv/i-Stock-1185569454-1-1.webp",
+  "san-jose": {
+    name: "San Jose Clinic",
+    address: "2375 Montpelier Drive Suite 10, San Jose, CA 95116",
+    heroImage: "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
+    desktopImage: "https://i.postimg.cc/kXLCrWJC/i-Stock-465837688-2.webp",
     description:
-      "Delivering customized SEO solutions in Anaheim, CA designed to increase online visibility and drive business growth.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "At our San Jose clinic, you'll receive personalized care and advanced pain management treatments tailored to your needs.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "santa-ana": {
-    name: "Santa Ana",
-    heroImage: "https://i.postimg.cc/htQ9pCNv/i-Stock-1346654769-1-1-1.webp",
-    desktopImage: "https://i.postimg.cc/htQ9pCNv/i-Stock-1346654769-1-1-1.webp",
+  "fresno": {
+    name: "Fresno Clinic",
+    address: "349 E. Bullard Ave Suite 105, Fresno, CA 93710",
+    heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
+    desktopImage: "https://i.postimg.cc/8kXQW90w/i-Stock-588965234-2.webp",
     description:
-      "Serving Santa Ana, CA with premium SEO services to enhance digital presence and maximize ROI.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+    "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "newport-beach": {
-    name: "Newport Beach",
-    heroImage: "https://i.postimg.cc/HkFtmGbb/i-Stock-1925763152-1-1.webp",
-    desktopImage: "https://i.postimg.cc/HkFtmGbb/i-Stock-1925763152-1-1.webp",
+  "hanford": {
+    name: "Hanford Clinic",
+    address: "1004 N. Douty Street, Hanford, CA 93230",
+    heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
+    desktopImage: "https://i.postimg.cc/ZK5Qfn6S/i-Stock-2198440524-2.webp",
     description:
-      "Offering strategic SEO services in Newport Beach, CA to help businesses rank higher and attract quality traffic.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+    "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "costa-mesa": {
-    name: "Costa Mesa",
-    heroImage: "https://i.postimg.cc/9XqCXy3T/i-Stock-1193585935-1-2.webp",
-    desktopImage: "https://i.postimg.cc/9XqCXy3T/i-Stock-1193585935-1-2.webp",
+  "bakersfield": {
+    name: "Bakersfield Clinic",
+    address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
+    heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
+    desktopImage: "https://i.postimg.cc/pL8p3Wt0/i-Stock-2178001181-2.webp",
     description:
-      "Providing efficient SEO and digital marketing solutions in Costa Mesa, CA to elevate your online brand.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
-  },
-  "cypress": {
-    name: "Cypress",
-    heroImage: "https://i.postimg.cc/fTjCYgnN/i-Stock-1201981141-1-1.webp",
-    desktopImage: "https://i.postimg.cc/fTjCYgnN/i-Stock-1201981141-1-1.webp",
-    description:
-      "Delivering quality SEO services in Cypress, CA with data-driven strategies and performance optimization.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
-  },
-  "buena-park": {
-    name: "Buena Park",
-    heroImage: "https://i.postimg.cc/TwF7HyCv/i-Stock-123091243-1-1.webp",
-    desktopImage: "https://i.postimg.cc/TwF7HyCv/i-Stock-123091243-1-1.webp",
-    description:
-      "Empowering Buena Park businesses with innovative SEO solutions and digital marketing expertise.",
-    phone: "8059980074",
-    fax: "",
-    email: "jimmy.lagattuta@gmail.com",
-    hours: ""
+      "Our Bakersfield clinic offers personalized treatment plans and advanced care to help you manage pain and improve your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   }
 };

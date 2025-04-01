@@ -5,28 +5,28 @@ function HeroSection() {
   return (
     <section className="hero-section">
       <picture>
-        {/* Mobile Image (Default) */}
+        {/* Mobile Image */}
         <source
-          srcSet="https://i.postimg.cc/c4RftRhP/i-Stock-1094589946-1-1-1.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-bg-mobile_1_ysenpc.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
         {/* Tablet Image */}
         <source
-          srcSet="https://i.postimg.cc/7Zq035Qh/i-Stock-1094589946-1-1.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743045314/home-header-bg-mobile_1_1_i0noq3.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
         {/* Desktop Image */}
         <source
-          srcSet="https://i.postimg.cc/wxJmnXC3/i-Stock-1094589946-2-2.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
-        {/* Fallback Image */}
+        {/* Fallback */}
         <img
-          src="https://i.postimg.cc/wxJmnXC3/i-Stock-1094589946-2-2.webp"
-          alt="Lightning-fast web experiences"
+          src="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
+          alt="Pure Health & Wellness Hero"
           width="auto"
           height="100%"
           loading="eager"
@@ -37,20 +37,23 @@ function HeroSection() {
         <div className="hero-text-bg">
           <div className="hero-content-title">
             <div className="line"></div>
-            <h1 className="company-name">LightningSEO.dev</h1>
+            <h2 className="company-name">PURE HEALTH & WELLNESS</h2>
             <div className="line"></div>
           </div>
-          <h1>
-            Don’t Blink—Experience <span className="highlight">Affordable, Lightning-Fast</span> Web Magic
+
+          <h1 className="hero-heading">
+            Unleash the Best Version of Yourself With Hormone Therapy
           </h1>
+
           <p className="hero-paragraph">
-            Our websites load in a flash, delivering seamless, engaging experiences that outpace the rest. Our speed earns Google’s applause—ensuring your site takes center stage.
+            Our customized solutions help patients of all ages overcome low
+            testosterone and hormone imbalance. With our help and hormone
+            replacement solutions, you can lose weight, build more muscle,
+            have a higher libido, and live a better life.
           </p>
-          <h1 className="subslogan">
-            Ready to upgrade your online presence?
-          </h1>
-          <Link to="/contact" className="cta-button">
-            Contact Us
+
+          <Link to="/book-appointment" className="cta-button">
+            Book an Appointment
           </Link>
         </div>
       </div>

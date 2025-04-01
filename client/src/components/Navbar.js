@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { servicesData, projectsData } from '../data';
+import { servicesData } from '../data'; // Remove 'projectsData' if unused
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +45,19 @@ function Navbar() {
     setProjectsSubMenuOpen(false);
   };
 
+  const handleBookAppointmentClick = () => {
+    const targetHash = "#contactForm";
+    if (location.pathname.startsWith("/contact")) {
+      const element = document.getElementById("contactForm");
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/contact${targetHash}`);
+    }
+    setIsOpen(false);
+    setServicesSubMenuOpen(false);
+    setProjectsSubMenuOpen(false);
+  };
+
   // Services submenu handlers
   const handleServicesClick = () => {
     if (isMobile) setServicesSubMenuOpen(!servicesSubMenuOpen);
@@ -59,11 +72,14 @@ function Navbar() {
 
   const handleServicesLeave = () => {
     if (!isMobile) {
-      servicesHoverTimeout.current = setTimeout(() => setServicesSubMenuOpen(false), 300);
+      servicesHoverTimeout.current = setTimeout(
+        () => setServicesSubMenuOpen(false),
+        300
+      );
     }
   };
 
-  // Projects submenu handlers
+  // Projects submenu handlers (if needed)
   const handleProjectsClick = () => {
     if (isMobile) setProjectsSubMenuOpen(!projectsSubMenuOpen);
   };
@@ -77,11 +93,14 @@ function Navbar() {
 
   const handleProjectsLeave = () => {
     if (!isMobile) {
-      projectsHoverTimeout.current = setTimeout(() => setProjectsSubMenuOpen(false), 300);
+      projectsHoverTimeout.current = setTimeout(
+        () => setProjectsSubMenuOpen(false),
+        300
+      );
     }
   };
 
-  // Update mobile state on window resize
+  // Update mobile/desktop state on window resize
   useEffect(() => {
     const handleResize = () => {
       const mobileView = window.innerWidth < 769;
@@ -103,15 +122,12 @@ function Navbar() {
         <div className="navbar-brand">
           <div className="navbar-logo" onClick={() => handleNavItemClick('/')}>
             <img
-              src="https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
-              alt="LightningSEO.dev Logo"
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
+              alt="Pure Health & Wellness Logo"
               loading="eager"
-              height="65"
-              width="85"
+              height="50"
+              width="224"
             />
-          </div>
-          <div className="company-name-desktop" onClick={() => handleNavItemClick('/')}>
-            LightningSEO.dev
           </div>
         </div>
 
@@ -126,8 +142,21 @@ function Navbar() {
 
         {/* Navigation Links */}
         <ul className={`nav-menu ${isOpen || !isMobile ? 'active' : ''}`}>
+          {/* Home (special "active-home" if path is "/") */}
           <li
-            className="nav-item services-link"
+            className={`nav-item pricing-link ${
+              location.pathname === '/' ? 'active-home' : ''
+            }`}
+            onClick={() => handleNavItemClick('/')}
+          >
+            Home
+          </li>
+
+          {/* Services (with sub-menu) */}
+          <li
+            className={`nav-item services-link ${
+              location.pathname.startsWith('/services') ? 'active-link' : ''
+            }`}
             onClick={handleServicesClick}
             onMouseEnter={handleServicesEnter}
             onMouseLeave={handleServicesLeave}
@@ -152,50 +181,42 @@ function Navbar() {
             )}
           </li>
 
+          {/* About Us */}
           <li
-            className="nav-item projects-link"
-            onClick={handleProjectsClick}
-            onMouseEnter={handleProjectsEnter}
-            onMouseLeave={handleProjectsLeave}
+            className={`nav-item pricing-link ${
+              location.pathname === '/about-us' ? 'active-link' : ''
+            }`}
+            onClick={() => handleNavItemClick('/about-us')}
           >
-            Projects
-            {projectsSubMenuOpen && (
-              <ul
-                className="sub-nav-menu show"
-                onMouseEnter={handleProjectsEnter}
-                onMouseLeave={handleProjectsLeave}
-              >
-                {Object.entries(projectsData).map(([key, project]) => (
-                  <li
-                    key={key}
-                    className="sub-nav-item"
-                    onClick={() => handleNavItemClick(`/projects/${key}`)}
-                  >
-                    {project.name}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-
-          <li className="nav-item pricing-link" onClick={() => handleNavItemClick('/pricing')}>
-            Pricing
-          </li>
-
-          <li className="nav-item reviews-link" onClick={() => handleNavItemClick('/reviews')}>
-            Reviews
-          </li>
-
-          <li className="nav-item faq-link" onClick={() => handleNavItemClick('/faq')}>
-            FAQ
-          </li>
-
-          <li className="nav-item aboutus-link" onClick={() => handleNavItemClick('/about-us')}>
             About Us
           </li>
 
-          <li className="nav-item book-appointment" onClick={handleContactClick}>
-            Free SEO Audit
+          {/* Become a Patient */}
+          <li
+            className={`nav-item reviews-link ${
+              location.pathname === '/form-component' ? 'active-link' : ''
+            }`}
+            onClick={() => handleNavItemClick('/form-component')}
+          >
+            Become a Patient
+          </li>
+
+          {/* Patient Portal */}
+          <li
+            className={`nav-item portal-link ${
+              location.pathname === '/patient-portal' ? 'active-link' : ''
+            }`}
+            onClick={() => handleNavItemClick('/patient-portal')}
+          >
+            Patient Portal
+          </li>
+
+          {/* Book Appointment */}
+          <li
+            className="nav-item book-appointment"
+            onClick={handleBookAppointmentClick}
+          >
+            Book Appointment
           </li>
         </ul>
       </div>

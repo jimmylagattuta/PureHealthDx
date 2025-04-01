@@ -1,12 +1,12 @@
 // src/sections/LocationsSection.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { serviceOfferedData } from "../data";
+import { locationsData } from "../data";
 import "./LocationsSection.css";
 
 function LocationsSection({ showButton = true }) {
-  // Convert serviceOfferedData (an object) to an array of locations with keys.
-  const locations = Object.entries(serviceOfferedData).map(([key, location]) => ({
+  // Convert locationsData (an object) to an array of locations with keys.
+  const locations = Object.entries(locationsData).map(([key, location]) => ({
     ...location,
     id: key,
   }));
@@ -39,14 +39,15 @@ function LocationsSection({ showButton = true }) {
 
   // Helper to determine the background image based on screen width and available data.
   const getBackgroundImage = (location) => {
+    // Use desktopImage if available and on desktop; otherwise, fall back to heroImage (or image)
     return isDesktop && location.desktopImage
       ? location.desktopImage
-      : location.heroImage;
+      : location.image || location.heroImage;
   };
 
   return (
     <section className="locations-section">
-      <div className="hero-content-title">
+      <div className="hero-content-title-locations">
         <div className="line-locations"></div>
         <h1 className="company-name-locations">OUR LOCATIONS</h1>
         <div className="line-locations"></div>
@@ -66,7 +67,7 @@ function LocationsSection({ showButton = true }) {
               <div className="location-info">
                 <h2 className="location-city">{location.name}</h2>
                 <p className="location-address">
-                  {location.address && location.address !== "Service Area" ? (
+                  {location.address ? (
                     <span
                       onClick={(e) => openMap(location.address, e)}
                       className="map-link"
@@ -82,7 +83,7 @@ function LocationsSection({ showButton = true }) {
                       {location.address}
                     </span>
                   ) : (
-                    "Service Area"
+                    "Address coming soon"
                   )}
                 </p>
                 {location.phone && (
@@ -103,7 +104,10 @@ function LocationsSection({ showButton = true }) {
         ))}
       </div>
       {showButton && (
-        <div className="button-container" style={{ textAlign: "center", marginTop: "20px" }}>
+        <div
+          className="button-container"
+          style={{ textAlign: "center", marginTop: "20px" }}
+        >
           <Link to="/locations" className="location-section-button">
             View All Locations
           </Link>
