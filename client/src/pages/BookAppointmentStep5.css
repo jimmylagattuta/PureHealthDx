@@ -1,0 +1,287 @@
+/* ---------------------- */
+/* BookAppointmentPage.css */
+/* ---------------------- */
+
+/* Container for the entire page */
+.book-appointment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Banner Section */
+  .banner {
+    position: relative;
+    width: 390px;
+    height: 240px;
+    background-image: url("https://via.placeholder.com/390x240");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  @media (min-width: 768px) {
+    .banner {
+      width: 768px;
+      height: 384px;
+      background-image: url("https://via.placeholder.com/768x384");
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .banner {
+      width: 1839px;
+      height: 548px;
+      background-image: url("https://via.placeholder.com/1839x548");
+    }
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+  }
+  
+  .banner-text {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .banner-text h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .banner-text h2 {
+    color: white;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .banner-text h3 {
+    color: white;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Content Section */
+  .content-section {
+    padding: 1rem;
+    max-width: 28rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  /* Paper-style Container */
+  .paper-container {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+  }
+  
+  /* Progress Bar */
+  .progress {
+    margin-bottom: 1rem;
+  }
+  
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-bar-background {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    background-color: #2563eb;
+    height: 0.5rem;
+    border-radius: 9999px;
+  }
+  
+  /* Scrollable Consent Text */
+  .consent-text {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .consent-text p {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Input, Select, and Textarea Styling */
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* Character Counter for Text Fields */
+  .character-counter {
+    font-size: 0.75rem;
+    text-align: right;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: -0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Signature Pad Styling */
+  .signature-pad-wrapper,
+  .signature-canvas-fixed {
+    border: 2px dashed #ccc;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .signature-canvas-fixed {
+    width: 100%;
+    height: 150px;
+  }
+  
+  /* Button Styles */
+  .btn-outline,
+  .submit-btn,
+  .button-row button,
+  .clear-signature {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1e40af;
+  }
+  
+  .btn-outline:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .clear-signature {
+    background: #f5f5f5;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Navigation Button Row */
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  /* Two-Column Header Container */
+.two-column-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row; /* side by side */
+  }
+  
+  /* Each column (left and right) */
+  .header-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px; /* adjust as needed */
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Example backgrounds:
+     left-col: dark gray
+     right-col: teal 
+     Adjust to match your desired color scheme. */
+  .left-col {
+    background-color: #333; /* or your chosen color */
+  }
+  
+  .right-col {
+    background-color: #0d6efd; /* or your chosen color */
+  }
+  
+  /* If you want different text sizes or spacing: */
+  .left-col h1 {
+    margin: 0;
+    font-size: 1.2rem; /* adjust as you like */
+    font-weight: bold;
+  }
+  
+  .right-col h2 {
+    margin: 0;
+    font-size: 1rem; /* adjust as you like */
+    font-weight: normal;
+  }
+  
+  /* Responsive adjustments for narrower screens */
+  @media (max-width: 768px) {
+    .two-column-header {
+      flex-direction: column;
+    }
+    .header-col {
+      min-height: 80px;
+    }
+    .left-col h1, .right-col h2 {
+      font-size: 1rem;
+    }
+  }
+  

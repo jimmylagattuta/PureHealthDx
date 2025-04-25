@@ -1,0 +1,244 @@
+/* Container for the entire page */
+.book-appointment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Banner Section with responsive dimensions and background images */
+  .banner {
+    position: relative;
+    width: 390px;
+    height: 240px;
+    background-image: url('https://i.postimg.cc/76k1vBnn/i-Stock-1275071474.webp');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .signature-canvas {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+  }
+  
+  .clear-signature {
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2563eb;
+  }
+  
+  .clear-signature:hover {
+    color: #1e40af;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  .btn-outline {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-outline:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+  }
+  
+
+  @media (min-width: 768px) {
+    .banner {
+      width: 768px;
+      height: 384px;
+      background-image: url('https://via.placeholder.com/768x384');
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .banner {
+      width: 1839px;
+      height: 548px;
+      background-image: url('https://via.placeholder.com/1839x548');
+    }
+  }
+  
+  /* Dark overlay for better text contrast */
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+  }
+  
+  /* Banner text styling */
+  .banner-text {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .banner-text h1 {
+    color: white;
+    font-size: 2rem;
+    justify-self: flex-start;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Content Section styling */
+  .content-section {
+    padding: 1rem;
+    max-width: 28rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .content-section h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Paper-style container for progress and form */
+  .paper-container {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+  
+  /* Progress Bar Styling */
+  .progress {
+    margin-bottom: 1rem;
+  }
+  
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-bar-background {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    background-color: #2563eb;
+    height: 0.5rem;
+    width: 16.66%;
+    border-radius: 9999px;
+  }
+  
+  /* Intake Form Styles */
+  .intake-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: left;
+  }
+  
+  .form-group label .required {
+    color: red;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"] {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* Submit Button Styles */
+  .submit-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Global error alert container (red box) */
+.error-alert {
+    background-color: #fdecea;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Inline error messages under each field */
+  .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: -0.25rem;  /* optional to pull up closer to the field */
+    margin-bottom: 0.5rem;
+  }
+
+  .required.error {
+    color: #dc3545; /* red */
+  }
+  
+  .required.valid {
+    color: #6c757d; /* grey */
+  }
+  
+  /* Reset any old red override */
+  .form-group label .required {
+    color: inherit !important;
+  }
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }

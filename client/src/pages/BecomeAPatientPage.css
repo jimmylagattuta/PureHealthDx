@@ -1,0 +1,236 @@
+/* ===============
+   MOBILE FIRST
+   =============== */
+   .become-patient-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* HERO SECTION */
+  .hero-section-patient-page {
+    position: relative;
+    background-image: url("https://i.postimg.cc/QxG7PG6n/man-earbuds-bg.jpg"); 
+    /* Replace with your actual background image */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-overlay {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hero-overline {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .hero-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-cta {
+    background-color: #1a6f4c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* 3 HIGHLIGHTS */
+  .highlights-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 1rem;
+  }
+  
+  .highlight-box {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    margin: 2rem 1rem;
+  }
+  
+  .section-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .subheading {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: bold;
+  }
+  
+  .section-cta {
+    display: block;
+    margin: 1.5rem auto;
+    background-color: #1a6f4c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* HOW TO BECOME A PATIENT */
+  .how-to-section {
+    margin: 2rem 1rem;
+  }
+  
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .step-box {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  /* TESTOSTERONE SECTION */
+  .testosterone-section {
+    margin: 2rem 1rem;
+  }
+  
+  .includes-text {
+    font-style: italic;
+    margin: 0.75rem 0;
+  }
+  
+  .therapy-includes-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .benefits-container h3 {
+    background-color: #ebf4f2;
+    color: #1a6f4c;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* WHAT WE DO BEST */
+  .what-we-do-best-section {
+    margin: 2rem 1rem;
+  }
+  
+  .services-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .services-list li {
+    background-color: #f0f0f0;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 4px;
+  }
+  
+  /* STATES WE SERVICE */
+  .states-section {
+    margin: 2rem 1rem;
+  }
+  
+  .states-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .states-list li {
+    margin: 0.5rem 0;
+  }
+  
+  /* ===============
+     DESKTOP QUERY
+     =============== */
+  @media (min-width: 769px) {
+    .hero-section {
+      padding: 6rem 2rem;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-text {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+  
+    .hero-cta {
+      font-size: 1.1rem;
+      padding: 0.9rem 2rem;
+    }
+  
+    .highlights-section {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem 2rem;
+    }
+  
+    .highlight-box {
+      flex: 1;
+      max-width: 220px;
+    }
+  
+    .steps-container {
+      flex-direction: row;
+    }
+  
+    .step-box {
+      flex: 1;
+    }
+  
+    .benefits-container h3 {
+      font-size: 1rem;
+    }
+  
+    .services-list li,
+    .states-list li {
+      font-size: 1rem;
+    }
+  }
+  

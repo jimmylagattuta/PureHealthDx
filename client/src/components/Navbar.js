@@ -194,9 +194,9 @@ function Navbar() {
           {/* Become a Patient */}
           <li
             className={`nav-item reviews-link ${
-              location.pathname === '/form-component' ? 'active-link' : ''
+              location.pathname === '/become-a-patient' ? 'active-link' : ''
             }`}
-            onClick={() => handleNavItemClick('/form-component')}
+            onClick={() => handleNavItemClick('/become-a-patient')}
           >
             Become a Patient
           </li>

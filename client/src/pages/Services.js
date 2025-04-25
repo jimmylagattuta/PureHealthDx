@@ -1,186 +1,176 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { servicesData } from "../data";
+import { servicesData, serviceExtras } from "../data";
 import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
 
 const Services = () => {
-  // 1. Call hooks at the top level
   const { serviceId } = useParams();
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 569);
+  const service = servicesData[serviceId];
+  const extras  = serviceExtras[serviceId] || {};
+  const symptomsBg = extras.symptomsBackground || heroImage;
 
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 569);
   useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 569);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const onResize = () => setIsDesktop(window.innerWidth >= 569);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // 2. Retrieve the service from your data
-  const service = servicesData[serviceId];
-
-  // 3. If not found, return early – after the hooks
-  if (!service) {
+  // LIST VIEW
+  if (!serviceId) {
     return (
-      <div className="service-page">
-        <p className="small-heading">CALIFORNIA PURE HEALTH &amp; WELLNESS</p>
-        <h1>Service Not Found</h1>
-        <p>We couldn’t find the service you’re looking for.</p>
-        <Link to="/services">Go back to all services</Link>
+      <div className="services-list-page">
+        <h1>Our Services</h1>
+        <ul className="services-list">
+          {Object.entries(servicesData).map(([slug, svc]) => (
+            <li key={slug}>
+              <Link to={`/services/${slug}`}>{svc.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <FooterComponent />
       </div>
     );
   }
 
-  // 4. Use desktop images if available, else fall back to mobile
+  // NOT FOUND
+  if (!service) {
+    return (
+      <div className="service-not-found">
+        <h1>Service Not Found</h1>
+        <Link to="/services">← Back to all services</Link>
+      </div>
+    );
+  }
+
+  // Pick hero image
   const heroImage =
     isDesktop && service.images.desktopHero
       ? service.images.desktopHero
       : service.images.hero;
 
-  const whyChooseBg =
-    isDesktop && service.desktopWhyChooseBg
-      ? service.desktopWhyChooseBg
-      : service.whyChooseBg;
-
-  // Build the rich snippet using Schema.org's MedicalProcedure type
-  const richSnippet = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": service.title,
-    "description": service.shortDescription,
-    "url": `https://purehealthdx.com/services/${serviceId}`,
-    "image": service.images.desktopHero || service.images.hero,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://purehealthdx.com/services/${serviceId}`
-    }
-  };
-
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(richSnippet)}
-        </script>
+        <title>{service.title} | Pure Health & Wellness</title>
       </Helmet>
-      <div className="service-page">
-        {/* HERO SECTION */}
-        <div
-          className="service-hero"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="services-hero-overlay">
-            <div className="services-hero-content-title">
-              <div className="line"></div>
-              <h1 className="company-name-services">
-                CALIFORNIA PURE HEALTH &amp; WELLNESS
-              </h1>
-              <div className="line"></div>
-            </div>
+
+      {/* — Hero — */}
+      <div
+        className="service-hero"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      >
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h2>PURE HEALTH &amp; WELLNESS</h2>
             <h1>{service.title}</h1>
-            <p>{service.shortDescription}</p>
-            <Link to="/contact" className="cta-button">
-              Book an Appointment
+            {service.heroSubtitle && (
+              <p className="hero-subtitle">{service.heroSubtitle}</p>
+            )}
+            <Link to={service.ctaLink || "/contact"} className="hero-cta">
+              {service.ctaText || "Book an Appointment"}
             </Link>
-            {/* Optional Contact Info */}
-            <div className="contact-info">
-              <p>
-                Email:{" "}
-                <a href="mailto:info@purehealthdx.com">
-                  info@purehealthdx.com
-                </a>
-              </p>
-              <p>Phone: (default phone)</p>
-            </div>
           </div>
         </div>
+      </div>
 
-        {/* Overlay Images: Render only on mobile (<768px) */}
-        {!isDesktop && (
-          <div className="overlay-images">
+      {/* — Intro — */}
+      <section className="service-intro-section">
+        {service.collageImage && (
+          <div className="collage-wrapper">
             <img
-              src={service.images.overlay1}
-              alt="Overlay 1"
-              className="image1"
-            />
-            <img
-              src={service.images.overlay2}
-              alt="Overlay 2"
-              className="image2"
+              src={service.collageImage}
+              alt={`${service.title} collage`}
+              className="collage-image"
             />
           </div>
         )}
-
-        {/* MAIN CONTENT SECTION */}
-        <div className="service-content">
-          <div className="content-section">
-            <img
-              src={
-                isDesktop
-                  ? "https://i.postimg.cc/FRn1qY8d/Screenshot-2025-03-11-190333.png"
-                  : service.images.section
-              }
-              alt={service.title}
-              className="content-image"
-            />
-
-            <div className="service-content-with-title">
-              <h1 id="services-title-small">{service.title}</h1>
-              <div className="content-text">
-                {service.mainContent
-                  .split("\n\n")
-                  .filter((paragraph) => paragraph.trim() !== "")
-                  .map((paragraph, index) => (
-                    <p key={index}>{paragraph.trim()}</p>
-                  ))}
-              </div>
-            </div>
-          </div>
+        <div className="service-intro-content">
+          {service.introTitle && <h2>{service.introTitle}</h2>}
+          {service.introText && <p>{service.introText}</p>}
+          {service.extendedIntroText && (
+            <p>{service.extendedIntroText}</p>
+          )}
+          {service.ctaLink && service.ctaText && (
+            <Link to={service.ctaLink} className="hero-cta">
+              {service.ctaText}
+            </Link>
+          )}
         </div>
+      </section>
 
-        {/* INFO SECTION with background image + dark overlay */}
-        <div
-          className="info-section"
-          style={{
-            backgroundImage: `url(${whyChooseBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="info-overlay">
-            <h2 className="info-title">{service.whyChooseTitle}</h2>
-            <p className="info-text">{service.whyChooseContent}</p>
+      {/* — Causes — */}
+      {extras.causes && (
+        <section className="causes-section">
+          {extras.causesIntroTitle && (
+            <h2 className="causes-intro-title">
+              {extras.causesIntroTitle}
+            </h2>
+          )}
+          {extras.causesIntroText && (
+            <p className="causes-intro-text">
+              {extras.causesIntroText}
+            </p>
+          )}
+          {extras.causes.map((group, gi) => (
+            <div key={gi} className="cause-card">
+              <h3>{group.title}</h3>
+              {group.description && <p>{group.description}</p>}
+              <ul>
+                {group.items.map((item, ii) => (
+                  <li key={ii}>
+                    <strong>{item.title}</strong>
+                    {item.description && <p>{item.description}</p>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      )}
 
-            <h3 className="info-subtitle">{service.helpTitle}</h3>
-            <ul className="info-list">
-              {service.helpList.map((item, i) => (
-                <li key={i}>{item}</li>
+      {/* — Symptoms w/ background + white card — */}
+      {extras.symptoms && (
+        <section
+        className="symptoms-section"
+        style={{
+          backgroundImage: `url(${symptomsBg})`,
+        }}
+      >
+          <div className="symptoms-card">
+            {extras.symptomsIntroTitle && (
+              <h2 className="symptoms-intro-title">
+                {extras.symptomsIntroTitle}
+              </h2>
+            )}
+            {extras.symptomsIntroText && (
+              <p className="symptoms-intro-text">
+                {extras.symptomsIntroText}
+              </p>
+            )}
+
+            <ul className="symptoms-list">
+              {extras.symptoms.map((s, i) => (
+                <li key={i}>{s}</li>
               ))}
             </ul>
 
-            <Link to="/about-us">
-              <h3 className="info-subtitle">{service.providerTitle}</h3>
-            </Link>
-            <div className="provider-container">
-              <div className="provider-text">
-                <p className="info-text">{service.providerContent}</p>
-              </div>
-              <div className="provider-image">
-                <img
-                  src="https://i.postimg.cc/tRW060nV/Screenshot-2025-03-08-132625-1-1.webp"
-                  alt="Our Provider"
-                />
-              </div>
-            </div>
-            <Link to="/contact" className="cta-button" style={{ margin: "20px" }}>
-              Book an Appointment
+            {extras.symptomsConclusion && (
+              <p className="symptoms-conclusion">
+                {extras.symptomsConclusion}
+              </p>
+            )}
+
+            <Link to={service.ctaLink || "/book"} className="hero-cta">
+              {service.ctaText || "Book an Appointment"}
             </Link>
           </div>
-        </div>
+        </section>
+      )}
 
-        {/* FOOTER */}
-        <FooterComponent />
-      </div>
+      <FooterComponent />
     </>
   );
 };

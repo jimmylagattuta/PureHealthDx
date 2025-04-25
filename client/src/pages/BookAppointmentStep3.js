@@ -1,0 +1,365 @@
+import React, { useEffect, useRef } from "react";
+import { useForm } from "react-hook-form";
+import SignatureCanvas from "react-signature-canvas";
+import { useNavigate } from "react-router-dom";
+import "./BookAppointmentPage.css";
+
+const BookAppointmentStep3 = () => {
+  const navigate = useNavigate();
+
+  // Mobile-first defaults for demonstration
+  const demoMode = true;
+
+  // Refs for signature canvas
+  const sigPad = useRef(null);
+
+  // Default data based on your screenshot
+  // Name: "fdfd" (4 of 50 chars)
+  // DOB: 9/15/2015
+  // Date: "2025-04-11"
+  const defaultName = demoMode ? "fdfd" : "";
+  const defaultDOB = {
+    month: demoMode ? "9" : "",
+    day: demoMode ? "15" : "",
+    year: demoMode ? "2015" : "",
+  };
+  const defaultDate = demoMode ? "2025-04-11" : "";
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    trigger,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      patientName: defaultName,
+      dobMonth: defaultDOB.month,
+      dobDay: defaultDOB.day,
+      dobYear: defaultDOB.year,
+      date: defaultDate,
+      signature: "",
+    },
+  });
+
+  const values = watch();
+
+  // Auto-scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Trigger initial validation
+  useEffect(() => {
+    console.log("Step 3: Triggering initial validation");
+    trigger();
+  }, [trigger]);
+
+  // If demo mode is true, auto-fill the fields
+  useEffect(() => {
+    if (demoMode) {
+      setValue("patientName", "fdfd"); // The name from screenshot
+      setValue("dobMonth", "9");
+      setValue("dobDay", "15");
+      setValue("dobYear", "2015");
+      setValue("date", "2025-04-11");
+      console.log("Demo mode: fields auto-filled");
+    }
+  }, [demoMode, setValue]);
+
+  const clearSignature = () => {
+    if (sigPad.current) {
+      sigPad.current.clear();
+      setValue("signature", "");
+      trigger("signature");
+    }
+  };
+
+  const onSubmit = (data) => {
+    console.log("Step 3: onSubmit triggered", data);
+
+    // Validate signature
+    if (!sigPad.current || sigPad.current.isEmpty()) {
+      setValue("signature", "", { shouldValidate: true });
+      trigger("signature");
+      return;
+    }
+
+    // Capture signature
+    const sigData = sigPad.current.getTrimmedCanvas().toDataURL();
+    setValue("signature", sigData);
+
+    console.log("Step 3: signature captured, navigating to step4");
+    navigate("/book-appointment-step4");
+  };
+
+  // Helper function for required field styling
+  const getRequiredClass = (fieldValue, fieldError) => {
+    if (!fieldValue) return "required error";
+    return fieldError ? "required error" : "required valid";
+  };
+
+  return (
+    <div className="book-appointment-container">      <div className="banner">
+    <div className="banner-overlay"></div>
+    <div className="banner-text">
+      <h1>Book Telemedicine Consultation</h1>
+    </div>
+  </div>
+      <div className="content-section">
+      <h2>Start Your Wellness Journey Today</h2>
+
+        <div className="paper-container">
+          {/* Progress Bar */}
+          <div className="progress">
+            <div className="progress-info">
+              <p>Step 3 of 6</p>
+            </div>
+            <div className="progress-bar-background">
+              <div className="progress-bar-fill" style={{ width: "50%" }} />
+            </div>
+          </div>
+
+          {/* Page Title */}
+          <h1 style={{ marginBottom: "1rem" }}>
+            Patient Consent for Medical Services
+          </h1>
+
+          {/* Consent Text */}
+          <div className="consent-text">
+            <p>
+              This Consent for Medical Services (“CONSENT”) specifies the terms
+              and conditions under which, you, the undersigned patient
+              (“PATIENT”) may secure the availability of medical services offered
+              by (“PRACTICE”):
+            </p>
+            <p>
+              Pure Health &amp; Wellness 6065 N First St, Fresno, CA 93710
+            </p>
+            <p>
+              This consent applies to the PRACTICE, its agents, employees and
+              physician(s). PATIENT and the PRACTICE hereby enter into this
+              agreement for provision of medical services specified herein
+              (SERVICES). Wherefore, in exchange for consideration, the receipt
+              and sufficiency of which the parties hereby acknowledge the PATIENT
+              and PRACTICE agree as follows:
+            </p>
+            <p>
+              The PATIENT acknowledges and agrees that this agreement has been
+              entered into before the PRACTICE has provided the SERVICES
+              specified herein to the PATIENT.
+            </p>
+            <p>
+              The PATIENT acknowledges and agrees that this agreement has not
+              been entered into at a time when the PATIENT is facing an
+              emergency or an urgent health care situation.
+            </p>
+            <p>
+              The PATIENT acknowledges reading and receiving a copy of the Notice
+              of Privacy Practices, and by signing this agreement, the PATIENT
+              authorizes the PRACTICE and its representatives to use and share
+              PATIENT health information as described in the Notices of Privacy
+              Practices.
+            </p>
+            <p>
+              The PATIENT agrees to let PRACTICE, its agents, employees, and
+              physician(s) provide medical care services. The SERVICES provided
+              to the PATIENT may include:
+            </p>
+            <ul>
+              <li>Evaluation of patient medical history and lifestyle behaviors</li>
+              <li>Physical examination</li>
+              <li>Blood, urine, fecal, and/or saliva tests</li>
+              <li>Diagnostic testing, bioelectrical and/or imaging tests</li>
+              <li>
+                Medical recommendations and management regarding my health issues
+                and disease prevention
+              </li>
+              <li>Nutrition</li>
+              <li>Nutritional supplementation and/or replacement</li>
+              <li>
+                Physical activity, functional performance, and exercise
+              </li>
+              <li>Lifestyle, environment, and behavior</li>
+              <li>Stress response management</li>
+              <li>Hormone replacement therapy</li>
+              <li>
+                Medication prescription management for those medications
+                prescribed by the PRACTICE
+              </li>
+              <li>
+                Procedures may include but are not limited to Injections,
+                Intravenous infusion therapy, Aesthetic procedures
+              </li>
+            </ul>
+            <p>
+              PATIENT agrees that PRACTICE has not made any claims or statements
+              about results or cures.
+            </p>
+            <p>
+              Duration of Consent: PATIENT acknowledges the right to revoke this
+              consent at any time except to the extent PRACTICE has already taken
+              action in reliance on it. If PATIENT does not revoke it, this
+              Consent will continue indefinitely. By signing this agreement, the
+              PATIENT acknowledges that PATIENT has read and fully understands
+              the information contained in this agreement. PATIENT agrees that
+              everything in this Consent applies to current and future health
+              care services provided by PRACTICE
+            </p>
+          </div>
+
+          {/* Intake Form */}
+          <form className="intake-form" onSubmit={handleSubmit(onSubmit)}>
+            {/* Patient Name */}
+            <div className="form-group">
+              <label>
+                Patient's Name <span className={getRequiredClass(values.patientName, errors.patientName)}>
+                  (Required)
+                </span>
+              </label>
+              <input
+                type="text"
+                maxLength={50}
+                {...register("patientName", {
+                  required: "Patient's Name is required.",
+                })}
+              />
+              <span className="character-counter">
+                {values.patientName ? values.patientName.length : 0} of 50 max characters
+              </span>
+              {errors.patientName && (
+                <p className="error-message">{errors.patientName.message}</p>
+              )}
+            </div>
+
+            {/* Date of Birth */}
+            <div className="form-group">
+              <label>
+                Date of Birth{" "}
+                <span
+                  className={getRequiredClass(
+                    values.dobMonth && values.dobDay && values.dobYear,
+                    errors.dobMonth || errors.dobDay || errors.dobYear
+                  )}
+                >
+                  (Required)
+                </span>
+              </label>
+              <div style={{ display: "flex", gap: "0.5rem" }}>
+                <select {...register("dobMonth", { required: "Month is required." })}>
+                  <option value="">Month</option>
+                  {[...Array(12)].map((_, i) => {
+                    const monthVal = i + 1;
+                    return (
+                      <option key={monthVal} value={String(monthVal)}>
+                        {String(monthVal).padStart(2, "0")}
+                      </option>
+                    );
+                  })}
+                </select>
+                <select {...register("dobDay", { required: "Day is required." })}>
+                  <option value="">Day</option>
+                  {[...Array(31)].map((_, i) => {
+                    const dayVal = i + 1;
+                    return (
+                      <option key={dayVal} value={String(dayVal)}>
+                        {String(dayVal).padStart(2, "0")}
+                      </option>
+                    );
+                  })}
+                </select>
+                <select {...register("dobYear", { required: "Year is required." })}>
+                  <option value="">Year</option>
+                  {[...Array(100)].map((_, i) => {
+                    const yearVal = new Date().getFullYear() - i;
+                    return (
+                      <option key={yearVal} value={String(yearVal)}>
+                        {yearVal}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+            </div>
+
+            {/* Date (auto-filled) */}
+            <div className="form-group">
+              <label>Date:</label>
+              <input
+                type="date"
+                {...register("date", {
+                  required: "Date is required.",
+                })}
+              />
+              {errors.date && (
+                <p className="error-message">{errors.date.message}</p>
+              )}
+            </div>
+
+            {/* Signature */}
+            <div className="form-group">
+              <label>
+                Patient Signature{" "}
+                <span className={getRequiredClass(values.signature, errors.signature)}>
+                  (Required)
+                </span>
+              </label>
+              <div className="signature-pad-wrapper">
+                <SignatureCanvas
+                  ref={sigPad}
+                  penColor="black"
+                  canvasProps={{
+                    width: 400,
+                    height: 150,
+                    className: "signature-canvas-fixed",
+                  }}
+                  onEnd={() => {
+                    if (!sigPad.current.isEmpty()) {
+                      const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
+                      setValue("signature", dataUrl);
+                      trigger("signature");
+                      console.log("Step 3: signature updated on end");
+                    }
+                  }}
+                />
+              </div>
+              <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
+                <button
+                  type="button"
+                  onClick={clearSignature}
+                  className="clear-signature"
+                >
+                  ↻ Clear Signature
+                </button>
+              </div>
+              {errors.signature && (
+                <p className="error-message">Signature is required.</p>
+              )}
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="form-navigation button-row">
+              <button
+                type="button"
+                className="btn-outline"
+                onClick={() => {
+                  console.log("Step 3: Navigating back to step2");
+                  navigate("/book-appointment-step2");
+                }}
+              >
+                Previous
+              </button>
+              <button type="submit" className="submit-btn">
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BookAppointmentStep3;

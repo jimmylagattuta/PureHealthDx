@@ -41,7 +41,7 @@ function HeroSection() {
             <div className="line"></div>
           </div>
 
-          <h1 className="hero-heading">
+          <h1 className="hero-heading" style={{ color: "white"}}>
             Unleash the Best Version of Yourself With Hormone Therapy
           </h1>
 
