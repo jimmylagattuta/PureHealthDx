@@ -9,18 +9,16 @@ const Services = () => {
   const { serviceId } = useParams();
   const service = servicesData[serviceId];
   const extras  = serviceExtras[serviceId] || {};
-  // FAQ state
   const [openFaq, setOpenFaq] = useState(null);
   const toggleFaq = idx => setOpenFaq(openFaq === idx ? null : idx);
-  // track desktop vs mobile
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 569);
+
   useEffect(() => {
     const onResize = () => setIsDesktop(window.innerWidth >= 569);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // 1) List view
   if (!serviceId) {
     return (
       <div className="services-list-page">
@@ -37,7 +35,6 @@ const Services = () => {
     );
   }
 
-  // 2) Not found
   if (!service) {
     return (
       <div className="service-not-found">
@@ -47,13 +44,11 @@ const Services = () => {
     );
   }
 
-  // pick hero image
   const heroImage =
     isDesktop && service.images.desktopHero
       ? service.images.desktopHero
       : service.images.hero;
 
-  // pick symptoms background (or fall back to hero)
   const symptomsBg = extras.symptomsBackground || heroImage;
 
   return (
@@ -95,9 +90,7 @@ const Services = () => {
         <div className="service-intro-content">
           {service.introTitle && <h2>{service.introTitle}</h2>}
           {service.introText && <p>{service.introText}</p>}
-          {service.extendedIntroText && (
-            <p>{service.extendedIntroText}</p>
-          )}
+          {service.extendedIntroText && <p>{service.extendedIntroText}</p>}
           {service.ctaLink && service.ctaText && (
             <Link to={service.ctaLink} className="hero-cta">
               {service.ctaText}
@@ -131,6 +124,14 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
+              {group.additionalText &&
+                group.additionalText.map((t, ti) => <p key={ti}>{t}</p>)
+              }
+              {group.ctaLink && (
+                <Link to={group.ctaLink} className="hero-cta">
+                  {group.ctaText}
+                </Link>
+              )}
             </div>
           ))}
         </section>
@@ -153,142 +154,108 @@ const Services = () => {
                 {extras.symptomsIntroText}
               </p>
             )}
-
             <ul className="symptoms-list">
-              {extras.symptoms.map((s, i) => (
-                <li key={i}>{s}</li>
-              ))}
+              {extras.symptoms.map((s, i) => <li key={i}>{s}</li>)}
             </ul>
-
             {extras.symptomsConclusion && (
               <p className="symptoms-conclusion">
                 {extras.symptomsConclusion}
               </p>
             )}
-
-            <Link
-              to={service.ctaLink || "/book"}
-              className="hero-cta"
-            >
+            <Link to={service.ctaLink || "/book"} className="hero-cta">
               {service.ctaText || "Book an Appointment"}
             </Link>
           </div>
         </section>
       )}
 
-      {/* — Individualized Treatment — */}
-      {extras.treatment && (
-        <section className="treatment-section">
-          <div className="treatment-card">
-            <img
-              src={extras.treatment.image}
-              alt={extras.treatment.heading}
-              className="treatment-image"
-            />
-            <h2>{extras.treatment.heading}</h2>
-            {extras.treatment.body.split("\n\n").map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-            <Link
-              to={service.ctaLink || "/book"}
-              className="hero-cta"
-            >
-              {service.ctaText || "Book an Appointment"}
-            </Link>
-          </div>
-        </section>
-      )}
-
-
-      {/* — Medication Types Section — */}
-      {extras.medications && (
-        <section className="medication-section">
-          <div className="medication-card">
-            {/* IMAGE */}
-            {extras.medications.image && (
-              <div className="medication-image-wrapper">
-                <img
-                  src={extras.medications.image}
-                  alt={`${service.title} medication options`}
-                  className="medication-image"
-                />
-              </div>
-            )}
-
-            {/* HEADING */}
-            {extras.medications.heading && (
-              <h2 className="medication-heading">
-                {extras.medications.heading}
-              </h2>
-            )}
-
-            {/* INTRO PARAGRAPHS */}
-            {extras.medications.paragraphs.map((p, i) => (
-              <p key={i} className="medication-intro">
-                {p}
-              </p>
-            ))}
-
-            {/* TYPES */}
-            {extras.medications.types.map((type, i) => (
-              <div key={i} className="medication-type">
-                <h3>{type.title}</h3>
-                <p>{type.description}</p>
-              </div>
-            ))}
-
-            {/* CONCLUSION */}
-            {extras.medications.conclusion && (
-              <p className="medication-conclusion">
-                {extras.medications.conclusion}
-              </p>
-            )}
-
-            {/* CTA */}
-            <Link
-              to={extras.medications.ctaLink}
-              className="hero-cta medication-cta"
-            >
-              {extras.medications.ctaText}
-            </Link>
-          </div>
-        </section>
-      )}
-
-
-      
-      {/* — Benefits Section — */}
-      {extras.benefits && (
-        <section className="benefits-section">
-          {/* only the first image */}
-          {extras.benefits.images?.[0] && (
-            <div className="benefits-image-wrapper">
-              <img
-                src={extras.benefits.images[0]}
-                alt="Benefit Illustration"
-                className="benefit-image"
-              />
-            </div>
-          )}
-
-          {extras.benefits.introHeading && (
-            <h2 className="benefits-intro-heading">
-              {extras.benefits.introHeading}
-            </h2>
-          )}
-
-          {extras.benefits.cards.map((card, ci) => (
-            <div key={ci} className="benefits-card">
-              {card.title && <h3>{card.title}</h3>}
-              {card.paragraphs.map((p, pi) => (
-                <p key={pi}>{p}</p>
+      {/* — Treatment Options — */}
+      {extras.treatmentOptions && (
+        <section className="treatment-options-section">
+          <h2>{extras.treatmentOptions.heading}</h2>
+          {extras.treatmentOptions.intro.map((p, i) => <p key={i}>{p}</p>)}
+          {extras.treatmentOptions.subsections.map((sec, si) => (
+            <div key={si} className="treatment-subsection">
+              <h3>{sec.title}</h3>
+              {sec.body.map((b, bi) => <p key={bi}>{b}</p>)}
+              {sec.list && (
+                <ul>
+                  {sec.list.map((li, lii) => <li key={lii}>{li}</li>)}
+                </ul>
+              )}
+              {sec.footnotes && sec.footnotes.map((f, fi) => (
+                <p key={fi} className="treatment-footnote">{f}</p>
               ))}
             </div>
           ))}
         </section>
       )}
 
-      
+      {/* — Medications — */}
+      {extras.medications && (
+        <section className="medication-section">
+          <div className="medication-card">
+            {extras.medications.image && (
+              <div className="medication-image-wrapper">
+                <img
+                  src={extras.medications.image}
+                  alt="medication"
+                  className="medication-image"
+                />
+              </div>
+            )}
+            {extras.medications.heading && (
+              <h2 className="medication-heading">
+                {extras.medications.heading}
+              </h2>
+            )}
+            {extras.medications.paragraphs.map((p, i) => (
+              <p key={i} className="medication-intro">{p}</p>
+            ))}
+            {extras.medications.types.map((t, ti) => (
+              <div key={ti} className="medication-type">
+                <h3>{t.title}</h3>
+                <p>{t.description}</p>
+              </div>
+            ))}
+            {extras.medications.conclusion && (
+              <p className="medication-conclusion">
+                {extras.medications.conclusion}
+              </p>
+            )}
+            <Link to={extras.medications.ctaLink} className="hero-cta medication-cta">
+              {extras.medications.ctaText}
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* — Benefits — */}
+      {extras.benefits && (
+        <section className="benefits-section">
+          {extras.benefits.images?.[0] && (
+            <div className="benefits-image-wrapper">
+              <img
+                src={extras.benefits.images[0]}
+                alt="benefit"
+                className="benefit-image"
+              />
+            </div>
+          )}
+          {extras.benefits.introHeading && (
+            <h2 className="benefits-intro-heading">
+              {extras.benefits.introHeading}
+            </h2>
+          )}
+          {extras.benefits.cards.map((c, ci) => (
+            <div key={ci} className="benefits-card">
+              <h3>{c.title}</h3>
+              {c.paragraphs.map((p, pi) => <p key={pi}>{p}</p>)}
+            </div>
+          ))}
+        </section>
+      )}
+
       {/* — Journey CTA — */}
       {extras.journey && (
         <section className="journey-cta-section">
@@ -299,10 +266,8 @@ const Services = () => {
         </section>
       )}
 
-
-
       {/* — How It Works — */}
-      {extras.journey && (
+      {extras.journey?.steps?.length > 0 && (
         <section className="works-section">
           <h2 className="works-intro-heading">
             {extras.journey.introHeading}
@@ -310,33 +275,23 @@ const Services = () => {
           <p className="works-intro-text">
             {extras.journey.introText}
           </p>
-
           <div className="works-steps">
             {extras.journey.steps.map((step, i) => (
               <div key={i} className="works-step">
-                <img
-                  src={step.icon}
-                  alt={step.title}
-                  className="step-icon"
-                />
+                <img src={step.icon} alt={step.title} className="step-icon" />
                 <div className="step-number">{step.number}</div>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
               </div>
             ))}
           </div>
-
-          <Link
-            to={service.ctaLink || "/book"}
-            className="hero-cta works-final-cta"
-          >
+          <Link to={service.ctaLink || "/book"} className="hero-cta works-final-cta">
             {service.ctaText || "Book an Appointment"}
           </Link>
         </section>
       )}
 
-      
-      {/* — FAQ Section — */}
+      {/* — FAQs — */}
       {extras.faqs?.length > 0 && (
         <section className="faq-section">
           <h2>Frequently Asked Questions</h2>
@@ -348,16 +303,11 @@ const Services = () => {
                 aria-expanded={openFaq === idx}
               >
                 <span>{faq.question}</span>
-                <span className="faq-icon">
-                  {openFaq === idx ? "▼" : "▶"}
-                </span>
+                <span className="faq-icon">{openFaq === idx ? "▼" : "▶"}</span>
               </button>
-
               {openFaq === idx && (
                 <div className="faq-answer">
-                  {faq.answer
-                    .split(/\n\n/)
-                    .map((para, i) => <p key={i}>{para}</p>)}
+                  {faq.answer.split(/\n\n/).map((p, pi) => <p key={pi}>{p}</p>)}
                 </div>
               )}
             </div>
@@ -369,15 +319,12 @@ const Services = () => {
       {extras.ctaBanner && (
         <section className="cta-banner">
           <h2>{extras.ctaBanner.heading}</h2>
-          {extras.ctaBanner.body
-            .split(/\n\n/)
-            .map((para, i) => <p key={i}>{para}</p>)}
+          {extras.ctaBanner.body.split(/\n\n/).map((p, i) => <p key={i}>{p}</p>)}
           <Link to={extras.ctaBanner.buttonLink} className="hero-cta">
             {extras.ctaBanner.buttonText}
           </Link>
         </section>
       )}
-
 
       <FooterComponent />
     </>

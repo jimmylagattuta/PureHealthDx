@@ -948,6 +948,60 @@ The good news is that treatment can become more of a maintenance plan once your 
 
     },
 
+   // — Frequently Asked Questions —
+   faqs: [
+    {
+      question: "How Common is Erectile Dysfunction?",
+      answer: `Although erectile dysfunction is not frequently discussed in public or in social situations, it is more common than most people think. It is estimated that 52% of men experience erectile dysfunction at some point in their lives.
+
+Erectile dysfunction is more common in men aged 40–75, but it is still possible in younger men. While doctors used to believe that erectile dysfunction was largely a psychological condition, current research suggests that in the majority of cases erectile dysfunction is caused by physical health problems.
+
+Most commonly, it is due to a lack of proper blood supply to the penis. In some cases, this can also serve as an early warning of an underlying cardiovascular disease such as a hardening or narrowing of the arteries, high blood pressure, high cholesterol, or heart disease.
+
+It is important to note that although erectile dysfunction is extremely common, it is not a normal part of aging. Aging is linked with declining testosterone levels, but this normal aging process does not directly affect a man’s ability to get an erection.`
+    },
+    {
+      question: "How Do Doctors Determine the Underlying Cause of Erectile Dysfunction?",
+      answer: `First, your doctor will determine if you have any underlying medical conditions—such as diabetes, an injury, cardiovascular disease, etc.—that could be causing your erectile dysfunction. In most cases of erectile dysfunction, there will be a health condition that is contributing to your symptoms that should be treated first.
+
+Your doctor will take a full medical history to determine when the symptoms first started, and then they will perform a physical exam to see if there is a lack of sensation or any visible damage to your sex organs. For most patients, a medical history and physical exam are all that are required to get an erectile dysfunction diagnosis.
+
+If no clear cause emerges, your doctor may then order additional tests—blood or urine work, or an ultrasound—to check for internal damage or issues with blood flow.`
+    },
+    {
+      question: "Questions You May Be Asked",
+      answer: `When you arrive for your appointment, be prepared to answer questions about your condition and symptoms to help your doctor properly diagnose you. Common questions include:
+
+• Do you have any chronic health conditions?  
+• When did your symptoms begin?  
+• Have you had changes in sexual desire?  
+• Are you having emotional or relationship problems?  
+• Do you get erections when sleeping, masturbating, or with a partner?  
+• Have you been diagnosed with a mental health condition?  
+• Are you experiencing depression, anxiety, or high stress?  
+• How often do your ED symptoms occur?  
+• Do you drink alcohol or use illicit drugs? How often?  
+• Are you taking any medications or supplements?  
+• Do you smoke?  
+• Have you had surgery, radiation, or chemotherapy in your pelvic region?  
+• Have you had any significant injury to your pelvic area?  
+• Do you have difficulty ejaculating or reaching climax?  
+• Are your erections painful?  
+• What is the frequency, quality, and duration of your erections like?
+
+While some of these questions may feel awkward, they’re essential to getting you the right diagnosis and treatment. Your doctor’s goal is to help—not judge—so answer as openly as you can.`
+    }
+  ],
+
+  ctaBanner: {
+    heading: "Don’t Wait to Get Relief From Your Erectile Dysfunction",
+    body: `Contact us today to learn about your treatment options and how quickly we can help you overcome your erectile dysfunction!`,
+    buttonText: "Book an Appointment",
+    buttonLink: "/book"
+  }
+
+
+
 
 
     // … your other sections (symptoms, treatment, etc.) …
