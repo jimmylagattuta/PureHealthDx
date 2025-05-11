@@ -4,78 +4,55 @@ import "./PlaquesComponent.css";
 function PlaquesComponent() {
   const plaques = [
     {
-      title: "Why Choose Us",
-      description:
-        "At LightningSEO.dev, we prioritize innovative strategies, data-driven insights, and measurable results. With years of industry experience, we deliver digital solutions that are reliable, affordable, and designed to drive your online growth.",
-      icon: "https://i.postimg.cc/d0TXq3Ff/i-Stock-2151690936-1.webp",
+      title: "Unmatched Customer Service",
+      icon: "https://i.postimg.cc/wBkLvY2D/how-it-works-icon.webp",  
     },
     {
-      title: "How We Can Help You",
-      description:
-        "From comprehensive SEO audits and technical optimizations to custom website development, mobile app creation, and Apple Watch app development, our team offers a full suite of digital services tailored to boost your online presence and drive results.",
-      icon: "https://i.postimg.cc/NMWrYD13/i-Stock-2151690936-2.webp",
+      title: "Supervised by Licensed Medical Doctors",
+      icon: "https://i.postimg.cc/DfRgRFMz/licensed-in-10-states.webp",
     },
     {
-      title: "See the Difference",
-      description:
-        "We stand out with our commitment to innovation, meticulous attention to detail, and exceptional customer service. Experience the LightningSEO.dev difference that transforms your digital presence and propels sustainable growth.",
-      icon: "https://i.postimg.cc/FzVcZcLw/i-Stock-2151690936-3.webp",
+      title: "20+ Years of Experience",
+      icon: "https://i.postimg.cc/XYSCkYDw/experience.webp",
     },
   ];
 
-  const [visiblePlaques, setVisiblePlaques] = useState({});
-  const plaqueRefs = useRef([]);
+  const [visible, setVisible] = useState({});
+  const refs = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const obs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          const index = entry.target.dataset.index;
-          if (entry.intersectionRatio > 0.6) {
-            setVisiblePlaques((prev) => ({
-              ...prev,
-              [index]: true,
-            }));
+        entries.forEach((e) => {
+          const i = e.target.dataset.index;
+          if (e.intersectionRatio > 0.6) {
+            setVisible((v) => ({ ...v, [i]: true }));
           }
         });
       },
       { threshold: [0, 0.4, 0.6, 1] }
     );
 
-    plaqueRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      plaqueRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
+    refs.current.forEach((r) => r && obs.observe(r));
+    return () => refs.current.forEach((r) => r && obs.unobserve(r));
   }, []);
 
   return (
     <section className="plaques-section">
-      {plaques.map((plaque, index) => (
+      {plaques.map((p, i) => (
         <div
-          key={index}
-          className="plaque-card"
-          ref={(el) => (plaqueRefs.current[index] = el)}
-          data-index={index}
+          key={i}
+          className={`plaque-card ${visible[i] ? "visible" : ""}`}
+          ref={(el) => (refs.current[i] = el)}
+          data-index={i}
         >
           <img
-            src={plaque.icon}
-            alt={plaque.title}
+            src={p.icon}
+            alt={p.title}
             className="plaque-icon"
             loading="lazy"
           />
-          <h1 className="plaque-title">{plaque.title}</h1>
-          <p
-            className={`plaque-description ${
-              visiblePlaques[index] ? "visible" : ""
-            }`}
-          >
-            {plaque.description}
-          </p>
+          <h3 className="plaque-title">{p.title}</h3>
         </div>
       ))}
     </section>

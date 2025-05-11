@@ -99,6 +99,99 @@ const Services = () => {
         </div>
       </section>
 
+
+      {/* — Difference — */}
+      {serviceId === 'hormone-therapy-for-women' && service.differenceTitle && (
+        <section className="difference-section">
+          <h2>{service.differenceTitle}</h2>
+          {service.differenceText.map((text, idx) => (
+            <p key={idx}>{text}</p>
+          ))}
+          <ul className="difference-list">
+            {service.differenceBullets.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* — Naturally Occurring Peptides — */}
+      {serviceId === "benefits-of-peptide-therapy" && extras.naturallyOccurringPeptides && (
+        <section className="peptide-section">
+          <h2>{extras.naturallyOccurringPeptides.heading}</h2>
+          {extras.naturallyOccurringPeptides.intro.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <ul className="peptide-list">
+            {extras.naturallyOccurringPeptides.items.map((item, i) => (
+              <li key={i}>
+                <strong>{item.title}</strong>
+                <p>{item.description}</p>
+              </li>
+            ))}
+          </ul>
+          <Link to={extras.naturallyOccurringPeptides.ctaLink} className="peptide-cta">
+            {extras.naturallyOccurringPeptides.ctaText}
+          </Link>
+        </section>
+      )}
+
+      {serviceId === "benefits-of-peptide-therapy" &&
+      extras.whyUsePeptideTherapy && (
+        <section className="whyuse-peptide-section">
+          <h2>{extras.whyUsePeptideTherapy.heading}</h2>
+          <p>{extras.whyUsePeptideTherapy.body}</p>
+          <div className="card-grid">
+            {extras.whyUsePeptideTherapy.cards.map((c, i) => (
+              <div key={i} className="why-card">
+                <img src={c.icon} alt={c.title} className="card-icon" />
+                <h3>{c.title}</h3>
+                <p>{c.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* — How It Works — */}
+      {serviceId === "benefits-of-peptide-therapy" && extras.howDoesPeptideWork && (
+        <section className="how-peptide-section">
+          <img
+            src={extras.howDoesPeptideWork.image}
+            alt="Peptide Therapy Illustration"
+            className="how-peptide-image"
+          />
+          <h2>{extras.howDoesPeptideWork.heading}</h2>
+          {extras.howDoesPeptideWork.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <Link to={extras.howDoesPeptideWork.ctaLink} className="hero-cta">
+            {extras.howDoesPeptideWork.ctaText}
+          </Link>
+        </section>
+      )}
+
+      {/* — Why Do It — */}
+      {serviceId === "platelet-rich-plasma-treatment" && extras.whyDoIt && (
+        <section className="whydoit-section">
+          <h5 className="whydoit-intro">{extras.whyDoIt.introLabel}</h5>
+          <h2 className="whydoit-heading">{extras.whyDoIt.heading}</h2>
+          {extras.whyDoIt.subheading && (
+            <p className="whydoit-subheading">{extras.whyDoIt.subheading}</p>
+          )}
+          <div className="whydoit-grid">
+            {extras.whyDoIt.items.map((item, i) => (
+              <div key={i} className="whydoit-item">
+                <img src={item.icon} alt={item.title} className="whydoit-icon" />
+                <h3 className="whydoit-title">{item.title}</h3>
+                <p className="whydoit-desc">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+
       {/* — Causes — */}
       {extras.causes && (
         <section className="causes-section">
@@ -260,6 +353,9 @@ const Services = () => {
       {extras.journey && (
         <section className="journey-cta-section">
           <h2>{extras.journey.ctaHeading}</h2>
+          {extras.journey.ctaBody && (
+            <p className="journey-cta-body">{extras.journey.ctaBody}</p>
+          )}
           <Link to={extras.journey.ctaLink} className="hero-cta">
             {extras.journey.ctaText}
           </Link>
@@ -315,6 +411,28 @@ const Services = () => {
         </section>
       )}
 
+      {extras.doctorBenefits && (
+        <section className="hormone-doctor-section">
+          <h2 className="section-title">
+            WORKING WITH A WOMEN’S HORMONE DOCTOR<br/>
+            Benefits of the Treatment:
+          </h2>
+          <p className="section-subtitle">
+            Alleviate Common Symptoms By Achieving Hormone Balance
+          </p>
+          <div className="card-grid">
+            {extras.doctorBenefits.map((b, i) => (
+              <div key={i} className="hormone-card">
+                <img src={b.icon} alt={b.title} className="card-icon" />
+                <h3>{b.title}</h3>
+                <p>{b.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+
       {/* — CTA Banner — */}
       {extras.ctaBanner && (
         <section className="cta-banner">
@@ -325,6 +443,18 @@ const Services = () => {
           </Link>
         </section>
       )}
+
+      {/* — Pain-Management Flyer — */}
+      {serviceId === "pain-management" && (
+        <section className="pain-flyer-section">
+          <img
+            src="https://i.postimg.cc/L84bzQhd/PHW-Flyer-1-768x994.webp"
+            alt="Pain Management Flyer"
+            className="pain-flyer-image"
+          />
+        </section>
+      )}
+
 
       <FooterComponent />
     </>

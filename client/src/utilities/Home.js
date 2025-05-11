@@ -4,6 +4,7 @@ import HeroSection from "../sections/HeroSection";
 
 // Lazy-load everything else:
 const FooterComponent = lazy(() => import('../sections/FooterComponent'));
+const PricingBanner = lazy(() => import('../sections/PricingBanner'));
 const AboutUsComponent = lazy(() => import('../sections/AboutUsComponent'));
 const Contact = lazy(() => import('../pages/main/Contact'));
 const PlaquesComponent = lazy(() => import("../sections/PlaquesComponent"));
@@ -109,12 +110,13 @@ const Home = ({ scrollToContact, reviews }) => {
 
       {loadRest && (
         <Suspense fallback={<div>Loading...</div>}>
+          <PricingBanner />
           <AboutUsComponent />
-          <Contact />
+          {/* <Contact /> */}
           <PlaquesComponent />
           <OurServicesComponent />
           <HowItWorksComponent />
-          <ProjectsSection />
+
           <LocationsSection />
           <FooterComponent />
         </Suspense>

@@ -1,0 +1,134 @@
+.pricing-banner {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #7a998f, #5f7b75);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Decorative top & bottom arcs */
+  .pricing-decor-top,
+  .pricing-decor-btm {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+    position: absolute;
+    left: -10%;
+    border-radius: 50%;
+  }
+  .pricing-decor-top  { top: -30px; }
+  .pricing-decor-btm  { bottom: -30px; }
+  
+  .pricing-title {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .pricing-amount {
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 1rem 0 1.5rem;
+  }
+  
+  .dollar-sign {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+    align-self: flex-start;
+  }
+  
+  .price {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .cents {
+    font-size: 1.2rem;
+    margin-left: 0.1rem;
+    align-self: flex-start;
+  }
+  
+  .per-month {
+    font-size: 1rem;
+    margin-left: 0.2rem;
+    color: rgba(255,255,255,0.8);
+  }
+  
+  .pricing-cta {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 1.5rem;
+  }
+  .pricing-cta:hover {
+    background: #111;
+    transform: translateY(-2px);
+  }
+  
+  .pricing-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  .check-icon {
+    color: #a8d5c3;
+    margin-right: 0.5rem;
+  }
+
+  /* -------------------------------------
+   Feature-list checkmarks
+------------------------------------- */
+.feature-item span {
+    position: relative;
+    padding-left: 1.2em;
+  }
+  
+  .feature-item span::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #a8d5c3; /* tweak to match your brand */
+  }
+  
+  
+  /* Responsive tweaks */
+  @media (max-width: 450px) {
+    .pricing-banner {
+      margin: 1rem;
+      padding: 1.5rem 1rem;
+    }
+    .pricing-title {
+      font-size: 1.4rem;
+    }
+    .price {
+      font-size: 3rem;
+    }
+    .pricing-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -31,6 +31,15 @@ function Navbar() {
     setProjectsSubMenuOpen(false);
   };
 
+  // Direct to external Patient Portal
+  const handleNavItemClickPortal = (url) => {
+    window.location.href = url;
+    setIsOpen(false);
+    setServicesSubMenuOpen(false);
+    setProjectsSubMenuOpen(false);
+  };
+  
+
   // Scroll to Contact Form if on the same page, otherwise navigate
   const handleContactClick = () => {
     const targetHash = "#contactForm";
@@ -194,19 +203,17 @@ function Navbar() {
           {/* Become a Patient */}
           <li
             className={`nav-item reviews-link ${
-              location.pathname === '/become-a-patient' ? 'active-link' : ''
+              location.pathname === '/book-appointment' ? 'active-link' : ''
             }`}
-            onClick={() => handleNavItemClick('/become-a-patient')}
+            onClick={() => handleNavItemClick('/book-appointment')}
           >
             Become a Patient
           </li>
 
           {/* Patient Portal */}
           <li
-            className={`nav-item portal-link ${
-              location.pathname === '/patient-portal' ? 'active-link' : ''
-            }`}
-            onClick={() => handleNavItemClick('/patient-portal')}
+            className="nav-item portal-link"
+            onClick={() => handleNavItemClickPortal('https://live.vcita.com/site/ihthr8x7hs2olzrt/activity/dashboard')}
           >
             Patient Portal
           </li>
@@ -214,7 +221,7 @@ function Navbar() {
           {/* Book Appointment */}
           <li
             className="nav-item book-appointment"
-            onClick={handleBookAppointmentClick}
+            onClick={() => handleNavItemClick('/book-appointment')}
           >
             Book Appointment
           </li>

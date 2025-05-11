@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "./BookAppointmentPage.css";
 
 const BookAppointmentPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   const demoMode = true;
   const navigate = useNavigate();
 
@@ -33,6 +37,9 @@ const BookAppointmentPage = () => {
           hoursOfSleep: "6-7",
           healthGoals: "Maintain healthy weight and improve energy",
           currentMedications: "None",
+          maritalStatus: "single",       // NEW
+          hasChildren: "no",             // NEW
+          childrenCount: ""              // NEW
         }
       : {};
 
@@ -57,17 +64,17 @@ const BookAppointmentPage = () => {
     if (!fieldValue || fieldError) return "required error";
     return "required valid";
   }
-  
-  const onSubmit = (data) => {
-    // Save the data to localStorage so it persists for later steps (e.g., step 6)
-    localStorage.setItem("appointmentFormData", JSON.stringify(data));
 
-    // Proceed to the next step
+  const onSubmit = (data) => {
+    // Save the data to localStorage so it persists for later steps
+    localStorage.setItem("appointmentFormData", JSON.stringify(data));
+    // Proceed to next step
     navigate("/book-appointment-step2");
   };
 
   return (
     <div className="book-appointment-container">
+      {/* Banner */}
       <div className="banner">
         <div className="banner-overlay"></div>
         <div className="banner-text">
@@ -75,10 +82,11 @@ const BookAppointmentPage = () => {
         </div>
       </div>
 
+      {/* Content */}
       <div className="content-section">
         <h2>Start Your Wellness Journey Today</h2>
-
         <div className="paper-container">
+          {/* Progress */}
           <div className="progress">
             <div className="progress-info">
               <p>Step 1 of 6</p>
@@ -88,6 +96,7 @@ const BookAppointmentPage = () => {
             </div>
           </div>
 
+          {/* Form */}
           <form className="intake-form" onSubmit={handleSubmit(onSubmit)}>
             {/* Name */}
             <div className="form-group">
@@ -178,13 +187,17 @@ const BookAppointmentPage = () => {
                 <select {...register("dobMonth", { required: "Month is required." })}>
                   <option value="">MM</option>
                   {[...Array(12)].map((_, i) => (
-                    <option key={i + 1} value={i + 1}>{String(i + 1).padStart(2, "0")}</option>
+                    <option key={i + 1} value={i + 1}>
+                      {String(i + 1).padStart(2, "0")}
+                    </option>
                   ))}
                 </select>
                 <select {...register("dobDay", { required: "Day is required." })}>
                   <option value="">DD</option>
                   {[...Array(31)].map((_, i) => (
-                    <option key={i + 1} value={i + 1}>{String(i + 1).padStart(2, "0")}</option>
+                    <option key={i + 1} value={i + 1}>
+                      {String(i + 1).padStart(2, "0")}
+                    </option>
                   ))}
                 </select>
                 <select {...register("dobYear", { required: "Year is required." })}>
@@ -196,32 +209,44 @@ const BookAppointmentPage = () => {
               </div>
             </div>
 
-            {/* License */}
+            {/* Driver’s License */}
             <div className="form-group">
               <label>
                 Driver’s License #{" "}
-                <span className={getRequiredClass(values.driversLicense, errors.driversLicense)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.driversLicense, errors.driversLicense)}
+                >
+                  (Required)
+                </span>
               </label>
               <input
                 type="text"
                 placeholder="E.g. A1234567"
                 {...register("driversLicense", { required: "This field is required." })}
               />
-              {errors.driversLicense && <p className="error-message">{errors.driversLicense.message}</p>}
+              {errors.driversLicense && (
+                <p className="error-message">{errors.driversLicense.message}</p>
+              )}
             </div>
 
             {/* Address */}
             <div className="form-group">
               <label>
                 Street Address{" "}
-                <span className={getRequiredClass(values.streetAddress, errors.streetAddress)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.streetAddress, errors.streetAddress)}
+                >
+                  (Required)
+                </span>
               </label>
               <input
                 type="text"
                 placeholder="1234 Elm Street"
                 {...register("streetAddress", { required: "This field is required." })}
               />
-              {errors.streetAddress && <p className="error-message">{errors.streetAddress.message}</p>}
+              {errors.streetAddress && (
+                <p className="error-message">{errors.streetAddress.message}</p>
+              )}
             </div>
 
             {/* City */}
@@ -238,7 +263,7 @@ const BookAppointmentPage = () => {
               {errors.city && <p className="error-message">{errors.city.message}</p>}
             </div>
 
-            {/* ZIP */}
+            {/* Zip */}
             <div className="form-group">
               <label>
                 Zip Code{" "}
@@ -270,21 +295,31 @@ const BookAppointmentPage = () => {
             <div className="form-group">
               <label>
                 What is your occupation?{" "}
-                <span className={getRequiredClass(values.occupation, errors.occupation)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.occupation, errors.occupation)}
+                >
+                  (Required)
+                </span>
               </label>
               <input
                 type="text"
                 placeholder="Occupation"
                 {...register("occupation", { required: "This field is required." })}
               />
-              {errors.occupation && <p className="error-message">{errors.occupation.message}</p>}
+              {errors.occupation && (
+                <p className="error-message">{errors.occupation.message}</p>
+              )}
             </div>
 
-            {/* Sleep */}
+            {/* Hours of Sleep */}
             <div className="form-group">
               <label>
                 How many hours a night do you sleep?{" "}
-                <span className={getRequiredClass(values.hoursOfSleep, errors.hoursOfSleep)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.hoursOfSleep, errors.hoursOfSleep)}
+                >
+                  (Required)
+                </span>
               </label>
               <select {...register("hoursOfSleep", { required: "This field is required." })}>
                 <option value="">Select</option>
@@ -294,37 +329,138 @@ const BookAppointmentPage = () => {
                 <option value="6-7">6-7</option>
                 <option value="8+">8+</option>
               </select>
-              {errors.hoursOfSleep && <p className="error-message">{errors.hoursOfSleep.message}</p>}
+              {errors.hoursOfSleep && (
+                <p className="error-message">{errors.hoursOfSleep.message}</p>
+              )}
             </div>
 
             {/* Health Goals */}
             <div className="form-group">
               <label>
                 Please write a quick summary of your overall health goals:{" "}
-                <span className={getRequiredClass(values.healthGoals, errors.healthGoals)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.healthGoals, errors.healthGoals)}
+                >
+                  (Required)
+                </span>
               </label>
               <textarea
                 placeholder="0 of 500 max characters"
                 maxLength={500}
                 {...register("healthGoals", { required: "This field is required." })}
               />
-              {errors.healthGoals && <p className="error-message">{errors.healthGoals.message}</p>}
+              {errors.healthGoals && (
+                <p className="error-message">{errors.healthGoals.message}</p>
+              )}
             </div>
 
-            {/* Medications */}
+            {/* Current Medications */}
             <div className="form-group">
               <label>
                 Please list any current medications you are taking:{" "}
-                <span className={getRequiredClass(values.currentMedications, errors.currentMedications)}>(Required)</span>
+                <span
+                  className={getRequiredClass(values.currentMedications, errors.currentMedications)}
+                >
+                  (Required)
+                </span>
               </label>
               <textarea
                 placeholder="0 of 500 max characters"
                 maxLength={500}
-                {...register("currentMedications", { required: "This field is required." })}
+                {...register("currentMedications", {
+                  required: "This field is required.",
+                })}
               />
-              {errors.currentMedications && <p className="error-message">{errors.currentMedications.message}</p>}
+              {errors.currentMedications && (
+                <p className="error-message">{errors.currentMedications.message}</p>
+              )}
             </div>
 
+            {/* Marital Status */}
+            <div className="form-group">
+              <label>
+                Marital Status{" "}
+                <span
+                  className={getRequiredClass(values.maritalStatus, errors.maritalStatus)}
+                >
+                  (Required)
+                </span>
+              </label>
+              <select {...register("maritalStatus", { required: "This field is required." })}>
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
+              {errors.maritalStatus && (
+                <p className="error-message">{errors.maritalStatus.message}</p>
+              )}
+            </div>
+
+            {/* Children Yes/No */}
+            <div className="form-group">
+              <label>
+                Do you have children?{" "}
+                <span
+                  className={getRequiredClass(values.hasChildren, errors.hasChildren)}
+                >
+                  (Required)
+                </span>
+              </label>
+              <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem" }}>
+                <label>
+                  <input
+                    type="radio"
+                    value="yes"
+                    {...register("hasChildren", { required: "This field is required." })}
+                  />{" "}
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="no"
+                    {...register("hasChildren", { required: "This field is required." })}
+                  />{" "}
+                  No
+                </label>
+              </div>
+              {errors.hasChildren && (
+                <p className="error-message">{errors.hasChildren.message}</p>
+              )}
+            </div>
+
+            {/* Number of Children - only if “Yes” */}
+            {values.hasChildren === "yes" && (
+              <div className="form-group">
+                <label>
+                  Number of Children{" "}
+                  <span
+                    className={getRequiredClass(
+                      values.childrenCount,
+                      errors.childrenCount
+                    )}
+                  >
+                    (Required)
+                  </span>
+                </label>
+                <input
+                  type="number"
+                  min="1"
+                  placeholder="e.g. 2"
+                  {...register("childrenCount", {
+                    required: "Please enter number of children.",
+                    min: { value: 1, message: "Must be at least 1." },
+                  })}
+                />
+                {errors.childrenCount && (
+                  <p className="error-message">{errors.childrenCount.message}</p>
+                )}
+              </div>
+            )}
+
+            {/* Submit */}
             <button type="submit" className="submit-btn">
               Next Step
             </button>

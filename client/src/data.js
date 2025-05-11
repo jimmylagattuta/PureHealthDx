@@ -250,6 +250,28 @@ export const servicesData = {
   extendedIntroText: `With hormone therapy, your body will get safe, medically researched doses of synthetic hormones that can help you begin to feel like your normal self. When you’re going through HRT, it’s important that you stay in communication with your doctor so that adjustments can be made to your dosage as necessary. Sometimes, it can take some time to figure out the exact dosage of hormones that are needed to address your hormonal imbalance. Together, you and your doctor will find the hormone therapy dosage that makes the most sense for your hormone imbalance.
 
 The goal of this treatment is to relieve menopausal symptoms, including weight gain, hot flashes, irregular periods, night sweats, mood changes, sleep problems.`,
+
+
+  // new section:
+  differenceTitle: "Hormone Imbalance Vs. Balance: What's The Difference?",
+  differenceText: [
+    `For many women, hormone imbalances are an inevitable part of getting older. After menopause, the body produces far less estrogen than before, and this can cause many unpleasant changes in the body that can negatively affect the quality of life. Some people find that their hormones cause adrenal gland issues, pituitary gland issues, thyroid gland problems, as well as serious hormone-related conditions like polycystic ovary syndrome.`,
+    `Thankfully, it’s possible to use hormone therapy to balance your hormones in a way that stops the negative effects of changing hormones as you get older. Hormone replacement therapy can help you feel like yourself again.`,
+    `Some women feel that declining energy and negative sex drive changes are just a part of growing older, but it doesn’t have to be that way. Advances in medicine have made it so that you likely don’t have to struggle through menopause the same way your mother and grandmother did. Thankfully, working closely with a physician who prescribes HRT can help you get the relief that you need from the symptoms of menopause.`,
+    `When you balance your hormone levels through hormone therapy, you won’t just find that your health conditions are getting better–you’ll also likely find that the other symptoms of perimenopause and menopause decrease. Menopausal symptoms can be exhausting and frustrating, and there’s nothing wrong with taking charge of your health by giving hormone therapy a try.`,
+    `If you’re considering hormone therapy, it’s likely that you’ve already tried other methods of correcting hormone imbalances, such as eating a healthy diet, taking control of your blood sugar, and getting medical education on why your changing hormones are negatively affecting your life. Women’s health can be complicated, and it can feel frustrating when you’re not seeing the changes you want despite your best efforts.`,
+    `Before you begin addressing your hormonal imbalances with hormone replacement therapy, your doctor will talk with you about your symptoms. This can help rule out an underlying condition that isn’t related to hormonal problems.`,
+    `Together, you and your physician will work to learn more about your health, and develop a health care plan that will help get your hormones in order. If you find that there isn’t an underlying cause unrelated to hormones that are causing your symptoms, your health care plan may include hormone replacement therapy or HRT. Typically, HRT involves supplementing your body’s estrogen and progestogen levels, as these are the two hormones that typically dip as the body goes through menopause. For most women, taking hormone replacement therapy is as simple as taking a pill every day.`
+  ],
+  differenceBullets: [
+    "Better sleep quality",
+    "Higher energy levels",
+    "Enhanced Mood",
+    "Increased Sex Drive",
+    "Improved Heart And Vascular Health"
+  ],
+
+
   causes: [
     {
       title: "Common Causes of Hormonal Imbalance in Women",
@@ -467,58 +489,54 @@ Our goal is to address the root of your pain while minimizing your dependence on
 },
 
 
-"semaglutide-weight-loss-program": {
-  title: "Semaglutide Weight Loss Program",
-  heroSubtitle: "Are you ready to achieve real, sustainable weight loss? Starting at just $229/Month!",
-  titleAbr: "Semaglutide",
-  shortDescription: `Our medically supervised semaglutide program helps patients lose weight safely, reduce appetite, and improve metabolic health.`,
-  images: {
-    hero: "https://i.postimg.cc/zvRL7Cpc/i-Stock-2185447936-1-1.webp", // Replace with actual hero image variable
-  },
-  collageImage: collageSemaCombined,
-  introTitle: "Semaglutide Weight Loss Program",
-  introText: `With Semaglutide, the FDA-approved breakthrough in weight management, you can start seeing results safely and effectively—all starting at only $229 per month! No contracts or long term commitments!`,
-  causes: [
-    {
-      title: "Why Weight Gain Happens",
-      items: [
-        "Insulin resistance",
-        "Hormonal imbalances",
-        "Chronic stress and cortisol spikes",
-        "Sedentary lifestyle",
-        "Poor sleep and recovery",
-        "Overeating or cravings"
-      ]
-    }
-  ],
-  symptoms: [
-    "Unexplained weight gain",
-    "Sugar cravings or constant hunger",
-    "Low energy and fatigue",
-    "Difficulty losing fat despite exercise",
-    "Mood swings and irritability"
-  ],
-  treatment: {
-    heading: "Safe, Sustainable Weight Loss with Semaglutide",
-    body: `Our program includes medical evaluations, weekly semaglutide injections, nutritional guidance, and continuous support from healthcare providers. Semaglutide mimics a natural hormone that targets areas of the brain involved in appetite regulation—helping you feel full longer, eat less, and burn more fat.
+// "semaglutide-weight-loss-program": {
+//   title: "Semaglutide Weight Loss Program",
+//   heroSubtitle: "Are you ready to achieve real, sustainable weight loss? Starting at just $229/Month!",
+//   titleAbr: "Semaglutide",
+//   shortDescription: `Our medically supervised semaglutide program helps patients lose weight safely, reduce appetite, and improve metabolic health.`,
+//   images: {
+//     hero: "https://i.postimg.cc/zvRL7Cpc/i-Stock-2185447936-1-1.webp", // Replace with actual hero image variable
+//   },
+//   collageImage: collageSemaCombined,
+//   introTitle: "Semaglutide Weight Loss Program",
+//   introText: `With Semaglutide, the FDA-approved breakthrough in weight management, you can start seeing results safely and effectively—all starting at only $229 per month! No contracts or long term commitments!`,
+//   causes: [
+//     {
+//       title: "Why Weight Gain Happens",
+//       items: [
+//         "Insulin resistance",
+//         "Hormonal imbalances",
+//         "Chronic stress and cortisol spikes",
+//         "Sedentary lifestyle",
+//         "Poor sleep and recovery",
+//         "Overeating or cravings"
+//       ]
+//     }
+//   ],
+//   symptoms: [
+//     "Unexplained weight gain",
+//     "Sugar cravings or constant hunger",
+//     "Low energy and fatigue",
+//     "Difficulty losing fat despite exercise",
+//     "Mood swings and irritability"
+//   ],
+//   treatment: {
+//     heading: "Safe, Sustainable Weight Loss with Semaglutide",
+//     body: `Our program includes medical evaluations, weekly semaglutide injections, nutritional guidance, and continuous support from healthcare providers. Semaglutide mimics a natural hormone that targets areas of the brain involved in appetite regulation—helping you feel full longer, eat less, and burn more fat.
 
-- ✅ Weekly injections with minimal side effects
-- ✅ Backed by clinical trials and FDA approval
-- ✅ No stimulants, no crash dieting
-- ✅ Ongoing provider support
+// - ✅ Weekly injections with minimal side effects
+// - ✅ Backed by clinical trials and FDA approval
+// - ✅ No stimulants, no crash dieting
+// - ✅ Ongoing provider support
 
-Whether you're struggling with stubborn fat, pre-diabetes, or general weight gain, this program is designed to help you succeed naturally and sustainably.`,
-    image: "https://via.placeholder.com/600x400?text=Semaglutide+Treatment" // Replace with treatment image
-  },
-  ctaText: "Book an Appointment",
-  ctaLink: "/book"
-}
+// Whether you're struggling with stubborn fat, pre-diabetes, or general weight gain, this program is designed to help you succeed naturally and sustainably.`,
+//     image: "https://via.placeholder.com/600x400?text=Semaglutide+Treatment" // Replace with treatment image
+//   },
+//   ctaText: "Book an Appointment",
+//   ctaLink: "/book"
+// }
 
 };
-
-
-
-// src/data/serviceExtras.js
 
 // src/data.js
 export const serviceExtras = {
@@ -652,7 +670,7 @@ By working with you one on one at our men’s testosterone clinic, we can help c
       // final note + cta
       conclusion: `In most cases, you will be able to pick which type of medication you’d prefer, however, you should take your doctor’s advice into consideration. For some men, only certain options may be available depending on how severe their symptoms are, if they have any potential health concerns, or how low their testosterone levels are to start.`,
       ctaText: "Book an Appointment",
-      ctaLink: "/book"
+      ctaLink: "/book-appointment"
     },
 
 
@@ -794,6 +812,87 @@ The good news is that treatment can become more of a maintenance plan once your 
     },
   },
 
+  // Add this alongside your other entries in src/data/serviceExtras.js
+  "hormone-therapy-for-women": {
+    // … any existing extras for causes, symptoms, etc. …
+
+    journey: {
+      ctaHeading: "Start Your Wellness Journey Today",
+      ctaBody: `As hormone therapy begins to take effect in your body, you'll likely notice positive changes. Put simply, you'll feel like yourself again. Continue taking your medications and enjoy getting back to your normal life, one day at a time.`,
+      ctaText:    "Book an Appointment",
+      ctaLink:    "/book-appointment",
+
+      introHeading: "How It Works: HRT for Older Women",
+      introText:    "",
+
+      steps: [
+        {
+          number: 1,
+          icon:   "https://i.postimg.cc/bwDCJjKv/i-Stock-1387200057-5-1.webp",
+          title:  "Book an Appointment",
+          description:
+            "Click the button at the top of the page to schedule an appointment. You can visit our clinic or set up a virtual consultation, making it easy for you to meet with a doctor who can treat your condition on your own time."
+        },
+        {
+          number: 2,
+          icon:   "https://i.postimg.cc/Z5xc0Kw4/i-Stock-1387200057-6-1.webp",
+          title:  "Take Your Prescription",
+          description:
+            "Take your prescription as recommended by our licensed doctor. The duration of your treatment would depend on your condition. Be sure to reach out to your physician if you have any questions or concerns about your medication. Sometimes, a simple dosage adjustment can make a world of difference when it comes to your results."
+        },
+        {
+          number: 3,
+          icon:   "https://i.postimg.cc/SKfZ2Gkk/i-Stock-1387200057-4.webp",
+          title:  "Live an Awesome Life",
+          description:
+            "It may take some time to see results, and your personal results will depend on your hormone levels, dosage, and other factors. Many women notice relief from hot flashes as soon as three weeks after the start of treatment. If you're concerned about the speed with which you're seeing results, be sure to reach out to your doctor to chat about changing your dosage."
+        }
+      ]
+    },
+    
+    faqs: [
+      {
+        question: "How HRT May Help With Weight Gain, Night Sweats, and More",
+        answer: `If you're considering starting hormone medications, it's likely that you have a lot of questions. It's smart to talk with your physician about what your hormone replacement therapy will entail so that you know what to expect as you go through the journey of getting your hormones back in order.`
+      },
+      {
+        question: "Who can have HRT for postmenopausal women?",
+        answer: `While hormone therapy works well for many women, it's not the right fit for everyone. Your doctor will work closely with you to determine whether the potential benefits outweigh the risks. Women over 60 may be at higher risk for adverse effects, and factors like a family history of blood clots, liver disease, osteoporosis, or heart disease should be taken into account.`
+      },
+      {
+        question: "How long do I need to take HRT?",
+        answer: `Your doctor will work with you to determine how long you should take hormone replacement therapy. It's generally not recommended to stay on HRT for more than a year due to an increased risk of breast cancer, though many women continue through the duration of their menopausal symptoms under close supervision.`
+      }
+    ],
+    doctorBenefits: [
+      {
+        icon: "https://i.postimg.cc/CxCsQL89/i-Stock-1487309111-1-1.webp",
+        title: "More Energy",
+        description:
+          "When you lose the energy you had in your younger years, you may feel frustrated that you aren't able to participate in the activities you enjoy. With hormone therapy, you'll likely find that you get an energy boost, making it easier for you to exercise, have positive relationships, and participate in hobbies that give your life meaning."
+      },
+      {
+        icon: "https://i.postimg.cc/GtVnVxW3/i-Stock-1487309111-3-1.webp",
+        title: "Less Fat",
+        description:
+          "If you're searching to learn more about HRT for women's weight loss, you're not alone. Weight gain is a common side effect of menopause. Many women who use hormone replacement therapy find that they're more easily able to lose weight. Losing fat can help boost energy and libido as well."
+      },
+      {
+        icon: "https://i.postimg.cc/MHWYxk8d/i-Stock-1487309111-2-1.webp",
+        title: "Higher Libido",
+        description:
+          "Many women find that they experience a decrease in sex drive when they go through menopause. HRT can help you get the fire back that you once had, boosting your sex drive and helping you enjoy intimacy the way you once did."
+      },
+      {
+        icon: "https://i.postimg.cc/Zqs9n13w/i-Stock-1487309111-4-1.webp",
+        title: "Sharper Mind",
+        description:
+          "Memory issues are an unfortunately common part of menopause. It can be frustrating when your mind doesn't feel as sharp as it once was. Women who take hormone replacement treatments often find that their minds feel sharper than they did prior to taking hormones."
+      }
+    ]
+  },
+
+
   "erectile-dysfunction-treatment": {
     causesIntroTitle: "What Causes Erectile Dysfunction?",
     causesIntroText: `There are several underlying conditions, medications, and psychological causes for erectile dysfunction. Although erectile dysfunction tends to be more common in men over the age of 40 than it is in younger men, there is no direct correlation between aging and erectile dysfunction. Many men believe that low testosterone is the primary contributing factor to ED, but that is almost never the case. While hypogonadism can indirectly contribute to erectile dysfunction, in most cases there is usually a more severe health condition at the root of ED.`,
@@ -916,7 +1015,7 @@ The good news is that treatment can become more of a maintenance plan once your 
     benefits: {
       // e.g. two illustrative images
       images: [
-        "https://example.com/benefit-image-1.jpg",
+        "https://i.postimg.cc/3rSZ3GN4/Mix-Collage-24-Apr-2025-10-07-PM-5584.webp",
         "https://example.com/benefit-image-2.jpg"
       ],
       introHeading: "Benefits of Treating Erectile Dysfunction",
@@ -997,7 +1096,7 @@ While some of these questions may feel awkward, they’re essential to getting y
     heading: "Don’t Wait to Get Relief From Your Erectile Dysfunction",
     body: `Contact us today to learn about your treatment options and how quickly we can help you overcome your erectile dysfunction!`,
     buttonText: "Book an Appointment",
-    buttonLink: "/book"
+    buttonLink: "/book-appointment"
   }
 
 
@@ -1005,17 +1104,230 @@ While some of these questions may feel awkward, they’re essential to getting y
 
 
     // … your other sections (symptoms, treatment, etc.) …
-  }
+  },
   
-  
+  "benefits-of-peptide-therapy": {
+    // … any existing extras …
 
-  // … other serviceExtras entries …
+    naturallyOccurringPeptides: {
+      heading: "Naturally Occurring Peptides",
+      intro: [
+        `It’s important to understand that, though peptide drug development and peptide drug discovery is now in the news, the body has naturally occurring peptides throughout that you might have already heard about.`,
+        `From neuropeptides in the brain, to other peptides in the immune system, there’s virtually no area of the body that doesn’t have peptides or that can’t benefit from peptide treatments.`,
+        `Some of the most common peptides you might have heard of already include:`
+      ],
+      items: [
+        {
+          title: "Oxytocin",
+          description:
+            "A neuropeptide that helps in stimulating the uterus during labor, but also plays a role in pleasure, forming bonds, and intimacy."
+        },
+        {
+          title: "Secretin",
+          description:
+            "Which helps stimulate the stomach’s acids to process food."
+        },
+        {
+          title: "Antimicrobial peptides (AMPs)",
+          description:
+            "Which help fight off diseases and are one of the first lines of defense in the immune response against viruses, bacteria, and more."
+        },
+        {
+          title: "Insulin",
+          description:
+            "Which is responsible for the processing of glucose in the body. Insulin resistance and lack of insulin in the body leads to diabetes."
+        },
+        {
+          title: "Glucagon",
+          description:
+            "Which helps with overall health and controlling the management of the body’s cellular process, diabetes management, regulating metabolism, and more."
+        }
+      ],
+      ctaText: "Book an Appointment",
+      ctaLink: "/book-appointment"
+    },
+
+    whyUsePeptideTherapy: {
+      heading: "Why Do People Use Human Growth Hormone Peptide Therapy?",
+      body: `As you can see from the list above, these small molecules play a vital role in helping the body and in modern medicine. Today, bioactive peptides and natural peptides in the body are making waves as more and more scientists work to create new peptide drugs to help improve overall health.`,
+      cards: [
+        {
+          icon: "https://i.postimg.cc/Zqs9n13w/i-Stock-1487309111-4-1.webp", // placeholder—replace when you have the real one
+          title: "Peptide Therapy for Improved Cognitive Function",
+          description: `Recently, scientists have been able to develop peptides made of d amino acids that have been shown to possibly help inhibit Alzheimer's disease, which is a neurological disease that affects memory. These d amino acids were once thought to be non-existent until amino acid residues of this peptide sequence were found in nature. Today, this is a new form of peptides that scientists are just beginning to understand.`
+        },
+        {
+          icon: "https://i.postimg.cc/65s1T5Cm/i-Stock-1487309111-5-1.webp",
+          title: "Peptide Therapy for Hair Growth",
+          description: `For those that want a solution for hair loss, want to stimulate hair growth, and need something that works fast, there's an unfortunately low number of prescription drugs that can help. However, recent studies in Korea have shown that a peptide, APN5, has been shown to stimulate hair growth. You can also find peptides in a wide range of different uses such as oral medications, hair serums, and other therapeutic agents.`
+        },
+        {
+          icon: "https://i.postimg.cc/brPkcM23/i-Stock-1487309111-7-1.webp",
+          title: "Weight Loss Peptide Therapy",
+          description: `There are also new studies that show promising peptide drugs that can be used for weight loss. This new peptide, known as AD9604, has been shown in animal studies to help reduce weight gain. In addition, because it has a safe peptide drug design, there is hope that this peptide can be used with in vivo stability as a potentially safe option for peptide therapy weight loss and weight management.`
+        },
+        {
+          icon: "https://i.postimg.cc/s2cR4G4x/i-Stock-1487309111-2-3.webp",
+          title: "Peptide Therapy for Sexual Dysfunction",
+          description: `One peptide, known as bremelanotide, is one of the most recent FDA-approved peptide drugs to help treat low libido in women and help with sexual dysfunction! There are also peptide drugs available to help men with lower libido and sexual dysfunction improve their quality of life.`
+        },
+        {
+          icon: "https://i.postimg.cc/BbD3DYY9/i-Stock-1487309111-6-2-1.webp",
+          title: "Anti-Aging Peptide Therapies",
+          description: `Anti-aging peptides have also been used safely to help minimize the look of the aging process. Peptide injections can help boost hormone production, as well as be injected directly into the skin to help get rid of wrinkles, and also stimulate collagen production.`
+        }
+      ]
+    },
+
+    howDoesPeptideWork: {
+      // placeholder image—just reuse it for now, you can replace later
+      image: "https://i.postimg.cc/0Ncm5gnG/Mix-Collage-24-Apr-2025-09-19-PM-3010.webp",
+      heading: "How Does Peptide Therapy Work?",
+      paragraphs: [
+        "If you’re interested in starting peptide therapy, you’ll first need to meet with one of our providers that specializes in peptide therapies. You will be given a bloodwork exam to determine if you have any underlying conditions, and also to determine if you’re suitable for peptide therapy.",
+        "Afterward, you will receive a unique and customized plan to help you get started on your road to overall better health. You might be prescribed small molecule drugs, medium sized peptides, subcutaneous injections, or a combination of different peptides in order to achieve your goals.",
+        "Whether you need help with weight management or weight loss, want better skin health, are feeling tired, or want help to improve joint pain and are looking for the latest in regenerative medicine, peptides can provide a fast solution."
+      ],
+      ctaText: "Book an Appointment",
+      ctaLink: "/book-appointment"
+    },
+    faqs: [
+      {
+        question: "What Are Peptides?",
+        answer: `Naturally occurring peptides are made of building blocks of the human body. They are made up of two to ten amino acids, which string together and create peptides. However, you might see peptides made up of around 50 to 100 amino acids. When more amino acid chains are linked together, these are no longer peptides and are considered proteins in the scientific community. Peptides can be strings or cyclic peptides which are, as the name suggests, shaped in a circle. Both of these are considered simple structures and can be manufactured in a lab, unlike protein structures.`
+      },
+      {
+        question: "The Role of Peptides in the Human Body?",
+        answer: `Peptide drug discovery is now playing a key role in medicine. That's because peptides have an important role in the human body. Some of their many functions include:
+
+• Regulate cellular processes  
+• Facilitate biochemical processes in the human body  
+• Help tissues grow, survive, and function`
+      },
+      {
+        question: "How Long Will I Take Peptide Therapeutics?",
+        answer: `Your peptide therapy sessions might last between 10 minutes to two hours depending on your goals. However, you might also be given peptide medications to take home with you. This will depend on the types of goals you have in mind, the severity of your condition (obesity, hair loss, pain, etc.), and recommendations made by your peptide therapy specialist.`
+      },
+      {
+        question: "Does Peptide Therapy Have Risks?",
+        answer: `It's good to know that amino acids are naturally occurring in the body. Like natural proteins, there's little risk that they'll do any harm once inside the body. Because peptides are short-chain amino acids, they can easily pass through the cell membrane and be absorbed into the body, so they can begin acting right away.
+
+However, once they are dissolved into the body, they become simple amino acids that are then treated the same as food. In addition, cyclic peptides are now being studied for their potential to last longer in the bloodstream, giving you better results and minimizing the need for frequent dosing. Although peptide cyclization is rarer, these peptides have the potential to be more stable and are an exciting new development in peptide therapy.
+
+In the meantime, our team will help you find the best peptide therapy that works for you and your goals using the latest in peptide drugs and pharmaceuticals.`
+      }
+    ],
+    ctaBanner: {
+      heading: "Visit Pure Health and Wellness for Peptide Therapy to Change your Life",
+      body: `Whether you’re looking for pain relief, peptide therapy for weight loss, need to improve your overall health, or are even looking to fix issues like hair loss and aging, we can help you get fast results! Call us today to book an appointment with one of our experts, and experience the benefits of peptide drugs today!`,
+      buttonText: "Book an Appointment",
+      buttonLink: "/book-appointment"
+    }
+  },  
+
+  "platelet-rich-plasma-treatment": {
+    whyDoIt: {
+      introLabel: "WHY DO IT",
+      heading: "Benefits of Platelet Rich Plasma Treatments",
+      subheading: "Many people prefer plasma rich platelet therapy because it provides numerous benefits, including the following.",
+      items: [
+        {
+          icon: "https://i.postimg.cc/CxCsQL89/i-Stock-1487309111-1-1.webp",
+          title: "Faster Recovery",
+          description:
+            "The procedure is performed in a doctor’s office with local anesthesia so you can return home soon after."
+        },
+        {
+          icon: "https://i.postimg.cc/RhFBpCZm/i-Stock-1484981265-1-1.webp",
+          title: "Less Bruising",
+          description:
+            "Because there’s no incision or surgery involved, there won’t be any noticeable scarring or bruising afterward."
+        },
+        {
+          icon: "https://i.postimg.cc/65s1T5Cm/i-Stock-1487309111-5-1.webp",
+          title: "Stimulates Hair Growth",
+          description:
+            "PRP scalp injections promote collagen formation and blood flow, stimulating hair growth by increasing cell production within the follicle."
+        },
+        {
+          icon: "https://i.postimg.cc/BbD3DYY9/i-Stock-1487309111-6-2-1.webp",
+          title: "Reduces Wrinkles",
+          description:
+            "PRP treatment reduces the appearance of skin aging, resulting in a more youthful look in a short period without going under the knife."
+        },
+        {
+          icon: "https://i.postimg.cc/RhsMv6Dq/i-Stock-1487309111-8-1.webp",
+          title: "Minimizes Scars",
+          description:
+            "With PRP injections, you can minimize these marks without invasive procedures like dermabrasion or laser therapy."
+        },
+        {
+          icon: "https://i.postimg.cc/6pxPy5xQ/i-Stock-1487309111-9-1-1.webp",
+          title: "Natural Procedure",
+          description:
+            "Since PRP uses your blood, the procedure is perfect for people who don’t want to use synthetic substances."
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "How does platelet rich plasma treatment work?",
+        answer: `Platelets are important for clotting and healing injured tissue. When the PRP is injected into your skin, it causes an inflammatory reaction that draws more white blood cells to the area in question.
+
+This process makes sense because it’s what your body does naturally when there’s an injury or trauma to an area of the skin.`
+      },
+      {
+        question: "Does plasma rich platelet therapy hurt?",
+        answer: `A small amount of discomfort may be felt when PRP gets injected into the skin, but most patients don’t experience any pain. The plasma rich platelet therapy procedure is performed with a topical anesthetic cream and local anesthesia to help minimize discomfort.`
+      },
+      {
+        question: "How long does a plasma rich platelet therapy take?",
+        answer: `The entire plasma rich platelet therapy takes about 30 minutes, but you will need to plan for one hour in case you have any questions or concerns after your treatment.`
+      }
+    ],
+    journey: {
+      ctaHeading: "Start Your Wellness Journey Today",
+      ctaText: "Book an Appointment",
+      ctaLink: "/book",
+      introHeading: "Our Simple Process",
+      introText: "", // no extra intro paragraph
+      steps: [
+        {
+          number: 1,
+          icon:   "https://i.postimg.cc/bwDCJjKv/i-Stock-1387200057-5-1.webp",
+          title:  "Book an appointment",
+          description:
+            "Click the button at the top of the page to schedule an appointment. You can visit our clinic or set up a virtual consultation."
+        },
+        {
+          number: 2,
+          icon:   "https://i.postimg.cc/Z5xc0Kw4/i-Stock-1387200057-6-1.webp",
+          title:  "Take your prescription",
+          description:
+            "Take your prescription as recommended by our licensed doctor. The duration of your treatment would depend on your condition."
+        },
+        {
+          number: 3,
+          icon:   "https://i.postimg.cc/SKfZ2Gkk/i-Stock-1387200057-4.webp",
+          title:  "Live an awesome life",
+          description:
+            "Some people see results sooner than others, but one thing is for sure: it works. You’ll have more energy to live the life that you want."
+        }
+      ]
+    }
+    // … any other extras like faqs, ctaBanner, etc. …
+  },
+
+  "pain-management": {
+    ctaBanner: {
+      heading: "Quality of Life",
+      body: `The clinic also offers Electodiagnostic testing and consultations in medical-legal cases such as car accidents and slip and falls. Pure Health & Wellness will continue to treat anti-aging and lifestyle issues such as testosterone replacement, weight loss, erectile dysfunction, and sleep dysfunction.`,
+      buttonText: "Book an Appointment",
+      buttonLink: "/book-appointment"
+    }
+  },
+
 };
-
-
-
-
-
 
 
 export const locationsData = {

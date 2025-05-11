@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faFacebook, 
@@ -15,25 +16,22 @@ function FooterComponent() {
   return (
     <footer className="footer-container">
       {/* Top area with 4 columns on desktop/tablet */}
-      <div className="footer-top-grid">
-        {/* 1) BRAND + TAGLINE COLUMN */}
-        <div className="footer-col brand-col">
-          <div className="fancy-brand-row">
-            <img
-              src="https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
-              alt="LightningSEO.dev Logo"
-              className="fancy-brand-logo"
-              height="40"
-              width="40"
-            />
-            <div className="fancy-text-group">
-              <h1 className="fancy-brand-title">LightningSEO.dev</h1>
-              <h2 className="fancy-brand-subtitle">
-                Affordable Digital Marketing &amp; Web Solutions
-              </h2>
-            </div>
-          </div>
-        </div>
+      <Link to="/">
+        <img
+          src="https://i.postimg.cc/FsjJMwWQ/footer-logo.webp"
+          alt="Pure Health & Wellness"
+          className="footer-logo"
+        />
+      </Link>
+
+
+      <p className="footer-tagline">
+        Helping you get rid of excess weight, erectile dysfunction, and low energy levels.
+      </p>
+
+      <div className="footer-socials">
+
+
 
         {/* 2) NAVIGATION COLUMN */}
         <div className="footer-col footer-section nav-col">
@@ -41,10 +39,7 @@ function FooterComponent() {
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about-us">About Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/reviews">Reviews</a></li>
+            <li><a href="/book-appointment">Book Appointment</a></li>
             <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
@@ -53,11 +48,13 @@ function FooterComponent() {
         <div className="footer-col footer-section services-col">
           <h3>Our Services</h3>
           <ul>
-            <li><a href="/services/on-page-seo">On-Page SEO</a></li>
-            <li><a href="/services/technical-seo">Technical SEO</a></li>
-            <li><a href="/services/web-development">Website Development</a></li>
-            <li><a href="/services/mobile-app">Mobile App Development</a></li>
-            <li><a href="/services/watch-app">Apple Watch App Development</a></li>
+            <li><a href="/services/testosterone-replacement-therapy">Testosterone Replacement Therapy</a></li>
+            <li><a href="/services/erectile-dysfunction-treatment">Erectile Dysfunction Treatment</a></li>
+            <li><a href="/services/hormone-therapy-for-women">HRT Treatment for Women</a></li>
+            <li><a href="/services/benefits-of-peptide-therapy">Peptide Therapy</a></li>
+            <li><a href="/services/platelet-rich-plasma-treatment">Platelet Rich Plasma Therapy</a></li>
+            <li><a href="/services/pain-management">Pain Management</a></li>
+
           </ul>
         </div>
 
@@ -67,8 +64,8 @@ function FooterComponent() {
           <ul>
             <li>
               <strong>Email: </strong>
-              <a href="mailto:jimmy.lagattuta@gmail.com">
-                &nbsp;jimmy.lagattuta@gmail.com
+              <a href="mailto:info@purehealthdx.com">
+                &nbsp;info@purehealthdx.com
               </a>
             </li>
 
@@ -85,7 +82,7 @@ function FooterComponent() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>© 2025 LightningSEO.dev. All Rights Reserved.</p>
+        <p>© 2025 Pure Health & Wellness. All Rights Reserved.</p>
         <ul className="footer-bottom-links">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>

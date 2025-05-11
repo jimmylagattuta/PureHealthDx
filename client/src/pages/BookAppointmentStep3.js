@@ -136,7 +136,7 @@ const BookAppointmentStep3 = () => {
               by (“PRACTICE”):
             </p>
             <p>
-              Pure Health &amp; Wellness 6065 N First St, Fresno, CA 93710
+              Pure Health &amp; Wellness 1130 Coffee Rd, Modesto, CA 95355
             </p>
             <p>
               This consent applies to the PRACTICE, its agents, employees and

@@ -4,35 +4,52 @@ import "./HowItWorksComponent.css";
 
 function HowItWorksComponent() {
   const navigate = useNavigate();
-  
-  const handleContactFormClick = (e) => {
+
+  const handleBecomePatientClick = (e) => {
     e.preventDefault();
-    navigate("/contact");
+    navigate("/book-appointment");
   };
 
   return (
-    <section className="how-it-works-section" aria-labelledby="how-it-works-title">
+    <section
+      className="how-it-works-section"
+      aria-labelledby="how-it-works-title"
+    >
       <div className="hero-content-title">
         <div
           className="line"
-          style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
-        ></div>
+          style={{
+            backgroundColor: "rgb(37, 54, 53)",
+            width: "40px",
+            height: "2px",
+          }}
+        />
         <h1
           className="company-name"
-          style={{ color: "rgb(37, 54, 53)", fontSize: "0.9rem", fontWeight: "bolder" }}
+          style={{
+            color: "rgb(37, 54, 53)",
+            fontSize: "0.9rem",
+            fontWeight: "bolder",
+          }}
         >
           HOW IT WORKS
         </h1>
         <div
           className="line"
-          style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
-        ></div>
+          style={{
+            backgroundColor: "rgb(37, 54, 53)",
+            width: "40px",
+            height: "2px",
+          }}
+        />
       </div>
+
       <h2 id="how-it-works-title" className="hiw-title">
-        How Do I Get Started with LightningSEO.dev?
+        How Do I Become A Patient?
       </h2>
       <p className="hiw-subtitle">
-        Ready to boost your online presence? Follow our simple, three-step process to get started with our comprehensive digital marketing solutions.
+        Ready to find out how you become a patient. Just follow the easy
+        step-by-step process below.
       </p>
 
       <div className="hiw-steps-container">
@@ -40,8 +57,8 @@ function HowItWorksComponent() {
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/T1zSsXbW/i-Stock-2151690936-4-1-1.webp"
-              alt="Step 1: Request a Free Audit"
+              src="https://i.postimg.cc/KzrL1S5n/book-your-appointment-1.webp"        // ← swap in your “finger + check” SVG
+              alt="Start Your Journey"
               width="55"
               height="65"
               loading="lazy"
@@ -49,19 +66,27 @@ function HowItWorksComponent() {
           </div>
           <div className="hiw-step-number-container">
             <div className="hiw-step-number">1</div>
-            <h3 className="hiw-step-title">Request a Free Audit</h3>
+            <h3 className="hiw-step-title">Start Your Journey</h3>
           </div>
           <p className="hiw-step-description">
-            Fill out our <a href="/contact" onClick={handleContactFormClick} className="hiw-contact-link">contact form</a> to tell us about your digital challenges. Whether you need help with SEO, website improvements, or app development, we start with a complimentary audit to understand your current performance.
+            <a
+              href="/book-appointment"
+              onClick={handleBecomePatientClick}
+              className="hiw-contact-link"
+            >
+              Complete the new patient intake form
+            </a>{" "}
+            and confirm your service subscription. Start now!
           </p>
         </div>
 
         {/* Step 2 */}
+
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/FKRsVjVk/i-Stock-2151690936-5-1-1.webp"
-              alt="Step 2: Strategy Consultation"
+              src="https://i.postimg.cc/MpCjtKP7/take-your-prescription-icon.webp"        // ← swap in your “labs + paper” SVG
+              alt="Complete Labs"
               width="55"
               height="65"
               loading="lazy"
@@ -69,10 +94,11 @@ function HowItWorksComponent() {
           </div>
           <div className="hiw-step-number-container">
             <div className="hiw-step-number">2</div>
-            <h3 className="hiw-step-title">Strategy Consultation</h3>
+            <h3 className="hiw-step-title">Complete Labs</h3>
           </div>
           <p className="hiw-step-description">
-            We review your audit results and schedule a consultation to discuss a tailored digital strategy. Our experts work with you to craft a plan that addresses your SEO, web development, mobile app, or watch app needs.
+            Schedule and bring your lab request to one of the Lab Corp nationwide
+            offices.
           </p>
         </div>
 
@@ -80,8 +106,8 @@ function HowItWorksComponent() {
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/q7Q2DXKs/i-Stock-2151690936-7-1.webp"
-              alt="Step 3: Implementation & Results"
+              src="https://i.postimg.cc/gJZpsm7Z/live-an-awesome-life-icon.webp"        // ← swap in your “provider” SVG
+              alt="Review Lab Results With Provider"
               width="55"
               height="65"
               loading="lazy"
@@ -89,10 +115,12 @@ function HowItWorksComponent() {
           </div>
           <div className="hiw-step-number-container">
             <div className="hiw-step-number">3</div>
-            <h3 className="hiw-step-title">Implementation & Results</h3>
+            <h3 className="hiw-step-title">Review Lab Results With Provider</h3>
           </div>
           <p className="hiw-step-description">
-            Once the strategy is approved, we implement the plan across your digital channels. Our team continuously monitors performance and optimizes your campaigns to ensure your online presence grows and converts.
+            One of our providers will schedule a time to review your lab results,
+            medical history, current symptoms, goals and needs, and discuss
+            possible treatment options if you are a qualified patient candidate.
           </p>
         </div>
       </div>

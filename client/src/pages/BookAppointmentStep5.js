@@ -146,7 +146,7 @@ const BookAppointmentStep5 = () => {
             <div className="consent-text">
               <p>
                 I, the undersigned, authorize and give my Informed Consent for
-                the administration of testosterone replacement therapy offered by (“PRACTICE”): Pure Health &amp; Wellness 6065 N First St, Fresno, CA 93710 (Patient &amp; Practice are referred to individually as “Party” or collectively as “Parties”)
+                the administration of testosterone replacement therapy offered by (“PRACTICE”): Pure Health &amp; Wellness 1130 Coffee Rd, Modesto, CA 95355 (Patient &amp; Practice are referred to individually as “Party” or collectively as “Parties”)
               </p>
               <p>
                 <strong>EXPECTED BENEFITS of TESTOSTERONE REPLACEMENT THERAPY</strong>
