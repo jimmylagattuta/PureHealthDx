@@ -12,6 +12,7 @@ class ContactMailer < ApplicationMailer
       @user_email = contact_params[:email]
       @phone = contact_params[:phone]
   
+      
       mail(
         to: 'jimmy.lagattuta@gmail.com', # Replace with your receiving email
         subject: "LSD: New Submission for LightningSEO.dev Contact Us Form"

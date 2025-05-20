@@ -1,46 +1,26 @@
+// src/components/AboutUs.js
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { servicesData } from "../data";
 import Contact from "../pages/main/Contact";
 import FooterComponent from "../sections/FooterComponent";
 import "./AboutUs.css";
 
 const AboutUs = () => {
-  // Convert servicesData object into an array for mapping.
-  const servicesArray = Object.entries(servicesData).map(([key, service]) => ({
-    ...service,
-    id: key,
-  }));
-
-  // Build the rich snippet JSON‑LD object for the About Us page.
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "LightningSEO.dev",
-    "url": "https://lightningseo.dev/about-us",
-    "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp",
-    "description":
-      "LightningSEO.dev is a full-service digital marketing agency specializing in affordable, high-performance SEO solutions, custom website development, mobile app development, and Apple Watch app development. We deliver measurable growth and a robust online presence for businesses of all sizes.",
-    "contactPoint": {
+    name: "Pure Health & Wellness Treatment Center",
+    url: window.location.href,
+    logo: "https://i.postimg.cc/FsjJMwWQ/footer-logo.webp",
+    description:
+      "Pure Health and Wellness Treatment Center provides personalized hormone therapy under licensed medical supervision.",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+1-000-000-0000",
-      "contactType": "Customer Service",
-      "availableLanguage": ["English"],
-      "email": "jimmy.lagattuta@gmail.com"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Services",
-      "itemListElement": servicesArray.map((service, index) => ({
-        "@type": "Offer",
-        "position": index + 1,
-        "itemOffered": {
-          "@type": "Service",
-          "name": service.title,
-          "description": service.shortDescription,
-          "url": `https://lightningseo.dev/services/${service.id}`
-        }
-      }))
+      telephone: "+1-000-000-0000",
+      contactType: "Customer Service",
+      availableLanguage: ["English"],
+      email: "info@purehealthdx.com"
     }
   };
 
@@ -52,63 +32,71 @@ const AboutUs = () => {
         </script>
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Header */}
       <section className="aboutus-hero">
-        <div className="aboutus-hero-overlay">
-          <h1 className="aboutus-hero-title">Welcome to LightningSEO.dev!</h1>
-          <p className="aboutus-hero-subtitle">
-            Affordable, High-Performance Digital Solutions for Your Business
+        <h1>About Us</h1>
+      </section>
+
+      {/* WHO WE ARE SECTION */}
+      <section className="aboutus-section">
+        <img
+          className="aboutus-image"
+          src="https://i.postimg.cc/SK6KjGDy/i-Stock-493796666.webp"
+          alt="Athlete hurdling"
+        />
+        <div className="who-we-are-about-us">
+          <small className="subtitle">WHO WE ARE</small>
+          <h2 className="title">Pure Health and Wellness Treatment Center</h2>
+          <p className="text">
+            Here at Pure Health and Wellness Center, we offer a personalized approach to hormone therapy. We believe every individual has unique needs that require an equally unique solution. All our treatments are carried out by an experienced and trained medical professional. Our customer service is hard to match in this or any other industry. We offer a comprehensive experience that will leave you feeling and looking better.
           </p>
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* WHAT WE DO SECTION */}
       <section className="aboutus-section">
-        <h2 className="aboutus-heading">About Us</h2>
-        <div className="aboutus-content">
-          <div className="aboutus-card">
-            <h3>Why Choose LightningSEO.dev</h3>
-            <p>
-              At LightningSEO.dev, we blend innovative SEO strategies with advanced digital development to help your business thrive online. Our mission is to deliver measurable results through data-driven insights and tailored solutions that drive traffic and conversions.
-            </p>
-          </div>
-          <div className="aboutus-card">
-            <h3>Our Approach</h3>
-            <p>
-              We begin with a comprehensive analysis of your current digital presence, followed by a custom strategy that combines on-page, technical, and local SEO with modern website and app development. Every solution is designed to maximize performance, boost search rankings, and engage your target audience.
-            </p>
-          </div>
-          <div className="aboutus-card">
-            <h3>The Difference We Make</h3>
-            <p>
-              Our commitment to quality, transparency, and continuous improvement sets us apart. We work closely with you to ensure that every project not only meets but exceeds your expectations—helping you achieve a strong online presence and sustainable growth.
-            </p>
-          </div>
+        <div className="who-we-are-about-us">
+          <small className="subtitle">WHAT WE DO</small>
+          <h2 className="title">Our Mission</h2>
+          <p className="text">
+            Every day, millions of people feel tired or suffer from low sex drive. They miss out on life in many other ways because of low testosterone levels. Our goal is to help these individuals unleash their best selves through personalized hormone treatment.
+          </p>
+          <Link to="/book-appointment" className="cta-button-about-us">
+            Book an Appointment
+          </Link>
+        </div>
+        <img
+          className="aboutus-image"
+          src="https://i.postimg.cc/527rmTgP/i-Stock-2160748151.webp"
+          alt="Medical professional at desk"
+        />
+      </section>
+
+      {/* Features */}
+      <section className="features-column">
+        <div className="feature-card">
+          <img src="https://i.postimg.cc/wMcd024w/i-Stock-1456535850-1.webp" alt="Customer Service" />
+          <p>Unmatched Customer Service</p>
+        </div>
+        <div className="feature-card">
+          <img src="https://i.postimg.cc/Wz7QM3tK/i-Stock-1456535850-2.webp" alt="Licensed doctors" />
+          <p>Supervised by Licensed Medical Doctors</p>
+        </div>
+        <div className="feature-card">
+          <img src="https://i.postimg.cc/W1yxmxb2/i-Stock-1456535850-3.webp" alt="Experience" />
+          <p>20+ Years of Experience</p>
         </div>
       </section>
 
-      {/* Our Services Section */}
-      <section className="aboutus-services">
-        <h2 className="aboutus-services-title">Our Services</h2>
-        <div className="aboutus-services-grid">
-          {servicesArray.map((service) => (
-            <a
-              key={service.id}
-              href={`/services/${service.id}`}
-              className="aboutus-service-card"
-            >
-              <div
-                className="aboutus-service-image"
-                style={{ backgroundImage: `url(${service.images.hero})` }}
-              ></div>
-              <h3 className="aboutus-service-title">{service.title}</h3>
-              <p className="aboutus-service-desc">{service.shortDescription}</p>
-            </a>
-          ))}
-        </div>
+
+      {/* CTA Footer */}
+      <section className="footer-cta">
+        <h2>Start Your Wellness Journey Today</h2>
+        <Link to="/book-appointment" className="cta-button-dark-about-us">
+          Book an Appointment
+        </Link>
       </section>
 
-      <Contact />
       <FooterComponent />
     </div>
   );

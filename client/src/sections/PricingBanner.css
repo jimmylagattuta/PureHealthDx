@@ -113,7 +113,53 @@
     top: 0;
     color: #a8d5c3; /* tweak to match your brand */
   }
-  
+  /* Desktop first tweaks */
+@media (min-width: 768px) {
+  .pricing-banner {
+    /* allow it to stretch out a bit on tablet/desktop */
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+  }
+
+  .pricing-title {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .pricing-amount {
+    margin: 1.5rem 0 2rem;
+  }
+  .pricing-amount .price {
+    font-size: 4.5rem;
+  }
+  .pricing-amount .dollar-sign,
+  .pricing-amount .cents {
+    font-size: 1.5rem;
+  }
+  .pricing-amount .per-month {
+    font-size: 1.1rem;
+  }
+
+  .pricing-cta {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .pricing-features {
+    /* add a third column for desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 1.5rem;
+  }
+}
+
+/* Ultra‐wide screens */
+@media (min-width: 1200px) {
+  .pricing-banner {
+    max-width: 900px;
+  }
+}
+
   
   /* Responsive tweaks */
   @media (max-width: 450px) {

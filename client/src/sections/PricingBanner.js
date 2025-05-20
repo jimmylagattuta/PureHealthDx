@@ -8,11 +8,11 @@ export default function PricingBanner() {
     <section className="pricing-banner">
       <div className="pricing-decor-top" />
 
-      <h2 className="pricing-title">At-Home Wellness Therapy Kit</h2>
+      <h2 className="pricing-title">Men's TRT Therapy Kit</h2>
 
       <div className="pricing-amount">
         <span className="dollar-sign">$</span>
-        <span className="price">99</span>
+        <span className="price">89</span>
         <span className="cents">.99</span>
         <span className="per-month">/mo</span>
       </div>

@@ -180,7 +180,7 @@ export const servicesData = {
   shortDescription: `Testosterone is a hormone primarily produced in the testicles once males begin puberty. Production naturally declines about 1% per year after 30, but some men experience far more rapid drops, leading to symptoms like low libido, fatigue, and muscle loss.`,
   images: {
     hero: heroTRT,
-    // desktopHero, overlay1, overlay2 could be included here later
+    desktopHero: "https://i.postimg.cc/T340Xpdq/i-Stock-2201828485.webp"
   },
   collageImage: collageTRTCombined,
   introTitle: "Testosterone Replacement Therapy",
@@ -242,7 +242,8 @@ export const servicesData = {
   titleAbr: "HRT",
   shortDescription: `Hormone Replacement Therapy helps restore natural hormone balance to relieve symptoms like fatigue, mood swings, hot flashes, and low libido.`,
   images: {
-    hero: "https://i.postimg.cc/8zN40cWC/i-Stock-2045082706.webp"
+    hero: "https://i.postimg.cc/8zN40cWC/i-Stock-2045082706.webp",
+    desktopHero: "https://i.postimg.cc/gjmQ6n6L/i-Stock-1128929966.webp"
   },
   collageImage: collageHRTCombined,
   introTitle: "Hormone Therapy: Helping You Feel Like You Again",
@@ -313,7 +314,8 @@ The goal of this treatment is to relieve menopausal symptoms, including weight g
   titleAbr: "ED",
   shortDescription: `Our advanced ED treatments—including medications, injections, and shockwave therapy—help you regain sexual performance and confidence.`,
   images: {
-    hero: "https://i.postimg.cc/pdhtpsd4/i-Stock-940674076.webp"
+    hero: "https://i.postimg.cc/pdhtpsd4/i-Stock-940674076.webp",
+    desktopHero: "https://i.postimg.cc/BbmYLN0R/i-Stock-1400269483.webp"
   },
   collageImage: collageEDCombined,
   introTitle: "Erectile Dysfunction Treatment",
@@ -364,6 +366,7 @@ All treatments are tailored to your unique situation with discretion and support
   shortDescription: `Targeted peptide protocols to support muscle growth, fat loss, immune health, and healthy aging—customized to your goals.`,
   images: {
     hero: "https://i.postimg.cc/65JS09pH/i-Stock-487589082.webp",
+    desktopHero: "https://i.postimg.cc/kgLnRvMV/i-Stock-2189199609.webp"
   },
   collageImage: collagePeptideCombined,
   introTitle: "What is Peptide Therapy?",
@@ -413,7 +416,8 @@ Each plan is personalized based on lab work, lifestyle goals, and optimal dosing
   titleAbr: "PRP",
   shortDescription: `PRP therapy uses your own growth factors to accelerate healing, reduce pain, and regenerate tissue naturally.`,
   images: {
-    hero: "https://i.postimg.cc/tJPTWX40/i-Stock-2185379954.webp"
+    hero: "https://i.postimg.cc/tJPTWX40/i-Stock-2185379954.webp",
+    desktopHero: "https://i.postimg.cc/B6rnFWT1/i-Stock-846081796.webp"
   },
   collageImage: collagePRPCombined,
   introTitle: "Platelet Rich Plasma Treatments",
@@ -445,6 +449,7 @@ By using a concentrated dose of platelets from your own body, PRP stimulates nat
   shortDescription: `Comprehensive pain management plans combining injections, therapies, and referrals to give you lasting relief.`,
   images: {
     hero: "https://i.postimg.cc/rFfm4Y8w/i-Stock-467842612-1-1-1-1.webp",
+    desktopHero: "https://i.postimg.cc/5yYrT0R6/i-Stock-2192512090.webp"
   },
   collageImage: collagePMCombined,
   introTitle: "What this can do for you.",

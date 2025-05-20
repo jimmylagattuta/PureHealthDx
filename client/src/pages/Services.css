@@ -1104,6 +1104,58 @@
     .whyuse-peptide-section .card-grid {
       grid-template-columns: repeat(3, 1fr);
     }
+    .cta-banner p {
+      max-width: 90vw;
+    }
+    .symptoms-card {
+      width: 50%;
+
+    }
+    .symptoms-list {
+      margin: 1rem 6.5rem;
+    }
+    .symptoms-card .hero-cta {
+      margin: 1rem 6.5rem;
+
+    }
+    .hormone-doctor-section .card-grid {
+      max-width: 90vw;
+    }
+    .hero-content {
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .treatment-options-section {
+      max-width: 90vw;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+    /* Center only when exactly two cards */
+    .whyuse-peptide-section .card-grid:has(> *:nth-child(2)):not(:has(> *:nth-child(3))) {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    
+    .how-peptide-section {
+      display: grid;
+      width: 60vw;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      text-align: left;
+      margin: 0 auto;
+    }
+
+    .how-peptide-section .hero-cta {
+      width: 20%;
+      text-align: center;
+    }
+
+    .whydoit-item {
+      text-align: center;
+    }
   }
   
   @media (min-width: 1200px) {

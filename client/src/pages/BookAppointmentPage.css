@@ -61,15 +61,19 @@
     .banner {
       width: 768px;
       height: 384px;
-      background-image: url('https://via.placeholder.com/768x384');
+      background-image: url('https://i.postimg.cc/76k1vBnn/i-Stock-1275071474.webp');
     }
   }
   
   @media (min-width: 1024px) {
     .banner {
-      width: 1839px;
+      width: 100vw;
       height: 548px;
-      background-image: url('https://via.placeholder.com/1839x548');
+      background-image: url('https://i.postimg.cc/gJFFp333/i-Stock-2188211992.webp');
+    }
+    .book-appointment-container .content-section {
+      max-width: 90vw;
+      text-align: left;
     }
   }
   
