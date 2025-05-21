@@ -20,6 +20,12 @@ module Api
       puts params[:appointment].inspect
       puts "=" * 80
 
+        # 🔍 DEBUG MISSING SIGNATURES
+        puts "DEBUG Keys: #{params[:appointment].keys}"
+        puts "Patient TRT signature length: #{params[:appointment]["informedConsentForTestosteroneReplacementTherapyPatientSignature"]&.length}"
+        puts "Witness TRT signature length: #{params[:appointment]["informedConsentForTestosteroneReplacementTherapyWitnessSignature"]&.length}"
+        puts "=" * 80
+
       # Optionally, send to mailer
       ContactMailer.full_submission_email(params[:appointment]).deliver_now
 
