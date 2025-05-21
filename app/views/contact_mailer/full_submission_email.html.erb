@@ -1,138 +1,130 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Pure Health Submission</title>
+    <meta charset="UTF-8" />
     <style>
       body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
         padding: 20px;
-        color: #333;
       }
-
-      .email-container {
-        max-width: 700px;
-        margin: auto;
-        background: #fff;
-        padding: 25px 30px;
-        border-radius: 8px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      }
-
-      h2 {
-        color: #009688;
-        margin-bottom: 0.5em;
-      }
-
-      h3 {
-        color: #444;
-        border-bottom: 1px solid #eee;
+      h1, h2 {
+        color: #0076a3;
+        border-bottom: 1px solid #ccc;
         padding-bottom: 4px;
-        margin-top: 2em;
-        margin-bottom: 0.8em;
       }
-
-      ul {
-        list-style: none;
-        padding-left: 0;
+      .section {
+        margin-bottom: 24px;
       }
-
-      li {
-        margin-bottom: 6px;
-      }
-
-      strong {
+      .label {
+        font-weight: bold;
         display: inline-block;
-        width: 210px;
-        font-weight: 600;
-        color: #333;
+        width: 220px;
       }
-
-      .footer {
-        margin-top: 2em;
-        font-size: 0.85em;
-        color: #999;
-        text-align: center;
+      .signature {
+        margin-top: 10px;
       }
-
-      .highlight {
-        background-color: #f1f1f1;
-        border-left: 4px solid #009688;
-        padding: 10px 15px;
-        font-size: 0.95em;
-        color: #444;
-        margin: 1em 0;
-        border-radius: 4px;
+      img.signature-img {
+        border: 1px solid #ccc;
+        max-width: 400px;
+        height: auto;
+        margin-top: 5px;
       }
     </style>
   </head>
   <body>
-    <div class="email-container">
-      <h2>📋 Pure Health Submission</h2>
-      <div class="highlight">A new appointment intake form has been submitted successfully.</div>
+    <h1>📋 Pure Health & Wellness: New Appointment Submission</h1>
 
-      <h3>👤 Patient Details</h3>
-      <ul>
-        <li><strong>Name:</strong> <%= @data["firstName"] %> <%= @data["lastName"] %></li>
-        <li><strong>Email:</strong> <%= @data["email"] %></li>
-        <li><strong>Phone:</strong> <%= @data["phone"] %></li>
-        <li><strong>Gender:</strong> <%= @data["gender"] %></li>
-        <li><strong>Date of Birth:</strong> <%= @data["dobMonth"] %>/<%= @data["dobDay"] %>/<%= @data["dobYear"] %></li>
-        <li><strong>Driver’s License:</strong> <%= @data["driversLicense"] %></li>
-        <li><strong>Occupation:</strong> <%= @data["occupation"] %></li>
-        <li><strong>Marital Status:</strong> <%= @data["maritalStatus"] %></li>
-        <li><strong>Children:</strong> <%= @data["hasChildren"] %>
-          <% if @data["hasChildren"] == "yes" %>(<%= @data["childrenCount"] %> kids)<% end %>
-        </li>
-      </ul>
+    <div class="section">
+      <h2>Step 1: Patient Info</h2>
+      <p><span class="label">Name:</span><%= @data["firstName"] %> <%= @data["lastName"] %></p>
+      <p><span class="label">Email:</span><%= @data["email"] %></p>
+      <p><span class="label">Phone:</span><%= @data["phone"] %></p>
+      <p><span class="label">Gender:</span><%= @data["gender"] %></p>
+      <p><span class="label">Date of Birth:</span><%= "#{@data["dobMonth"]}/#{@data["dobDay"]}/#{@data["dobYear"]}" %></p>
+      <p><span class="label">Driver’s License #:</span><%= @data["driversLicense"] %></p>
+      <p><span class="label">Street Address:</span><%= @data["streetAddress"] %></p>
+      <p><span class="label">City:</span><%= @data["city"] %></p>
+      <p><span class="label">State:</span><%= @data["state"] %></p>
+      <p><span class="label">Zip Code:</span><%= @data["zipCode"] %></p>
+      <p><span class="label">Occupation:</span><%= @data["occupation"] %></p>
+      <p><span class="label">Hours of Sleep:</span><%= @data["hoursOfSleep"] %></p>
+      <p><span class="label">Health Goals:</span><%= @data["healthGoals"] %></p>
+      <p><span class="label">Current Medications:</span><%= @data["currentMedications"] %></p>
+      <p><span class="label">Marital Status:</span><%= @data["maritalStatus"] %></p>
+      <p><span class="label">Has Children:</span><%= @data["hasChildren"] %></p>
+      <% if @data["hasChildren"] == "yes" %>
+        <p><span class="label">Number of Children:</span><%= @data["childrenCount"] %></p>
+      <% end %>
+    </div>
 
-      <h3>🏠 Address</h3>
-      <ul>
-        <li><strong>Street:</strong> <%= @data["streetAddress"] %></li>
-        <li><strong>City:</strong> <%= @data["city"] %></li>
-        <li><strong>State:</strong> <%= @data["state"] %></li>
-        <li><strong>Zip Code:</strong> <%= @data["zipCode"] %></li>
-      </ul>
+    <div class="section">
+      <h2>Step 2: Medical History</h2>
+      <p><span class="label">Height:</span><%= @data["height"] %></p>
+      <p><span class="label">Weight:</span><%= @data["weight"] %></p>
+      <p><span class="label">Last Felt Well:</span><%= @data["lastFeltWell"] %></p>
+      <p><span class="label">Tried Hormone Therapy Before:</span><%= @data["hormoneTherapyBefore"] %></p>
+      <p><span class="label">Exercise Days/Week:</span><%= @data["exerciseDays"] %></p>
+      <p><span class="label">Conditions:</span><%= @data["conditions"].join(", ") %></p>
+      <p><span class="label">Family History:</span><%= @data["familyHistory"].join(", ") %></p>
+      <p><span class="label">Social History:</span><%= @data["socialHistory"].join(", ") %></p>
+      <p><span class="label">Allergies:</span><%= @data["allergies"] %></p>
+      <p><span class="label">Motivation:</span><%= @data["motivation"] %></p>
+      <p><span class="label">Symptoms:</span><%= @data["symptoms"].join(", ") %></p>
+      <p><span class="label">Services Interested In:</span><%= @data["services"].join(", ") %></p>
+    </div>
 
-      <h3>🛌 Health & Lifestyle</h3>
-      <ul>
-        <li><strong>Health Goals:</strong> <%= @data["healthGoals"] %></li>
-        <li><strong>Current Medications:</strong> <%= @data["currentMedications"] %></li>
-        <li><strong>Allergies:</strong> <%= @data["allergies"] %></li>
-        <li><strong>Hours of Sleep:</strong> <%= @data["hoursOfSleep"] %></li>
-        <li><strong>Height:</strong> <%= @data["height"] %></li>
-        <li><strong>Weight:</strong> <%= @data["weight"] %></li>
-        <li><strong>Exercise Days:</strong> <%= @data["exerciseDays"] %></li>
-        <li><strong>Last Time Felt Well:</strong> <%= @data["lastFeltWell"] %></li>
-        <li><strong>Hormone Therapy Before:</strong> <%= @data["hormoneTherapyBefore"] %></li>
-        <li><strong>Motivation:</strong> <%= @data["motivation"] %></li>
-      </ul>
+    <div class="section">
+      <h2>Step 3: Consent for Medical Services</h2>
+      <p><span class="label">Name:</span><%= @data["patientConsentForMedicalServicesPatientName"] %></p>
+      <p><span class="label">DOB:</span><%= "#{@data["patientConsentForMedicalServicesDobMonth"]}/#{@data["patientConsentForMedicalServicesDobDay"]}/#{@data["patientConsentForMedicalServicesDobYear"]}" %></p>
+      <p><span class="label">Date:</span><%= @data["patientConsentForMedicalServicesDate"] %></p>
+      <div class="signature">
+        <p><span class="label">Patient Signature:</span></p>
+        <img class="signature-img" src="<%= @data["patientConsentForMedicalServicesSignature"] %>" alt="Patient Signature" />
+      </div>
+    </div>
 
-      <h3>🧬 Medical History</h3>
-      <ul>
-        <li><strong>Conditions:</strong> <%= Array(@data["conditions"]).join(", ") %></li>
-        <li><strong>Family History:</strong> <%= Array(@data["familyHistory"]).join(", ") %></li>
-        <li><strong>Social History:</strong> <%= Array(@data["socialHistory"]).join(", ") %></li>
-        <li><strong>Symptoms:</strong> <%= Array(@data["symptoms"]).join(", ") %></li>
-      </ul>
+    <div class="section">
+      <h2>Step 4: HGH Therapy Consent</h2>
+      <p><span class="label">Patient Name:</span><%= @data["informedConsentForHghReplacementTherapyPatientName"] %></p>
+      <p><span class="label">Patient Date:</span><%= @data["informedConsentForHghReplacementTherapyPatientDate"] %></p>
+      <div class="signature">
+        <p><span class="label">Patient Signature:</span></p>
+        <img class="signature-img" src="<%= @data["informedConsentForHghReplacementTherapyPatientSignature"] %>" alt="Patient Signature" />
+      </div>
+      <p><span class="label">Witness:</span><%= @data["informedConsentForHghReplacementTherapyWitnessFirstName"] %> <%= @data["informedConsentForHghReplacementTherapyWitnessLastName"] %></p>
+      <p><span class="label">Witness Date:</span><%= @data["informedConsentForHghReplacementTherapyWitnessDate"] %></p>
+      <div class="signature">
+        <p><span class="label">Witness Signature:</span></p>
+        <img class="signature-img" src="<%= @data["informedConsentForHghReplacementTherapyWitnessSignature"] %>" alt="Witness Signature" />
+      </div>
+    </div>
 
-      <h3>🛠 Services Requested</h3>
-      <ul>
-        <li><strong>Services:</strong> <%= Array(@data["services"]).join(", ") %></li>
-      </ul>
+    <div class="section">
+      <h2>Step 5: Testosterone Therapy Consent</h2>
+      <p><span class="label">Patient Name:</span><%= @data["informedConsentForTestosteroneReplacementTherapyPatientName"] %></p>
+      <p><span class="label">Patient Date:</span><%= @data["informedConsentForTestosteroneReplacementTherapyPatientDate"] %></p>
+      <div class="signature">
+        <p><span class="label">Patient Signature:</span></p>
+        <img class="signature-img" src="<%= @data["informedConsentForTestosteroneReplacementTherapyPatientSignature"] %>" alt="Patient Signature" />
+      </div>
+      <p><span class="label">Witness:</span><%= @data["informedConsentForTestosteroneReplacementTherapyWitnessFirstName"] %> <%= @data["informedConsentForTestosteroneReplacementTherapyWitnessLastName"] %></p>
+      <p><span class="label">Witness Date:</span><%= @data["informedConsentForTestosteroneReplacementTherapyWitnessDate"] %></p>
+      <div class="signature">
+        <p><span class="label">Witness Signature:</span></p>
+        <img class="signature-img" src="<%= @data["informedConsentForTestosteroneReplacementTherapyWitnessSignature"] %>" alt="Witness Signature" />
+      </div>
+    </div>
 
-      <h3>🖊 Consents</h3>
-      <ul>
-        <li><strong>Medical Consent Date:</strong> <%= @data["patientConsentForMedicalServicesDate"] %></li>
-        <li><strong>HGH Consent Date:</strong> <%= @data["informedConsentForHghReplacementTherapyPatientDate"] %></li>
-        <li><strong>Testosterone Consent Date:</strong> <%= @data["informedConsentForTestosteroneReplacementTherapyPatientDate"] %></li>
-        <li><strong>Controlled Substance Refill DOB:</strong> <%= @data["controlledSubstanceAutoRefillConsentDob"] %></li>
-      </ul>
-
-      <div class="footer">
-        <p>This is a submission from the Pure Health & Wellness intake portal.</p>
+    <div class="section">
+      <h2>Step 6: Controlled Substance Refill Consent</h2>
+      <p><span class="label">Patient Name:</span><%= @data["controlledSubstanceAutoRefillConsentPatientName"] %></p>
+      <p><span class="label">Date of Birth:</span><%= @data["controlledSubstanceAutoRefillConsentDob"] %></p>
+      <div class="signature">
+        <p><span class="label">Patient Signature:</span></p>
+        <img class="signature-img" src="<%= @data["controlledSubstanceAutoRefillConsentPatientSignature"] %>" alt="Signature" />
       </div>
     </div>
   </body>
