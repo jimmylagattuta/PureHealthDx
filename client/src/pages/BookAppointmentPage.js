@@ -158,6 +158,7 @@ const BookAppointmentPage = () => {
               <input
                 type="tel"
                 placeholder="(555) 555-5555"
+                value={values.phone}
                 {...register("phone", {
                   required: "This field is required.",
                   pattern: {
@@ -165,6 +166,13 @@ const BookAppointmentPage = () => {
                     message: "Phone format: (###) ###-####",
                   },
                 })}
+                onChange={(e) => {
+                  const formatted = formatPhoneNumber(e.target.value);
+                  e.target.value = formatted;
+                  // force value update since RHF won't track changes by default in `onChange`
+                  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(e.target), 'value').set.call(e.target, formatted);
+                  e.target.dispatchEvent(new Event('input', { bubbles: true }));
+                }}
               />
 
               {errors.phone && <p className="error-message">{errors.phone.message}</p>}
