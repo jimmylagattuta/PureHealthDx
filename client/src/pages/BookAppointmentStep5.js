@@ -84,37 +84,58 @@ const BookAppointmentStep5 = () => {
     }
   };
 
-  const onSubmit = () => {
-    console.log("Step 5: onSubmit triggered");
-    // In non-demo mode, enforce signature validation.
-    if (!demoMode) {
-      if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
-        console.log("Step 5: Patient signature pad is empty");
-        setValue("patientSignature", "", { shouldValidate: true });
-        trigger("patientSignature");
-        return;
-      }
-      if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
-        console.log("Step 5: Witness signature pad is empty");
-        setValue("witnessSignature", "", { shouldValidate: true });
-        trigger("witnessSignature");
-        return;
-      }
-      
-      const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
-      const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
-      setValue("patientSignature", patientSigData);
-      setValue("witnessSignature", witnessSigData);
-      console.log("Step 5: Captured Patient Signature Data:", patientSigData);
-      console.log("Step 5: Captured Witness Signature Data:", witnessSigData);
-    } else {
-      // In demo mode, bypass signature validation.
-      console.log("Demo Mode ON: Skipping signature validation");
+const onSubmit = () => {
+  console.log("Step 5: onSubmit triggered");
+
+  let patientSigData = "";
+  let witnessSigData = "";
+
+  if (!demoMode) {
+    if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
+      console.warn("Step 5: Patient signature is missing");
+      setValue("patientSignature", "", { shouldValidate: true });
+      trigger("patientSignature");
+      return;
     }
-    
-    console.log("Step 5: Navigating to book-appointment-step6");
-    navigate("/book-appointment-step6");
+
+    if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
+      console.warn("Step 5: Witness signature is missing");
+      setValue("witnessSignature", "", { shouldValidate: true });
+      trigger("witnessSignature");
+      return;
+    }
+
+    patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
+    witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
+
+    setValue("patientSignature", patientSigData);
+    setValue("witnessSignature", witnessSigData);
+  } else {
+    console.log("Demo Mode ON: Skipping signature capture");
+    patientSigData = "demo_patient_signature";
+    witnessSigData = "demo_witness_signature";
+  }
+
+  const labeledStep5Data = {
+    informedConsentForTestosteroneReplacementTherapyPatientName: values.patientName,
+    informedConsentForTestosteroneReplacementTherapyPatientSignature: patientSigData,
+    informedConsentForTestosteroneReplacementTherapyPatientDate: values.patientDate,
+    informedConsentForTestosteroneReplacementTherapyWitnessFirstName: values.witnessFirstName,
+    informedConsentForTestosteroneReplacementTherapyWitnessLastName: values.witnessLastName,
+    informedConsentForTestosteroneReplacementTherapyWitnessSignature: witnessSigData,
+    informedConsentForTestosteroneReplacementTherapyWitnessDate: values.witnessDate,
   };
+
+  const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+  const fullData = { ...previousSteps, ...labeledStep5Data };
+
+  console.log("📋 Combined Step 1–5 data:", fullData);
+  localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+  // ❌ Do not navigate forward yet
+  // navigate("/book-appointment-step6");
+};
+
 
   return (
     <form className="intake-form" onSubmit={handleSubmit(onSubmit)}>

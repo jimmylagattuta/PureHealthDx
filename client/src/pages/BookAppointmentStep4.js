@@ -108,7 +108,7 @@ const onSubmit = () => {
   localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
 
   // ❌ Temporarily block navigation to Step 5
-  // navigate("/book-appointment-step5");
+  navigate("/book-appointment-step5");
 };
 
 
