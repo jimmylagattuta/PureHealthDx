@@ -14,7 +14,8 @@ class ContactMailer < ApplicationMailer
 
     mail(
       to: 'jimmy.lagattuta@gmail.com',
-      subject: "New Full Appointment Submission"
+      cc: 'kenneth@purehealthdx.com',
+      subject: "Pure Health: New Appointment Submission"
     )
   end
 
