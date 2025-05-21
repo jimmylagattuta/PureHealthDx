@@ -21,7 +21,7 @@ class ContactMailer < ApplicationMailer
 
   def attach_signature(data_uri, cid_filename)
     return unless data_uri.present?
-    base64 = data_uri.sub(/^data:image\/png;base64,/, '')
+    base64 = data_uri.sub(/^data:image\/png;base64,/, '').strip
     attachments.inline[cid_filename] = {
       mime_type: 'image/png',
       content: Base64.decode64(base64)
