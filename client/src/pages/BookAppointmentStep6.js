@@ -10,7 +10,7 @@ const BookAppointmentStep6 = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [flashMessage, setFlashMessage] = useState("");
 
-  const demoMode = true;
+  const demoMode = false;
   const patientSigPad = useRef(null);
   const defaultDOB = "";
 

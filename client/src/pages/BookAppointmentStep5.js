@@ -9,7 +9,7 @@ const BookAppointmentStep5 = () => {
 
   // Enable demo mode – in demo mode, non‑signature fields will be auto‑filled
   // and signature validation will be bypassed.
-  const demoMode = true;
+  const demoMode = false;
 
   // Refs for the two signature pads (they remain for display but are not validated in demo mode)
   const patientSigPad = useRef(null);

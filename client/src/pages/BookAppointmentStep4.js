@@ -12,31 +12,32 @@ const BookAppointmentStep4 = () => {
   const witnessSigPad = useRef(null);
 
   // Dummy autofill values for patient fields and witness fields
-  const dummyPatientName = "John Doe";
-  const dummyPatientDate = "2025-04-10"; // ISO format (YYYY-MM-DD)
-  const dummyWitnessFirstName = "Jane";
-  const dummyWitnessLastName = "Smith";
-  const dummyWitnessDate = "2025-04-10";
+  // const dummyPatientName = "John Doe";
+  // const dummyPatientDate = "2025-04-10"; // ISO format (YYYY-MM-DD)
+  // const dummyWitnessFirstName = "Jane";
+  // const dummyWitnessLastName = "Smith";
+  // const dummyWitnessDate = "2025-04-10";
 
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    watch,
-    trigger,
-    formState: { errors },
-  } = useForm({
-    mode: "onChange",
-    defaultValues: {
-      patientName: dummyPatientName,
-      patientSignature: "",
-      patientDate: dummyPatientDate,
-      witnessFirstName: dummyWitnessFirstName,
-      witnessLastName: dummyWitnessLastName,
-      witnessSignature: "",
-      witnessDate: dummyWitnessDate,
-    },
-  });
+const {
+  register,
+  handleSubmit,
+  setValue,
+  watch,
+  trigger,
+  formState: { errors },
+} = useForm({
+  mode: "onChange",
+  defaultValues: {
+    patientName: "",
+    patientSignature: "",
+    patientDate: "",
+    witnessFirstName: "",
+    witnessLastName: "",
+    witnessSignature: "",
+    witnessDate: "",
+  },
+});
+
 
   const values = watch();
 
