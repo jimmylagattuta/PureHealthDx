@@ -99,11 +99,11 @@ const onSubmit = (step3Data) => {
   const step1And2Data = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
   const fullData = { ...step1And2Data, ...labeledStep3Data };
 
-  console.log("📋 Combined Step 1 + 2 + 3 data:", fullData);
+  // console.log("📋 Combined Step 1 + 2 + 3 data:", fullData);
 
   localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
 
-  // navigate("/book-appointment-step4");
+  navigate("/book-appointment-step4");
 };
 
 

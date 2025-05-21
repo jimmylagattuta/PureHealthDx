@@ -67,38 +67,45 @@ const BookAppointmentStep4 = () => {
 
   const onSubmit = () => {
     console.log("Step 4: onSubmit triggered");
-    console.log("Patient Signature Pad:", patientSigPad.current);
-    console.log("Witness Signature Pad:", witnessSigPad.current);
 
-    // Ensure patient signature is not empty
     if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
-      console.log("Step 4: Patient signature pad is empty");
+      console.warn("Step 4: Patient signature is missing");
       setValue("patientSignature", "", { shouldValidate: true });
       trigger("patientSignature");
       return;
     }
-    // Ensure witness signature is not empty
+
     if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
-      console.log("Step 4: Witness signature pad is empty");
+      console.warn("Step 4: Witness signature is missing");
       setValue("witnessSignature", "", { shouldValidate: true });
       trigger("witnessSignature");
       return;
     }
 
-    // Capture trimmed signature images
+    // ✅ Capture both signatures
     const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
     const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
 
-    console.log("Step 4: Captured Patient Signature Data:", patientSigData);
-    console.log("Step 4: Captured Witness Signature Data:", witnessSigData);
+    // ✅ Label data with full form prefix
+    const labeledStep4Data = {
+      informedConsentForHghReplacementTherapyPatientSignature: patientSigData,
+      informedConsentForHghReplacementTherapyWitnessSignature: witnessSigData
+    };
 
-    setValue("patientSignature", patientSigData);
-    setValue("witnessSignature", witnessSigData);
+    // ✅ Combine with all previous steps
+    const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+    const fullData = { ...previousSteps, ...labeledStep4Data };
 
-    console.log("Step 4: Navigating to book-appointment-step5");
-    // Move on to Step 5 (Preview or finalize)
-    navigate("/book-appointment-step5");
+    // ✅ Show full combined dataset
+    console.log("📋 Combined Step 1–4 data:", fullData);
+
+    // ✅ Store it for Step 5
+    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+    // ❌ Block navigation temporarily
+    // navigate("/book-appointment-step5");
   };
+
 
   return (
     <form
