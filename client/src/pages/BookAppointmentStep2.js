@@ -210,7 +210,7 @@ const BookAppointmentStep2 = () => {
               <label>When was the last time you felt well? (Required)</label>
               <input
                 type="text"
-                placeholder="Enter a value (e.g. y)"
+                placeholder="Enter a value (e.g. two weeks)"
                 {...register("lastFeltWell", { required: "This field is required." })}
               />
               {errors.lastFeltWell && <p className="error-message">{errors.lastFeltWell.message}</p>}
