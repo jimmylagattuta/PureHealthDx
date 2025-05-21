@@ -4,26 +4,28 @@ class ContactMailer < ApplicationMailer
   def full_submission_email(data)
     @data = data
 
-    # Attach signatures if present
-    attach_base64_image(data["patientConsentForMedicalServicesSignature"], 'patient_signature.png')
-    attach_base64_image(data["informedConsentForHghReplacementTherapyPatientSignature"], 'hgh_patient_signature.png')
-    attach_base64_image(data["informedConsentForHghReplacementTherapyWitnessSignature"], 'hgh_witness_signature.png')
-    attach_base64_image(data["informedConsentForTestosteroneReplacementTherapyPatientSignature"], 'trt_patient_signature.png')
-    attach_base64_image(data["informedConsentForTestosteroneReplacementTherapyWitnessSignature"], 'trt_witness_signature.png')
-    attach_base64_image(data["controlledSubstanceAutoRefillConsentPatientSignature"], 'controlled_signature.png')
+    attach_signature(data["patientConsentForMedicalServicesSignature"], "sig_patient_medical.png")
+    attach_signature(data["informedConsentForHghReplacementTherapyPatientSignature"], "sig_patient_hgh.png")
+    attach_signature(data["informedConsentForHghReplacementTherapyWitnessSignature"], "sig_witness_hgh.png")
+    attach_signature(data["informedConsentForTestosteroneReplacementTherapyPatientSignature"], "sig_patient_trt.png")
+    attach_signature(data["informedConsentForTestosteroneReplacementTherapyWitnessSignature"], "sig_witness_trt.png")
+    attach_signature(data["controlledSubstanceAutoRefillConsentPatientSignature"], "sig_patient_controlled.png")
 
-    mail(to: 'jimmy.lagattuta@gmail.com', subject: "New Full Appointment Submission")
+    mail(
+      to: 'jimmy.lagattuta@gmail.com',
+      subject: "New Full Appointment Submission"
+    )
   end
 
   private
 
-  def attach_base64_image(data_uri, filename)
+  def attach_signature(data_uri, cid_filename)
     return unless data_uri.present?
-
-    image_data = data_uri.sub(/^data:image\/png;base64,/, '')
-    attachments.inline[filename] = {
+    base64 = data_uri.sub(/^data:image\/png;base64,/, '')
+    attachments.inline[cid_filename] = {
       mime_type: 'image/png',
-      content: Base64.decode64(image_data)
+      content: Base64.decode64(base64)
     }
   end
+
 end
