@@ -58,16 +58,17 @@ const BookAppointmentStep2 = () => {
     }
   }, [demoMode, setValue]);
 
-  const onSubmit = (data) => {
-
-    
-
-    
+  const onSubmit = (step2Data) => {
     const step1Data = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
-    const fullData = { ...step1Data, ...data };
+    const fullData = { ...step1Data, ...step2Data };
+
     console.log("📋 Combined Step 1 + Step 2 form data:", fullData);
-    // navigate("/book-appointment-step3");
-    
+
+    // Save merged result back to localStorage for use in Step 3
+    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+    // Navigate to Step 3
+    navigate("/book-appointment-step3");
   };
 
   // Options for checkbox and radio groups.

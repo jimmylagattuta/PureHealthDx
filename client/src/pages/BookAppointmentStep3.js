@@ -77,23 +77,32 @@ const BookAppointmentStep3 = () => {
     }
   };
 
-  const onSubmit = (data) => {
-    console.log("Step 3: onSubmit triggered", data);
-
-    // Validate signature
+  const onSubmit = (step3Data) => {
+    // ✅ Ensure signature is captured
     if (!sigPad.current || sigPad.current.isEmpty()) {
       setValue("signature", "", { shouldValidate: true });
       trigger("signature");
       return;
     }
 
-    // Capture signature
-    const sigData = sigPad.current.getTrimmedCanvas().toDataURL();
-    setValue("signature", sigData);
+    // ✅ Capture the signature image
+    const signatureImage = sigPad.current.getTrimmedCanvas().toDataURL();
+    step3Data.signature = signatureImage;
 
-    console.log("Step 3: signature captured, navigating to step4");
-    navigate("/book-appointment-step4");
+    // ✅ Retrieve and merge Step 1 + Step 2 data
+    const step1And2Data = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+    const fullData = { ...step1And2Data, ...step3Data };
+
+    // ✅ Log the full object
+    console.log("📋 Combined Step 1 + Step 2 + Step 3 data:", fullData);
+
+    // ✅ Optionally save fullData back to localStorage
+    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+    // ❌ Block progression for now
+    // navigate("/book-appointment-step4");
   };
+
 
   // Helper function for required field styling
   const getRequiredClass = (fieldValue, fieldError) => {
