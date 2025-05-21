@@ -1,166 +1,139 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Pure Health &amp; Wellness – New Appointment</title>
+    <meta charset="utf-8" />
+    <title>Pure Health Submission</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+
+      .email-container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      }
+
+      h2 {
+        color: #009688;
+        margin-bottom: 0.5em;
+      }
+
+      h3 {
+        color: #444;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 4px;
+        margin-top: 2em;
+        margin-bottom: 0.8em;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      strong {
+        display: inline-block;
+        width: 210px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .footer {
+        margin-top: 2em;
+        font-size: 0.85em;
+        color: #999;
+        text-align: center;
+      }
+
+      .highlight {
+        background-color: #f1f1f1;
+        border-left: 4px solid #009688;
+        padding: 10px 15px;
+        font-size: 0.95em;
+        color: #444;
+        margin: 1em 0;
+        border-radius: 4px;
+      }
+    </style>
   </head>
-  <body style="margin:0;padding:0;background-color:#f4f4f4;font-family:Arial,sans-serif;color:#333;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f4;padding:20px 0;">
-      <tr>
-        <td align="center">
-          <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:8px;overflow:hidden;">
-            <!-- header -->
-            <tr>
-              <td style="background-color:#2a9d8f;padding:20px;text-align:center;">
-                <h1 style="margin:0;color:#fff;font-size:24px;">Pure Health &amp; Wellness</h1>
-                <p style="margin:5px 0 0;color:#e9f5f2;font-size:14px;">New Telemedicine Appointment</p>
-              </td>
-            </tr>
-            <!-- personal info -->
-            <tr>
-              <td style="padding:20px;">
-                <h2 style="margin-top:0;color:#264653;font-size:18px;border-bottom:1px solid #ddd;padding-bottom:5px;">Personal Information</h2>
-                <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
-                  <tr>
-                    <td style="font-weight:bold;width:150px;">Name</td>
-                    <td><%= @data['firstName'] %> <%= @data['lastName'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Email</td>
-                    <td><%= @data['email'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Phone</td>
-                    <td><%= @data['phone'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Gender</td>
-                    <td><%= @data['gender'].capitalize %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Date of Birth</td>
-                    <td><%= "#{@data['dobMonth'].rjust(2,'0')}/#{@data['dobDay'].rjust(2,'0')}/#{@data['dobYear']}" %></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <!-- address -->
-            <tr>
-              <td style="padding:0 20px 20px;">
-                <h2 style="margin:0 0 5px;color:#264653;font-size:18px;border-bottom:1px solid #ddd;padding-bottom:5px;">Address</h2>
-                <p style="margin:0;"><strong>Street:</strong> <%= @data['streetAddress'] %></p>
-                <p style="margin:5px 0 0;"><strong>City:</strong> <%= @data['city'] %>, <strong>State:</strong> <%= @data['state'] %> <strong>ZIP:</strong> <%= @data['zipCode'] %></p>
-              </td>
-            </tr>
-            <!-- health & lifestyle -->
-            <tr>
-              <td style="padding:0 20px 20px;">
-                <h2 style="margin:0 0 5px;color:#264653;font-size:18px;border-bottom:1px solid #ddd;padding-bottom:5px;">Health &amp; Lifestyle</h2>
-                <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
-                  <tr>
-                    <td style="font-weight:bold;width:200px;">Occupation</td>
-                    <td><%= @data['occupation'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Hours Sleep/Night</td>
-                    <td><%= @data['hoursOfSleep'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Health Goals</td>
-                    <td><%= @data['healthGoals'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Current Medications</td>
-                    <td><%= @data['currentMedications'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Height</td>
-                    <td><%= @data['height'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Weight</td>
-                    <td><%= @data['weight'] %> lbs</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Exercise Days/Week</td>
-                    <td><%= @data['exerciseDays'] %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Marital Status</td>
-                    <td><%= @data['maritalStatus'].capitalize %></td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight:bold;">Has Children?</td>
-                    <td>
-                      <%= @data['hasChildren'].capitalize %>
-                      <% if @data['hasChildren'] == 'yes' %>
-                        (<%= @data['childrenCount'] %>)
-                      <% end %>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <!-- medical history -->
-            <tr>
-              <td style="padding:0 20px 20px;">
-                <h2 style="margin:0 0 5px;color:#264653;font-size:18px;border-bottom:1px solid #ddd;padding-bottom:5px;">Medical History</h2>
-                <p style="margin:0;"><strong>Conditions:</strong> <%= @data['conditions'].join(', ') %></p>
-                <p style="margin:5px 0;"><strong>Family History:</strong> <%= @data['familyHistory'].join(', ') %></p>
-                <p style="margin:5px 0;"><strong>Social History:</strong> <%= @data['socialHistory'].join(', ') %></p>
-                <p style="margin:5px 0;"><strong>Allergies:</strong> <%= @data['allergies'] %></p>
-                <p style="margin:5px 0;"><strong>Symptoms:</strong> <%= @data['symptoms'].join(', ') %></p>
-                <p style="margin:5px 0;"><strong>Services Interested:</strong> <%= @data['services'].join(', ') %></p>
-                <p style="margin:5px 0;"><strong>Motivation Level:</strong> <%= @data['motivation'] %></p>
-                <p style="margin:5px 0;"><strong>Last Felt Well:</strong> <%= @data['lastFeltWell'].capitalize %></p>
-              </td>
-            </tr>
-            <!-- consent sections -->
-            <tr>
-              <td style="padding:0 20px 20px;">
-                <h2 style="margin:0 0 5px;color:#264653;font-size:18px;border-bottom:1px solid #ddd;padding-bottom:5px;">Consent Forms</h2>
-                
-                <!-- Medical Services Consent -->
-                <h3 style="margin:15px 0 5px;color:#2a9d8f;font-size:16px;">Medical Services</h3>
-                <p style="margin:0;"><strong>Date:</strong> <%= @data['patientConsentForMedicalServicesDate'] %></p>
-                <p style="margin:5px 0;"><strong>Name:</strong> <%= @data['patientConsentForMedicalServicesPatientName'] %></p>
-                <p style="margin:5px 0;"><strong>Signature:</strong></p>
-                <p style="margin:5px 0;"><img src="<%= @data['patientConsentForMedicalServicesSignature'] %>" alt="Patient Signature" style="max-width:300px;border:1px solid #ddd;border-radius:4px;"></p>
+  <body>
+    <div class="email-container">
+      <h2>📋 Pure Health Submission</h2>
+      <div class="highlight">A new appointment intake form has been submitted successfully.</div>
 
-                <!-- HGH Consent -->
-                <h3 style="margin:15px 0 5px;color:#2a9d8f;font-size:16px;">HGH Therapy</h3>
-                <p style="margin:0;"><strong>Date:</strong> <%= @data['informedConsentForHghReplacementTherapyPatientDate'] %></p>
-                <p style="margin:5px 0;"><strong>Patient:</strong> <%= @data['informedConsentForHghReplacementTherapyPatientName'] %></p>
-                <p style="margin:5px 0;"><strong>Signature:</strong></p>
-                <p style="margin:5px 0;"><img src="<%= @data['informedConsentForHghReplacementTherapyPatientSignature'] %>" alt="HGH Patient Sig" style="max-width:300px;border:1px solid #ddd;border-radius:4px;"></p>
-                <p style="margin:5px 0;"><strong>Witness:</strong> <%= @data['informedConsentForHghReplacementTherapyWitnessFirstName'] %> <%= @data['informedConsentForHghReplacementTherapyWitnessLastName'] %></p>
-                <p style="margin:5px 0;"><strong>Witness Sig:</strong></p>
-                <p style="margin:5px 0;"><img src="<%= @data['informedConsentForHghReplacementTherapyWitnessSignature'] %>" alt="HGH Witness Sig" style="max-width:300px;border:1px solid #ddd;border-radius:4px;"></p>
+      <h3>👤 Patient Details</h3>
+      <ul>
+        <li><strong>Name:</strong> <%= @data["firstName"] %> <%= @data["lastName"] %></li>
+        <li><strong>Email:</strong> <%= @data["email"] %></li>
+        <li><strong>Phone:</strong> <%= @data["phone"] %></li>
+        <li><strong>Gender:</strong> <%= @data["gender"] %></li>
+        <li><strong>Date of Birth:</strong> <%= @data["dobMonth"] %>/<%= @data["dobDay"] %>/<%= @data["dobYear"] %></li>
+        <li><strong>Driver’s License:</strong> <%= @data["driversLicense"] %></li>
+        <li><strong>Occupation:</strong> <%= @data["occupation"] %></li>
+        <li><strong>Marital Status:</strong> <%= @data["maritalStatus"] %></li>
+        <li><strong>Children:</strong> <%= @data["hasChildren"] %>
+          <% if @data["hasChildren"] == "yes" %>(<%= @data["childrenCount"] %> kids)<% end %>
+        </li>
+      </ul>
 
-                <!-- Testosterone Consent -->
-                <h3 style="margin:15px 0 5px;color:#2a9d8f;font-size:16px;">Testosterone Therapy</h3>
-                <p style="margin:0;"><strong>Date:</strong> <%= @data['informedConsentForTestosteroneReplacementTherapyPatientDate'] %></p>
-                <p style="margin:5px 0;"><strong>Patient:</strong> <%= @data['informedConsentForTestosteroneReplacementTherapyPatientName'] %></p>
-                <p style="margin:5px 0;"><strong>Signature:</strong></p>
-                <p style="margin:5px 0;"><img src="<%= @data['informedConsentForTestosteroneReplacementTherapyPatientSignature'] %>" alt="T Replacement Patient Sig" style="max-width:300px;border:1px solid #ddd;border-radius:4px;"></p>
+      <h3>🏠 Address</h3>
+      <ul>
+        <li><strong>Street:</strong> <%= @data["streetAddress"] %></li>
+        <li><strong>City:</strong> <%= @data["city"] %></li>
+        <li><strong>State:</strong> <%= @data["state"] %></li>
+        <li><strong>Zip Code:</strong> <%= @data["zipCode"] %></li>
+      </ul>
 
-                <!-- Controlled Substance Refill Consent -->
-                <h3 style="margin:15px 0 5px;color:#2a9d8f;font-size:16px;">Auto-Refill Consent</h3>
-                <p style="margin:0;"><strong>Date:</strong> <%= @data['controlledSubstanceAutoRefillConsentDob'] %></p>
-                <p style="margin:5px 0;"><strong>Patient:</strong> <%= @data['controlledSubstanceAutoRefillConsentPatientName'] %></p>
-                <p style="margin:5px 0;"><strong>Signature:</strong></p>
-                <p style="margin:5px 0;"><img src="<%= @data['controlledSubstanceAutoRefillConsentPatientSignature'] %>" alt="Refill Sig" style="max-width:300px;border:1px solid #ddd;border-radius:4px;"></p>
-              </td>
-            </tr>
-            <!-- footer -->
-            <tr>
-              <td style="background-color:#eee;padding:15px;text-align:center;font-size:12px;color:#666;">
-                &copy; <%= Time.current.year %> Pure Health &amp; Wellness — all rights reserved.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+      <h3>🛌 Health & Lifestyle</h3>
+      <ul>
+        <li><strong>Health Goals:</strong> <%= @data["healthGoals"] %></li>
+        <li><strong>Current Medications:</strong> <%= @data["currentMedications"] %></li>
+        <li><strong>Allergies:</strong> <%= @data["allergies"] %></li>
+        <li><strong>Hours of Sleep:</strong> <%= @data["hoursOfSleep"] %></li>
+        <li><strong>Height:</strong> <%= @data["height"] %></li>
+        <li><strong>Weight:</strong> <%= @data["weight"] %></li>
+        <li><strong>Exercise Days:</strong> <%= @data["exerciseDays"] %></li>
+        <li><strong>Last Time Felt Well:</strong> <%= @data["lastFeltWell"] %></li>
+        <li><strong>Hormone Therapy Before:</strong> <%= @data["hormoneTherapyBefore"] %></li>
+        <li><strong>Motivation:</strong> <%= @data["motivation"] %></li>
+      </ul>
+
+      <h3>🧬 Medical History</h3>
+      <ul>
+        <li><strong>Conditions:</strong> <%= Array(@data["conditions"]).join(", ") %></li>
+        <li><strong>Family History:</strong> <%= Array(@data["familyHistory"]).join(", ") %></li>
+        <li><strong>Social History:</strong> <%= Array(@data["socialHistory"]).join(", ") %></li>
+        <li><strong>Symptoms:</strong> <%= Array(@data["symptoms"]).join(", ") %></li>
+      </ul>
+
+      <h3>🛠 Services Requested</h3>
+      <ul>
+        <li><strong>Services:</strong> <%= Array(@data["services"]).join(", ") %></li>
+      </ul>
+
+      <h3>🖊 Consents</h3>
+      <ul>
+        <li><strong>Medical Consent Date:</strong> <%= @data["patientConsentForMedicalServicesDate"] %></li>
+        <li><strong>HGH Consent Date:</strong> <%= @data["informedConsentForHghReplacementTherapyPatientDate"] %></li>
+        <li><strong>Testosterone Consent Date:</strong> <%= @data["informedConsentForTestosteroneReplacementTherapyPatientDate"] %></li>
+        <li><strong>Controlled Substance Refill DOB:</strong> <%= @data["controlledSubstanceAutoRefillConsentDob"] %></li>
+      </ul>
+
+      <div class="footer">
+        <p>This is a submission from the Pure Health & Wellness intake portal.</p>
+      </div>
+    </div>
   </body>
 </html>
