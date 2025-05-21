@@ -48,11 +48,13 @@ const BookAppointmentPage = () => {
     handleSubmit,
     trigger,
     watch,
+    setValue,
     formState: { errors },
   } = useForm({
     mode: "onChange",
     defaultValues,
   });
+
 
   useEffect(() => {
     trigger(); // validate on mount to activate grey labels in demoMode
@@ -155,17 +157,23 @@ const BookAppointmentPage = () => {
                 Phone{" "}
                 <span className={getRequiredClass(values.phone, errors.phone)}>(Required)</span>
               </label>
-              <input
-                type="tel"
-                placeholder="(555) 555-5555"
-                {...register("phone", {
-                  required: "This field is required.",
-                  pattern: {
-                    value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
-                    message: "Phone format: (###) ###-####",
-                  },
-                })}
-              />
+             <input
+  type="tel"
+  placeholder="(555) 555-5555"
+  {...register("phone", {
+    required: "This field is required.",
+    pattern: {
+      value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
+      message: "Phone format: (###) ###-####",
+    },
+  })}
+  onChange={(e) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    setValue("phone", formatted, { shouldValidate: true });
+  }}
+  value={values.phone}
+/>
+
 
               {errors.phone && <p className="error-message">{errors.phone.message}</p>}
             </div>
