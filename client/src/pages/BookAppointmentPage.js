@@ -158,21 +158,21 @@ const BookAppointmentPage = () => {
                 <span className={getRequiredClass(values.phone, errors.phone)}>(Required)</span>
               </label>
              <input
-  type="tel"
-  placeholder="(555) 555-5555"
-  {...register("phone", {
-    required: "This field is required.",
-    pattern: {
-      value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
-      message: "Phone format: (###) ###-####",
-    },
-  })}
-  onChange={(e) => {
-    const formatted = formatPhoneNumber(e.target.value);
-    setValue("phone", formatted, { shouldValidate: true });
-  }}
-  value={values.phone}
-/>
+              type="tel"
+              placeholder="(555) 555-5555"
+              {...register("phone", {
+                required: "This field is required.",
+                pattern: {
+                  value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
+                  message: "Phone format: (###) ###-####",
+                },
+              })}
+              onChange={(e) => {
+                const formatted = formatPhoneNumber(e.target.value);
+                setValue("phone", formatted, { shouldValidate: true });
+              }}
+              value={values.phone}
+            />
 
 
               {errors.phone && <p className="error-message">{errors.phone.message}</p>}
@@ -224,12 +224,19 @@ const BookAppointmentPage = () => {
                     </option>
                   ))}
                 </select>
-                <select {...register("dobYear", { required: "Year is required." })}>
-                  <option value="">YYYY</option>
-                  <option value="1980">1980</option>
-                  <option value="2023">2023</option>
-                  <option value="2022">2022</option>
-                </select>
+<select {...register("dobYear", { required: "Year is required." })}>
+  <option value="">YYYY</option>
+  {Array.from({ length: 100 }, (_, i) => {
+    const currentYear = new Date().getFullYear();
+    const year = currentYear - 18 - i;
+    return (
+      <option key={year} value={year}>
+        {year}
+      </option>
+    );
+  })}
+</select>
+
               </div>
             </div>
 

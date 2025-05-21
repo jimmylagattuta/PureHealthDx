@@ -16,8 +16,8 @@ const BookAppointmentStep5 = () => {
   const witnessSigPad = useRef(null);
 
   // Dummy defaults for dates
-  const defaultPatientDate = "2025-04-10";
-  const defaultWitnessDate = "2025-04-10";
+const today = new Date().toISOString().split("T")[0];
+
 
   const {
     register,
@@ -28,16 +28,17 @@ const BookAppointmentStep5 = () => {
     formState: { errors },
   } = useForm({
     mode: "onChange",
-    // Set initial default values for demo mode.
-    defaultValues: {
-      patientName: demoMode ? "John Doe" : "",
-      patientSignature: "",
-      patientDate: defaultPatientDate,
-      witnessFirstName: demoMode ? "Jane" : "",
-      witnessLastName: demoMode ? "Smith" : "",
-      witnessSignature: "",
-      witnessDate: defaultWitnessDate,
-    },
+defaultValues: {
+  patientName: demoMode ? "John Doe" : "",
+  patientSignature: "",
+  patientDate: today,
+  witnessFirstName: demoMode ? "Jane" : "",
+  witnessLastName: demoMode ? "Smith" : "",
+  witnessSignature: "",
+  witnessDate: today,
+},
+
+
   });
 
   const values = watch();
@@ -47,17 +48,17 @@ const BookAppointmentStep5 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // If demo mode is enabled, explicitly auto-fill the non‐signature fields.
-  useEffect(() => {
-    if (demoMode) {
-      setValue("patientName", "John Doe");
-      setValue("patientDate", defaultPatientDate);
-      setValue("witnessFirstName", "Jane");
-      setValue("witnessLastName", "Smith");
-      setValue("witnessDate", defaultWitnessDate);
-      console.log("Demo mode enabled: default text data auto-filled");
-    }
-  }, [demoMode, setValue, defaultPatientDate, defaultWitnessDate]);
+useEffect(() => {
+  if (demoMode) {
+    setValue("patientName", "John Doe");
+    setValue("patientDate", today);
+    setValue("witnessFirstName", "Jane");
+    setValue("witnessLastName", "Smith");
+    setValue("witnessDate", today);
+    console.log("Demo mode enabled: default text data auto-filled");
+  }
+}, [demoMode, setValue, today]);
+
 
   // Trigger initial validation
   useEffect(() => {

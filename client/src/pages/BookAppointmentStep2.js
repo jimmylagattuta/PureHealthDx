@@ -193,15 +193,17 @@ const BookAppointmentStep2 = () => {
 
 
             {/* Weight */}
-            <div className="form-group">
-              <label>Your Weight (Required)</label>
-              <input
-                type="number"
-                placeholder="144"
-                {...register("weight", { required: "Weight is required." })}
-              />
-              {errors.weight && <p className="error-message">{errors.weight.message}</p>}
-            </div>
+<div className="form-group">
+  <label>Your Weight (Required)</label>
+  <input
+    type="number"
+    placeholder="144"
+    value={values.weight || ""}
+    onChange={(e) => setValue("weight", e.target.value, { shouldValidate: true })}
+  />
+  {errors.weight && <p className="error-message">{errors.weight.message}</p>}
+</div>
+
 
             {/* Last felt well */}
             <div className="form-group">
