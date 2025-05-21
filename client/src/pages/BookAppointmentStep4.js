@@ -65,46 +65,52 @@ const BookAppointmentStep4 = () => {
     }
   };
 
-  const onSubmit = () => {
-    console.log("Step 4: onSubmit triggered");
+const onSubmit = () => {
+  console.log("Step 4: onSubmit triggered");
 
-    if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
-      console.warn("Step 4: Patient signature is missing");
-      setValue("patientSignature", "", { shouldValidate: true });
-      trigger("patientSignature");
-      return;
-    }
+  if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
+    console.warn("Step 4: Patient signature is missing");
+    setValue("patientSignature", "", { shouldValidate: true });
+    trigger("patientSignature");
+    return;
+  }
 
-    if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
-      console.warn("Step 4: Witness signature is missing");
-      setValue("witnessSignature", "", { shouldValidate: true });
-      trigger("witnessSignature");
-      return;
-    }
+  if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
+    console.warn("Step 4: Witness signature is missing");
+    setValue("witnessSignature", "", { shouldValidate: true });
+    trigger("witnessSignature");
+    return;
+  }
 
-    // ✅ Capture both signatures
-    const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
-    const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
+  // Capture signatures
+  const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
+  const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
 
-    // ✅ Label data with full form prefix
-    const labeledStep4Data = {
-      informedConsentForHghReplacementTherapyPatientSignature: patientSigData,
-      informedConsentForHghReplacementTherapyWitnessSignature: witnessSigData
-    };
+  // Watch values
+  const values = watch();
 
-    // ✅ Combine with all previous steps
-    const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
-    const fullData = { ...previousSteps, ...labeledStep4Data };
-
-    // ✅ Show full combined dataset
-    console.log("📋 Combined Step 1–4 data:", fullData);
-
-    // ✅ Store it for Step 5
-    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
-
-    // ❌ Block navigation temporarily
-    // navigate("/book-appointment-step5");
+  // Full labeling
+  const labeledStep4Data = {
+    informedConsentForHghReplacementTherapyPatientName: values.patientName,
+    informedConsentForHghReplacementTherapyPatientDate: values.patientDate,
+    informedConsentForHghReplacementTherapyPatientSignature: patientSigData,
+    informedConsentForHghReplacementTherapyWitnessFirstName: values.witnessFirstName,
+    informedConsentForHghReplacementTherapyWitnessLastName: values.witnessLastName,
+    informedConsentForHghReplacementTherapyWitnessDate: values.witnessDate,
+    informedConsentForHghReplacementTherapyWitnessSignature: witnessSigData
   };
+
+  const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+  const fullData = { ...previousSteps, ...labeledStep4Data };
+
+  console.log("📋 Combined Step 1–4 data:", fullData);
+
+  localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+  // ❌ Temporarily block navigation to Step 5
+  // navigate("/book-appointment-step5");
+};
+
 
 
   return (
