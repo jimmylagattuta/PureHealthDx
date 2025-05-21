@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "api/sessions#destroy"
   post '/contact', to: 'api/contacts#create'
   get "/pull_yelp_cache", to: "api/jobs#pull_yelp_cache"
-
+  post '/appointment', to: 'api/contacts#create'
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
