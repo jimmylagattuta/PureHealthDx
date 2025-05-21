@@ -76,6 +76,17 @@ const BookAppointmentPage = () => {
 
   };
 
+  const formatPhoneNumber = (value) => {
+    if (!value) return value;
+    const phone = value.replace(/[^\d]/g, "").slice(0, 10);
+    const phoneLength = phone.length;
+
+    if (phoneLength < 4) return phone;
+    if (phoneLength < 7) return `(${phone.slice(0, 3)}) ${phone.slice(3)}`;
+    return `(${phone.slice(0, 3)}) ${phone.slice(3, 6)}-${phone.slice(6, 10)}`;
+  };
+
+
   return (
     <div className="book-appointment-container">
       {/* Banner */}
@@ -155,6 +166,7 @@ const BookAppointmentPage = () => {
                   },
                 })}
               />
+
               {errors.phone && <p className="error-message">{errors.phone.message}</p>}
             </div>
 
