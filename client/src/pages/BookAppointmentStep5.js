@@ -90,31 +90,27 @@ const onSubmit = () => {
   let patientSigData = "";
   let witnessSigData = "";
 
-  if (!demoMode) {
-    if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
-      console.warn("Step 5: Patient signature is missing");
-      setValue("patientSignature", "", { shouldValidate: true });
-      trigger("patientSignature");
-      return;
-    }
-
-    if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
-      console.warn("Step 5: Witness signature is missing");
-      setValue("witnessSignature", "", { shouldValidate: true });
-      trigger("witnessSignature");
-      return;
-    }
-
-    patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
-    witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
-
-    setValue("patientSignature", patientSigData);
-    setValue("witnessSignature", witnessSigData);
-  } else {
-    console.log("Demo Mode ON: Skipping signature capture");
-    patientSigData = "demo_patient_signature";
-    witnessSigData = "demo_witness_signature";
+  // Always attempt to capture signature from canvas
+  if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
+    console.warn("Step 5: Patient signature is missing");
+    setValue("patientSignature", "", { shouldValidate: true });
+    trigger("patientSignature");
+    return;
   }
+
+  if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
+    console.warn("Step 5: Witness signature is missing");
+    setValue("witnessSignature", "", { shouldValidate: true });
+    trigger("witnessSignature");
+    return;
+  }
+
+  // Capture actual signature data regardless of demo mode
+  patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
+  witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
+
+  setValue("patientSignature", patientSigData);
+  setValue("witnessSignature", witnessSigData);
 
   const labeledStep5Data = {
     informedConsentForTestosteroneReplacementTherapyPatientName: values.patientName,
@@ -132,9 +128,10 @@ const onSubmit = () => {
   console.log("📋 Combined Step 1–5 data:", fullData);
   localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
 
-  // ❌ Do not navigate forward yet
+  // Navigate to Step 6
   navigate("/book-appointment-step6");
 };
+
 
 
   return (
