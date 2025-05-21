@@ -96,15 +96,34 @@ const Home = ({ scrollToContact, reviews }) => {
   return (
     <div>
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(richSnippet)}
-        </script>
-        <title>LightningSEO.dev | Affordable Digital Marketing & Web Solutions</title>
+        <title>Pure Health & Wellness | Hormone & Wellness Clinic</title>
         <meta
           name="description"
-          content="LightningSEO.dev offers affordable, high-performance digital marketing solutions including expert SEO, website development, mobile app development, and Apple Watch app development to boost your online presence."
+          content="Pure Health & Wellness specializes in hormone therapy, weight loss, ED treatment, and personalized telehealth services. Book your consultation today."
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            name: "Pure Health & Wellness",
+            url: "https://purehealthdx.com",
+            logo: "https://i.postimg.cc/tTy4LRpb/footer-logo-1-1.webp",
+            sameAs: [],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+1-000-000-0000",
+              contactType: "Customer Service",
+            },
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "California",
+              addressRegion: "CA",
+              addressCountry: "US",
+            },
+          })}
+        </script>
       </Helmet>
+
       
       <HeroSection />
 
