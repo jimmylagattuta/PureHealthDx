@@ -17,6 +17,10 @@ export default function PricingBanner() {
         <span className="per-month">/mo</span>
       </div>
 
+      <p className="pricing-note">
+        *When purchasing 2 1/2 months at a time. This pricing structure is fixed and cannot be adjusted.
+      </p>
+
       <Link to="/book-appointment" className="pricing-cta">
         Get Started
       </Link>

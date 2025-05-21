@@ -79,19 +79,36 @@ const BookAppointmentStep6 = () => {
     }
   };
 
-  const onSubmit = () => {
-    // Ensure that the patient signature pad is not empty.
+  const onSubmit = (step6Data) => {
     if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
       setValue("patientSignature", "", { shouldValidate: true });
       trigger("patientSignature");
       return;
     }
-    // Capture the trimmed signature image and update the form state.
-    const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
-    setValue("patientSignature", patientSigData);
 
-    // Final submission: navigate to a confirmation or finalization page.
-    navigate("/book-appointment-complete");
+    // Capture the signature as base64
+    const signatureData = patientSigPad.current.getTrimmedCanvas().toDataURL();
+    step6Data.patientSignature = signatureData;
+
+    // Label all fields specifically
+    const labeledStep6Data = {
+      controlledSubstanceAutoRefillConsentPatientName: step6Data.patientName,
+      controlledSubstanceAutoRefillConsentPatientSignature: step6Data.patientSignature,
+      controlledSubstanceAutoRefillConsentDob: step6Data.dob,
+    };
+
+    // Merge with previous form data
+    const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+    const fullData = { ...previousSteps, ...labeledStep6Data };
+
+    // Log everything
+    console.log("📋 Final Combined Step 1–6 Submission:", fullData);
+
+    // Save it
+    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+    // ❌ Navigation blocked for review
+    // navigate("/book-appointment-complete");
   };
 
   return (

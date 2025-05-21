@@ -133,7 +133,7 @@ const onSubmit = () => {
   localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
 
   // ❌ Do not navigate forward yet
-  // navigate("/book-appointment-step6");
+  navigate("/book-appointment-step6");
 };
 
 

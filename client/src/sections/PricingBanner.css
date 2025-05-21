@@ -64,6 +64,13 @@
     color: rgba(255,255,255,0.8);
   }
   
+  .pricing-note {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
   .pricing-cta {
     display: inline-block;
     background: #222;
@@ -150,6 +157,10 @@
     /* add a third column for desktop */
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem 1.5rem;
+  }
+
+  .pricing-note {
+    font-size: 0.85rem;
   }
 }
 
