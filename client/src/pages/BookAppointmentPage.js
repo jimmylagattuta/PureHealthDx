@@ -67,7 +67,7 @@ const BookAppointmentPage = () => {
 
   const onSubmit = (data) => {
     // Save the data to localStorage so it persists for later steps
-    // console.log("📋 Form submission (questions + answers):", data);
+    console.log("📋 Form submission (questions + answers):", data);
     localStorage.setItem("appointmentFormData", JSON.stringify(data));
 
     // Proceed to next step
