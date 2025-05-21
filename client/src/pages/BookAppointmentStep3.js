@@ -77,31 +77,34 @@ const BookAppointmentStep3 = () => {
     }
   };
 
-  const onSubmit = (step3Data) => {
-    // ✅ Ensure signature is captured
-    if (!sigPad.current || sigPad.current.isEmpty()) {
-      setValue("signature", "", { shouldValidate: true });
-      trigger("signature");
-      return;
-    }
+const onSubmit = (step3Data) => {
+  if (!sigPad.current || sigPad.current.isEmpty()) {
+    setValue("signature", "", { shouldValidate: true });
+    trigger("signature");
+    return;
+  }
 
-    // ✅ Capture the signature image
-    const signatureImage = sigPad.current.getTrimmedCanvas().toDataURL();
-    step3Data.signature = signatureImage;
+  const signatureImage = sigPad.current.getTrimmedCanvas().toDataURL();
+  step3Data.signature = signatureImage;
 
-    // ✅ Retrieve and merge Step 1 + Step 2 data
-    const step1And2Data = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
-    const fullData = { ...step1And2Data, ...step3Data };
-
-    // ✅ Log the full object
-    console.log("📋 Combined Step 1 + Step 2 + Step 3 data:", fullData);
-
-    // ✅ Optionally save fullData back to localStorage
-    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
-
-    // ❌ Block progression for now
-    // navigate("/book-appointment-step4");
+  const labeledStep3Data = {
+    patientConsentForMedicalServicesPatientName: step3Data.patientName,
+    patientConsentForMedicalServicesDobMonth: step3Data.dobMonth,
+    patientConsentForMedicalServicesDobDay: step3Data.dobDay,
+    patientConsentForMedicalServicesDobYear: step3Data.dobYear,
+    patientConsentForMedicalServicesDate: step3Data.date,
+    patientConsentForMedicalServicesSignature: step3Data.signature
   };
+
+  const step1And2Data = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+  const fullData = { ...step1And2Data, ...labeledStep3Data };
+
+  console.log("📋 Combined Step 1 + 2 + 3 data:", fullData);
+
+  localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+
+  // navigate("/book-appointment-step4");
+};
 
 
   // Helper function for required field styling
