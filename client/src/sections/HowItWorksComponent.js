@@ -57,7 +57,7 @@ function HowItWorksComponent() {
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/KzrL1S5n/book-your-appointment-1.webp"        // ← swap in your “finger + check” SVG
+              src="https://i.postimg.cc/yd9Hqs2B/book-your-appointment-1-1.webp"        // ← swap in your “finger + check” SVG
               alt="Start Your Journey"
               width="55"
               height="65"
@@ -106,7 +106,7 @@ function HowItWorksComponent() {
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/gJZpsm7Z/live-an-awesome-life-icon.webp"        // ← swap in your “provider” SVG
+              src="https://i.postimg.cc/Qd4s16pL/live-an-awesome-life-icon-1.webp"        // ← swap in your “provider” SVG
               alt="Review Lab Results With Provider"
               width="55"
               height="65"
