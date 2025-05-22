@@ -84,7 +84,7 @@ const Services = () => {
         addressCountry: "US"
       },
       openingHours: office.hours.replace(/, /g, "; "),
-      serviceOffered: serviceSnippet
+      availableService: serviceSnippet
     };
   });
 
