@@ -85,7 +85,7 @@ function HowItWorksComponent() {
         <div className="hiw-step">
           <div className="hiw-step-icon">
             <img
-              src="https://i.postimg.cc/MpCjtKP7/take-your-prescription-icon.webp"        // ← swap in your “labs + paper” SVG
+              src="https://i.postimg.cc/V6Q0jL8b/take-your-prescription-icon-1.webp"        // ← swap in your “labs + paper” SVG
               alt="Complete Labs"
               width="55"
               height="65"
