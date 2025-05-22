@@ -7,7 +7,7 @@ function HeroSection() {
       <picture>
         {/* Mobile Image */}
         <source
-          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-bg-mobile_1_ysenpc.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/w_auto,dpr_auto,f_auto,q_auto/v1743042048/home-header-bg-mobile_1_ysenpc.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
