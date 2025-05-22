@@ -44,15 +44,23 @@ const SingleLocation = ({ office }) => {
 
   // Build the office snippet (LocalBusiness) and attach all services
   const officeSnippet = {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
     name: office.name,
     description: office.description,
-    telephone: office.phone,
     url: window.location.href,
     image: locationImage,
     email: office.email,
-    serviceOffered: servicesSnippets
+    telephone: office.phone,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Health Services",
+      itemListElement: servicesSnippets.map(service => ({
+        "@type": "Offer",
+        itemOffered: service
+      }))
+    }
   };
+
 
   // Wrap it in @graph
   const richSnippet = {
