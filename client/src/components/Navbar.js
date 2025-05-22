@@ -158,6 +158,7 @@ function Navbar() {
               loading="eager"
               height="50"
               width="224"
+              fetchpriority="high"
             />
           </div>
         </div>

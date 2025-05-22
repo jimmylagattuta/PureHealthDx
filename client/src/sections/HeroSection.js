@@ -30,6 +30,7 @@ function HeroSection() {
           width="auto"
           height="100%"
           loading="eager"
+          fetchpriority="high"
         />
       </picture>
 
