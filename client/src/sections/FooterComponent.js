@@ -22,6 +22,8 @@ function FooterComponent() {
           src="https://i.postimg.cc/FsjJMwWQ/footer-logo.webp"
           alt="Pure Health & Wellness"
           className="footer-logo"
+          width="248"
+          height="56"
         />
       </Link>
 
