@@ -1,139 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home Page -->
+  <!-- Home -->
   <url>
-    <loc>https://lightningseo.dev/</loc>
-    <lastmod>2025-03-16</lastmod>
+    <loc>https://purehealthandwellness.com/</loc>
+    <lastmod>2025-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Core Pages -->
+  <!-- About Us -->
   <url>
-    <loc>https://lightningseo.dev/about</loc>
-    <lastmod>2025-03-16</lastmod>
+    <loc>https://purehealthandwellness.com/about-us</loc>
+    <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Services -->
   <url>
-    <loc>https://lightningseo.dev/contact</loc>
-    <lastmod>2025-03-16</lastmod>
+    <loc>https://purehealthandwellness.com/services/testosterone-replacement-therapy</loc>
+    <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lightningseo.dev/privacy-policy</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://purehealthandwellness.com/services/hormone-therapy-for-women</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lightningseo.dev/faq</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://purehealthandwellness.com/services/erectile-dysfunction-treatment</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/services/benefits-of-peptide-therapy</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/services/platelet-rich-plasma-treatment</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/services/pain-management</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Book Appointment Flow -->
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment-step2</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment-step3</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment-step4</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment-step5</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/book-appointment-step6</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Services Pages -->
+  <!-- Locations Listing -->
   <url>
-    <loc>https://lightningseo.dev/services/on-page-seo</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/technical-seo</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/local-seo</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/content-seo</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/link-building</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/seo-audit</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/seo-consulting</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/web-development</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/web-app</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/mobile-app</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/services/watch-app</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Projects Pages -->
-  <url>
-    <loc>https://lightningseo.dev/projects</loc>
-    <lastmod>2025-03-16</lastmod>
+    <loc>https://purehealthandwellness.com/locations</loc>
+    <lastmod>2025-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://lightningseo.dev/projects/project-alpha</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/projects/project-beta</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lightningseo.dev/projects/project-gamma</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
-  <!-- Blog Section (If Applicable) -->
+  <!-- Individual Locations -->
   <url>
-    <loc>https://lightningseo.dev/blog</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://purehealthandwellness.com/locations/santa-rosa</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/sacramento</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/stockton</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/modesto</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/hayward</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/salinas</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/san-jose</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/fresno</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/hanford</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://purehealthandwellness.com/locations/bakersfield</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>
