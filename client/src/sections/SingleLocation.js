@@ -24,46 +24,49 @@ const SingleLocation = ({ office }) => {
   const locationImage =
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
 
-  // Build the office snippet (LocalBusiness)
-  const officeSnippet = {
-    "@type": "LocalBusiness",
-    "name": office.name,
-    "description": office.description,
-    "telephone": office.phone,
-    "url": window.location.href,
-    "image": locationImage,
-    "email": office.email,
-  };
-
   // Build service snippets from servicesArray
   const servicesSnippets = servicesArray.map((service) => {
     const serviceImage = isDesktop ? service.images.desktopHero : service.images.hero;
     return {
       "@type": "Service",
-      "name": service.title,
-      "description": service.shortDescription,
-      "url": `https://lightningseo.dev/services/${service.id}`,
-      "image": serviceImage,
-      "provider": {
+      name: service.title,
+      description: service.shortDescription,
+      url: `https://purehealthdx.com/services/${service.id}`,
+      image: serviceImage,
+      provider: {
         "@type": "Organization",
-        "name": "LightningSEO.dev",
-        "url": "https://lightningseo.dev",
-        "logo": "https://i.postimg.cc/QtwR2GW9/i-Stock-1502494966-1.webp"
+        name: "Pure Health & Wellness",
+        url: "https://purehealthdx.com",
+        logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
       }
     };
   });
 
-  // Combine the office and services snippets in an @graph.
+  // Build the office snippet (LocalBusiness) and attach all services
+  const officeSnippet = {
+    "@type": "LocalBusiness",
+    name: office.name,
+    description: office.description,
+    telephone: office.phone,
+    url: window.location.href,
+    image: locationImage,
+    email: office.email,
+    serviceOffered: servicesSnippets
+  };
+
+  // Wrap it in @graph
   const richSnippet = {
     "@context": "https://schema.org",
-    "@graph": [officeSnippet, ...servicesSnippets]
+    "@graph": [
+      officeSnippet
+    ]
   };
 
   return (
     <>
       <Helmet>
         <script type="application/ld+json">
-          {JSON.stringify(richSnippet)}
+          {JSON.stringify(richSnippet, null, 2)}
         </script>
       </Helmet>
       <div className="sl-location-card">

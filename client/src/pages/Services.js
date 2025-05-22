@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { servicesData, serviceExtras } from "../data";
+import { servicesData, serviceExtras, locationsData } from "../data";
 import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
 
@@ -44,6 +44,59 @@ const Services = () => {
     );
   }
 
+    // Build the Service snippet
+  const serviceImage = isDesktop && service.images.desktopHero
+    ? service.images.desktopHero
+    : service.images.hero;
+
+  const serviceSnippet = {
+    "@type": "Service",
+    name: service.title,
+    description: service.shortDescription,
+    image: serviceImage,
+    url: window.location.href,
+    provider: {
+      "@type": "Organization",
+      name: "Pure Health & Wellness",
+      url: "https://purehealthdx.com",
+      logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
+    }
+  };
+
+  // Build a snippet per location, connecting to this service
+  const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
+    const locImage = isDesktop && office.desktopImage
+      ? office.desktopImage
+      : office.heroImage;
+    return {
+      "@type": "LocalBusiness",
+      name: office.name,
+      description: office.description,
+      telephone: office.phone,
+      url: `https://purehealthdx.com/locations/${slug}`,
+      image: locImage,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: office.address.split(",")[0],
+        addressLocality: office.address.split(",")[1].trim(),
+        addressRegion: office.address.split(",")[2].split(" ")[1],
+        postalCode: office.address.split(" ").slice(-1)[0],
+        addressCountry: "US"
+      },
+      openingHours: office.hours.replace(/, /g, "; "),
+      serviceOffered: serviceSnippet
+    };
+  });
+
+    // Combine into one graph
+  const richSnippet = {
+    "@context": "https://schema.org",
+    "@graph": [
+      serviceSnippet,
+      ...locationSnippets
+    ]
+  };
+
   const heroImage =
     isDesktop && service.images.desktopHero
       ? service.images.desktopHero
@@ -55,6 +108,9 @@ const Services = () => {
     <>
       <Helmet>
         <title>{service.title} | Pure Health & Wellness</title>
+        <script type="application/ld+json">
+          {JSON.stringify(richSnippet, null, 2)}
+        </script>
       </Helmet>
 
       {/* — Hero — */}

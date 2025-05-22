@@ -12,7 +12,7 @@ const Contact = lazy(() => import("./pages/main/Contact"));
 const FAQ = lazy(() => import("./pages/main/FAQ"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const PrivacyPolicy = lazy(() => import("./sections/PrivacyPolicy"));
-const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+
 const LocationsPage = lazy(() => import("./pages/LocationsPage"));
 const BecomeAPatientPage = lazy(() => import("./pages/BecomeAPatientPage"));
 const BookAppointmentPage = lazy(() => import("./pages/BookAppointmentPage"));
@@ -57,7 +57,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<PrivacyPolicy />} />
 
-            <Route path="/projects/:projectId?" element={<ProjectsPage />} />
+
             <Route path="/locations/:locationId?" element={<LocationsPage />} />
 
             <Route path="/become-a-patient" element={<BecomeAPatientPage />} />
