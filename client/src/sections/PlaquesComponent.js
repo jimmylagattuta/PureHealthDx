@@ -52,7 +52,7 @@ function PlaquesComponent() {
             className="plaque-icon"
             loading="lazy"
           />
-          <h3 className="plaque-title">{p.title}</h3>
+          <h1 className="plaque-title">{p.title}</h1>
         </div>
       ))}
     </section>
