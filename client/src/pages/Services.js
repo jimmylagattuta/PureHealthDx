@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData, serviceExtras, locationsData } from "../data";
+import LocationsSection from "../sections/LocationsSection";
 import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
 
@@ -544,7 +545,7 @@ const richSnippet = {
         </section>
       )}
 
-
+      <LocationsSection />
       <FooterComponent />
     </>
   );

@@ -10,6 +10,7 @@ import {
   faThreads, 
   faInstagram 
 } from "@fortawesome/free-brands-svg-icons";
+import { locationsData } from "../data";
 import "./FooterComponent.css";
 
 function FooterComponent() {
@@ -57,6 +58,19 @@ function FooterComponent() {
 
           </ul>
         </div>
+
+       {/* 4) LOCATIONS */}
+        <div className="footer-col footer-section locations-col">
+          <h3>Our Locations</h3>
+          <ul>
+            {Object.entries(locationsData).map(([slug, loc]) => (
+              <li key={slug}>
+                <Link to={`/locations/${slug}`}>{loc.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
 
         {/* 4) GET IN TOUCH COLUMN */}
         <div className="footer-col footer-section contact-col">

@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { servicesData } from '../data'; // Remove 'projectsData' if unused
+import { servicesData, locationsData } from '../data'; // Remove 'projectsData' if unused
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesSubMenuOpen, setServicesSubMenuOpen] = useState(false);
+  const [locationsSubMenuOpen, setLocationsSubMenuOpen] = useState(false)
+  const locationsHoverTimeout = useRef(null)
   const [projectsSubMenuOpen, setProjectsSubMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
   const navigate = useNavigate();
   const location = useLocation();
   const servicesHoverTimeout = useRef(null);
   const projectsHoverTimeout = useRef(null);
+  
 
   // Toggle entire mobile menu
   const toggleMenu = () => {
@@ -29,6 +32,7 @@ function Navbar() {
     setIsOpen(false);
     setServicesSubMenuOpen(false);
     setProjectsSubMenuOpen(false);
+    setLocationsSubMenuOpen(false);
   };
 
   // Direct to external Patient Portal
@@ -108,7 +112,25 @@ function Navbar() {
       );
     }
   };
-
+    const handleLocationsClick = () => {
+    if (isMobile) {
+      setLocationsSubMenuOpen(open => !open)
+    }
+  }
+  const handleLocationsEnter = () => {
+    if (!isMobile) {
+      clearTimeout(locationsHoverTimeout.current)
+      setLocationsSubMenuOpen(true)
+    }
+  }
+  const handleLocationsLeave = () => {
+    if (!isMobile) {
+      locationsHoverTimeout.current = setTimeout(
+        () => setLocationsSubMenuOpen(false),
+        300
+      )
+    }
+  }
   // Update mobile/desktop state on window resize
   useEffect(() => {
     const handleResize = () => {
@@ -189,6 +211,35 @@ function Navbar() {
               </ul>
             )}
           </li>
+
+                  {/* Locations */}
+        <li
+          className={`nav-item locations-link ${
+            location.pathname.startsWith('/locations') ? 'active-link' : ''
+          }`}
+          onClick={handleLocationsClick}
+          onMouseEnter={handleLocationsEnter}
+          onMouseLeave={handleLocationsLeave}
+        >
+          Locations
+          {locationsSubMenuOpen && (
+            <ul
+              className="sub-nav-menu show"
+              onMouseEnter={handleLocationsEnter}
+              onMouseLeave={handleLocationsLeave}
+            >
+              {Object.entries(locationsData).map(([slug, loc]) => (
+                <li
+                  key={slug}
+                  className="sub-nav-item"
+                  onClick={() => handleNavItemClick(`/locations/${slug}`)}
+                >
+                  {loc.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
 
           {/* About Us */}
           <li
