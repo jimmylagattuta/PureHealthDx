@@ -62,40 +62,73 @@ const Services = () => {
       logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
     }
   };
+const globalServiceSnippet = {
+  "@type": "Service",
+  "@id": `https://purehealthdx.com/services/${serviceId}#service`,
+  serviceType: service.title,
+  description: service.shortDescription,
+  image: isDesktop && service.images.desktopHero
+    ? service.images.desktopHero
+    : service.images.hero,
+  url: window.location.href,
+  provider: {
+    "@type": "Organization",
+    name: "Pure Health & Wellness",
+    url: "https://purehealthdx.com",
+    logo: "https://res.cloudinary.com/…/nav-logo_tersen.webp"
+  }
+};
+const perLocationServiceSnippets = Object.entries(locationsData).map(
+  ([slug, office]) => ({
+    "@type": "Service",
+    "@id": `https://purehealthdx.com/services/${serviceId}#${slug}-service`,
+    serviceType: service.title,
+    description: service.shortDescription,
+    image: isDesktop && service.images.desktopHero
+      ? service.images.desktopHero
+      : service.images.hero,
+    url: `https://purehealthdx.com/services/${serviceId}`, 
+    provider: { "@id": `https://purehealthdx.com/locations/${slug}#loc` }
+  })
+);
 
   // Build a snippet per location, connecting to this service
   const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
-    const locImage = isDesktop && office.desktopImage
-      ? office.desktopImage
-      : office.heroImage;
+    const id = `https://purehealthdx.com/locations/${slug}#loc`;
+    const [street, locality, regionPostal] = office.address.split(",");
+    const [region, postalCode] = regionPostal.trim().split(" ");
+
     return {
       "@type": "LocalBusiness",
+      "@id": id,
       name: office.name,
       description: office.description,
       telephone: office.phone,
       url: `https://purehealthdx.com/locations/${slug}`,
-      image: locImage,
+      image: office.desktopImage || office.heroImage,
       address: {
         "@type": "PostalAddress",
-        streetAddress: office.address.split(",")[0],
-        addressLocality: office.address.split(",")[1].trim(),
-        addressRegion: office.address.split(",")[2].split(" ")[1],
-        postalCode: office.address.split(" ").slice(-1)[0],
+        streetAddress: street.trim(),
+        addressLocality: locality.trim(),
+        addressRegion: region,
+        postalCode,
         addressCountry: "US"
       },
-      openingHours: office.hours.replace(/, /g, "; "),
-      availableService: serviceSnippet
+      openingHours: office.hours  // e.g. "Mon - Fri: 08:00 AM - 05:00 PM"
     };
   });
 
+
     // Combine into one graph
-  const richSnippet = {
-    "@context": "https://schema.org",
-    "@graph": [
-      serviceSnippet,
-      ...locationSnippets
-    ]
-  };
+const richSnippet = {
+  "@context": "https://schema.org",
+  "@graph": [
+    globalServiceSnippet,
+    ...locationSnippets,
+    ...perLocationServiceSnippets
+  ]
+};
+
 
   const heroImage =
     isDesktop && service.images.desktopHero
