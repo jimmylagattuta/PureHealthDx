@@ -124,7 +124,7 @@ export const servicesData = {
   titleAbr: "HRT",
   shortDescription: `Hormone Replacement Therapy helps restore natural hormone balance to relieve symptoms like fatigue, mood swings, hot flashes, and low libido.`,
   images: {
-    hero: "https://i.postimg.cc/8zN40cWC/i-Stock-2045082706.webp",
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747964123/iStock-2045082706_gu4dec.jpg",
     desktopHero: "https://i.postimg.cc/gjmQ6n6L/i-Stock-1128929966.webp"
   },
   collageImage: collageHRTCombined,
