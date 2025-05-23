@@ -163,7 +163,15 @@ const Home = ({ scrollToContact, reviews }) => {
                 "opens":"08:00",
                 "closes":"17:00"
               }
-            ]
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "349 E. Bullard Ave Suite 105",
+              "addressLocality": "Fresno",
+              "addressRegion": "CA",
+              "postalCode": "93710",
+              "addressCountry": "US"
+            }
           },
           {
             "@type": "Service",
