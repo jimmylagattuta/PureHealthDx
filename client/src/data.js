@@ -61,7 +61,7 @@ export const servicesData = {
   titleAbr: "TRT",
   shortDescription: `Testosterone is a hormone primarily produced in the testicles once males begin puberty. Production naturally declines about 1% per year after 30, but some men experience far more rapid drops, leading to symptoms like low libido, fatigue, and muscle loss.`,
   images: {
-    hero: heroTRT,
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747966750/iStock-2135022914_icxnzb.jpg",
     desktopHero: "https://i.postimg.cc/T340Xpdq/i-Stock-2201828485.webp"
   },
   collageImage: collageTRTCombined,
@@ -196,7 +196,7 @@ The goal of this treatment is to relieve menopausal symptoms, including weight g
   titleAbr: "ED",
   shortDescription: `Our advanced ED treatments—including medications, injections, and shockwave therapy—help you regain sexual performance and confidence.`,
   images: {
-    hero: "https://i.postimg.cc/pdhtpsd4/i-Stock-940674076.webp",
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747977323/iStock-940674076_rh9nwn.jpg",
     desktopHero: "https://i.postimg.cc/BbmYLN0R/i-Stock-1400269483.webp"
   },
   collageImage: collageEDCombined,
@@ -247,7 +247,7 @@ All treatments are tailored to your unique situation with discretion and support
   titleAbr: "Peptides",
   shortDescription: `Targeted peptide protocols to support muscle growth, fat loss, immune health, and healthy aging—customized to your goals.`,
   images: {
-    hero: "https://i.postimg.cc/65JS09pH/i-Stock-487589082.webp",
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747977752/iStock-487589082_ccbrfi.jpg",
     desktopHero: "https://i.postimg.cc/kgLnRvMV/i-Stock-2189199609.webp"
   },
   collageImage: collagePeptideCombined,
@@ -298,7 +298,7 @@ Each plan is personalized based on lab work, lifestyle goals, and optimal dosing
   titleAbr: "PRP",
   shortDescription: `PRP therapy uses your own growth factors to accelerate healing, reduce pain, and regenerate tissue naturally.`,
   images: {
-    hero: "https://i.postimg.cc/tJPTWX40/i-Stock-2185379954.webp",
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747977524/iStock-2185379954_qse2an.jpg",
     desktopHero: "https://i.postimg.cc/B6rnFWT1/i-Stock-846081796.webp"
   },
   collageImage: collagePRPCombined,
@@ -330,7 +330,7 @@ By using a concentrated dose of platelets from your own body, PRP stimulates nat
   titleAbr: "Pain Mgmt",
   shortDescription: `Comprehensive pain management plans combining injections, therapies, and referrals to give you lasting relief.`,
   images: {
-    hero: "https://i.postimg.cc/rFfm4Y8w/i-Stock-467842612-1-1-1-1.webp",
+    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747966659/iStock-467842612_1_1_1_1_yjteqt.jpg",
     desktopHero: "https://i.postimg.cc/5yYrT0R6/i-Stock-2192512090.webp"
   },
   collageImage: collagePMCombined,
