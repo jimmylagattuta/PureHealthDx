@@ -13,19 +13,19 @@ function HeroSection() {
         />
         {/* Tablet Image */}
         <source
-          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743045314/home-header-bg-mobile_1_1_i0noq3.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/w_auto,dpr_auto,f_auto,q_auto/v1743045314/home-header-bg-mobile_1_1_i0noq3.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
         {/* Desktop Image */}
         <source
-          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
+          srcSet="https://res.cloudinary.com/djtsuktwb/image/upload/w_auto,dpr_auto,f_auto,q_auto/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
         {/* Fallback */}
         <img
-          src="https://res.cloudinary.com/djtsuktwb/image/upload/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
+          src="https://res.cloudinary.com/djtsuktwb/image/upload/w_auto,dpr_auto,f_auto,q_auto/v1743042048/home-header-updated-1-1-1_va1zkk.webp"
           alt="Pure Health & Wellness Hero"
           width="auto"
           height="100%"
