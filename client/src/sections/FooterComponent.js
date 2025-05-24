@@ -19,6 +19,7 @@ function FooterComponent() {
       {/* Top area with 4 columns on desktop/tablet */}
       <Link to="/">
         <img
+          loading="lazy"
           src="https://i.postimg.cc/FsjJMwWQ/footer-logo.webp"
           alt="Pure Health & Wellness"
           className="footer-logo"

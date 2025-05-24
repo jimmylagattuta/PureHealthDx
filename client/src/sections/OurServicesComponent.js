@@ -36,6 +36,7 @@ function OurServicesComponent() {
             {/* Front Content (Desktop: shows image, title, and "Learn More") */}
             <div className="service-card-content">
               <img
+                loading="lazy"
                 src={service.images.hero}
                 alt={service.title}
                 className="service-img"
