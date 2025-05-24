@@ -51,9 +51,14 @@
   </noscript>
   <div id="root"></div>
 
+
 <script>
-  window.addEventListener("load", function () {
-    // Create the chat-widget element AFTER the page loads
+  let widgetLoaded = false;
+
+  const loadWidget = () => {
+    if (widgetLoaded) return;
+    widgetLoaded = true;
+
     const chatWidget = document.createElement("chat-widget");
     chatWidget.setAttribute("location-id", "v1An46qmobBT85BmPPS5");
     chatWidget.setAttribute("style", "--chat-widget-primary-color:#7C9F9C; --chat-widget-active-color:#7C9F9C; --chat-widget-bubble-color:#7C9F9C;");
@@ -65,16 +70,13 @@
     chatWidget.setAttribute("agency-website", "https://www.purehealthdx.com");
     chatWidget.setAttribute("primary-color", "#7C9F9C");
 
-    // Append widget element
     document.body.appendChild(chatWidget);
 
-    // Load widget script
     const widgetScript = document.createElement("script");
     widgetScript.src = "https://widgets.leadconnectorhq.com/loader.js";
     widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
 
     widgetScript.onload = function () {
-      // Accessibility fix
       const tryPatchButton = () => {
         const shadow = chatWidget.shadowRoot;
         if (!shadow) return;
@@ -91,8 +93,17 @@
     };
 
     document.body.appendChild(widgetScript);
+  };
+
+  // Trigger after user scrolls down a bit
+  window.addEventListener("scroll", function onScroll() {
+    if (window.scrollY > 50) {
+      loadWidget();
+      window.removeEventListener("scroll", onScroll);
+    }
   });
 </script>
+
 
 
 </body>
