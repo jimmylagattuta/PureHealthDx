@@ -42,6 +42,7 @@
       
 
 </head>
+
 <body>
   <h1 style="display: none;">Pure Health & Wellness | Fresno Hormone Replacement Therapy Clinic</h1>
   <noscript>
@@ -49,5 +50,29 @@
     or contact us at 805-635-1774 for more information.
   </noscript>
   <div id="root"></div>
+
+  <!-- Lazy-loaded Chat Widget -->
+  <chat-widget
+    location-id="v1An46qmobBT85BmPPS5"
+    style="--chat-widget-primary-color: #7C9F9C; --chat-widget-active-color:#7C9F9C ;--chat-widget-bubble-color: #7C9F9C ;"
+    sub-heading="Enter your question below and a customer care specialist will get right back to you." 
+    prompt-msg="Hi there, have a question for our Pure Health & Wellness team? Text us here." 
+    success-msg="One of our customer care specialists will contact you shortly." 
+    prompt-avatar="https://images.leadconnectorhq.com/image/f_webp/q_100/r_180/u_https://cdn.filesafe.space/locationPhotos%2Fv1An46qmobBT85BmPPS5%2Fchat-widget-person?alt=media&token=e35e009f-ae8e-492f-b8ca-6470a56ca47c" 
+    agency-name="Pure Health & Wellness" 
+    agency-website="https://www.purehealthdx.com" 
+    primary-color="#7C9F9C">
+  </chat-widget>
+
+  <script>
+    window.addEventListener("load", function () {
+      const script = document.createElement("script");
+      script.src = "https://widgets.leadconnectorhq.com/loader.js";
+      script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
+      document.body.appendChild(script);
+    });
+  </script>
 </body>
+</html>
+
 </html>
