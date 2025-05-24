@@ -69,9 +69,19 @@
       const script = document.createElement("script");
       script.src = "https://widgets.leadconnectorhq.com/loader.js";
       script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
+      script.onload = function () {
+        // Wait a moment for the widget to render
+        setTimeout(() => {
+          const closeBtn = document.querySelector('.lc_text-widget_prompt--prompt-close');
+          if (closeBtn && !closeBtn.getAttribute('aria-label')) {
+            closeBtn.setAttribute('aria-label', 'Close chat widget');
+          }
+        }, 3000); // delay long enough to allow render
+      };
       document.body.appendChild(script);
     });
   </script>
+
 </body>
 </html>
 
