@@ -51,7 +51,6 @@
   </noscript>
   <div id="root"></div>
 
-  <!-- Lazy-loaded Chat Widget -->
   <chat-widget
     location-id="v1An46qmobBT85BmPPS5"
     style="--chat-widget-primary-color: #7C9F9C; --chat-widget-active-color:#7C9F9C ;--chat-widget-bubble-color: #7C9F9C ;"
@@ -69,18 +68,26 @@
       const script = document.createElement("script");
       script.src = "https://widgets.leadconnectorhq.com/loader.js";
       script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
+
       script.onload = function () {
-        // Wait a moment for the widget to render
-        setTimeout(() => {
+        const observer = new MutationObserver(() => {
           const closeBtn = document.querySelector('.lc_text-widget_prompt--prompt-close');
           if (closeBtn && !closeBtn.getAttribute('aria-label')) {
             closeBtn.setAttribute('aria-label', 'Close chat widget');
+            observer.disconnect(); // stop observing once patched
           }
-        }, 3000); // delay long enough to allow render
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
       };
+
       document.body.appendChild(script);
     });
   </script>
+
 
 </body>
 </html>
