@@ -65,28 +65,39 @@
 
   <script>
     window.addEventListener("load", function () {
-      const script = document.createElement("script");
-      script.src = "https://widgets.leadconnectorhq.com/loader.js";
-      script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
+      const widgetScript = document.createElement("script");
+      widgetScript.src = "https://widgets.leadconnectorhq.com/loader.js";
+      widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
 
-      script.onload = function () {
-        const observer = new MutationObserver(() => {
-          const closeBtn = document.querySelector('.lc_text-widget_prompt--prompt-close');
-          if (closeBtn && !closeBtn.getAttribute('aria-label')) {
-            closeBtn.setAttribute('aria-label', 'Close chat widget');
-            observer.disconnect(); // stop observing once patched
+      widgetScript.onload = function () {
+        const tryPatchButton = () => {
+          const customElement = document.querySelector("chat-widget");
+          if (!customElement) return;
+
+          const shadow = customElement.shadowRoot;
+          if (!shadow) return;
+
+          const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
+          if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
+            closeBtn.setAttribute("aria-label", "Close chat widget");
+            console.log("✅ Patched accessibility label on close button.");
+          } else {
+            // Retry until found (with limit)
+            if (window.__chatRetryCount < 10) {
+              window.__chatRetryCount++;
+              setTimeout(tryPatchButton, 500);
+            }
           }
-        });
+        };
 
-        observer.observe(document.body, {
-          childList: true,
-          subtree: true,
-        });
+        window.__chatRetryCount = 0;
+        setTimeout(tryPatchButton, 1000);
       };
 
-      document.body.appendChild(script);
+      document.body.appendChild(widgetScript);
     });
   </script>
+
 
 
 </body>
