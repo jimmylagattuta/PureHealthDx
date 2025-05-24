@@ -51,53 +51,48 @@
   </noscript>
   <div id="root"></div>
 
-  <chat-widget
-    location-id="v1An46qmobBT85BmPPS5"
-    style="--chat-widget-primary-color: #7C9F9C; --chat-widget-active-color:#7C9F9C ;--chat-widget-bubble-color: #7C9F9C ;"
-    sub-heading="Enter your question below and a customer care specialist will get right back to you." 
-    prompt-msg="Hi there, have a question for our Pure Health & Wellness team? Text us here." 
-    success-msg="One of our customer care specialists will contact you shortly." 
-    prompt-avatar="https://images.leadconnectorhq.com/image/f_webp/q_100/r_180/u_https://cdn.filesafe.space/locationPhotos%2Fv1An46qmobBT85BmPPS5%2Fchat-widget-person?alt=media&token=e35e009f-ae8e-492f-b8ca-6470a56ca47c" 
-    agency-name="Pure Health & Wellness" 
-    agency-website="https://www.purehealthdx.com" 
-    primary-color="#7C9F9C">
-  </chat-widget>
+<script>
+  window.addEventListener("load", function () {
+    // Create the chat-widget element AFTER the page loads
+    const chatWidget = document.createElement("chat-widget");
+    chatWidget.setAttribute("location-id", "v1An46qmobBT85BmPPS5");
+    chatWidget.setAttribute("style", "--chat-widget-primary-color:#7C9F9C; --chat-widget-active-color:#7C9F9C; --chat-widget-bubble-color:#7C9F9C;");
+    chatWidget.setAttribute("sub-heading", "Enter your question below and a customer care specialist will get right back to you.");
+    chatWidget.setAttribute("prompt-msg", "Hi there, have a question for our Pure Health & Wellness team? Text us here.");
+    chatWidget.setAttribute("success-msg", "One of our customer care specialists will contact you shortly.");
+    chatWidget.setAttribute("prompt-avatar", "https://images.leadconnectorhq.com/image/f_webp/q_100/r_180/u_https://cdn.filesafe.space/locationPhotos%2Fv1An46qmobBT85BmPPS5%2Fchat-widget-person?alt=media&token=e35e009f-ae8e-492f-b8ca-6470a56ca47c");
+    chatWidget.setAttribute("agency-name", "Pure Health & Wellness");
+    chatWidget.setAttribute("agency-website", "https://www.purehealthdx.com");
+    chatWidget.setAttribute("primary-color", "#7C9F9C");
 
-  <script>
-    window.addEventListener("load", function () {
-      const widgetScript = document.createElement("script");
-      widgetScript.src = "https://widgets.leadconnectorhq.com/loader.js";
-      widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
+    // Append widget element
+    document.body.appendChild(chatWidget);
 
-      widgetScript.onload = function () {
-        const tryPatchButton = () => {
-          const customElement = document.querySelector("chat-widget");
-          if (!customElement) return;
+    // Load widget script
+    const widgetScript = document.createElement("script");
+    widgetScript.src = "https://widgets.leadconnectorhq.com/loader.js";
+    widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
 
-          const shadow = customElement.shadowRoot;
-          if (!shadow) return;
-
-          const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
-          if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
-            closeBtn.setAttribute("aria-label", "Close chat widget");
-            console.log("✅ Patched accessibility label on close button.");
-          } else {
-            // Retry until found (with limit)
-            if (window.__chatRetryCount < 10) {
-              window.__chatRetryCount++;
-              setTimeout(tryPatchButton, 500);
-            }
-          }
-        };
-
-        window.__chatRetryCount = 0;
-        setTimeout(tryPatchButton, 1000);
+    widgetScript.onload = function () {
+      // Accessibility fix
+      const tryPatchButton = () => {
+        const shadow = chatWidget.shadowRoot;
+        if (!shadow) return;
+        const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
+        if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
+          closeBtn.setAttribute("aria-label", "Close chat widget");
+        } else if (window.__chatRetryCount < 10) {
+          window.__chatRetryCount++;
+          setTimeout(tryPatchButton, 500);
+        }
       };
+      window.__chatRetryCount = 0;
+      setTimeout(tryPatchButton, 1000);
+    };
 
-      document.body.appendChild(widgetScript);
-    });
-  </script>
-
+    document.body.appendChild(widgetScript);
+  });
+</script>
 
 
 </body>
