@@ -69,7 +69,6 @@
     chatWidget.setAttribute("agency-name", "Pure Health & Wellness");
     chatWidget.setAttribute("agency-website", "https://www.purehealthdx.com");
     chatWidget.setAttribute("primary-color", "#7C9F9C");
-
     document.body.appendChild(chatWidget);
 
     const widgetScript = document.createElement("script");
@@ -77,31 +76,37 @@
     widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
 
     widgetScript.onload = function () {
+      let retry = 0;
       const tryPatchButton = () => {
         const shadow = chatWidget.shadowRoot;
-        if (!shadow) return;
-        const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
-        if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
-          closeBtn.setAttribute("aria-label", "Close chat widget");
-        } else if (window.__chatRetryCount < 10) {
-          window.__chatRetryCount++;
+        if (shadow) {
+          const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
+          if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
+            closeBtn.setAttribute("aria-label", "Close chat widget");
+          }
+        } else if (retry < 10) {
+          retry++;
           setTimeout(tryPatchButton, 500);
         }
       };
-      window.__chatRetryCount = 0;
       setTimeout(tryPatchButton, 1000);
     };
 
     document.body.appendChild(widgetScript);
-  };y
+  };
 
-  // Trigger after user scrolls down a bit
+  // load on desktop scroll
   window.addEventListener("scroll", function onScroll() {
     if (window.scrollY > 50) {
       loadWidget();
       window.removeEventListener("scroll", onScroll);
     }
   });
+
+  // immediately load on mobile
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    loadWidget();
+  }
 </script>
 
 
