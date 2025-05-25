@@ -55,59 +55,73 @@
 <script>
   let widgetLoaded = false;
 
-  const loadWidget = () => {
+  function loadWidget() {
     if (widgetLoaded) return;
     widgetLoaded = true;
 
+    // create the widget element
     const chatWidget = document.createElement("chat-widget");
     chatWidget.setAttribute("location-id", "v1An46qmobBT85BmPPS5");
-    chatWidget.setAttribute("style", "--chat-widget-primary-color:#7C9F9C; --chat-widget-active-color:#7C9F9C; --chat-widget-bubble-color:#7C9F9C;");
+    chatWidget.setAttribute("style", `
+      --chat-widget-primary-color:#7C9F9C;
+      --chat-widget-active-color:#7C9F9C;
+      --chat-widget-bubble-color:#7C9F9C;
+    `);
     chatWidget.setAttribute("sub-heading", "Enter your question below and a customer care specialist will get right back to you.");
     chatWidget.setAttribute("prompt-msg", "Hi there, have a question for our Pure Health & Wellness team? Text us here.");
     chatWidget.setAttribute("success-msg", "One of our customer care specialists will contact you shortly.");
-    chatWidget.setAttribute("prompt-avatar", "https://images.leadconnectorhq.com/image/f_webp/q_100/r_180/u_https://cdn.filesafe.space/locationPhotos%2Fv1An46qmobBT85BmPPS5%2Fchat-widget-person?alt=media&token=e35e009f-ae8e-492f-b8ca-6470a56ca47c");
+    chatWidget.setAttribute("prompt-avatar", 
+      "https://images.leadconnectorhq.com/…/chat-widget-person?alt=media"
+    );
     chatWidget.setAttribute("agency-name", "Pure Health & Wellness");
     chatWidget.setAttribute("agency-website", "https://www.purehealthdx.com");
     chatWidget.setAttribute("primary-color", "#7C9F9C");
     document.body.appendChild(chatWidget);
 
-    const widgetScript = document.createElement("script");
-    widgetScript.src = "https://widgets.leadconnectorhq.com/loader.js";
-    widgetScript.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js");
-
-    widgetScript.onload = function () {
+    // load the external widget script
+    const s = document.createElement("script");
+    s.src = "https://widgets.leadconnectorhq.com/loader.js";
+    s.setAttribute(
+      "data-resources-url",
+      "https://widgets.leadconnectorhq.com/chat-widget/v1An46qmobBT85BmPPS5.js"
+    );
+    s.onload = () => {
       let retry = 0;
-      const tryPatchButton = () => {
+      const patchClose = () => {
         const shadow = chatWidget.shadowRoot;
         if (shadow) {
-          const closeBtn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
-          if (closeBtn && !closeBtn.hasAttribute("aria-label")) {
-            closeBtn.setAttribute("aria-label", "Close chat widget");
+          const btn = shadow.querySelector(".lc_text-widget_prompt--prompt-close");
+          if (btn && !btn.hasAttribute("aria-label")) {
+            btn.setAttribute("aria-label", "Close chat widget");
           }
-        } else if (retry < 10) {
-          retry++;
-          setTimeout(tryPatchButton, 500);
+        } else if (++retry < 10) {
+          setTimeout(patchClose, 500);
         }
       };
-      setTimeout(tryPatchButton, 1000);
+      setTimeout(patchClose, 1000);
     };
-
-    document.body.appendChild(widgetScript);
-  };
-
-  // load on desktop scroll
-  window.addEventListener("scroll", function onScroll() {
-    if (window.scrollY > 50) {
-      loadWidget();
-      window.removeEventListener("scroll", onScroll);
-    }
-  });
-
-  // immediately load on mobile
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    loadWidget();
+    document.body.appendChild(s);
   }
+
+  // once any of these fire, load the widget and then remove listeners
+  function onUserInteraction(e) {
+    if (e.type === "scroll" && window.scrollY < 50) return;
+    loadWidget();
+    cleanup();
+  }
+
+  function cleanup() {
+    window.removeEventListener("scroll", onUserInteraction);
+    window.removeEventListener("touchstart", onUserInteraction);
+    window.removeEventListener("click", onUserInteraction);
+  }
+
+  // defer until user scrolls down 50px, taps, or clicks
+  window.addEventListener("scroll", onUserInteraction, { passive: true });
+  window.addEventListener("touchstart", onUserInteraction, { once: true });
+  window.addEventListener("click", onUserInteraction, { once: true });
 </script>
+
 
 
 
