@@ -490,11 +490,12 @@ const BookAppointmentPage = () => {
                 )}
               </div>
             )}
+            <div className="form-navigation button-row">
 
-            {/* Submit */}
-            <button type="submit" className="submit-btn">
-              Next Step
-            </button>
+              <button type="submit" className="submit-btn">
+                Next Step
+              </button>
+            </div>
           </form>
         </div>
       </div>
