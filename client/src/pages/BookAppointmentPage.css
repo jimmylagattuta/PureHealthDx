@@ -43,39 +43,19 @@
     margin-top: 1.5rem;
   }
   
-  .btn-outline {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 0.25rem;
-  }
-  
-  .btn-outline:hover {
-    border-color: #2563eb;
-    color: #2563eb;
-  }
+/* Previous (outline) button */
+.btn-outline {
+  border: 2px solid #2563eb;
+  background-color: transparent;
+  color: #2563eb;
+}
+
+.btn-outline:hover {
+  background-color: #ebf4ff;
+}
   
 
-  @media (min-width: 768px) {
-    .banner {
-      width: 768px;
-      height: 384px;
-      background-image: url('https://i.postimg.cc/76k1vBnn/i-Stock-1275071474.webp');
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .banner {
-      width: 100vw;
-      height: 548px;
-      background-image: url('https://i.postimg.cc/gJFFp333/i-Stock-2188211992.webp');
-    }
-    .book-appointment-container .content-section {
-      max-width: 90vw;
-      text-align: left;
-    }
-  }
+
   
   /* Dark overlay for better text contrast */
   .banner-overlay {
@@ -191,23 +171,42 @@
     margin-bottom: 0.5rem;
     box-sizing: border-box;
   }
-  
-  /* Submit Button Styles */
-  .submit-btn {
-    width: 100%;
-    background-color: #2563eb;
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.25rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .submit-btn:hover {
-    background-color: #1e40af;
-  }
+  /* Button row: stacked vertically on mobile */
+.button-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Shared button styling */
+.button-row button {
+  font-size: 1.05rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Next (solid) button */
+.submit-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #1e40af;
+}
+/* Optional: pressed effect */
+.submit-btn:active {
+  transform: translateY(0);
+}
+
   
   /* Global error alert container (red box) */
 .error-alert {
@@ -245,4 +244,46 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #111827;
+  }
+
+    @media (min-width: 768px) {
+    .banner {
+      width: 768px;
+      height: 384px;
+      background-image: url('https://i.postimg.cc/76k1vBnn/i-Stock-1275071474.webp');
+    }
+      .button-row {
+    flex-direction: row;
+
+  }
+
+  .btn-outline,
+  .submit-btn {
+    width: auto;
+    min-width: 140px;
+
+  }
+  }
+  
+  @media (min-width: 1024px) {
+    .banner {
+      width: 100vw;
+      height: 548px;
+      background-image: url('https://i.postimg.cc/gJFFp333/i-Stock-2188211992.webp');
+    }
+    .book-appointment-container .content-section {
+      max-width: 90vw;
+      text-align: left;
+    }
+    
+    .button-row {
+      justify-content: center;
+    }
+
+    .btn-outline,
+    .submit-btn {
+      width: auto;
+      min-width: 440px;
+
+    }
   }

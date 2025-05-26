@@ -184,10 +184,19 @@
     height: 150px;
   }
   
-  .signature-canvas-fixed {
-    width: 100%;
-    height: 150px;
-  }
+/* Add a visible frame directly to the canvas */
+.signature-canvas-fixed {
+  width: 100% !important;
+  height: 150px !important;
+  border: 3px dashed #2563eb !important;
+  border-radius: 0.5rem !important;
+  background-color: #ffffff !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  
+}
+
   
   /* Button Styles */
   .btn-outline,

@@ -7,47 +7,36 @@ import "./BookAppointmentPage.css";
 const BookAppointmentStep4 = () => {
   const navigate = useNavigate();
 
-  // Refs for the two signature pads
   const patientSigPad = useRef(null);
   const witnessSigPad = useRef(null);
 
-  // Dummy autofill values for patient fields and witness fields
-  // const dummyPatientName = "John Doe";
-  // const dummyPatientDate = "2025-04-10"; // ISO format (YYYY-MM-DD)
-  // const dummyWitnessFirstName = "Jane";
-  // const dummyWitnessLastName = "Smith";
-  // const dummyWitnessDate = "2025-04-10";
-
-const {
-  register,
-  handleSubmit,
-  setValue,
-  watch,
-  trigger,
-  formState: { errors },
-} = useForm({
-  mode: "onChange",
-  defaultValues: {
-    patientName: "",
-    patientSignature: "",
-    patientDate: "",
-    witnessFirstName: "",
-    witnessLastName: "",
-    witnessSignature: "",
-    witnessDate: "",
-  },
-});
-
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    trigger,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      patientName: "",
+      patientSignature: "",
+      patientDate: "",
+      witnessFirstName: "",
+      witnessLastName: "",
+      witnessSignature: "",
+      witnessDate: "",
+    },
+  });
 
   const values = watch();
 
-  // Validate on mount
   useEffect(() => {
     console.log("Step 4: Triggering initial validation");
     trigger();
   }, [trigger]);
 
-  // Clear functions for signature pads
   const clearPatientSignature = () => {
     console.log("Step 4: Clearing patient signature");
     if (patientSigPad.current) {
@@ -66,72 +55,98 @@ const {
     }
   };
 
-const onSubmit = () => {
-  console.log("Step 4: onSubmit triggered");
+  const applySignatureCanvasStyles = (ref) => {
+    if (ref && ref.getCanvas()) {
+      const canvas = ref.getCanvas();
+      Object.assign(canvas.style, {
+        border: "none",
+        borderRadius: "12px",
+        backgroundColor: "#ffffff",
+        backgroundImage:
+          "repeating-linear-gradient(45deg, #f3f4f6, #f3f4f6 10px, #ffffff 10px, #ffffff 20px)",
+        width: "min-content",
+        maxWidth: "100%",
+        height: "150px",
+        display: "block",
+        boxSizing: "border-box",
+        transition: "box-shadow 0.3s ease, transform 0.2s ease",
+      });
 
-  if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
-    console.warn("Step 4: Patient signature is missing");
-    setValue("patientSignature", "", { shouldValidate: true });
-    trigger("patientSignature");
-    return;
-  }
+      const activateHover = () => {
+        canvas.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.35)";
+        canvas.style.transform = "scale(1.01)";
+      };
 
-  if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
-    console.warn("Step 4: Witness signature is missing");
-    setValue("witnessSignature", "", { shouldValidate: true });
-    trigger("witnessSignature");
-    return;
-  }
+      const deactivateHover = () => {
+        canvas.style.boxShadow = "0 6px 20px rgba(37, 99, 235, 0.2)";
+        canvas.style.transform = "scale(1)";
+      };
 
-  // Capture signatures
-  const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
-  const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
-
-  // Watch values
-  const values = watch();
-
-  // Full labeling
-  const labeledStep4Data = {
-    informedConsentForHghReplacementTherapyPatientName: values.patientName,
-    informedConsentForHghReplacementTherapyPatientDate: values.patientDate,
-    informedConsentForHghReplacementTherapyPatientSignature: patientSigData,
-    informedConsentForHghReplacementTherapyWitnessFirstName: values.witnessFirstName,
-    informedConsentForHghReplacementTherapyWitnessLastName: values.witnessLastName,
-    informedConsentForHghReplacementTherapyWitnessDate: values.witnessDate,
-    informedConsentForHghReplacementTherapyWitnessSignature: witnessSigData
+      canvas.addEventListener("mouseenter", activateHover);
+      canvas.addEventListener("mouseleave", deactivateHover);
+      canvas.addEventListener("touchstart", activateHover);
+      canvas.addEventListener("touchend", deactivateHover);
+    }
   };
 
-  const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
-  const fullData = { ...previousSteps, ...labeledStep4Data };
+  const onSubmit = () => {
+    console.log("Step 4: onSubmit triggered");
 
-  console.log("📋 Combined Step 1–4 data:", fullData);
+    if (!patientSigPad.current || patientSigPad.current.isEmpty()) {
+      console.warn("Step 4: Patient signature is missing");
+      setValue("patientSignature", "", { shouldValidate: true });
+      trigger("patientSignature");
+      return;
+    }
 
-  localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+    if (!witnessSigPad.current || witnessSigPad.current.isEmpty()) {
+      console.warn("Step 4: Witness signature is missing");
+      setValue("witnessSignature", "", { shouldValidate: true });
+      trigger("witnessSignature");
+      return;
+    }
 
-  // ❌ Temporarily block navigation to Step 5
-  navigate("/book-appointment-step5");
-};
+    const patientSigData = patientSigPad.current.getTrimmedCanvas().toDataURL();
+    const witnessSigData = witnessSigPad.current.getTrimmedCanvas().toDataURL();
 
+    const values = watch();
 
+    const labeledStep4Data = {
+      informedConsentForHghReplacementTherapyPatientName: values.patientName,
+      informedConsentForHghReplacementTherapyPatientDate: values.patientDate,
+      informedConsentForHghReplacementTherapyPatientSignature: patientSigData,
+      informedConsentForHghReplacementTherapyWitnessFirstName: values.witnessFirstName,
+      informedConsentForHghReplacementTherapyWitnessLastName: values.witnessLastName,
+      informedConsentForHghReplacementTherapyWitnessDate: values.witnessDate,
+      informedConsentForHghReplacementTherapyWitnessSignature: witnessSigData,
+    };
+
+    const previousSteps = JSON.parse(localStorage.getItem("appointmentFormData")) || {};
+    const fullData = { ...previousSteps, ...labeledStep4Data };
+
+    console.log("📋 Combined Step 1–4 data:", fullData);
+    localStorage.setItem("appointmentFormData", JSON.stringify(fullData));
+    navigate("/book-appointment-step5");
+  };
 
   return (
     <form
       className="intake-form"
-      onSubmit={handleSubmit(onSubmit, (errors) => console.log("Validation errors:", errors))}
+      onSubmit={handleSubmit(onSubmit, (errors) =>
+        console.log("Validation errors:", errors)
+      )}
     >
       <div className="book-appointment-container">
-      <div className="banner">
-        <div className="banner-overlay"></div>
-        <div className="banner-text">
-          <h1>Book Telemedicine Consultation</h1>
+        <div className="banner">
+          <div className="banner-overlay"></div>
+          <div className="banner-text">
+            <h1>Book Telemedicine Consultation</h1>
+          </div>
         </div>
-      </div>
 
         <div className="content-section">
-        <h2>Start Your Wellness Journey Today</h2>
-
+          <h2>Start Your Wellness Journey Today</h2>
           <div className="paper-container">
-            {/* Progress Bar */}
             <div className="progress">
               <div className="progress-info">
                 <p>Step 4 of 6</p>
@@ -329,7 +344,6 @@ const onSubmit = () => {
               </p>
             </div>
 
-            {/* Patient's Information */}
             <div className="form-group">
               <label>Patient's Name (Required)</label>
               <input
@@ -349,21 +363,22 @@ const onSubmit = () => {
 
             <div className="form-group">
               <label>Patient Signature (Required)</label>
-              <div className="signature-pad-wrapper">
+              <div className="signature-frame">
                 <SignatureCanvas
-                  ref={patientSigPad}
+                  ref={(ref) => {
+                    patientSigPad.current = ref;
+                    applySignatureCanvasStyles(ref);
+                  }}
                   penColor="black"
                   canvasProps={{
                     width: 400,
                     height: 150,
-                    className: "signature-canvas-fixed",
                   }}
                   onEnd={() => {
                     if (!patientSigPad.current.isEmpty()) {
                       const dataUrl = patientSigPad.current.getTrimmedCanvas().toDataURL();
                       setValue("patientSignature", dataUrl);
                       trigger("patientSignature");
-                      console.log("Step 4: Patient signature updated on end");
                     }
                   }}
                 />
@@ -391,7 +406,6 @@ const onSubmit = () => {
               )}
             </div>
 
-            {/* Witness Information */}
             <div className="form-group">
               <label>Witness Name (Required)</label>
               <div style={{ display: "flex", gap: "0.5rem" }}>
@@ -420,21 +434,22 @@ const onSubmit = () => {
 
             <div className="form-group">
               <label>Witness Signature (Required)</label>
-              <div className="signature-pad-wrapper">
+              <div className="signature-frame">
                 <SignatureCanvas
-                  ref={witnessSigPad}
+                  ref={(ref) => {
+                    witnessSigPad.current = ref;
+                    applySignatureCanvasStyles(ref);
+                  }}
                   penColor="black"
                   canvasProps={{
                     width: 400,
                     height: 150,
-                    className: "signature-canvas-fixed",
                   }}
                   onEnd={() => {
                     if (!witnessSigPad.current.isEmpty()) {
                       const dataUrl = witnessSigPad.current.getTrimmedCanvas().toDataURL();
                       setValue("witnessSignature", dataUrl);
                       trigger("witnessSignature");
-                      console.log("Step 4: Witness signature updated on end");
                     }
                   }}
                 />
@@ -462,7 +477,6 @@ const onSubmit = () => {
               )}
             </div>
 
-            {/* Navigation Buttons */}
             <div className="form-navigation button-row">
               <button
                 type="button"

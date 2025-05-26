@@ -297,59 +297,98 @@ const onSubmit = (step3Data) => {
             </div>
 
             {/* Date (auto-filled) */}
-            <div className="form-group">
-              <label>Date:</label>
-              <input
-                type="date"
-                {...register("date", {
-                  required: "Date is required.",
-                })}
-              />
-              {errors.date && (
-                <p className="error-message">{errors.date.message}</p>
-              )}
-            </div>
+{/* Signature */}
+<div className="form-group">
+  <label>
+    Patient Signature{" "}
+    <span className={getRequiredClass(values.signature, errors.signature)}>
+      (Required)
+    </span>
+  </label>
 
-            {/* Signature */}
-            <div className="form-group">
-              <label>
-                Patient Signature{" "}
-                <span className={getRequiredClass(values.signature, errors.signature)}>
-                  (Required)
-                </span>
-              </label>
-              <div className="signature-pad-wrapper">
-                <SignatureCanvas
-                  ref={sigPad}
-                  penColor="black"
-                  canvasProps={{
-                    width: 400,
-                    height: 150,
-                    className: "signature-canvas-fixed",
-                  }}
-                  onEnd={() => {
-                    if (!sigPad.current.isEmpty()) {
-                      const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
-                      setValue("signature", dataUrl);
-                      trigger("signature");
-                      console.log("Step 3: signature updated on end");
-                    }
-                  }}
-                />
-              </div>
-              <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
-                <button
-                  type="button"
-                  onClick={clearSignature}
-                  className="clear-signature"
-                >
-                  ↻ Clear Signature
-                </button>
-              </div>
-              {errors.signature && (
-                <p className="error-message">Signature is required.</p>
-              )}
-            </div>
+  {/* Signature Pad with hint label */}
+  <div className="signature-pad-wrapper">
+    <div
+      className={`signature-hint ${values.signature ? "hidden" : ""}`}
+    >
+      ✍️ Sign Here
+    </div>
+
+<div className="signature-frame">
+<SignatureCanvas
+  ref={(ref) => {
+    sigPad.current = ref;
+
+    if (ref && ref.getCanvas()) {
+      const canvas = ref.getCanvas();
+      Object.assign(canvas.style, {
+        border: "none", // border moved to wrapper
+        borderRadius: "12px",
+        backgroundColor: "#ffffff",
+        backgroundImage:
+          "repeating-linear-gradient(45deg, #f3f4f6, #f3f4f6 10px, #ffffff 10px, #ffffff 20px)",
+        width: "min-content",
+        maxWidth: "100%",
+        height: "150px",
+        display: "block",
+        transition: "box-shadow 0.3s ease, transform 0.2s ease",
+      });
+
+      const activateHover = () => {
+        canvas.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.35)";
+        canvas.style.transform = "scale(1.01)";
+      };
+
+      const deactivateHover = () => {
+        canvas.style.boxShadow = "0 6px 20px rgba(37, 99, 235, 0.2)";
+        canvas.style.transform = "scale(1)";
+      };
+
+      // Desktop hover
+      canvas.addEventListener("mouseenter", activateHover);
+      canvas.addEventListener("mouseleave", deactivateHover);
+
+      // Mobile touch simulation
+      canvas.addEventListener("touchstart", activateHover);
+      canvas.addEventListener("touchend", deactivateHover);
+    }
+  }}
+  penColor="black"
+  canvasProps={{
+    width: 400,
+    height: 150,
+  }}
+  onEnd={() => {
+    if (!sigPad.current.isEmpty()) {
+      const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
+      setValue("signature", dataUrl);
+      trigger("signature");
+    }
+  }}
+/>
+
+</div>
+
+
+
+
+  </div>
+
+  <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
+    <button
+      type="button"
+      onClick={clearSignature}
+      className="clear-signature"
+    >
+      ↻ Clear Signature
+    </button>
+  </div>
+
+  {errors.signature && (
+    <p className="error-message">Signature is required.</p>
+  )}
+</div>
+
 
             {/* Navigation Buttons */}
             <div className="form-navigation button-row">

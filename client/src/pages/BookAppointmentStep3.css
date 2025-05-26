@@ -188,18 +188,70 @@
     height: auto;
   }
   
-  .signature-pad-wrapper {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
+.signature-pad-wrapper {
+  width: 100%;
+  margin-top: 0.75rem;
+  position: relative;
+}
+
+/* Add a visible frame directly to the canvas */
+.signature-canvas-fixed {
+  width: 100% !important;
+  height: 150px !important;
+  border: 3px dashed #2563eb !important;
+  border-radius: 0.5rem !important;
+  background-color: #ffffff !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
   
-  .signature-canvas-fixed {
-    width: 100%;
-    max-width: 100%;
-    height: 150px;
+}
+@keyframes fadeInSignature {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
   }
-  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.signature-frame {
+  display: inline-block;
+  border: 3px dashed #2563eb;
+  border-radius: 12px;
+  padding: 0.25rem;
+  animation: spinBorder 3s linear infinite;
+}
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* "Sign Here" Label */
+.signature-hint {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2563eb;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+.signature-hint.hidden {
+  opacity: 0;
+}
+
+
   
   /* Reset Signature Button */
   .clear-signature {
@@ -253,6 +305,13 @@
     background-color: #1e40af;
   }
   
+
+
+
+
+
+
+
   .clear-signature {
     margin-top: 0.5rem;
     margin-right: 0.5rem;
