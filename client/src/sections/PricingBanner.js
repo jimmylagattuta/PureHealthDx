@@ -8,7 +8,7 @@ export default function PricingBanner() {
     <section className="pricing-banner">
       <div className="pricing-decor-top" />
 
-      <h2 className="pricing-title">Men's TRT Therapy Kit</h2>
+      <h2 className="pricing-title">California's lowest priced Men's TRT</h2>
 
       <div className="pricing-amount">
         <span className="dollar-sign">$</span>

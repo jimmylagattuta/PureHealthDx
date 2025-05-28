@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
+import PricingBanner from "./PricingBanner"; // adjust path if needed
 import "./SingleLocation.css";
 
 const SingleLocation = ({ office }) => {
@@ -86,10 +87,32 @@ const SingleLocation = ({ office }) => {
           >
             <h2 className="sl-location-name">{office.name}</h2>
           </div>
-          <div className="sl-location-info">
-            {/* No address: display a generic label */}
-            <p className="sl-location-address">Service Offered</p>
-          </div>
+<div className="sl-location-info">
+  {office.address ? (
+    <p
+      className="sl-location-address"
+      onClick={() =>
+        window.open(
+          `https://www.google.com/maps/search/?api=1&query=${office.address.replace(/ /g, "+")}`,
+          "_blank"
+        )
+      }
+      style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "8px" }}
+    >
+      <img
+        src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
+        alt="Map pin"
+        className="map-icon"
+        width="16"
+        height="16"
+      />
+      {office.address}
+    </p>
+  ) : (
+    <p className="sl-location-address">Address coming soon</p>
+  )}
+</div>
+
         </div>
 
         {/* Redesigned Contact Info Section */}
@@ -121,6 +144,8 @@ const SingleLocation = ({ office }) => {
           <h3>About {office.name}</h3>
           <p>{office.description}</p>
         </div>
+
+        <PricingBanner />
 
         {/* Services List Section */}
         <div
