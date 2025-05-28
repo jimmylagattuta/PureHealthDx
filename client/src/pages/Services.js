@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData, serviceExtras, locationsData } from "../data";
 import LocationsSection from "../sections/LocationsSection";
+import PricingBanner from "../sections/PricingBanner";
+import Testimonials from "../components/Testimonials";
 import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
 
@@ -31,6 +33,8 @@ const Services = () => {
             </li>
           ))}
         </ul>
+        <PricingBanner />
+        <Testimonials />
         <FooterComponent />
       </div>
     );
@@ -544,7 +548,8 @@ const richSnippet = {
           />
         </section>
       )}
-
+      <PricingBanner />
+      <Testimonials />
       <LocationsSection />
       <FooterComponent />
     </>

@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import { locationsData, servicesData } from "../data";
 import LocationsSection from "../sections/LocationsSection";
 import SingleLocation from "../sections/SingleLocation";
+import PricingBanner from "../sections/PricingBanner"; // adjust path if needed
+import Testimonials from "../components/Testimonials"; // adjust path if needed
 import FooterComponent from "../sections/FooterComponent";
 import "./LocationsPage.css";
 
@@ -184,7 +186,8 @@ function LocationsPage() {
         </div>
         {content}
       </div>
-
+      <PricingBanner />
+      <Testimonials />
       <FooterComponent />
     </div>
   );

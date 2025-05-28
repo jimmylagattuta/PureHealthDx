@@ -24,7 +24,7 @@ export default function Testimonials() {
   const [idx, setIdx] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const [visible, setVisible] = useState([]);
-  const [stage, setStage] = useState("visible"); // 'visible' | 'fade-out' | 'fade-in'
+  const [stage, setStage] = useState("visible");
 
   const perPage = width >= 1024 ? 4 : width >= 600 ? 2 : 1;
   const total = testimonials.length;
@@ -57,7 +57,7 @@ export default function Testimonials() {
     setStage("fade-out");
     setTimeout(() => {
       setIdx((prev) => (prev + perPage) % total);
-      setStage("fade-in");
+      setStage("slide-in");
       setTimeout(() => setStage("visible"), 500);
     }, 500);
   };
@@ -66,7 +66,7 @@ export default function Testimonials() {
     setStage("fade-out");
     setTimeout(() => {
       setIdx((prev) => (prev + direction + total) % total);
-      setStage("fade-in");
+      setStage("slide-in");
       setTimeout(() => setStage("visible"), 500);
     }, 500);
   };
@@ -90,7 +90,18 @@ export default function Testimonials() {
 
         <div className={`cards-wrapper ${stage}`}>
           {visible.map((t, i) => (
-            <div className="card" key={i} style={{ animationDelay: `${i * 150}ms` }}>
+            <div
+              className={`card ${stage}`}
+              key={i}
+              style={
+                perPage === 1 && stage === "slide-in"
+                  ? {
+                      animation: `slideInRight 0.6s ease forwards`,
+                      animationDelay: `${i * 150}ms`
+                    }
+                  : {}
+              }
+            >
               <p className="quote">“{t.quote}”</p>
               <p className="name">— {t.name}</p>
             </div>

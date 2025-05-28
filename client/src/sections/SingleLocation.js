@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
 import PricingBanner from "./PricingBanner"; // adjust path if needed
+import Testimonials from "../components/Testimonials"; // adjust path if needed
 import "./SingleLocation.css";
 
 const SingleLocation = ({ office }) => {
@@ -146,6 +147,7 @@ const SingleLocation = ({ office }) => {
         </div>
 
         <PricingBanner />
+        <Testimonials />
 
         {/* Services List Section */}
         <div
