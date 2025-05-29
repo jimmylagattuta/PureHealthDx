@@ -4,6 +4,12 @@ Rails.application.configure do
   # Middleware to compress responses
   config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
 
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+    r301 %r{.*}, 'https://purehealthdx.com$&', if: Proc.new { |rack_env|
+      rack_env['HTTP_HOST'] == 'www.purehealthdx.com'
+    }
+  end
+
   # Code is not reloaded between requests
   config.cache_classes = true
 

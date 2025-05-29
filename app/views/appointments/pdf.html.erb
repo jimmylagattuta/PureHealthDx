@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        padding: 20px;
+      }
+      h1, h2 {
+        color: #0076a3;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+      }
+      .section {
+        margin-bottom: 24px;
+      }
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        width: 220px;
+      }
+      .signature {
+        margin-top: 10px;
+      }
+      img.signature-img {
+        border: 1px solid #ccc;
+        max-width: 400px;
+        height: auto;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📋 Pure Health & Wellness: New Appointment Submission</h1>
+
+    <%= render partial: 'appointments/sections/patient_info', locals: { data: @data } %>
+    <%= render partial: 'appointments/sections/medical_history', locals: { data: @data } %>
+    <%= render partial: 'appointments/sections/consent_medical_services', locals: { data: @data } %>
+    <%= render partial: 'appointments/sections/consent_hgh', locals: { data: @data } %>
+    <%= render partial: 'appointments/sections/consent_trt', locals: { data: @data } %>
+    <%= render partial: 'appointments/sections/consent_controlled', locals: { data: @data } %>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'appointments/show_pdf'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   post '/contact', to: 'api/contacts#create'
   get "/pull_yelp_cache", to: "api/jobs#pull_yelp_cache"
   post '/appointment', to: 'api/contacts#create'
+get 'appointments/:id/pdf', to: 'appointments#show_pdf', as: 'appointment_pdf'
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
