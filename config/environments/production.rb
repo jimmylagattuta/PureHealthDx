@@ -15,7 +15,6 @@ Rails.application.configure do
 
   # Eager load code on boot
   config.eager_load = true
-
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local = false
   config.serve_static_assets = true  # Serve static assets in production
