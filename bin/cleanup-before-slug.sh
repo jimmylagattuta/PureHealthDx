@@ -2,23 +2,15 @@
 
 echo "🔥 cleanup-before-slug.sh: aggressively stripping slug bloat"
 
-check_and_delete() {
-  if [ -d "$1" ]; then
-    echo "🧹 Found $1, deleting..."
-    rm -rf "$1"
-    if [ -d "$1" ]; then
-      echo "❌ Failed to delete $1"
-    else
-      echo "✅ Deleted $1"
-    fi
-  else
-    echo "ℹ️  $1 does not exist, skipping."
-  fi
-}
+# Remove leftover Node stuff
+[ -d client/node_modules ] && rm -rf client/node_modules && echo "🗑 Removed client/node_modules"
+[ -f package-lock.json ] && rm -f package-lock.json && echo "🗑 Removed package-lock.json"
 
-check_and_delete client/node_modules/heroku-deploy
-check_and_delete client/node_modules/react-icons
-check_and_delete client/node_modules/@testing-library
-check_and_delete client/node_modules/jest-environment-jsdom
+# Kill Ruby + binary bloat
+[ -d vendor/bundle ] && rm -rf vendor/bundle && echo "🗑 Removed vendor/bundle"
+[ -d vendor/ruby-3.1.2 ] && rm -rf vendor/ruby-3.1.2 && echo "🗑 Removed vendor/ruby-3.1.2"
+[ -f bin/node ] && rm -f bin/node && echo "🗑 Removed bin/node"
+[ -f bin/node.exe ] && rm -f bin/node.exe && echo "🗑 Removed bin/node.exe"
+[ -d bin ] && rm -rf bin && echo "🗑 Removed bin"
 
 echo "🏁 cleanup-before-slug.sh complete"
