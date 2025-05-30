@@ -32,13 +32,13 @@ Rails.application.configure do
   config.cache_store = :redis_cache_store, { url: ENV['REDIS_TLS_URL'], expires_in: 30.days }
 
   # Use Sidekiq for background jobs, configure Redis URL
-  config.active_job.queue_adapter = :sidekiq
-  Sidekiq.configure_server do |config|
-    config.redis = { url: ENV['REDIS_URL'] }
-  end
-  Sidekiq.configure_client do |config|
-    config.redis = { url: ENV['REDIS_URL'] }
-  end
+  # config.active_job.queue_adapter = :sidekiq
+  # Sidekiq.configure_server do |config|
+  #   config.redis = { url: ENV['REDIS_URL'] }
+  # end
+  # Sidekiq.configure_client do |config|
+  #   config.redis = { url: ENV['REDIS_URL'] }
+  # end
 
   # Disable assets compilation in production (ensure assets are precompiled)
   config.assets.compile = false
