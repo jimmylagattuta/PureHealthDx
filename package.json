@@ -8,7 +8,7 @@
   "clean": "rm -rf public",
   "build": "echo 'Skipping React build during Heroku deploy'",
   "deploy": "echo 'React already built, skipping deploy'",
-  "heroku-postbuild": "echo 'No postbuild needed — React is prebuilt'"
+  "heroku-postbuild": "./bin/heroku-cleanup.sh"
 },
   "dependencies": {
     "react": "^18.3.0",
