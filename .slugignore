@@ -1,7 +1,5 @@
-# Drop Node binaries
+# drop the build-only folders
+client/
+node_modules/
 bin/node
 bin/node.exe
-
-# Drop JS deps (only needed to build)
-node_modules
-client/node_modules
