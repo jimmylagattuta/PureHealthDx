@@ -1,4 +1,7 @@
-/client
-/node_modules
-/bin/node
-/bin/node.exe
+# Drop Node binaries
+bin/node
+bin/node.exe
+
+# Drop JS deps (only needed to build)
+node_modules
+client/node_modules
