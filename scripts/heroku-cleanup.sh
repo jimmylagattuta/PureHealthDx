@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "🔥 cleanup-before-slug.sh: aggressively stripping slug bloat"
-
 # Remove leftover Node stuff
 [ -d client/node_modules ] && rm -rf client/node_modules && echo "🗑 Removed client/node_modules"
 [ -f package-lock.json ] && rm -f package-lock.json && echo "🗑 Removed package-lock.json"
