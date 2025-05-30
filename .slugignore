@@ -1,3 +1,7 @@
-/client/node_modules/
-/client/package-lock.json
-/vendor
+test/
+log/
+tmp/
+vendor/bundle/
+vendor/ruby-*
+client/node_modules/
+bin/
