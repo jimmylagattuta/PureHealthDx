@@ -2,10 +2,23 @@
 
 echo "🔥 cleanup-before-slug.sh: aggressively stripping slug bloat"
 
-# Delete heavy node_modules dependencies
-rm -rf client/node_modules/heroku-deploy
-rm -rf client/node_modules/react-icons
-rm -rf client/node_modules/@testing-library
-rm -rf client/node_modules/jest-environment-jsdom
+check_and_delete() {
+  if [ -d "$1" ]; then
+    echo "🧹 Found $1, deleting..."
+    rm -rf "$1"
+    if [ -d "$1" ]; then
+      echo "❌ Failed to delete $1"
+    else
+      echo "✅ Deleted $1"
+    fi
+  else
+    echo "ℹ️  $1 does not exist, skipping."
+  fi
+}
 
-echo "✅ cleanup-before-slug.sh done"
+check_and_delete client/node_modules/heroku-deploy
+check_and_delete client/node_modules/react-icons
+check_and_delete client/node_modules/@testing-library
+check_and_delete client/node_modules/jest-environment-jsdom
+
+echo "🏁 cleanup-before-slug.sh complete"
