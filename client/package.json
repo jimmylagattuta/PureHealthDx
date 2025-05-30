@@ -27,7 +27,9 @@
     "react-scripts": "^5.0.1",
     "react-signature-canvas": "^1.1.0-alpha.2",
     "source-map-explorer": "^2.5.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2"
   },
   "engines": {
     "node": "18.17.0"
