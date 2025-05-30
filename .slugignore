@@ -1,7 +1,7 @@
-# Exclude the Node runtime binary (only needed at build time)
-bin/node
-bin/node.exe
+# # Exclude the Node runtime binary (only needed at build time)
+# bin/node
+# bin/node.exe
 
-# Drop JS deps (if you don’t need Node at runtime)
-node_modules
-client/node_modules
+# # Drop JS deps (if you don’t need Node at runtime)
+# node_modules
+# client/node_modules
