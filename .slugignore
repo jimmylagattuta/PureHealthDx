@@ -5,3 +5,5 @@ bin/node.exe
 # Drop JS deps (if you don’t need Node at runtime)
 node_modules
 client/node_modules
+
+vendor/bundle
