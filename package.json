@@ -6,7 +6,7 @@
   },
   "scripts": {
     "build": "echo '✅ Skipping React build — handled manually.'",
-    "heroku-postbuild": "./bin/cleanup-before-slug.sh"
+    "heroku-postbuild": "./bin/heroku-cleanup.sh"
   },
   "dependencies": {
     "react": "^18.3.0",
