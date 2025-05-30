@@ -18,15 +18,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 gem "rack-cors", :require => 'rack/cors'
-gem 'redis-rails'
 gem "memcachier"
 gem 'terser'
 gem 'rack-rewrite'
-gem 'sidekiq'
-gem 'sidekiq-scheduler'
-gem 'rufus-scheduler'
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
 gem 'heroku-deflater', :group => :production
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
