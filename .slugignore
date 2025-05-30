@@ -1,8 +1,4 @@
-# remove the Node runtime binaries
+/client
+/node_modules
 /bin/node
 /bin/node.exe
-
-# remove all JS deps (we only need the compiled output)
-/node_modules/
-/client/
-/client/node_modules/
