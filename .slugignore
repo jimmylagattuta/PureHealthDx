@@ -1,5 +1,0 @@
-# drop the build-only folders
-client/
-node_modules/
-bin/node
-bin/node.exe
