@@ -1,1 +1,8 @@
-/client/node_modules/heroku-deploy
+client/node_modules/heroku-deploy
+client/node_modules/react-icons
+client/node_modules/@testing-library
+client/node_modules/jest-environment-jsdom
+client/node_modules/jest-environment-jsdom/**
+client/node_modules/react-icons/**
+client/node_modules/@testing-library/**
+client/node_modules/heroku-deploy/**
