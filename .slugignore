@@ -2,4 +2,3 @@ client/node_modules/
 client/package-lock.json
 vendor/bundle/
 vendor/ruby-3.1.2/
-bin/
