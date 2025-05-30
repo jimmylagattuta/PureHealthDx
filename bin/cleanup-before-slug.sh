@@ -1,16 +1,12 @@
 #!/bin/sh
 
-echo "🔥 heroku-postbuild: aggressively stripping slug bloat"
+echo "🔥 cleanup-before-slug.sh: aggressively stripping slug bloat"
 
-rm -rf client
+rm -rf client/node_modules
+rm -rf client/build
 rm -rf node_modules
-rm -rf vendor/bundle
-rm -rf vendor/ruby-3.1.2
 rm -rf tmp/cache
-rm -rf log/*
-rm -rf test
+rm -rf vendor/bundle
+rm -rf vendor/ruby*
 
-rm -f bin/node
-rm -f bin/node.exe
-
-echo "✅ Cleanup done."
+echo "✅ cleanup-before-slug.sh done"

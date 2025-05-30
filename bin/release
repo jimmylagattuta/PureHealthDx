@@ -1,23 +1,8 @@
+# bin/release
 #!/bin/sh
 
-echo "?? bin/release: aggressively stripping slug bloat"
+echo "🔥 bin/release: aggressively stripping slug bloat"
+./bin/cleanup-before-slug.sh
+echo "✅ bin/release cleanup done"
 
-rm -rf client
-rm -rf node_modules
-rm -rf vendor/bundle
-rm -rf vendor/ruby*
-rm -rf tmp/cache
-rm -rf log
-rm -rf test
-rm -rf spec
-
-rm -f bin/node
-rm -f bin/node.exe
-rm -f bin/yarn
-rm -f bin/webpack
-
-rm -rf public/assets
-rm -rf public/packs
-rm -rf public/packs-test
-
-echo "? bin/release cleanup done"
+bin/rails db:migrate
