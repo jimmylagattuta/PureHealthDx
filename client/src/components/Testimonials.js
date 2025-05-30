@@ -78,6 +78,7 @@ export default function Testimonials() {
         <div className="line" />
       </div>
 
+
       <h1 className="main-title">
         Hear From Some of Our Satisfied Clients
       </h1>
