@@ -1,14 +1,11 @@
 #!/bin/sh
 
-echo "🔥 cleanup-before-slug.sh: stripping slug bloat"
+echo "🔥 cleanup-before-slug.sh: aggressively stripping slug bloat"
 
-rm -rf node_modules
-rm -rf client
-rm -rf tmp/cache
-rm -rf log
-rm -rf test
-rm -rf spec
-rm -rf vendor/bundle
-rm -rf vendor/ruby*
+# Delete heavy node_modules dependencies
+rm -rf client/node_modules/heroku-deploy
+rm -rf client/node_modules/react-icons
+rm -rf client/node_modules/@testing-library
+rm -rf client/node_modules/jest-environment-jsdom
 
 echo "✅ cleanup-before-slug.sh done"
