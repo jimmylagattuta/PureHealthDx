@@ -1,7 +1,6 @@
-# # Exclude the Node runtime binary (only needed at build time)
-bin/node
-bin/node.exe
+# .slugignore (at the root of your project)
 
-# # Drop JS deps (if you don’t need Node at runtime)
-node_modules
-client/node_modules
+/client
+/node_modules
+/bin/node
+/bin/node.exe
