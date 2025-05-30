@@ -1,21 +1,2 @@
 # .slugignore
-*.mp4
-*.mov
-*.zip
-*.tar
-*.tar.gz
-*.log
-tmp/*
-log/*
-*.psd
-*.ai
-*.sketch
-node_modules/
-client/node_modules/
-client/public/
-client/src/
-client/.env
-vendor/cache/
-public/assets/
-coverage/
-docs/
+client/
