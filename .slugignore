@@ -1,6 +1,7 @@
-# .slugignore (at the root of your project)
-
-/client
-/node_modules
+# only remove the Node runtime binaries
 /bin/node
 /bin/node.exe
+
+# drop root & client JS deps
+/node_modules
+/client/node_modules
