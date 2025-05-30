@@ -1,8 +1,0 @@
-# bin/release
-#!/bin/sh
-
-echo "🔥 bin/release: aggressively stripping slug bloat"
-./bin/cleanup-before-slug.sh
-echo "✅ bin/release cleanup done"
-
-bin/rails db:migrate
