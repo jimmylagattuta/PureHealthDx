@@ -25,7 +25,6 @@ export default function Testimonials() {
   const [width, setWidth] = useState(window.innerWidth);
   const [visible, setVisible] = useState([]);
   const [stage, setStage] = useState("visible");
-
   const perPage = width >= 1024 ? 4 : width >= 600 ? 2 : 1;
   const total = testimonials.length;
 
