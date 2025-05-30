@@ -29,7 +29,7 @@ Rails.application.configure do
   config.force_ssl = true
 
   # Caching with Redis for production, set Redis URL in environment variables
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_TLS_URL'], expires_in: 30.days }
+  # config.cache_store = :redis_cache_store, { url: ENV['REDIS_TLS_URL'], expires_in: 30.days }
 
   # Use Sidekiq for background jobs, configure Redis URL
   # config.active_job.queue_adapter = :sidekiq
