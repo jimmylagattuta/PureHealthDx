@@ -1,2 +1,5 @@
 # .slugignore
 client/
+vendor/bundle/
+vendor/ruby-3.1.2/
+vendor/cache/
