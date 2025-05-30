@@ -5,9 +5,7 @@
     "node": "18.17.0"
   },
   "scripts": {
-    "clean": "rm -rf public",
-    "build": "npm install --prefix client && npm run build --prefix client",
-    "deploy": "cp -a client/build/. public/ && rm -rf client node_modules bin/node bin/node.exe"
+    "build": "echo '✅ Skipping React build — handled manually.'"
   },
   "dependencies": {
     "react": "^18.3.0",
