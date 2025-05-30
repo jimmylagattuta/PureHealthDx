@@ -5,11 +5,10 @@
     "node": "18.17.0"
   },
   "scripts": {
-  "clean": "rm -rf public",
-  "build": "echo 'Skipping React build during Heroku deploy'",
-  "deploy": "echo 'React already built, skipping deploy'",
-  "heroku-postbuild": "./bin/heroku-cleanup.sh"
-},
+    "clean": "...",
+    "build": "...",
+    "deploy": "..."
+    },
   "dependencies": {
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
