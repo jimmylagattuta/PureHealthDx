@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🔥 bin/release running — cleaning slug..."
+echo "🔥 bin/release is executing"
 
 if [ -f bin/node ]; then
   echo "🚫 Removing bin/node"
