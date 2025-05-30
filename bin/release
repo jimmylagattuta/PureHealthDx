@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "🔥 bin/release running — cleaning slug..."
+
+if [ -f bin/node ]; then
+  echo "🚫 Removing bin/node"
+  rm -f bin/node
+fi
+
+if [ -d vendor/bundle ]; then
+  echo "🚫 Removing vendor/bundle"
+  rm -rf vendor/bundle
+fi
+
+if [ -d vendor/ruby-3.1.2 ]; then
+  echo "🚫 Removing vendor/ruby-3.1.2"
+  rm -rf vendor/ruby-3.1.2
+fi
+
+if [ -d client ]; then
+  echo "🚫 Removing client directory"
+  rm -rf client
+fi
+
+if [ -d node_modules ]; then
+  echo "🚫 Removing node_modules"
+  rm -rf node_modules
+fi
+
+cat <<EOF
+---
+default_process_types:
+  web: bundle exec rails s
+EOF
