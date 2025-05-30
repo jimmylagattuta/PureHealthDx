@@ -4,4 +4,3 @@ tmp/
 vendor/bundle/
 vendor/ruby-*
 client/node_modules/
-bin/
