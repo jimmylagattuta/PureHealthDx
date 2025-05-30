@@ -75,16 +75,16 @@ export default function Testimonials() {
     <section className="testimonials-section mobile-first">
       <div className="testimonial-header">
         <div className="line" />
-        <h4 className="mini-title">TESTIMONIALS</h4>
+        <h1 className="mini-title">TESTIMONIALS</h1>
         <div className="line" />
       </div>
 
-      <h2 className="main-title">
+      <h1 className="main-title">
         Hear From Some of Our Satisfied Clients
-      </h2>
+      </h1>
 
       <div className="carousel-container">
-        <button className="nav prev" onClick={() => handleManual(-perPage)}>
+        <button aria-label="Previous testimonials" className="nav prev" onClick={() => handleManual(-perPage)}>
           <FaChevronLeft />
         </button>
 
@@ -108,7 +108,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <button className="nav next" onClick={() => handleManual(perPage)}>
+        <button aria-label="Next testimonials" className="nav next" onClick={() => handleManual(perPage)}>
           <FaChevronRight />
         </button>
       </div>
