@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Appointment Summary</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      color: #333;
-    }
-    h1 {
-      color: #007BFF;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Appointment Summary</h1>
-  <p><strong>Patient Name:</strong> <%= @appointment.patient_name %></p>
-  <p><strong>Date:</strong> <%= @appointment.date %></p>
-  <p><strong>Notes:</strong> <%= @appointment.notes %></p>
-</body>
-</html>
+<h1>Appointment Summary (Test)</h1>
+
+<p><strong>Patient Name:</strong> <%= @appointment.patient_name %></p>
+<p><strong>Date:</strong> <%= @appointment.date.strftime("%B %d, %Y") %></p>
+<p><strong>Notes:</strong></p>
+<pre><%= @appointment.notes %></pre>
+
+<% if @appointment.signature.present? %>
+  <h3>Signature:</h3>
+  <img src="<%= @appointment.signature %>" alt="Signature" style="max-width: 300px;" />
+<% else %>
+  <p>No signature provided.</p>
+<% end %>
