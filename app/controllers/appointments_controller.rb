@@ -21,7 +21,9 @@ class AppointmentsController < ApplicationController
 
     render pdf: "appointment_#{@appointment.id}",
           template: "appointments/pdf",
+          formats: [:html],
           layout: false
+
   end
 
 end
