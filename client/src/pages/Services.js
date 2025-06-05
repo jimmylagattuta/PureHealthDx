@@ -15,7 +15,8 @@ const Services = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const toggleFaq = idx => setOpenFaq(openFaq === idx ? null : idx);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 569);
-
+  const canonicalUrl = `https://purehealthdx.com/services/${serviceId || ""}`;
+  
   useEffect(() => {
     const onResize = () => setIsDesktop(window.innerWidth >= 569);
     window.addEventListener("resize", onResize);
@@ -145,7 +146,8 @@ const richSnippet = {
   return (
     <>
       <Helmet>
-        <title>{service.title} | Pure Health & Wellness</title>
+        <title>{service ? `${service.title} | Pure Health & Wellness` : "Our Services | Pure Health & Wellness"}</title>
+        <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}
         </script>
