@@ -232,6 +232,7 @@ const richSnippet = {
   return (
     <div className="aboutus-container">
       <Helmet>
+        <link rel="canonical" href="https://purehealthdx.com/about-us" />
         <script type="application/ld+json">
           {JSON.stringify(richSnippet)}
         </script>

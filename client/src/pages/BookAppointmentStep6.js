@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import SignatureCanvas from "react-signature-canvas";
 import { useNavigate } from "react-router-dom";
@@ -141,6 +142,10 @@ const BookAppointmentStep6 = () => {
 
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Step 6 of 6 | Become a Patient</title>
+      </Helmet>
       {flashMessage && <div className="flash-message">{flashMessage}</div>}
       {isLoading && <div className="loading-spinner">Submitting<span className="dots"></span></div>}
       <form className="intake-form" onSubmit={handleSubmit(onSubmit)}>
