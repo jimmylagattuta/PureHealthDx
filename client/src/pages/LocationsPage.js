@@ -80,6 +80,9 @@ function LocationsPage() {
   };
 
   const isSingle = Boolean(locationId);
+  const canonicalUrl = isSingle
+    ? `https://purehealthdx.com/locations/${locationId}`
+    : `https://purehealthdx.com/locations`;
 
   let richSnippet = null;
   if (!isSingle) {
@@ -170,10 +173,23 @@ function LocationsPage() {
     <div>
       {!isSingle && richSnippet && (
         <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify(richSnippet, null, 2)}
-          </script>
+          <link rel="canonical" href={canonicalUrl} />
+          <title>
+            {isSingle
+              ? `${locationsData[locationId]?.name || "Clinic Not Found"} | Pure Health & Wellness`
+              : "Our California Clinics | Pure Health & Wellness"}
+          </title>
+          <meta
+            name="description"
+            content={
+              isSingle
+                ? locationsData[locationId]?.description ||
+                  "Visit our local Pure Health & Wellness clinic."
+                : "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more."
+            }
+          />
         </Helmet>
+
       )}
 
       <div className="locations-page-container">

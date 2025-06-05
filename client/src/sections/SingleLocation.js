@@ -25,6 +25,8 @@ const SingleLocation = ({ office }) => {
   // Use desktop image if available and on desktop; else fallback to hero image.
   const locationImage =
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
+  const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
+  const canonicalUrl = `https://purehealthdx.com/locations/${slug}`;
 
   // Build service snippets from servicesArray
   const servicesSnippets = servicesArray.map((service) => {
@@ -75,6 +77,9 @@ const SingleLocation = ({ office }) => {
   return (
     <>
       <Helmet>
+        <title>{office.name} | Pure Health & Wellness</title>
+        <meta name="description" content={office.description} />
+        <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}
         </script>
