@@ -102,7 +102,7 @@ const Home = ({ scrollToContact, reviews }) => {
   return (
     <div>
       <Helmet>
-        <title>Testosterone Replacement Therapy (TRT) & Hormone Clinics in California | Pure Health & Wellness</title>
+        <title>California's Lowest Priced Men's TRT | Pure Health & Wellness</title>
         <meta
           name="description"
           content="Pure Health & Wellness offers personalized testosterone replacement therapy (TRT), hormone therapy for men and women, ED treatment, weight loss, and telehealth across California — including Fresno, Bakersfield, San Jose, and more."
