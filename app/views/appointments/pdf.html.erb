@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; font-size: 14px; }
+    h1 { color: #333; }
+  </style>
+</head>
+<body>
+
 <h1>Appointment Summary (Test)</h1>
 
 <p><strong>Patient Name:</strong> <%= @appointment.patient_name %></p>
@@ -5,9 +16,12 @@
 <p><strong>Notes:</strong></p>
 <pre><%= @appointment.notes %></pre>
 
-<% if @appointment.signature.present? %>
+<% if @signature_path.present? %>
   <h3>Signature:</h3>
-  <img src="<%= @appointment.signature %>" alt="Signature" style="max-width: 300px;" />
+  <img src="<%= @signature_path %>" alt="Signature" style="max-width: 300px; border: 1px solid #000;" />
 <% else %>
   <p>No signature provided.</p>
 <% end %>
+
+</body>
+</html>
