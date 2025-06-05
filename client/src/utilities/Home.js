@@ -102,10 +102,10 @@ const Home = ({ scrollToContact, reviews }) => {
   return (
     <div>
       <Helmet>
-        <title>Pure Health & Wellness | Hormone & Wellness Clinic</title>
+        <title>Testosterone Replacement Therapy (TRT) & Hormone Clinics in California | Pure Health & Wellness</title>
         <meta
           name="description"
-          content="Pure Health & Wellness specializes in hormone therapy, weight loss, ED treatment, and personalized telehealth services. Book your consultation today."
+          content="Pure Health & Wellness offers personalized testosterone replacement therapy (TRT), hormone therapy for men and women, ED treatment, weight loss, and telehealth across California — including Fresno, Bakersfield, San Jose, and more."
         />
         <script type="application/ld+json">
           {`
