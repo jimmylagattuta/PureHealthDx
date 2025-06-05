@@ -23,7 +23,9 @@ gem 'terser'
 gem 'rack-rewrite'
 gem 'heroku-deflater', :group => :production
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'wicked_pdf'
 gem 'wkhtmltopdf-heroku', '~> 3.0.0'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
