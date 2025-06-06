@@ -9,7 +9,7 @@ const BookAppointmentPage = () => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
-  const demoMode = false;
+  const demoMode = true;
   const navigate = useNavigate();
 
   // Retrieve any stored data from previous sessions

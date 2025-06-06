@@ -9,7 +9,7 @@ const BookAppointmentStep6 = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [flashMessage, setFlashMessage] = useState("");
-  const demoMode = false;
+  const demoMode = true;
   const patientSigPad = useRef(null);
 
   const {

@@ -14,20 +14,23 @@
 
 <h1>Appointment Summary (Test)</h1>
 
-<p><strong>Patient Name:</strong> <%= @appointment.patient_name %></p>
-<p><strong>Date:</strong> <%= @appointment.date.strftime("%B %d, %Y") %></p>
+<p><strong>Patient Name:</strong> <%= @patient_name %></p>
+<p><strong>Date:</strong> <%= @date.to_date.strftime("%B %d, %Y") %></p>
 <p><strong>Notes:</strong></p>
-<pre><%= @appointment.notes %></pre>
+<pre><%= @notes %></pre>
 
 <h3>Signature</h3>
 
 <% if @signature_inline.present? %>
   <div class="sig-box">
-    <div class="sig-label">No signature received — placeholder shown below:</div>
-    <img class="sig-img" src="<%= @signature_inline %>" alt="Signature placeholder" />
+    <div class="sig-label">Signed by patient:</div>
+    <img class="sig-img" src="<%= @signature_inline %>" alt="Patient Signature" />
   </div>
 <% else %>
-  <p style="color: #888;">(Signature not available)</p>
+  <div class="sig-box">
+    <div class="sig-label">No signature received — placeholder shown below:</div>
+    <img class="sig-img" src="<%= @placeholder_signature_base64 %>" alt="Signature placeholder" />
+  </div>
 <% end %>
 
 </body>

@@ -20,19 +20,21 @@ module Api
       puts params[:appointment].inspect
       puts "=" * 80
 
-        # 🔍 DEBUG MISSING SIGNATURES
-        puts "DEBUG Keys: #{params[:appointment].keys}"
-        puts "Patient TRT signature length: #{params[:appointment]["informedConsentForTestosteroneReplacementTherapyPatientSignature"]&.length}"
-        puts "Witness TRT signature length: #{params[:appointment]["informedConsentForTestosteroneReplacementTherapyWitnessSignature"]&.length}"
-        puts "=" * 80
+      appointment = Appointment.create!(
+        patient_name: params[:appointment]["patientConsentForMedicalServicesPatientName"],
+        date: Date.today,
+        notes: "Step 3 Test Submission",
+        signature_url: params[:appointment]["patientConsentForMedicalServicesSignature"]
+      )
 
-      # Optionally, send to mailer
+      # ✅ Also send email
       ContactMailer.full_submission_email(params[:appointment]).deliver_now
 
-      render json: { success: true, message: 'Appointment submitted successfully' }, status: :ok
+      render json: { success: true, id: appointment.id, message: 'Appointment saved and email sent' }, status: :ok
     rescue => e
       puts "❌ Error processing appointment: #{e.message}"
       render json: { success: false, message: 'Failed to submit appointment', error: e.message }, status: :unprocessable_entity
     end
+
   end
 end
