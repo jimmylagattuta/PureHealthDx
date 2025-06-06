@@ -127,7 +127,7 @@ const onSubmit = (step3Data) => {
         </div>
       </div>
           <div className="content-section">
-          <h2>Start Your Wellness Journey Today</h2>
+          <h2>Start Your Wellness Journey Today!</h2>
 
             <div className="paper-container">
               {/* Progress Bar */}
