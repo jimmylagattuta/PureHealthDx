@@ -13,18 +13,16 @@ class AppointmentsController < ApplicationController
 
     signature_data = @signature_url.presence || generate_test_signature_base64
     base64_data = signature_data.sub(/^data:image\/png;base64,/, '')
-    decoded = Base64.decode64(base64_data)
 
-    @signature_path = Rails.root.join("tmp", "sig_inline.png").to_s
-    File.open(@signature_path, "wb") { |f| f.write(decoded) }
+    # Embed directly as base64 URI
+    @signature_inline = "data:image/png;base64,#{base64_data}"
 
     render pdf: "appointment_summary",
           template: "appointments/pdf",
           formats: [:html],
           layout: false
-  ensure
-    File.delete(@signature_path) if File.exist?(@signature_path)
   end
+
 
   private
 
