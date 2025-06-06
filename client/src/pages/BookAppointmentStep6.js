@@ -115,7 +115,7 @@ const BookAppointmentStep6 = () => {
     const fullData = { ...previousSteps, ...labeledStep6Data };
 
     try {
-      const response = await fetch("/appointment", {
+      const response = await fetch("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ appointment: fullData }),
