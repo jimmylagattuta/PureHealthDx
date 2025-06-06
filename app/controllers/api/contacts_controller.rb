@@ -20,21 +20,23 @@ module Api
       puts params[:appointment].inspect
       puts "=" * 80
 
+      permitted = params.require(:appointment).permit!  # ✅ PERMIT EVERYTHING for now
+
       appointment = Appointment.create!(
-        patient_name: params[:appointment]["patientConsentForMedicalServicesPatientName"],
+        patient_name: permitted["patientConsentForMedicalServicesPatientName"],
         date: Date.today,
         notes: "Step 3 Test Submission",
-        signature_url: params[:appointment]["patientConsentForMedicalServicesSignature"]
+        signature_url: permitted["patientConsentForMedicalServicesSignature"]
       )
 
-      # ✅ Also send email
-      ContactMailer.full_submission_email(params[:appointment]).deliver_now
+      ContactMailer.full_submission_email(permitted.to_h).deliver_now
 
       render json: { success: true, id: appointment.id, message: 'Appointment saved and email sent' }, status: :ok
     rescue => e
       puts "❌ Error processing appointment: #{e.message}"
       render json: { success: false, message: 'Failed to submit appointment', error: e.message }, status: :unprocessable_entity
     end
+
 
   end
 end
