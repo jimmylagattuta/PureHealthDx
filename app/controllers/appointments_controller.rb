@@ -4,22 +4,24 @@ class AppointmentsController < ApplicationController
   require 'chunky_png'
   require 'stringio'
   
-  def pdf
-    @appointment = Appointment.find(params[:id])
-    data = JSON.parse(@appointment.full_data)
+def pdf
+  @appointment = Appointment.find(params[:id])
+  data = JSON.parse(@appointment.full_data)
 
-    @patient_name = data["patientConsentForMedicalServicesPatientName"] || "Unknown"
-    @date = data["patientConsentForMedicalServicesDate"]
-    @notes = @appointment.notes.presence || "(No notes provided)"
+  @data = data # ✅ required for matching `@data["key"]` access
+  @patient_name = data["patientConsentForMedicalServicesPatientName"] || "Unknown"
+  @date = data["patientConsentForMedicalServicesDate"]
+  @notes = @appointment.notes.presence || "(No notes provided)"
 
-    base64_data = (data["patientConsentForMedicalServicesSignature"] || "").sub(/^data:image\/png;base64,/, "")
-    @signature_inline = "data:image/png;base64,#{base64_data}"
+  base64_data = (data["patientConsentForMedicalServicesSignature"] || "").sub(/^data:image\/png;base64,/, "")
+  @signature_inline = "data:image/png;base64,#{base64_data}"
 
-    render pdf: "appointment_summary",
-          template: "appointments/pdf",
-          formats: [:html],
-          layout: false
-  end
+  render pdf: "appointment_summary",
+         template: "appointments/pdf",
+         formats: [:html],
+         layout: false
+end
+
 
 
 
