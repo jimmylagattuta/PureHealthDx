@@ -19,28 +19,12 @@
 <p><strong>Notes:</strong></p>
 <pre><%= @appointment.notes %></pre>
 
-<h3>Signature Tests:</h3>
+<h3>Signature</h3>
 
-<% if @signature_path && File.exist?(@signature_path) %>
+<% if @signature_inline.present? %>
   <div class="sig-box">
-    <div class="sig-label">1. file:// path:</div>
-    <img class="sig-img" src="file://<%= @signature_path %>" alt="Signature file://" />
-  </div>
-
-  <div class="sig-box">
-    <div class="sig-label">2. Plain path (no file://):</div>
-    <img class="sig-img" src="<%= @signature_path %>" alt="Signature plain path" />
-  </div>
-
-  <div class="sig-box">
-    <div class="sig-label">3. Escaped URI:</div>
-    <% require 'erb' %>
-    <img class="sig-img" src="<%= ERB::Util.url_encode(@signature_path) %>" alt="Signature escaped path" />
-  </div>
-
-  <div class="sig-box">
-    <div class="sig-label">4. Inline Base64:</div>
-    <img class="sig-img" src="<%= @signature_inline %>" alt="Signature inline base64" />
+    <div class="sig-label">No signature received — placeholder shown below:</div>
+    <img class="sig-img" src="<%= @signature_inline %>" alt="Signature placeholder" />
   </div>
 <% else %>
   <p style="color: #888;">(Signature not available)</p>
