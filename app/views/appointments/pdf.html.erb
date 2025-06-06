@@ -34,7 +34,9 @@
 
   <div class="sig-box">
     <div class="sig-label">3. Escaped URI:</div>
-    <img class="sig-img" src="<%= URI.escape(@signature_path) %>" alt="Signature escaped path" />
+    <% require 'erb' %>
+    <img class="sig-img" src="<%= ERB::Util.url_encode(@signature_path) %>" alt="Signature escaped path" />
+
   </div>
 <% else %>
   <p style="color: #888;">(Signature not available)</p>
