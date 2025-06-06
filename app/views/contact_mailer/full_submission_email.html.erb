@@ -35,11 +35,16 @@
   </head>
   <body>
     
-  <p style="margin-bottom: 20px;">
-    <a href="<%= pdf_appointments_url(format: :pdf, appointment: @data) %>" target="_blank">
-      ⬇️ Download This Page as PDF
-    </a>
-  </p>
+    <p style="margin-bottom: 20px;">
+      <form action="<%= pdf_appointments_url(format: :pdf) %>" method="post" target="_blank" style="display: inline;">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <%= hidden_field_tag "appointment", @data.to_json %>
+        <button type="submit"
+          style="padding: 10px 20px; background: #0076a3; color: white; text-decoration: none; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+          ⬇️ Download This Page as PDF
+        </button>
+      </form>
+    </p>
 
 
     <h1>📋 Pure Health & Wellness: New Appointment Submission</h1>

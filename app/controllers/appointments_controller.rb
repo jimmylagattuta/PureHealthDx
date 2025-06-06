@@ -3,18 +3,24 @@ class AppointmentsController < ApplicationController
   require 'base64'
   require 'chunky_png'
   require 'stringio'
-
+    
   def pdf
-    appointment_data = params[:appointment] || {}
-    @patient_name = appointment_data[:patient_name] || "Unknown Patient"
-    @signature_url = appointment_data[:signature_url]
-    @notes = appointment_data[:notes] || "(No notes provided)"
-    @date = appointment_data[:date] || Time.current.to_date
+    raw_data = params[:appointment]
+    appointment_data =
+      if raw_data.is_a?(String)
+        JSON.parse(raw_data) rescue {}
+      else
+        raw_data || {}
+      end
+
+    @patient_name = appointment_data["patient_name"] || "Unknown Patient"
+    @signature_url = appointment_data["signature_url"]
+    @notes = appointment_data["notes"] || "(No notes provided)"
+    @date = appointment_data["date"] || Time.current.to_date
 
     signature_data = @signature_url.presence || generate_test_signature_base64
     base64_data = signature_data.sub(/^data:image\/png;base64,/, '')
 
-    # Embed directly as base64 URI
     @signature_inline = "data:image/png;base64,#{base64_data}"
 
     render pdf: "appointment_summary",

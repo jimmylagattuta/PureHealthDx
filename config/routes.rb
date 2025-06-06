@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :appointments do
     collection do
-      get :pdf, defaults: { format: :pdf }
+      post :pdf, defaults: { format: :pdf }
     end
   end
 
