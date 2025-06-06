@@ -107,6 +107,18 @@ const onSubmit = (step3Data) => {
   navigate("/book-appointment-step4");
 };
 
+const handleSignatureEnd = () => {
+  const canvasRef = sigPad.current;
+  if (
+    canvasRef &&
+    typeof canvasRef.getTrimmedCanvas === "function" &&
+    !canvasRef.isEmpty()
+  ) {
+    const dataUrl = canvasRef.getTrimmedCanvas().toDataURL();
+    setValue("signature", dataUrl);
+    trigger("signature");
+  }
+};
 
   // Helper function for required field styling
   const getRequiredClass = (fieldValue, fieldError) => {
@@ -322,61 +334,12 @@ const onSubmit = (step3Data) => {
 
     <div className="signature-frame">
     <SignatureCanvas
-      ref={(ref) => {
-        sigPad.current = ref;
-
-        if (ref && ref.getCanvas()) {
-          const canvas = ref.getCanvas();
-          Object.assign(canvas.style, {
-            border: "none", // border moved to wrapper
-            borderRadius: "12px",
-            backgroundColor: "#ffffff",
-            backgroundImage:
-              "repeating-linear-gradient(45deg, #f3f4f6, #f3f4f6 10px, #ffffff 10px, #ffffff 20px)",
-            width: "min-content",
-            maxWidth: "100%",
-            height: "150px",
-            display: "block",
-            transition: "box-shadow 0.3s ease, transform 0.2s ease",
-          });
-
-          const activateHover = () => {
-            canvas.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.35)";
-            canvas.style.transform = "scale(1.01)";
-          };
-
-          const deactivateHover = () => {
-            canvas.style.boxShadow = "0 6px 20px rgba(37, 99, 235, 0.2)";
-            canvas.style.transform = "scale(1)";
-          };
-
-          // Desktop hover
-          canvas.addEventListener("mouseenter", activateHover);
-          canvas.addEventListener("mouseleave", deactivateHover);
-
-          // Mobile touch simulation
-          canvas.addEventListener("touchstart", activateHover);
-          canvas.addEventListener("touchend", deactivateHover);
-        }
-      }}
+      ref={sigPad}
       penColor="black"
-      canvasProps={{
-        width: 400,
-        height: 150,
-      }}
-    onEnd={() => {
-      if (
-        sigPad.current &&
-        typeof sigPad.current.getTrimmedCanvas === "function" &&
-        !sigPad.current.isEmpty()
-      ) {
-        const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
-        setValue("signature", dataUrl);
-        trigger("signature");
-      }
-    }}
-
+      canvasProps={{ width: 400, height: 150 }}
+      onEnd={handleSignatureEnd}
     />
+
 
     </div>
 
