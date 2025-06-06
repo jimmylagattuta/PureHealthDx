@@ -25,6 +25,7 @@ gem 'heroku-deflater', :group => :production
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-heroku', '~> 3.0.0'
+gem 'chunky_png'
 
 
 group :development, :test do

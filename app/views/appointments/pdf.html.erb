@@ -16,13 +16,14 @@
 <p><strong>Notes:</strong></p>
 <pre><%= @appointment.notes %></pre>
 
-<% if @appointment.signature_url.present? %>
+<% if @signature_path.present? && File.exist?(@signature_path) %>
   <h3>Signature:</h3>
-  <img src="<%= @appointment.signature_url %>" alt="Signature"
+  <img src="file://<%= @signature_path %>" alt="Signature"
        style="max-width: 300px; height: auto; border: 1px solid #000;" />
 <% else %>
   <p>No signature provided.</p>
 <% end %>
+
 
 
 
