@@ -107,6 +107,7 @@ const Home = ({ scrollToContact, reviews }) => {
           name="description"
           content="Pure Health & Wellness offers personalized testosterone replacement therapy (TRT), hormone therapy for men and women, ED treatment, weight loss, and telehealth across California — including Fresno, Bakersfield, San Jose, and more."
         />
+        <link rel="canonical" href="https://purehealthdx.com/" />
         <script type="application/ld+json">
           {`
       {
