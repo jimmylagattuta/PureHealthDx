@@ -365,12 +365,17 @@ const onSubmit = (step3Data) => {
         height: 150,
       }}
       onEnd={() => {
-        if (!sigPad.current.isEmpty()) {
+        if (
+          sigPad.current &&
+          typeof sigPad.current.getTrimmedCanvas === "function" &&
+          !sigPad.current.isEmpty()
+        ) {
           const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
           setValue("signature", dataUrl);
           trigger("signature");
         }
       }}
+
     />
 
     </div>
