@@ -80,7 +80,7 @@ export default function Testimonials() {
 
 
       <h1 className="main-title">
-        Hear From Some of Our Satisfied Clients
+        Hear From Some of Our Satisfied Patients
       </h1>
 
       <div className="carousel-container">
