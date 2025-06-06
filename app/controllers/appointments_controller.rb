@@ -22,14 +22,16 @@ class AppointmentsController < ApplicationController
       raise
     end
 
+    # Build inline base64 string for direct embedding
+    @signature_inline = "data:image/png;base64,#{Base64.strict_encode64(decoded)}"
+
     render pdf: "appointment_#{@appointment.id}",
-          template: "appointments/pdf",
-          formats: [:html],
-          layout: false
+           template: "appointments/pdf",
+           formats: [:html],
+           layout: false
   ensure
     File.delete(@signature_path) if File.exist?(@signature_path)
   end
-
 
   def generate_test_signature_base64
     require 'chunky_png'
@@ -49,7 +51,4 @@ class AppointmentsController < ApplicationController
     base64 = Base64.strict_encode64(io.string)
     "data:image/png;base64,#{base64}"
   end
-
-
-
 end
