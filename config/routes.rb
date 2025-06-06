@@ -16,10 +16,11 @@ Rails.application.routes.draw do
 
 
   resources :appointments do
-    member do
+    collection do
       get :pdf, defaults: { format: :pdf }
     end
   end
+
 
 
 

@@ -11,7 +11,6 @@ class AppointmentsController < ApplicationController
     @notes = appointment_data[:notes] || "(No notes provided)"
     @date = appointment_data[:date] || Time.current.to_date
 
-    # fallback: generate dummy signature if none was provided
     signature_data = @signature_url.presence || generate_test_signature_base64
     base64_data = signature_data.sub(/^data:image\/png;base64,/, '')
     decoded = Base64.decode64(base64_data)
@@ -20,9 +19,9 @@ class AppointmentsController < ApplicationController
     File.open(@signature_path, "wb") { |f| f.write(decoded) }
 
     render pdf: "appointment_summary",
-           template: "appointments/pdf",
-           formats: [:html],
-           layout: false
+          template: "appointments/pdf",
+          formats: [:html],
+          layout: false
   ensure
     File.delete(@signature_path) if File.exist?(@signature_path)
   end
