@@ -5,6 +5,9 @@
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; font-size: 14px; }
     h1 { color: #333; }
+    .sig-box { border: 1px solid #000; padding: 8px; margin-bottom: 24px; }
+    .sig-label { font-weight: bold; margin-bottom: 4px; }
+    .sig-img { max-width: 300px; height: auto; border: 1px solid #000; }
   </style>
 </head>
 <body>
@@ -16,17 +19,26 @@
 <p><strong>Notes:</strong></p>
 <pre><%= @appointment.notes %></pre>
 
-<h3>Signature:</h3>
+<h3>Signature Tests:</h3>
 
 <% if @signature_path && File.exist?(@signature_path) %>
-  <img src="file://<%= @signature_path %>" alt="Signature"
-       style="max-width: 300px; height: auto; border: 1px solid #000;" />
+  <div class="sig-box">
+    <div class="sig-label">1. <code>file://</code> path:</div>
+    <img class="sig-img" src="file://<%= @signature_path %>" alt="Signature file://" />
+  </div>
+
+  <div class="sig-box">
+    <div class="sig-label">2. Plain path (no <code>file://</code>):</div>
+    <img class="sig-img" src="<%= @signature_path %>" alt="Signature plain path" />
+  </div>
+
+  <div class="sig-box">
+    <div class="sig-label">3. Escaped URI:</div>
+    <img class="sig-img" src="<%= URI.escape(@signature_path) %>" alt="Signature escaped path" />
+  </div>
 <% else %>
   <p style="color: #888;">(Signature not available)</p>
 <% end %>
-
-
-
 
 </body>
 </html>
