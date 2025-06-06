@@ -2,8 +2,9 @@
 class ContactMailer < ApplicationMailer
   default from: 'jimmy.lagattuta@gmail.com'
 
-  def full_submission_email(data)
-    @data = data
+  def full_submission_email(appointment)
+    @appointment = appointment
+    data = JSON.parse(@appointment.full_data)  # Extract saved form data
 
     attach_signature(data["patientConsentForMedicalServicesSignature"], "sig_patient_medical", "image/png")
     attach_signature(data["informedConsentForHghReplacementTherapyPatientSignature"], "sig_patient_hgh", "image/png")

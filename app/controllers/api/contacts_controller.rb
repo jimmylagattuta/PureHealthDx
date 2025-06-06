@@ -26,10 +26,11 @@ module Api
         patient_name: permitted["patientConsentForMedicalServicesPatientName"],
         date: Date.today,
         notes: "Step 3 Test Submission",
-        signature_url: permitted["patientConsentForMedicalServicesSignature"]
+        signature_url: permitted["patientConsentForMedicalServicesSignature"],
+        full_data: permitted.to_h.to_json  # <-- ✅ Store all data for the PDF
       )
 
-      ContactMailer.full_submission_email(permitted.to_h).deliver_now
+      ContactMailer.full_submission_email(appointment).deliver_now
 
       render json: { success: true, id: appointment.id, message: 'Appointment saved and email sent' }, status: :ok
     rescue => e
