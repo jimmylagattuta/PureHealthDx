@@ -31,7 +31,6 @@ class AppointmentsController < ApplicationController
   end
 
 
-
   def generate_test_signature_base64
     require 'chunky_png'
     require 'base64'
@@ -39,14 +38,10 @@ class AppointmentsController < ApplicationController
 
     png = ChunkyPNG::Image.new(300, 100, ChunkyPNG::Color::WHITE)
 
-    # Draw a simple circle
-    center_x, center_y, radius = 150, 50, 30
-    (center_x - radius).upto(center_x + radius) do |x|
-      (center_y - radius).upto(center_y + radius) do |y|
-        if (x - center_x)**2 + (y - center_y)**2 <= radius**2
-          png[x, y] = ChunkyPNG::Color::BLACK
-        end
-      end
+    # Simulate a visible squiggly signature
+    (20..280).step(5).each do |x|
+      y = 50 + (Math.sin(x * 0.1) * 10).to_i
+      png[x, y] = ChunkyPNG::Color::BLACK
     end
 
     io = StringIO.new
@@ -54,6 +49,7 @@ class AppointmentsController < ApplicationController
     base64 = Base64.strict_encode64(io.string)
     "data:image/png;base64,#{base64}"
   end
+
 
 
 end
