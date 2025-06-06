@@ -3,17 +3,16 @@ class AppointmentsController < ApplicationController
   require 'base64'
   require 'chunky_png'
   require 'stringio'
+  
   def pdf
-    appointment = Appointment.find(params[:id])
-    data = JSON.parse(appointment.full_data)
+    @appointment = Appointment.find(params[:id])
+    data = JSON.parse(@appointment.full_data)
 
-    @patient_name = data["patient_name"]
-    @signature_url = data["signature_url"]
-    @notes = data["notes"]
-    @date = data["date"]
+    @patient_name = data["patientConsentForMedicalServicesPatientName"] || "Unknown"
+    @date = data["patientConsentForMedicalServicesDate"]
+    @notes = @appointment.notes.presence || "(No notes provided)"
 
-    # Handle signature
-    base64_data = @signature_url.to_s.sub(/^data:image\/png;base64,/, '')
+    base64_data = (data["patientConsentForMedicalServicesSignature"] || "").sub(/^data:image\/png;base64,/, "")
     @signature_inline = "data:image/png;base64,#{base64_data}"
 
     render pdf: "appointment_summary",
