@@ -364,17 +364,17 @@ const onSubmit = (step3Data) => {
         width: 400,
         height: 150,
       }}
-      onEnd={() => {
-        if (
-          sigPad.current &&
-          typeof sigPad.current.getTrimmedCanvas === "function" &&
-          !sigPad.current.isEmpty()
-        ) {
-          const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
-          setValue("signature", dataUrl);
-          trigger("signature");
-        }
-      }}
+    onEnd={() => {
+      if (
+        sigPad.current &&
+        typeof sigPad.current.getTrimmedCanvas === "function" &&
+        !sigPad.current.isEmpty()
+      ) {
+        const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL();
+        setValue("signature", dataUrl);
+        trigger("signature");
+      }
+    }}
 
     />
 
