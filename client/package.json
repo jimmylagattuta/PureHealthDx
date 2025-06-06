@@ -10,6 +10,8 @@
     "@loadable/component": "^5.15.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
     "axios": "^1.2.1",
     "eslint-config-react-app": "^7.0.1",
     "final-form": "^4.20.10",
@@ -25,11 +27,9 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.19.0",
     "react-scripts": "^5.0.1",
-    "react-signature-canvas": "^1.1.0-alpha.2",
+    "react-signature-canvas": "^1.0.6",
     "source-map-explorer": "^2.5.3",
-    "web-vitals": "^2.1.4",
-    "ajv": "^6.12.6",
-    "ajv-keywords": "^3.5.2"
+    "web-vitals": "^2.1.4"
   },
   "engines": {
     "node": "18.17.0"
