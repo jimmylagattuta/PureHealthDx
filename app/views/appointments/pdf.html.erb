@@ -15,7 +15,16 @@
 <h1>Appointment Summary (Test)</h1>
 
 <p><strong>Patient Name:</strong> <%= @patient_name %></p>
-<p><strong>Date:</strong> <%= @date.to_date.strftime("%B %d, %Y") %></p>
+
+
+<% if @date.present? %>
+  <p><strong>Date:</strong> <%= @date.to_date.strftime("%B %d, %Y") %></p>
+<% else %>
+  <p><strong>Date:</strong> (not provided)</p>
+<% end %>
+
+
+
 <p><strong>Notes:</strong></p>
 <pre><%= @notes %></pre>
 
