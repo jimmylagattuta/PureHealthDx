@@ -2,42 +2,52 @@
 class ContactMailer < ApplicationMailer
   default from: 'jimmy.lagattuta@gmail.com'
 
-  def full_submission_email(appointment)
-    puts "📬 Entered full_submission_email"
-    @appointment = appointment
+def full_submission_email(appointment)
+  puts "📬 Entered full_submission_email"
+  @appointment = appointment
 
-    if @appointment.nil?
-      puts "❌ Appointment is nil"
-      return
-    end
-
-    puts "📝 Appointment ID: #{@appointment.id}"
-    puts "📦 Raw full_data: #{@appointment.full_data.inspect}"
-
-    begin
-      data = JSON.parse(@appointment.full_data)
-      puts "✅ Parsed data keys: #{data.keys}"
-    rescue => e
-      puts "❌ JSON parse error: #{e.message}"
-      raise e
-    end
-
-    # Attach each signature with debug
-    attach_signature(data["patientConsentForMedicalServicesSignature"], "sig_patient_medical", "image/png")
-    attach_signature(data["informedConsentForHghReplacementTherapyPatientSignature"], "sig_patient_hgh", "image/png")
-    attach_signature(data["informedConsentForHghReplacementTherapyWitnessSignature"], "sig_witness_hgh", "image/png")
-    attach_signature(data["informedConsentForTestosteroneReplacementTherapyPatientSignature"], "sig_patient_trt", "image/png")
-    attach_signature(data["informedConsentForTestosteroneReplacementTherapyWitnessSignature"], "sig_witness_trt", "image/png")
-    attach_signature(data["controlledSubstanceAutoRefillConsentPatientSignature"], "sig_patient_controlled", "image/png")
-
-    puts "📧 Preparing to send mail..."
-    mail(
-      to: 'jimmy.lagattuta@gmail.com',
-      cc: 'kenneth@purehealthdx.com',
-      subject: "Pure Health: New Appointment Submission"
-    )
-    puts "✅ Mail triggered"
+  if @appointment.nil?
+    puts "❌ Appointment is nil"
+    return
   end
+
+  puts "📝 Appointment ID: #{@appointment.id}"
+  puts "📦 Raw full_data: #{@appointment.full_data.inspect}"
+
+  begin
+    if @appointment.full_data.present?
+      data = JSON.parse(@appointment.full_data)
+      puts "✅ Parsed full_data keys: #{data.keys}"
+    else
+      raise "full_data is empty or nil"
+    end
+  rescue => e
+    puts "❌ Error parsing full_data JSON: #{e.message}"
+    raise e
+  end
+
+  # Assign @data so it can be used in views if needed
+  @data = data
+
+  # Safely attach signatures
+  %w[
+    patientConsentForMedicalServicesSignature
+    informedConsentForHghReplacementTherapyPatientSignature
+    informedConsentForHghReplacementTherapyWitnessSignature
+    informedConsentForTestosteroneReplacementTherapyPatientSignature
+    informedConsentForTestosteroneReplacementTherapyWitnessSignature
+    controlledSubstanceAutoRefillConsentPatientSignature
+  ].each do |key|
+    attach_signature(data[key], "sig_#{key.underscore}", "image/png")
+  end
+
+  mail(
+    to: 'jimmy.lagattuta@gmail.com',
+    cc: 'kenneth@purehealthdx.com',
+    subject: "Pure Health: New Appointment Submission"
+  )
+end
+
 
   private
 
