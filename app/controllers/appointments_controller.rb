@@ -4,23 +4,28 @@ class AppointmentsController < ApplicationController
   require 'chunky_png'
   require 'stringio'
   
-def pdf
-  @appointment = Appointment.find(params[:id])
-  data = JSON.parse(@appointment.full_data)
+  def pdf
+    @appointment = Appointment.find(params[:id])
+    data = JSON.parse(@appointment.full_data)
 
-  @data = data # ✅ required for matching `@data["key"]` access
-  @patient_name = data["patientConsentForMedicalServicesPatientName"] || "Unknown"
-  @date = data["patientConsentForMedicalServicesDate"]
-  @notes = @appointment.notes.presence || "(No notes provided)"
+    @data = data
+    @patient_name = data["patientConsentForMedicalServicesPatientName"] || "Unknown"
+    @date = data["patientConsentForMedicalServicesDate"]
+    @notes = @appointment.notes.presence || "(No notes provided)"
 
-  base64_data = (data["patientConsentForMedicalServicesSignature"] || "").sub(/^data:image\/png;base64,/, "")
-  @signature_inline = "data:image/png;base64,#{base64_data}"
+    # Inline base64 images for PDF display
+    @sig_patient_medical    = data["patientConsentForMedicalServicesSignature"]
+    @sig_patient_hgh        = data["informedConsentForHghReplacementTherapyPatientSignature"]
+    @sig_witness_hgh        = data["informedConsentForHghReplacementTherapyWitnessSignature"]
+    @sig_patient_trt        = data["informedConsentForTestosteroneReplacementTherapyPatientSignature"]
+    @sig_witness_trt        = data["informedConsentForTestosteroneReplacementTherapyWitnessSignature"]
+    @sig_patient_controlled = data["controlledSubstanceAutoRefillConsentPatientSignature"]
 
-  render pdf: "appointment_summary",
-         template: "appointments/pdf",
-         formats: [:html],
-         layout: false
-end
+    render pdf: "appointment_summary",
+          template: "appointments/pdf",
+          formats: [:html],
+          layout: false
+  end
 
 
 
