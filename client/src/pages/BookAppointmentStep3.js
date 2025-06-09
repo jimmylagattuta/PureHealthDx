@@ -9,7 +9,7 @@ const BookAppointmentStep3 = () => {
   const navigate = useNavigate();
 
   // Mobile-first defaults for demonstration
-  const demoMode = false;
+  const demoMode = true;
 
   // Refs for signature canvas
   const sigPad = useRef(null);
