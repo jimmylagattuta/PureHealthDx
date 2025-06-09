@@ -25,13 +25,38 @@ const Services = () => {
   }, []);
 
   if (!serviceId) {
+    // Build an ItemList schema for all services
+    const allServicesItemList = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: Object.keys(servicesData).map((key, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        url: `https://purehealthdx.com/services/${key}`,
+      })),
+    };
+
     return (
-      <div className="services-list-page">
-        <OurServicesComponent showViewAllButton={false} />
-        <PricingBanner />
-        <Testimonials />
-        <FooterComponent />
-      </div>
+      <>
+        <Helmet>
+          <title>Our Services | Pure Health & Wellness</title>
+          <link
+            rel="canonical"
+            href="https://purehealthdx.com/services"
+          />
+          <script type="application/ld+json">
+            {JSON.stringify(allServicesItemList, null, 2)}
+          </script>
+        </Helmet>
+
+        <div className="services-list-page">
+          <OurServicesComponent showViewAllButton={false} />
+          <PricingBanner />
+          <Testimonials />
+          <LocationsSection />
+          <FooterComponent />
+        </div>
+      </>
     );
   }
 
