@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Ensure static files are served by Rails if RAILS_SERVE_STATIC_FILES is set
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = true
   # Set host for URL generation (needed for ActionMailer + PDF links)
   Rails.application.routes.default_url_options[:host] = 'https://purehealthdx.com'
 end
