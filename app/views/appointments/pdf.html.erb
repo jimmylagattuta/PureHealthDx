@@ -78,6 +78,8 @@
     <p><span class="label">Services Interested In:</span><%= @data["services"].join(", ") %></p>
   </div>
 
+  <div style="page-break-before: always;"></div>
+
   <!-- Step 3 -->
   <div class="section">
     <h2>Step 3: Consent for Medical Services</h2>
@@ -119,23 +121,28 @@
     </div>
   </div>
 
+  <div style="page-break-before: always;"></div>
+
   <!-- Step 4 -->
   <div class="section">
     <h2>Step 4: HGH Therapy Consent</h2>
-    <p><span class="label">Patient Name:</span><%= @data["informedConsentForHghReplacementTherapyPatientName"] %></p>
-    <p><span class="label">Patient Date:</span><%= @data["informedConsentForHghReplacementTherapyPatientDate"] %></p>
+
+    <p><span class="label">Patient Name:</span> <%= @data["informedConsentForHghReplacementTherapyPatientName"] %></p>
+    <p><span class="label">Patient Date:</span> <%= @data["informedConsentForHghReplacementTherapyPatientDate"] %></p>
     <div class="signature">
       <p><span class="label">Patient Signature:</span></p>
       <img class="signature-img" src="<%= @sig_patient_hgh %>" alt="Patient Signature" />
     </div>
-    <p><span class="label">Witness:</span><%= @data["informedConsentForHghReplacementTherapyWitnessFirstName"] %> <%= @data["informedConsentForHghReplacementTherapyWitnessLastName"] %></p>
-    <p><span class="label">Witness Date:</span><%= @data["informedConsentForHghReplacementTherapyWitnessDate"] %></p>
+
+    <p><span class="label">Witness First Name:</span> <%= @data["informedConsentForHghReplacementTherapyWitnessFirstName"] %></p>
+    <p><span class="label">Witness Last Name:</span> <%= @data["informedConsentForHghReplacementTherapyWitnessLastName"] %></p>
+    <p><span class="label">Witness Date:</span> <%= @data["informedConsentForHghReplacementTherapyWitnessDate"] %></p>
     <div class="signature">
       <p><span class="label">Witness Signature:</span></p>
       <img class="signature-img" src="<%= @sig_witness_hgh %>" alt="Witness Signature" />
     </div>
   </div>
-
+  
   <!-- Step 5 -->
   <div class="section">
     <h2>Step 5: Testosterone Therapy Consent</h2>
