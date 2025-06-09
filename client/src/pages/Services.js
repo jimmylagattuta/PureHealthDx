@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData, serviceExtras, locationsData } from "../data";
+import OurServicesComponent from "./../sections/OurServicesComponent";
 import LocationsSection from "../sections/LocationsSection";
 import PricingBanner from "../sections/PricingBanner";
 import Testimonials from "../components/Testimonials";
@@ -26,14 +27,7 @@ const Services = () => {
   if (!serviceId) {
     return (
       <div className="services-list-page">
-        <h1>Our Services</h1>
-        <ul className="services-list">
-          {Object.entries(servicesData).map(([slug, svc]) => (
-            <li key={slug}>
-              <Link to={`/services/${slug}`}>{svc.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <OurServicesComponent showViewAllButton={false} />
         <PricingBanner />
         <Testimonials />
         <FooterComponent />

@@ -122,7 +122,34 @@
   .service-name-mobile {
     display: none;
   }
-  
+  /* center & space it out under the grid */
+.all-services-btn-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* mobile-first: full-width, tappable button */
+.all-services-btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #5a7c78;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* on larger screens, shrink to content width */
+@media (min-width: 768px) {
+  .all-services-btn {
+    width: auto;
+  }
+}
+
   @media (max-width: 1023px) {
     .service-name-mobile {
       display: block;

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { servicesData } from "../data";
 import "./OurServicesComponent.css";
 
-function OurServicesComponent() {
+function OurServicesComponent({ showViewAllButton = true }) {
   const navigate = useNavigate();
 
   // Convert servicesData object into an array, adding a link for each service
@@ -65,6 +65,16 @@ function OurServicesComponent() {
           </div>
         ))}
       </div>
+      {showViewAllButton && (
+        <div className="all-services-btn-wrapper">
+          <button
+            className="all-services-btn"
+            onClick={() => navigate("/services")}
+          >
+            View All Services
+          </button>
+        </div>
+      )}
     </section>
   );
 }
