@@ -9,7 +9,7 @@ const BookAppointmentPage = () => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
-  const demoMode = false;
+  const demoMode = true;
   const navigate = useNavigate();
 
   // Retrieve any stored data from previous sessions
@@ -38,9 +38,11 @@ const BookAppointmentPage = () => {
           hoursOfSleep: "6-7",
           healthGoals: "Maintain healthy weight and improve energy",
           currentMedications: "None",
-          maritalStatus: "single",       // NEW
-          hasChildren: "no",             // NEW
-          childrenCount: ""              // NEW
+          dietDescription: "",      // NEW
+          referralSource: "",       // NEW
+          maritalStatus: "single",  // NEW
+          hasChildren: "no",        // NEW
+          childrenCount: ""         // NEW
         }
       : {};
 
@@ -55,7 +57,6 @@ const BookAppointmentPage = () => {
     mode: "onChange",
     defaultValues,
   });
-
 
   useEffect(() => {
     trigger(); // validate on mount to activate grey labels in demoMode
@@ -74,9 +75,7 @@ const BookAppointmentPage = () => {
     localStorage.setItem("appointmentFormData", JSON.stringify(data));
 
     // Proceed to next step
-
     navigate("/book-appointment-step2");
-
   };
 
   const formatPhoneNumber = (value) => {
@@ -88,7 +87,6 @@ const BookAppointmentPage = () => {
     if (phoneLength < 7) return `(${phone.slice(0, 3)}) ${phone.slice(3)}`;
     return `(${phone.slice(0, 3)}) ${phone.slice(3, 6)}-${phone.slice(6, 10)}`;
   };
-
 
   return (
     <>
@@ -163,24 +161,22 @@ const BookAppointmentPage = () => {
                   Phone{" "}
                   <span className={getRequiredClass(values.phone, errors.phone)}>(Required)</span>
                 </label>
-              <input
-                type="tel"
-                placeholder="(555) 555-5555"
-                {...register("phone", {
-                  required: "This field is required.",
-                  pattern: {
-                    value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
-                    message: "Phone format: (###) ###-####",
-                  },
-                })}
-                onChange={(e) => {
-                  const formatted = formatPhoneNumber(e.target.value);
-                  setValue("phone", formatted, { shouldValidate: true });
-                }}
-                value={values.phone}
-              />
-
-
+                <input
+                  type="tel"
+                  placeholder="(555) 555-5555"
+                  {...register("phone", {
+                    required: "This field is required.",
+                    pattern: {
+                      value: /^\(\d{3}\)\s\d{3}-\d{4}$/,
+                      message: "Phone format: (###) ###-####",
+                    },
+                  })}
+                  onChange={(e) => {
+                    const formatted = formatPhoneNumber(e.target.value);
+                    setValue("phone", formatted, { shouldValidate: true });
+                  }}
+                  value={values.phone}
+                />
                 {errors.phone && <p className="error-message">{errors.phone.message}</p>}
               </div>
 
@@ -230,19 +226,18 @@ const BookAppointmentPage = () => {
                       </option>
                     ))}
                   </select>
-  <select {...register("dobYear", { required: "Year is required." })}>
-    <option value="">YYYY</option>
-    {Array.from({ length: 100 }, (_, i) => {
-      const currentYear = new Date().getFullYear();
-      const year = currentYear - 18 - i;
-      return (
-        <option key={year} value={year}>
-          {year}
-        </option>
-      );
-    })}
-  </select>
-
+                  <select {...register("dobYear", { required: "Year is required." })}>
+                    <option value="">YYYY</option>
+                    {Array.from({ length: 100 }, (_, i) => {
+                      const currentYear = new Date().getFullYear();
+                      const year = currentYear - 18 - i;
+                      return (
+                        <option key={year} value={year}>
+                          {year}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
               </div>
 
@@ -250,9 +245,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Driver’s License #{" "}
-                  <span
-                    className={getRequiredClass(values.driversLicense, errors.driversLicense)}
-                  >
+                  <span className={getRequiredClass(values.driversLicense, errors.driversLicense)}>
                     (Required)
                   </span>
                 </label>
@@ -270,9 +263,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Street Address{" "}
-                  <span
-                    className={getRequiredClass(values.streetAddress, errors.streetAddress)}
-                  >
+                  <span className={getRequiredClass(values.streetAddress, errors.streetAddress)}>
                     (Required)
                   </span>
                 </label>
@@ -332,9 +323,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   What is your occupation?{" "}
-                  <span
-                    className={getRequiredClass(values.occupation, errors.occupation)}
-                  >
+                  <span className={getRequiredClass(values.occupation, errors.occupation)}>
                     (Required)
                   </span>
                 </label>
@@ -352,9 +341,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   How many hours a night do you sleep?{" "}
-                  <span
-                    className={getRequiredClass(values.hoursOfSleep, errors.hoursOfSleep)}
-                  >
+                  <span className={getRequiredClass(values.hoursOfSleep, errors.hoursOfSleep)}>
                     (Required)
                   </span>
                 </label>
@@ -375,9 +362,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Please write a quick summary of your overall health goals:{" "}
-                  <span
-                    className={getRequiredClass(values.healthGoals, errors.healthGoals)}
-                  >
+                  <span className={getRequiredClass(values.healthGoals, errors.healthGoals)}>
                     (Required)
                   </span>
                 </label>
@@ -395,21 +380,58 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Please list any current medications you are taking:{" "}
-                  <span
-                    className={getRequiredClass(values.currentMedications, errors.currentMedications)}
-                  >
+                  <span className={getRequiredClass(values.currentMedications, errors.currentMedications)}>
                     (Required)
                   </span>
                 </label>
                 <textarea
                   placeholder="0 of 500 max characters"
                   maxLength={500}
-                  {...register("currentMedications", {
-                    required: "This field is required.",
-                  })}
+                  {...register("currentMedications", { required: "This field is required." })}
                 />
                 {errors.currentMedications && (
                   <p className="error-message">{errors.currentMedications.message}</p>
+                )}
+              </div>
+
+              {/* Diet / Nutrition */}
+              <div className="form-group">
+                <label>
+                  In a few words describe your current diet/nutrition{" "}
+                  <span className={getRequiredClass(values.dietDescription, errors.dietDescription)}>
+                    (Required)
+                  </span>
+                </label>
+                <textarea
+                  placeholder="e.g. Balanced plant-based diet with occasional lean protein"
+                  maxLength={300}
+                  {...register("dietDescription", { required: "Please describe your current diet/nutrition." })}
+                />
+                {errors.dietDescription && (
+                  <p className="error-message">{errors.dietDescription.message}</p>
+                )}
+              </div>
+
+              {/* Referral Source */}
+              <div className="form-group">
+                <label>
+                  How did you hear about us?{" "}
+                  <span className={getRequiredClass(values.referralSource, errors.referralSource)}>
+                    (Required)
+                  </span>
+                </label>
+                <select
+                  {...register("referralSource", { required: "Please let us know how you heard about us." })}
+                >
+                  <option value="">Select</option>
+                  <option value="friend">Friend</option>
+                  <option value="family">Family Member</option>
+                  <option value="google">Google</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="instagram">Instagram</option>
+                </select>
+                {errors.referralSource && (
+                  <p className="error-message">{errors.referralSource.message}</p>
                 )}
               </div>
 
@@ -417,9 +439,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Marital Status{" "}
-                  <span
-                    className={getRequiredClass(values.maritalStatus, errors.maritalStatus)}
-                  >
+                  <span className={getRequiredClass(values.maritalStatus, errors.maritalStatus)}>
                     (Required)
                   </span>
                 </label>
@@ -439,9 +459,7 @@ const BookAppointmentPage = () => {
               <div className="form-group">
                 <label>
                   Do you have children?{" "}
-                  <span
-                    className={getRequiredClass(values.hasChildren, errors.hasChildren)}
-                  >
+                  <span className={getRequiredClass(values.hasChildren, errors.hasChildren)}>
                     (Required)
                   </span>
                 </label>
@@ -473,12 +491,7 @@ const BookAppointmentPage = () => {
                 <div className="form-group">
                   <label>
                     Number of Children{" "}
-                    <span
-                      className={getRequiredClass(
-                        values.childrenCount,
-                        errors.childrenCount
-                      )}
-                    >
+                    <span className={getRequiredClass(values.childrenCount, errors.childrenCount)}>
                       (Required)
                     </span>
                   </label>
@@ -496,8 +509,8 @@ const BookAppointmentPage = () => {
                   )}
                 </div>
               )}
-              <div className="form-navigation button-row">
 
+              <div className="form-navigation button-row">
                 <button type="submit" className="submit-btn">
                   Next Step
                 </button>

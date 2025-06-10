@@ -165,12 +165,30 @@ const richSnippet = {
   return (
     <>
       <Helmet>
-        <title>{service ? `${service.title} | Pure Health & Wellness` : "Our Services | Pure Health & Wellness"}</title>
-        <link rel="canonical" href={canonicalUrl} />
+        <title>
+          {service
+            ? `${service.title} | Pure Health & Wellness`
+            : "Our Services | Pure Health & Wellness"}
+        </title>
+
+        {/* Preferred canonical with trailing slash */}
+        <link
+          rel="canonical"
+          href={`https://purehealthdx.com/services/${serviceId}/`}
+        />
+
+        {/* Secondary canonical without trailing slash */}
+        <link
+          rel="canonical"
+          href={`https://purehealthdx.com/services/${serviceId}`}
+        />
+
+        {/* Structured data */}
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}
         </script>
       </Helmet>
+
 
       {/* — Hero — */}
       <div

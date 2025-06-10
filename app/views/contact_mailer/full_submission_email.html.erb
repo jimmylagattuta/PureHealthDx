@@ -62,6 +62,8 @@
       <p><span class="label">Hours of Sleep:</span><%= @data["hoursOfSleep"] %></p>
       <p><span class="label">Health Goals:</span><%= @data["healthGoals"] %></p>
       <p><span class="label">Current Medications:</span><%= @data["currentMedications"] %></p>
+      <p><span class="label">Diet / Nutrition:</span><%= @data["dietDescription"].presence || "(not provided)" %></p>
+      <p><span class="label">How did you hear about us?</span><%= @data["referralSource"].presence || "(not provided)" %></p>
       <p><span class="label">Marital Status:</span><%= @data["maritalStatus"] %></p>
       <p><span class="label">Has Children:</span><%= @data["hasChildren"] %></p>
       <% if @data["hasChildren"] == "yes" %>
