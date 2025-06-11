@@ -383,7 +383,7 @@ const richSnippet = {
                 {extras.symptomsConclusion}
               </p>
             )}
-            <Link to={service.ctaLink || "/book"} className="hero-cta">
+            <Link to={service.ctaLink || "/book-appointment/"} className="hero-cta">
               {service.ctaText || "Book an Appointment"}
             </Link>
           </div>
@@ -509,7 +509,7 @@ const richSnippet = {
               </div>
             ))}
           </div>
-          <Link to={service.ctaLink || "/book"} className="hero-cta works-final-cta">
+          <Link to={service.ctaLink || "/book-appointment/"} className="hero-cta works-final-cta">
             {service.ctaText || "Book an Appointment"}
           </Link>
         </section>

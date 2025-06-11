@@ -113,7 +113,7 @@ export const servicesData = {
     image: treatmentTRT
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 }
 ,
 
@@ -186,7 +186,7 @@ The goal of this treatment is to relieve menopausal symptoms, including weight g
     image: "https://via.placeholder.com/600x400?text=Treatment+Image"
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 },
 
 
@@ -236,7 +236,7 @@ All treatments are tailored to your unique situation with discretion and support
     image: "https://via.placeholder.com/600x400?text=ED+Treatment"
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 },
 
 
@@ -289,7 +289,7 @@ Each plan is personalized based on lab work, lifestyle goals, and optimal dosing
     image: "https://via.placeholder.com/600x400?text=Peptide+Treatment"
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 },
 
 "platelet-rich-plasma-treatment": {
@@ -319,7 +319,7 @@ By using a concentrated dose of platelets from your own body, PRP stimulates nat
     image: "https://via.placeholder.com/600x400?text=PRP+Treatment"
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 },
 
 
@@ -372,7 +372,7 @@ Our goal is to address the root of your pain while minimizing your dependence on
     image: "https://via.placeholder.com/600x400?text=Pain+Treatment"
   },
   ctaText: "Book an Appointment",
-  ctaLink: "/book"
+  ctaLink: "/book-appointment/"
 },
 
 
@@ -420,7 +420,7 @@ Our goal is to address the root of your pain while minimizing your dependence on
 //     image: "https://via.placeholder.com/600x400?text=Semaglutide+Treatment" // Replace with treatment image
 //   },
 //   ctaText: "Book an Appointment",
-//   ctaLink: "/book"
+//   ctaLink: "/book-appointment/"
 // }
 
 };
@@ -600,7 +600,7 @@ By working with you one on one at our men’s testosterone clinic, we can help c
       // CTA banner
       ctaHeading: "Start Your Wellness Journey Today",
       ctaText: "Book an Appointment",
-      ctaLink: "/book",
+      ctaLink: "/book-appointment/",
 
       // Intro under the banner
       introHeading: "How It Works",
@@ -695,7 +695,7 @@ The good news is that treatment can become more of a maintenance plan once your 
   
   Reach out to our testosterone replacement therapy clinic team today to learn how we can help you get back to your old self. The sooner that you start testosterone replacement therapy, the sooner that you will get that boost to your energy, libido, and mood and you’ll be able to get back to doing the things you love.`,
       buttonText: "Book an Appointment",
-      buttonLink: "/book"
+      buttonLink: "/book-appointment/"
     },
   },
 
@@ -853,7 +853,7 @@ The good news is that treatment can become more of a maintenance plan once your 
               "Luckily, there are plenty of treatment options for erectile dysfunction focused on increasing blood flow that will not interfere with these medications as long as you are otherwise healthy enough to enjoy sex."
             ],
             ctaText: "Book an Appointment",
-            ctaLink: "/book"
+            ctaLink: "/book-appointment/"
           }
     ],
 
@@ -930,7 +930,7 @@ The good news is that treatment can become more of a maintenance plan once your 
     journey: {
       ctaHeading: "Start Your Wellness Journey Today",
       ctaText: "Book an Appointment",
-      ctaLink: "/book",
+      ctaLink: "/book-appointment/",
 
     },
 
@@ -1175,7 +1175,7 @@ This process makes sense because it’s what your body does naturally when there
     journey: {
       ctaHeading: "Start Your Wellness Journey Today",
       ctaText: "Book an Appointment",
-      ctaLink: "/book",
+      ctaLink: "/book-appointment/",
       introHeading: "Our Simple Process",
       introText: "", // no extra intro paragraph
       steps: [
