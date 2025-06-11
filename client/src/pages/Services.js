@@ -177,12 +177,6 @@ const richSnippet = {
           href={`https://purehealthdx.com/services/${serviceId}/`}
         />
 
-        {/* Secondary canonical without trailing slash */}
-        <link
-          rel="canonical"
-          href={`https://purehealthdx.com/services/${serviceId}`}
-        />
-
         {/* Structured data */}
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}

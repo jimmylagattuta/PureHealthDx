@@ -204,7 +204,7 @@ function Navbar() {
                   <li
                     key={key}
                     className="sub-nav-item"
-                    onClick={() => handleNavItemClick(`/services/${key}`)}
+                    onClick={() => handleNavItemClick(`/services/${key}/`)}
                   >
                     {service.title}
                   </li>
@@ -233,7 +233,7 @@ function Navbar() {
                 <li
                   key={slug}
                   className="sub-nav-item"
-                  onClick={() => handleNavItemClick(`/locations/${slug}`)}
+                  onClick={() => handleNavItemClick(`/locations/${slug}/`)}
                 >
                   {loc.name}
                 </li>
@@ -247,7 +247,7 @@ function Navbar() {
             className={`nav-item pricing-link ${
               location.pathname === '/about-us' ? 'active-link' : ''
             }`}
-            onClick={() => handleNavItemClick('/about-us')}
+            onClick={() => handleNavItemClick('/about-us/')}
           >
             About Us
           </li>
@@ -257,7 +257,7 @@ function Navbar() {
             className={`nav-item reviews-link ${
               location.pathname === '/book-appointment' ? 'active-link' : ''
             }`}
-            onClick={() => handleNavItemClick('/book-appointment')}
+            onClick={() => handleNavItemClick('/book-appointment/')}
           >
             Become a Patient
           </li>
@@ -273,7 +273,7 @@ function Navbar() {
           {/* Book Appointment */}
           <li
             className="nav-item book-appointment"
-            onClick={() => handleNavItemClick('/book-appointment')}
+            onClick={() => handleNavItemClick('/book-appointment/')}
           >
             Book Appointment
           </li>
