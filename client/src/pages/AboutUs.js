@@ -12,9 +12,9 @@ const richSnippet = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://purehealthdx.com#organization",
+      "@id": "https://purehealthdx.com/#organization",
       "name": "Pure Health & Wellness",
-      "url": "https://purehealthdx.com",
+      "url": "https://purehealthdx.com/",
       "logo": "https://i.postimg.cc/FsjJMwWQ/footer-logo.webp",
       "image": "https://i.postimg.cc/SK6KjGDy/i-Stock-493796666.webp",
       "description": "Pure Health & Wellness provides customized care in hormone therapy, erectile dysfunction treatment, weight loss, pain management, and peptide therapy. We offer expert, compassionate care across multiple California locations.",
@@ -34,49 +34,49 @@ const richSnippet = {
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/testosterone-replacement-therapy#service",
+      "@id": "https://purehealthdx.com/services/testosterone-replacement-therapy/#service",
       "serviceType": "Testosterone Replacement Therapy",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/testosterone-replacement-therapy"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/testosterone-replacement-therapy/"
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/hormone-therapy-for-women#service",
+      "@id": "https://purehealthdx.com/services/hormone-therapy-for-women/#service",
       "serviceType": "Hormone Therapy for Women",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/hormone-therapy-for-women"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/hormone-therapy-for-women/"
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/erectile-dysfunction-treatment#service",
+      "@id": "https://purehealthdx.com/services/erectile-dysfunction-treatment/#service",
       "serviceType": "Erectile Dysfunction Treatment",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/erectile-dysfunction-treatment"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/erectile-dysfunction-treatment/"
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/benefits-of-peptide-therapy#service",
+      "@id": "https://purehealthdx.com/services/benefits-of-peptide-therapy/#service",
       "serviceType": "Peptide Therapy",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/benefits-of-peptide-therapy"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/benefits-of-peptide-therapy/"
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/platelet-rich-plasma-treatment#service",
+      "@id": "https://purehealthdx.com/services/platelet-rich-plasma-treatment/#service",
       "serviceType": "PRP Therapy",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/platelet-rich-plasma-treatment"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/platelet-rich-plasma-treatment/"
     },
     {
       "@type": "Service",
-      "@id": "https://purehealthdx.com/services/pain-management#service",
+      "@id": "https://purehealthdx.com/services/pain-management/#service",
       "serviceType": "Pain Management",
-      "provider": { "@id": "https://purehealthdx.com#organization" },
-      "url": "https://purehealthdx.com/services/pain-management"
+      "provider": { "@id": "https://purehealthdx.com/#organization" },
+      "url": "https://purehealthdx.com/services/pain-management/"
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/sacramento#loc",
+      "@id": "https://purehealthdx.com/locations/sacramento/#loc",
       "name": "Sacramento Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -86,12 +86,12 @@ const richSnippet = {
         "postalCode": "95823",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/sacramento",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/sacramento/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/modesto#loc",
+      "@id": "https://purehealthdx.com/locations/modesto/#loc",
       "name": "Modesto Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -101,12 +101,12 @@ const richSnippet = {
         "postalCode": "95355",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/modesto",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/modesto/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/stockton#loc",
+      "@id": "https://purehealthdx.com/locations/stockton/#loc",
       "name": "Stockton Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -116,12 +116,12 @@ const richSnippet = {
         "postalCode": "95203",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/stockton",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/stockton/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/hayward#loc",
+      "@id": "https://purehealthdx.com/locations/hayward/#loc",
       "name": "Hayward Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -131,12 +131,12 @@ const richSnippet = {
         "postalCode": "94545",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/hayward",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/hayward/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/salinas#loc",
+      "@id": "https://purehealthdx.com/locations/salinas/#loc",
       "name": "Salinas Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -146,12 +146,12 @@ const richSnippet = {
         "postalCode": "93901",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/salinas",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/salinas/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/san-jose#loc",
+      "@id": "https://purehealthdx.com/locations/san-jose/#loc",
       "name": "San Jose Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -161,12 +161,12 @@ const richSnippet = {
         "postalCode": "95116",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/san-jose",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/san-jose/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/fresno#loc",
+      "@id": "https://purehealthdx.com/locations/fresno/#loc",
       "name": "Fresno Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -176,12 +176,12 @@ const richSnippet = {
         "postalCode": "93710",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/fresno",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/fresno/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/hanford#loc",
+      "@id": "https://purehealthdx.com/locations/hanford/#loc",
       "name": "Hanford Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -191,12 +191,12 @@ const richSnippet = {
         "postalCode": "93230",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/hanford",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/hanford/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/bakersfield#loc",
+      "@id": "https://purehealthdx.com/locations/bakersfield/#loc",
       "name": "Bakersfield Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -206,12 +206,12 @@ const richSnippet = {
         "postalCode": "93301",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/bakersfield",
+      "url": "https://purehealthdx.com/locations/bakersfield/",
       "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/santa-rosa#loc",
+      "@id": "https://purehealthdx.com/locations/santa-rosa/#loc",
       "name": "Santa Rosa Clinic",
       "address": {
         "@type": "PostalAddress",
@@ -221,8 +221,8 @@ const richSnippet = {
         "postalCode": "95404",
         "addressCountry": "US"
       },
-      "url": "https://purehealthdx.com/locations/santa-rosa",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
+      "url": "https://purehealthdx.com/locations/santa-rosa/",
+      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     }
   ]
 };
@@ -232,7 +232,7 @@ const richSnippet = {
   return (
     <div className="aboutus-container">
       <Helmet>
-        <link rel="canonical" href="https://purehealthdx.com/about-us" />
+        <link rel="canonical" href="https://purehealthdx.com/about-us/" />
         <script type="application/ld+json">
           {JSON.stringify(richSnippet)}
         </script>
@@ -267,7 +267,7 @@ const richSnippet = {
           <p className="text">
             Every day, millions of people feel tired or suffer from low sex drive. They miss out on life in many other ways because of low testosterone levels. Our goal is to help these individuals unleash their best selves through personalized hormone treatment.
           </p>
-          <Link to="/book-appointment" className="cta-button-about-us">
+          <Link to="/book-appointment/" className="cta-button-about-us">
             Book an Appointment
           </Link>
         </div>
@@ -298,7 +298,7 @@ const richSnippet = {
       {/* CTA Footer */}
       <section className="footer-cta">
         <h2>Start Your Wellness Journey Today</h2>
-        <Link to="/book-appointment" className="cta-button-dark-about-us">
+        <Link to="/book-appointment/" className="cta-button-dark-about-us">
           Book an Appointment
         </Link>
       </section>
