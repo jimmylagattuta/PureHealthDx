@@ -7,7 +7,7 @@ function HowItWorksComponent() {
 
   const handleBecomePatientClick = (e) => {
     e.preventDefault();
-    navigate("/book-appointment");
+    navigate("/book-appointment/");
   };
 
   return (

@@ -74,7 +74,7 @@ function LocationsSection({ showButton = true }) {
         {locations.map((location, index) => (
           <Link
             key={location.id}
-            to={`/locations/${location.id}`}
+            to={`/locations/${location.id}/`}
             className="location-card-link"
           >
             <div className={`location-card ${index % 2 !== 0 ? "reverse" : ""}`}>
@@ -126,7 +126,7 @@ function LocationsSection({ showButton = true }) {
           className="button-container"
           style={{ textAlign: "center", marginTop: "20px" }}
         >
-          <Link to="/locations" className="location-section-button">
+          <Link to="/locations/" className="location-section-button">
             View All Locations
           </Link>
         </div>

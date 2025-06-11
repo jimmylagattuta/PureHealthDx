@@ -10,7 +10,7 @@ function OurServicesComponent({ showViewAllButton = true }) {
   const servicesArray = Object.entries(servicesData).map(([key, service]) => ({
     key,
     ...service,
-    link: `/services/${key}`,
+    link: `/services/${key}/`,
   }));
 
   return (
@@ -69,7 +69,7 @@ function OurServicesComponent({ showViewAllButton = true }) {
         <div className="all-services-btn-wrapper">
           <button
             className="all-services-btn"
-            onClick={() => navigate("/services")}
+            onClick={() => navigate("/services/")}
           >
             View All Services
           </button>

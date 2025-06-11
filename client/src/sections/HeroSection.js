@@ -53,7 +53,7 @@ function HeroSection() {
             have a higher libido, and live a better life.
           </p>
 
-          <Link to="/book-appointment" className="cta-button">
+          <Link to="/book-appointment/" className="cta-button">
             Book an Appointment
           </Link>
         </div>

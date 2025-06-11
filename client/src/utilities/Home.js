@@ -34,7 +34,7 @@ const Home = ({ scrollToContact, reviews }) => {
         "@type": "Organization",
         "@id": "https://purehealthdx.com/#org",
         "name": "Pure Health & Wellness",
-        "url": "https://purehealthdx.com",
+        "url": "https://purehealthdx.com/",
         "logo": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
         "contactPoint": [
           {
@@ -53,7 +53,7 @@ const Home = ({ scrollToContact, reviews }) => {
       {
         "@type": "WebSite",
         "@id": "https://purehealthdx.com/#website",
-        "url": "https://purehealthdx.com",
+        "url": "https://purehealthdx.com/",
         "name": "Pure Health & Wellness",
         "description": "Pure Health & Wellness is a leading telehealth clinic specializing in hormone replacement therapy, regenerative treatments, and pain management across multiple California locations.",
         "publisher": { "@id": "https://purehealthdx.com/#org" },
@@ -69,7 +69,7 @@ const Home = ({ scrollToContact, reviews }) => {
         "name": "Pure Health & Wellness",
         "description": "Innovative health clinic offering testosterone therapy, hormone therapy, erectile dysfunction treatment, peptide therapy, PRP, and comprehensive pain management.",
         "image": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
-        "url": "https://purehealthdx.com",
+        "url": "https://purehealthdx.com/",
         "telephone": "+1-877-271-0203",
         "priceRange": "$$",
         "parentOrganization": { "@id": "https://purehealthdx.com/#org" },
@@ -91,8 +91,8 @@ const Home = ({ scrollToContact, reviews }) => {
         "@id": "https://purehealthdx.com/#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://purehealthdx.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Services","item": "https://purehealthdx.com/services" },
-          { "@type": "ListItem", "position": 3, "name": "Testosterone Replacement Therapy", "item": "https://purehealthdx.com/services/testosterone-replacement-therapy" }
+          { "@type": "ListItem", "position": 2, "name": "Services","item": "https://purehealthdx.com/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Testosterone Replacement Therapy", "item": "https://purehealthdx.com/services/testosterone-replacement-therapy/" }
         ]
       }
     ]
@@ -117,7 +117,7 @@ const Home = ({ scrollToContact, reviews }) => {
             "@type": "Organization",
             "@id": "https://purehealthdx.com/#org",
             "name": "Pure Health & Wellness",
-            "url": "https://purehealthdx.com",
+            "url": "https://purehealthdx.com/",
             "logo": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
             "contactPoint": [
               {
@@ -136,7 +136,7 @@ const Home = ({ scrollToContact, reviews }) => {
           {
             "@type": "WebSite",
             "@id": "https://purehealthdx.com/#website",
-            "url": "https://purehealthdx.com",
+            "url": "https://purehealthdx.com/",
             "name": "Pure Health & Wellness",
             "description": "Pure Health & Wellness is a leading telehealth clinic specializing in hormone replacement therapy, regenerative treatments, and pain management across multiple California locations.",
             "publisher": { "@id": "https://purehealthdx.com/#org" },
@@ -152,7 +152,7 @@ const Home = ({ scrollToContact, reviews }) => {
             "name": "Pure Health & Wellness",
             "description": "Innovative health clinic offering testosterone therapy, hormone therapy, erectile dysfunction treatment, peptide therapy, PRP, and comprehensive pain management.",
             "image": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
-            "url": "https://purehealthdx.com",
+            "url": "https://purehealthdx.com/",
             "telephone": "+1-877-271-0203",
             "priceRange": "$$",
             "parentOrganization": { "@id": "https://purehealthdx.com/#org" },
@@ -177,7 +177,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/testosterone-replacement-therapy#service",
+            "@id": "https://purehealthdx.com/services/testosterone-replacement-therapy/#service",
             "serviceType": "Testosterone Replacement Therapy",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
             "url": "https://purehealthdx.com/services/testosterone-replacement-therapy",
@@ -185,7 +185,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/hormone-therapy-for-women#service",
+            "@id": "https://purehealthdx.com/services/hormone-therapy-for-women/#service",
             "serviceType": "Hormone Therapy for Women",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
             "url": "https://purehealthdx.com/services/hormone-therapy-for-women",
@@ -193,39 +193,39 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/erectile-dysfunction-treatment#service",
+            "@id": "https://purehealthdx.com/services/erectile-dysfunction-treatment/#service",
             "serviceType": "Erectile Dysfunction Treatment",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
-            "url": "https://purehealthdx.com/services/erectile-dysfunction-treatment",
+            "url": "https://purehealthdx.com/services/erectile-dysfunction-treatment/",
             "description": "Advanced ED treatments including medications, injections, and shockwave therapy."
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/benefits-of-peptide-therapy#service",
+            "@id": "https://purehealthdx.com/services/benefits-of-peptide-therapy/#service",
             "serviceType": "Peptide Therapy",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
-            "url": "https://purehealthdx.com/services/benefits-of-peptide-therapy",
+            "url": "https://purehealthdx.com/services/benefits-of-peptide-therapy/",
             "description": "Targeted peptide protocols for muscle growth, fat loss, immune health, and anti-aging."
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/platelet-rich-plasma-treatment#service",
+            "@id": "https://purehealthdx.com/services/platelet-rich-plasma-treatment/#service",
             "serviceType": "Platelet-Rich Plasma Therapy",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
-            "url": "https://purehealthdx.com/services/platelet-rich-plasma-treatment",
+            "url": "https://purehealthdx.com/services/platelet-rich-plasma-treatment/",
             "description": "PRP injections using your own blood to accelerate healing and tissue regeneration."
           },
           {
             "@type": "Service",
-            "@id": "https://purehealthdx.com/services/pain-management#service",
+            "@id": "https://purehealthdx.com/services/pain-management/#service",
             "serviceType": "Pain Management",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
-            "url": "https://purehealthdx.com/services/pain-management",
+            "url": "https://purehealthdx.com/services/pain-management/",
             "description": "Comprehensive pain management combining image-guided injections, therapies, and referrals."
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/santa-rosa#loc",
+            "@id": "https://purehealthdx.com/locations/santa-rosa/#loc",
             "name": "Santa Rosa Clinic",
             "image": "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
             "address": {
@@ -242,7 +242,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/sacramento#loc",
+            "@id": "https://purehealthdx.com/locations/sacramento/#loc",
             "name": "Sacramento Clinic",
             "image": "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
             "address": {
@@ -259,7 +259,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/stockton#loc",
+            "@id": "https://purehealthdx.com/locations/stockton/#loc",
             "name": "Stockton Clinic",
             "image": "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
             "address": {
@@ -276,7 +276,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/modesto#loc",
+            "@id": "https://purehealthdx.com/locations/modesto/#loc",
             "name": "Modesto Clinic",
             "image": "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
             "address": {
@@ -293,7 +293,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/hayward#loc",
+            "@id": "https://purehealthdx.com/locations/hayward/#loc",
             "name": "Hayward Clinic",
             "image": "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
             "address": {
@@ -310,7 +310,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/salinas#loc",
+            "@id": "https://purehealthdx.com/locations/salinas/#loc",
             "name": "Salinas Clinic",
             "image": "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
             "address": {
@@ -327,7 +327,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/san-jose#loc",
+            "@id": "https://purehealthdx.com/locations/san-jose/#loc",
             "name": "San Jose Clinic",
             "image": "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
             "address": {
@@ -344,7 +344,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/fresno#loc",
+            "@id": "https://purehealthdx.com/locations/fresno/#loc",
             "name": "Fresno Clinic",
             "image": "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
             "address": {
@@ -361,7 +361,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/hanford#loc",
+            "@id": "https://purehealthdx.com/locations/hanford/#loc",
             "name": "Hanford Clinic",
             "image": "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
             "address": {
@@ -378,7 +378,7 @@ const Home = ({ scrollToContact, reviews }) => {
           },
           {
             "@type": "MedicalClinic",
-            "@id": "https://purehealthdx.com/locations/bakersfield#loc",
+            "@id": "https://purehealthdx.com/locations/bakersfield/#loc",
             "name": "Bakersfield Clinic",
             "image": "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
             "address": {
@@ -407,13 +407,13 @@ const Home = ({ scrollToContact, reviews }) => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://purehealthdx.com/services"
+                "item": "https://purehealthdx.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Testosterone Replacement Therapy",
-                "item": "https://purehealthdx.com/services/testosterone-replacement-therapy"
+                "item": "https://purehealthdx.com/services/testosterone-replacement-therapy/"
               }
             ]
           }

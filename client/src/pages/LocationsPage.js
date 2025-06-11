@@ -21,6 +21,11 @@ function LocationsPage() {
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [firstKey, firstLocation] = Object.entries(locationsData)[0] || [];
+  const addressParts = firstLocation.address.split(",").map(s => s.trim());
+  const street = addressParts[0] || "";
+  const city = addressParts[1] || "";
+  const [region, ...postal] = (addressParts[2] || "").split(" ");
 
   useEffect(() => {
     if (window.location.hash === "#contactForm") {
@@ -99,6 +104,14 @@ function LocationsPage() {
         "contactType": "Customer Service",
         "areaServed": "US",
         "availableLanguage": ["English", "Spanish"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": street,
+        "addressLocality": city,
+        "addressRegion": region,
+        "postalCode": postal.join(" "),
+        "addressCountry": "US"
       }
     };
 

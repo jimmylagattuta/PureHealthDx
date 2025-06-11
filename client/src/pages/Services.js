@@ -16,7 +16,7 @@ const Services = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const toggleFaq = idx => setOpenFaq(openFaq === idx ? null : idx);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 569);
-  const canonicalUrl = `https://purehealthdx.com/services/${serviceId || ""}`;
+  const canonicalUrl = `https://purehealthdx.com/services/${serviceId || ""}/`;
   
   useEffect(() => {
     const onResize = () => setIsDesktop(window.innerWidth >= 569);
@@ -32,7 +32,7 @@ const Services = () => {
       itemListElement: Object.keys(servicesData).map((key, idx) => ({
         "@type": "ListItem",
         position: idx + 1,
-        url: `https://purehealthdx.com/services/${key}`,
+        url: `https://purehealthdx.com/services/${key}/`,
       })),
     };
 
@@ -42,7 +42,7 @@ const Services = () => {
           <title>Our Services | Pure Health & Wellness</title>
           <link
             rel="canonical"
-            href="https://purehealthdx.com/services"
+            href="https://purehealthdx.com/services/"
           />
           <script type="application/ld+json">
             {JSON.stringify(allServicesItemList, null, 2)}
@@ -83,13 +83,13 @@ const Services = () => {
     provider: {
       "@type": "Organization",
       name: "Pure Health & Wellness",
-      url: "https://purehealthdx.com",
+      url: "https://purehealthdx.com/",
       logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
     }
   };
 const globalServiceSnippet = {
   "@type": "Service",
-  "@id": `https://purehealthdx.com/services/${serviceId}#service`,
+  "@id": `https://purehealthdx.com/services/${serviceId}/#service`,
   serviceType: service.title,
   description: service.shortDescription,
   image: isDesktop && service.images.desktopHero
@@ -99,14 +99,14 @@ const globalServiceSnippet = {
   provider: {
     "@type": "Organization",
     name: "Pure Health & Wellness",
-    url: "https://purehealthdx.com",
-    logo: "https://res.cloudinary.com/…/nav-logo_tersen.webp"
+    url: "https://purehealthdx.com/",
+    logo: "https://i.postimg.cc/tTy4LRpb/footer-logo-1-1.webp"
   }
 };
 const perLocationServiceSnippets = Object.entries(locationsData).map(
   ([slug, office]) => ({
     "@type": "Service",
-    "@id": `https://purehealthdx.com/services/${serviceId}#${slug}-service`,
+    "@id": `https://purehealthdx.com/services/${serviceId}/#${slug}-service`,
     serviceType: service.title,
     description: service.shortDescription,
     image: isDesktop && service.images.desktopHero
@@ -118,30 +118,31 @@ const perLocationServiceSnippets = Object.entries(locationsData).map(
 );
 
   // Build a snippet per location, connecting to this service
-  const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
-    const id = `https://purehealthdx.com/locations/${slug}#loc`;
-    const [street, locality, regionPostal] = office.address.split(",");
-    const [region, postalCode] = regionPostal.trim().split(" ");
+const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
+  const id = `https://purehealthdx.com/locations/${slug}/#loc`;
+  const [street, locality, regionPostal] = office.address.split(",");
+  const [region, postalCode] = regionPostal.trim().split(" ");
 
-    return {
-      "@type": "LocalBusiness",
-      "@id": id,
-      name: office.name,
-      description: office.description,
-      telephone: office.phone,
-      url: `https://purehealthdx.com/locations/${slug}/`,
-      image: office.desktopImage || office.heroImage,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: street.trim(),
-        addressLocality: locality.trim(),
-        addressRegion: region,
-        postalCode,
-        addressCountry: "US"
-      },
-      openingHours: office.hours  // e.g. "Mon - Fri: 08:00 AM - 05:00 PM"
-    };
-  });
+  return {
+    "@type": ["Place", "LocalBusiness"],
+    "@id": id,
+    name: office.name,
+    description: office.description,
+    telephone: office.phone,
+    url: `https://purehealthdx.com/locations/${slug}/`,
+    image: office.desktopImage || office.heroImage,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: street.trim(),
+      addressLocality: locality.trim(),
+      addressRegion: region,
+      postalCode,
+      addressCountry: "US"
+    },
+    openingHours: office.hours // e.g. "Mon - Fri: 08:00 AM - 05:00 PM"
+  };
+});
+
 
 
     // Combine into one graph

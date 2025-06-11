@@ -35,7 +35,7 @@ function AboutUsComponent() {
         <p className="about-us-paragraph">
           The process to become a patient is simple. Book your appointment, schedule your labs, meet with one of our providers, and have your prescription sent straight to your doorstep. We guarantee that your quality of life will improve. We aren’t the local men’s health clinic or male hormone replacement therapy clinic that just prescribes testosterone. Our medical providers are specialists, licensed, and have decades of experience treating patients. Our providers offer a personalized approach to TRT and HRT. We believe every individual has unique needs that require an equally unique solution. It’s time to unleash the best version of yourself with the help of Pure Health & Wellness.
         </p>
-        <Link to="/about-us" className="about-us-button">
+        <Link to="/about-us/" className="about-us-button">
           Learn More About Pure Health & Wellness
         </Link>
       </div>
