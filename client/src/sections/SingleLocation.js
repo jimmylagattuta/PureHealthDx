@@ -27,7 +27,11 @@ const SingleLocation = ({ office }) => {
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
   const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
   const canonicalUrl = `https://purehealthdx.com/locations/${slug}/`;
-
+  const addressParts = office.address?.split(",").map(part => part.trim()) || [];
+  const street = addressParts[0] || "";
+  const city = addressParts[1] || "";
+  const [region, ...postal] = (addressParts[2] || "").split(" ");
+  const postalCode = postal.join(" ");
   // Build service snippets from servicesArray
   const servicesSnippets = servicesArray.map((service) => {
     const serviceImage = isDesktop ? service.images.desktopHero : service.images.hero;
@@ -55,6 +59,14 @@ const SingleLocation = ({ office }) => {
     image: locationImage,
     email: office.email,
     telephone: office.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: street,
+      addressLocality: city,
+      addressRegion: region,
+      postalCode: postalCode,
+      addressCountry: "US"
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Health Services",
