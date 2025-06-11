@@ -11,7 +11,7 @@
 
   <!-- About Us -->
   <url>
-    <loc>https://purehealthdx.com/about-us</loc>
+    <loc>https://purehealthdx.com/about-us/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,46 +19,45 @@
 
   <!-- Services -->
   <url>
-    <loc>https://purehealthdx.com/services/testosterone-replacement-therapy</loc>
+    <loc>https://purehealthdx.com/services/testosterone-replacement-therapy/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/services/hormone-therapy-for-women</loc>
+    <loc>https://purehealthdx.com/services/hormone-therapy-for-women/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/services/erectile-dysfunction-treatment</loc>
+    <loc>https://purehealthdx.com/services/erectile-dysfunction-treatment/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/services/benefits-of-peptide-therapy</loc>
+    <loc>https://purehealthdx.com/services/benefits-of-peptide-therapy/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/services/platelet-rich-plasma-treatment</loc>
+    <loc>https://purehealthdx.com/services/platelet-rich-plasma-treatment/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/services/pain-management</loc>
+    <loc>https://purehealthdx.com/services/pain-management/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
 
   <!-- Locations Listing -->
   <url>
-    <loc>https://purehealthdx.com/locations</loc>
+    <loc>https://purehealthdx.com/locations/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -66,64 +65,64 @@
 
   <!-- Individual Locations -->
   <url>
-    <loc>https://purehealthdx.com/locations/santa-rosa</loc>
+    <loc>https://purehealthdx.com/locations/santa-rosa/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/sacramento</loc>
+    <loc>https://purehealthdx.com/locations/sacramento/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/stockton</loc>
+    <loc>https://purehealthdx.com/locations/stockton/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/modesto</loc>
+    <loc>https://purehealthdx.com/locations/modesto/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/hayward</loc>
+    <loc>https://purehealthdx.com/locations/hayward/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/salinas</loc>
+    <loc>https://purehealthdx.com/locations/salinas/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/san-jose</loc>
+    <loc>https://purehealthdx.com/locations/san-jose/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/fresno</loc>
+    <loc>https://purehealthdx.com/locations/fresno/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/hanford</loc>
+    <loc>https://purehealthdx.com/locations/hanford/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://purehealthdx.com/locations/bakersfield</loc>
+    <loc>https://purehealthdx.com/locations/bakersfield/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
 </urlset>

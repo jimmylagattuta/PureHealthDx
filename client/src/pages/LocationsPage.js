@@ -162,7 +162,7 @@ function LocationsPage() {
   if (isSingle) {
     const office = locationsData[locationId];
     content = office
-      ? <SingleLocation office={office} />
+      ? <SingleLocation office={office} slug={locationId} />
       : (
         <div className="office-detail not-found">
           <h2>Office Not Found</h2>

@@ -6,7 +6,7 @@ import PricingBanner from "./PricingBanner"; // adjust path if needed
 import Testimonials from "../components/Testimonials"; // adjust path if needed
 import "./SingleLocation.css";
 
-const SingleLocation = ({ office }) => {
+const SingleLocation = ({ office, slug }) => {
   // Determine if the screen width is 769px or wider.
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
 
@@ -25,8 +25,11 @@ const SingleLocation = ({ office }) => {
   // Use desktop image if available and on desktop; else fallback to hero image.
   const locationImage =
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
-  const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
-  const canonicalUrl = `https://purehealthdx.com/locations/${slug}/`;
+  // const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
+  // Use passed-in slug from route, fallback to computed if ever needed
+  const safeSlug = slug || office?.name.toLowerCase().replace(/\s+/g, "-");
+  // const canonicalUrl = `https://purehealthdx.com/locations/${slug}/`;
+  const canonicalUrl = `https://purehealthdx.com/locations/${safeSlug}/`;
   const addressParts = office.address?.split(",").map(part => part.trim()) || [];
   const street = addressParts[0] || "";
   const city = addressParts[1] || "";
