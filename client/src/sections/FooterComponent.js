@@ -42,9 +42,9 @@ function FooterComponent() {
           <h3>Navigation</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/book-appointment">Book Appointment</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/book-appointment/">Book Appointment</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
           </ul>
         </div>
 
@@ -52,12 +52,12 @@ function FooterComponent() {
         <div className="footer-col footer-section services-col">
           <h3>Our Services</h3>
           <ul>
-            <li><a href="/services/testosterone-replacement-therapy">Testosterone Replacement Therapy</a></li>
-            <li><a href="/services/erectile-dysfunction-treatment">Erectile Dysfunction Treatment</a></li>
-            <li><a href="/services/hormone-therapy-for-women">HRT Treatment for Women</a></li>
-            <li><a href="/services/benefits-of-peptide-therapy">Peptide Therapy</a></li>
-            <li><a href="/services/platelet-rich-plasma-treatment">Platelet Rich Plasma Therapy</a></li>
-            <li><a href="/services/pain-management">Pain Management</a></li>
+            <li><a href="/services/testosterone-replacement-therapy/">Testosterone Replacement Therapy</a></li>
+            <li><a href="/services/erectile-dysfunction-treatment/">Erectile Dysfunction Treatment</a></li>
+            <li><a href="/services/hormone-therapy-for-women/">HRT Treatment for Women</a></li>
+            <li><a href="/services/benefits-of-peptide-therapy/">Peptide Therapy</a></li>
+            <li><a href="/services/platelet-rich-plasma-treatment/">Platelet Rich Plasma Therapy</a></li>
+            <li><a href="/services/pain-management/">Pain Management</a></li>
 
           </ul>
         </div>
@@ -68,7 +68,7 @@ function FooterComponent() {
           <ul>
             {Object.entries(locationsData).map(([slug, loc]) => (
               <li key={slug}>
-                <Link to={`/locations/${slug}`}>{loc.name}</Link>
+                <Link to={`/locations/${slug}/`}>{loc.name}</Link>
               </li>
             ))}
           </ul>
@@ -88,7 +88,7 @@ function FooterComponent() {
 
           </ul>
           <p className="book-appointment-p">
-            <a href="/contact" className="book-appointment-link">
+            <a href="/contact/" className="book-appointment-link">
               Contact Us
             </a>
           </p>
@@ -101,8 +101,8 @@ function FooterComponent() {
       <div className="footer-bottom">
         <p>© 2025 Pure Health & Wellness. All Rights Reserved.</p>
         <ul className="footer-bottom-links">
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-          <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
         </ul>
         <p className="footer-credit">Website by James Lagattuta</p>
       </div>
