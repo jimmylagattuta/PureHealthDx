@@ -26,7 +26,7 @@ const SingleLocation = ({ office }) => {
   const locationImage =
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
   const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
-  const canonicalUrl = `https://purehealthdx.com/locations/${slug}`;
+  const canonicalUrl = `https://purehealthdx.com/locations/${slug}/`;
 
   // Build service snippets from servicesArray
   const servicesSnippets = servicesArray.map((service) => {
@@ -35,7 +35,7 @@ const SingleLocation = ({ office }) => {
       "@type": "Service",
       name: service.title,
       description: service.shortDescription,
-      url: `https://purehealthdx.com/services/${service.id}`,
+      url: `https://purehealthdx.com/services/${service.id}/`,
       image: serviceImage,
       provider: {
         "@type": "Organization",

@@ -112,8 +112,8 @@ const perLocationServiceSnippets = Object.entries(locationsData).map(
     image: isDesktop && service.images.desktopHero
       ? service.images.desktopHero
       : service.images.hero,
-    url: `https://purehealthdx.com/services/${serviceId}`, 
-    provider: { "@id": `https://purehealthdx.com/locations/${slug}#loc` }
+    url: `https://purehealthdx.com/services/${serviceId}/`, 
+    provider: { "@id": `https://purehealthdx.com/locations/${slug}/#loc` }
   })
 );
 
@@ -129,7 +129,7 @@ const perLocationServiceSnippets = Object.entries(locationsData).map(
       name: office.name,
       description: office.description,
       telephone: office.phone,
-      url: `https://purehealthdx.com/locations/${slug}`,
+      url: `https://purehealthdx.com/locations/${slug}/`,
       image: office.desktopImage || office.heroImage,
       address: {
         "@type": "PostalAddress",

@@ -81,8 +81,8 @@ function LocationsPage() {
 
   const isSingle = Boolean(locationId);
   const canonicalUrl = isSingle
-    ? `https://purehealthdx.com/locations/${locationId}`
-    : `https://purehealthdx.com/locations`;
+    ? `https://purehealthdx.com/locations/${locationId}/`
+    : `https://purehealthdx.com/locations/`;
 
   let richSnippet = null;
   if (!isSingle) {
@@ -105,10 +105,10 @@ function LocationsPage() {
     // Services
     const serviceNodes = Object.entries(servicesData).map(([slug, svc]) => ({
       "@type": "Service",
-      "@id": `https://purehealthdx.com/services/${slug}#service`,
+      "@id": `https://purehealthdx.com/services/${slug}/#service`,
       "name": svc.title,
       "description": svc.shortDescription,
-      "url": `https://purehealthdx.com/services/${slug}`,
+      "url": `https://purehealthdx.com/services/${slug}/`,
       "provider": { "@id": "https://purehealthdx.com/#org" }
     }));
 
@@ -120,11 +120,11 @@ function LocationsPage() {
       const [region, ...postal] = (parts[2] || "").split(" ");
       return {
         "@type": "MedicalClinic",
-        "@id": `https://purehealthdx.com/locations/${slug}#clinic`,
+        "@id": `https://purehealthdx.com/locations/${slug}/#clinic`,
         "name": loc.name,
         "description": loc.description,
         "image": loc.desktopImage || loc.heroImage,
-        "url": `https://purehealthdx.com/locations/${slug}`,
+        "url": `https://purehealthdx.com/locations/${slug}/`,
         "telephone": loc.phone,
         "address": {
           "@type": "PostalAddress",
@@ -188,7 +188,13 @@ function LocationsPage() {
                 : "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more."
             }
           />
+          {!isSingle && (
+            <script type="application/ld+json">
+              {JSON.stringify(richSnippet, null, 2)}
+            </script>
+          )}
         </Helmet>
+
 
       )}
 
