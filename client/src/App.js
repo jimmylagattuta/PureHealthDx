@@ -61,6 +61,7 @@ function App() {
             <Route path="/book-appointment-step4/" element={<BookAppointmentStep4 />} />
             <Route path="/book-appointment-step5/" element={<BookAppointmentStep5 />} />
             <Route path="/book-appointment-step6/" element={<BookAppointmentStep6 />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
       </main>
