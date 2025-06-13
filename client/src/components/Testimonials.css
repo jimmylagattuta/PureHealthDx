@@ -78,11 +78,14 @@
   padding: 0 2.5rem;
   width: 100%;
 }
-.trustindex-widget {
+.trustindex-widget,
+.trustindex-widget .ti-widget {
   width: 100%;
-  max-width: 100%;
+  height: auto;
+  display: block;
   overflow: hidden;
 }
+
 
 .card {
   /* layer container */
