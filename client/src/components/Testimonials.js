@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
+// src/components/Testimonials.jsx
+import React, { useEffect, useRef } from "react";
 import "./Testimonials.css";
 
 export default function Testimonials() {
+  const widgetRef = useRef(null);
+
   useEffect(() => {
-    // 1) Remove any previously injected loader
-    document
-      .querySelectorAll('script[src*="trustindex.io/loader.js"]')
-      .forEach(s => s.parentNode.removeChild(s));
+    if (!widgetRef.current) return;
 
-    // 2) Inject a brand-new loader (cache-busted so it runs again)
-    const script = document.createElement("script");
-    script.src = `https://cdn.trustindex.io/loader.js?db37cd1481f80980a2269889243&t=${Date.now()}`;
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
+    // wipe out any old markup
+    widgetRef.current.innerHTML = "";
 
-    // (no clean-up needed on unmount,
-    //  we want the widget to persist once loaded)
-  }, []); // run once, after placeholder mounts
+    // inject the Trustindex loader _inside_ our placeholder
+    const s = document.createElement("script");
+    s.src = "https://cdn.trustindex.io/loader.js?db37cd1481f80980a2269889243";
+    s.async = true;
+    s.defer = true;
+    widgetRef.current.appendChild(s);
+  }, []);
 
   return (
     <section className="testimonials-section mobile-first">
@@ -31,10 +31,9 @@ export default function Testimonials() {
         Hear From Some of Our Satisfied Patients
       </h1>
 
-      {/* This placeholder must exist *before* the loader runs */}
+      {/* here’s the only thing we need now */}
       <div
-        className="ti-widget"
-        data-id="db37cd1481f80980a2269889243"
+        ref={widgetRef}
         style={{ width: "100%", marginTop: "60px", minHeight: "200px" }}
       ></div>
     </section>

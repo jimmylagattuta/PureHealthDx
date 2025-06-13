@@ -281,16 +281,20 @@
 
 /* at end of Testimonials.css */
 
-.testimonials-section .ti-widget {
-  display: block !important;
-  width: 100% !important;
-  max-width: 800px !important;
-  margin: 2rem auto 0 !important;
-  min-height: 250px !important;
-  overflow: hidden !important;
+.trustindex-widget {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
-.testimonials-section .ti-widget iframe {
-  display: block !important;
+
+.trustindex-widget .ti-widget {
   width: 100% !important;
   height: auto !important;
+  display: block !important;
+  overflow: hidden !important;
+  max-width: 100%;
+  margin: 0 auto;
 }
