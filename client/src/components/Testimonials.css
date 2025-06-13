@@ -78,6 +78,11 @@
   padding: 0 2.5rem;
   width: 100%;
 }
+.trustindex-widget {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
 
 .card {
   /* layer container */
