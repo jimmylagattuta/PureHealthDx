@@ -166,6 +166,14 @@ const Home = ({ scrollToContact, reviews }) => {
                 "closes":"17:00"
               }
             ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "25",
+            "bestRating": "5",
+            "worstRating": "4"
+          },
+
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "349 E. Bullard Ave Suite 105",
