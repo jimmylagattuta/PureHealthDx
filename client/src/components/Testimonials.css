@@ -3,6 +3,10 @@
   padding: 2rem 1rem;
 }
 
+/* --- Trustindex widget overrides (add these at the end) --- */
+
+
+
 .testimonial-header {
   display: flex;
   justify-content: center;
@@ -49,6 +53,20 @@
   justify-content: center;
 }
 
+/* ---------------------------------------
+   Force the widget to stay inside its section
+   and override any unwanted absolute/fixed
+   positioning that Trustindex might inject
+--------------------------------------- */
+
+/* Make sure the section wraps its content */
+.testimonials-section {
+  position: relative;
+  z-index: 1;
+}
+
+
+
 .nav {
   position: absolute;
   top: 50%;
@@ -78,13 +96,8 @@
   padding: 0 2.5rem;
   width: 100%;
 }
-.trustindex-widget,
-.trustindex-widget .ti-widget {
-  width: 100%;
-  height: auto;
-  display: block;
-  overflow: hidden;
-}
+
+
 
 
 .card {
@@ -264,4 +277,20 @@
   100% {
     transform: translateX(0) scale(1);
   }
+}
+
+/* at end of Testimonials.css */
+
+.testimonials-section .ti-widget {
+  display: block !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 2rem auto 0 !important;
+  min-height: 250px !important;
+  overflow: hidden !important;
+}
+.testimonials-section .ti-widget iframe {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
