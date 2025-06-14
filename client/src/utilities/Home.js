@@ -25,6 +25,18 @@ const Home = ({ scrollToContact, reviews }) => {
     }, 0);
     return () => clearTimeout(timer);
   }, []);
+  const homeBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://purehealthdx.com/"
+      }
+    ]
+  };
 
   // Rich snippet updated for LightningSEO.dev digital services
   const richSnippetGraph = {
@@ -82,17 +94,6 @@ const Home = ({ scrollToContact, reviews }) => {
             "opens":"08:00",
             "closes":"17:00"
           }
-        ]
-      },
-      // … all your <Service> entries here …
-      // … all your <MedicalClinic location> entries here …
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://purehealthdx.com/#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://purehealthdx.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Services","item": "https://purehealthdx.com/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Testosterone Replacement Therapy", "item": "https://purehealthdx.com/services/testosterone-replacement-therapy/" }
         ]
       }
     ]
@@ -429,6 +430,10 @@ const Home = ({ scrollToContact, reviews }) => {
       }
           `}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(homeBreadcrumb, null, 2)}
+        </script>
+
       </Helmet>
 
 

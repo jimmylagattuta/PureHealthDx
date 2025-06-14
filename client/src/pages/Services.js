@@ -23,7 +23,24 @@ const Services = () => {
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
-
+  const servicesBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://purehealthdx.com/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://purehealthdx.com/services/"
+      }
+    ]
+  };
   if (!serviceId) {
     // Build an ItemList schema for all services
     const allServicesItemList = {
@@ -46,6 +63,9 @@ const Services = () => {
           />
           <script type="application/ld+json">
             {JSON.stringify(allServicesItemList, null, 2)}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify(servicesBreadcrumb, null, 2)}
           </script>
         </Helmet>
 
@@ -143,6 +163,32 @@ const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
   };
 });
 
+  // Dynamic breadcrumbList for services
+  const serviceBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://purehealthdx.com/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://purehealthdx.com/services/"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: canonicalUrl
+      }
+    ]
+  };
+
 
 
     // Combine into one graph
@@ -181,6 +227,9 @@ const richSnippet = {
         {/* Structured data */}
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceBreadcrumb, null, 2)}
         </script>
       </Helmet>
 
@@ -265,20 +314,20 @@ const richSnippet = {
       )}
 
       {serviceId === "benefits-of-peptide-therapy" &&
-      extras.whyUsePeptideTherapy && (
-        <section className="whyuse-peptide-section">
-          <h2>{extras.whyUsePeptideTherapy.heading}</h2>
-          <p>{extras.whyUsePeptideTherapy.body}</p>
-          <div className="card-grid">
-            {extras.whyUsePeptideTherapy.cards.map((c, i) => (
-              <div key={i} className="why-card">
-                <img src={c.icon} alt={c.title} className="card-icon" />
-                <h3>{c.title}</h3>
-                <p>{c.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        extras.whyUsePeptideTherapy && (
+          <section className="whyuse-peptide-section">
+            <h2>{extras.whyUsePeptideTherapy.heading}</h2>
+            <p>{extras.whyUsePeptideTherapy.body}</p>
+            <div className="card-grid">
+              {extras.whyUsePeptideTherapy.cards.map((c, i) => (
+                <div key={i} className="why-card">
+                  <img src={c.icon} alt={c.title} className="card-icon" />
+                  <h3>{c.title}</h3>
+                  <p>{c.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
       )}
 
       {/* — How It Works — */}
