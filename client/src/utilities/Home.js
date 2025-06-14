@@ -189,8 +189,14 @@ const Home = ({ scrollToContact, reviews }) => {
             "@id": "https://purehealthdx.com/services/testosterone-replacement-therapy/#service",
             "serviceType": "Testosterone Replacement Therapy",
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
-            "url": "https://purehealthdx.com/services/testosterone-replacement-therapy",
-            "description": "Customized testosterone replacement therapy to restore energy, libido, and overall vitality."
+            "url": "https://purehealthdx.com/services/testosterone-replacement-therapy/",
+            "description": "Get your energy, motivation, and sex drive back with physician-guided testosterone replacement therapy (TRT). Our TRT program helps men with hypogonadism restore hormone levels through injections or creams, with results often visible in 3–6 weeks.",
+            "offers": {
+              "@type": "Offer",
+              "price": "89.99",
+              "priceCurrency": "USD",
+              "description": "Starting price per month when purchasing 2.5 months at a time. Includes remote consultation, prescription therapy, and ongoing care check-ins."
+            }
           },
           {
             "@type": "Service",
@@ -231,6 +237,20 @@ const Home = ({ scrollToContact, reviews }) => {
             "provider": { "@id": "https://purehealthdx.com/#clinic" },
             "url": "https://purehealthdx.com/services/pain-management/",
             "description": "Comprehensive pain management combining image-guided injections, therapies, and referrals."
+          },
+          {
+            "@type": "Service",
+            "@id": "https://purehealthdx.com/services/semaglutide-weight-loss/#service",
+            "serviceType": "Semaglutide Weight Loss Program",
+            "provider": { "@id": "https://purehealthdx.com/#clinic" },
+            "url": "https://purehealthdx.com/services/semaglutide-weight-loss/",
+            "description": "Achieve real, sustainable weight loss with our physician-supervised Semaglutide program. Starting at just $229/month, our treatment includes appetite control, metabolic support, and personalized care with free online consultations and home delivery.",
+            "offers": {
+              "@type": "Offer",
+              "price": "229.00",
+              "priceCurrency": "USD",
+              "description": "Starting price for Semaglutide Weight Loss Program up to 1mg dosage. Includes supplies and provider access. Higher doses available for additional fee."
+            }
           },
           {
             "@type": "MedicalClinic",
