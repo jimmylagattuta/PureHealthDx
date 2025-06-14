@@ -401,30 +401,6 @@ const Home = ({ scrollToContact, reviews }) => {
             "telephone": "+1-877-271-0203",
             "openingHours": "Mo–Fr 08:00–17:00",
             "parentOrganization": { "@id": "https://purehealthdx.com/#org" }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://purehealthdx.com/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://purehealthdx.com/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Services",
-                "item": "https://purehealthdx.com/services/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Testosterone Replacement Therapy",
-                "item": "https://purehealthdx.com/services/testosterone-replacement-therapy/"
-              }
-            ]
           }
         ]
       }
