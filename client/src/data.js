@@ -376,52 +376,53 @@ Our goal is to address the root of your pain while minimizing your dependence on
 },
 
 
-// "semaglutide-weight-loss-program": {
-//   title: "Semaglutide Weight Loss Program",
-//   heroSubtitle: "Are you ready to achieve real, sustainable weight loss? Starting at just $229/Month!",
-//   titleAbr: "Semaglutide",
-//   shortDescription: `Our medically supervised semaglutide program helps patients lose weight safely, reduce appetite, and improve metabolic health.`,
-//   images: {
-//     hero: "https://i.postimg.cc/zvRL7Cpc/i-Stock-2185447936-1-1.webp", // Replace with actual hero image variable
-//   },
-//   collageImage: collageSemaCombined,
-//   introTitle: "Semaglutide Weight Loss Program",
-//   introText: `With Semaglutide, the FDA-approved breakthrough in weight management, you can start seeing results safely and effectively—all starting at only $229 per month! No contracts or long term commitments!`,
-//   causes: [
-//     {
-//       title: "Why Weight Gain Happens",
-//       items: [
-//         "Insulin resistance",
-//         "Hormonal imbalances",
-//         "Chronic stress and cortisol spikes",
-//         "Sedentary lifestyle",
-//         "Poor sleep and recovery",
-//         "Overeating or cravings"
-//       ]
-//     }
-//   ],
-//   symptoms: [
-//     "Unexplained weight gain",
-//     "Sugar cravings or constant hunger",
-//     "Low energy and fatigue",
-//     "Difficulty losing fat despite exercise",
-//     "Mood swings and irritability"
-//   ],
-//   treatment: {
-//     heading: "Safe, Sustainable Weight Loss with Semaglutide",
-//     body: `Our program includes medical evaluations, weekly semaglutide injections, nutritional guidance, and continuous support from healthcare providers. Semaglutide mimics a natural hormone that targets areas of the brain involved in appetite regulation—helping you feel full longer, eat less, and burn more fat.
+"semaglutide-weight-loss-program": {
+  title: "Semaglutide Weight Loss Program",
+  heroSubtitle: "Are you ready to achieve real, sustainable weight loss? Starting at just $229/Month!",
+  titleAbr: "Semaglutide",
+  shortDescription: `Our medically supervised semaglutide program helps patients lose weight safely, reduce appetite, and improve metabolic health.`,
+  images: {
+    hero: "https://i.postimg.cc/zvRL7Cpc/i-Stock-2185447936-1-1.webp", // Replace with actual hero image variable
+    desktopHero: "https://res.cloudinary.com/djtsuktwb/image/upload/v1749869528/iStock-498812823_1_vjh68d.jpg"
+  },
+  collageImage: collageSemaCombined,
+  introTitle: "Semaglutide Weight Loss Program",
+  introText: `With Semaglutide, the FDA-approved breakthrough in weight management, you can start seeing results safely and effectively—all starting at only $229 per month! No contracts or long term commitments!`,
+  causes: [
+    {
+      title: "Why Weight Gain Happens",
+      items: [
+        "Insulin resistance",
+        "Hormonal imbalances",
+        "Chronic stress and cortisol spikes",
+        "Sedentary lifestyle",
+        "Poor sleep and recovery",
+        "Overeating or cravings"
+      ]
+    }
+  ],
+  symptoms: [
+    "Unexplained weight gain",
+    "Sugar cravings or constant hunger",
+    "Low energy and fatigue",
+    "Difficulty losing fat despite exercise",
+    "Mood swings and irritability"
+  ],
+  treatment: {
+    heading: "Safe, Sustainable Weight Loss with Semaglutide",
+    body: `Our program includes medical evaluations, weekly semaglutide injections, nutritional guidance, and continuous support from healthcare providers. Semaglutide mimics a natural hormone that targets areas of the brain involved in appetite regulation—helping you feel full longer, eat less, and burn more fat.
 
-// - ✅ Weekly injections with minimal side effects
-// - ✅ Backed by clinical trials and FDA approval
-// - ✅ No stimulants, no crash dieting
-// - ✅ Ongoing provider support
+- ✅ Weekly injections with minimal side effects
+- ✅ Backed by clinical trials and FDA approval
+- ✅ No stimulants, no crash dieting
+- ✅ Ongoing provider support
 
-// Whether you're struggling with stubborn fat, pre-diabetes, or general weight gain, this program is designed to help you succeed naturally and sustainably.`,
-//     image: "https://via.placeholder.com/600x400?text=Semaglutide+Treatment" // Replace with treatment image
-//   },
-//   ctaText: "Book an Appointment",
-//   ctaLink: "/book-appointment/"
-// }
+Whether you're struggling with stubborn fat, pre-diabetes, or general weight gain, this program is designed to help you succeed naturally and sustainably.`,
+    image: "https://via.placeholder.com/600x400?text=Semaglutide+Treatment" // Replace with treatment image
+  },
+  ctaText: "Book an Appointment",
+  ctaLink: "/book-appointment/"
+}
 
 };
 
@@ -1213,6 +1214,75 @@ This process makes sense because it’s what your body does naturally when there
       buttonLink: "/book-appointment"
     }
   },
+"semaglutide-weight-loss-program": {
+  benefits: {
+    images: [
+      "https://i.postimg.cc/3rSZ3GN4/Mix-Collage-24-Apr-2025-10-07-PM-5584.webp"
+    ],
+    introHeading: "Why Choose Semaglutide?",
+    cards: [
+      {
+        title: "Noticeable Weight Reduction",
+        paragraphs: [
+          "Achieve lasting weight loss with a solution that’s tailored to work with your body."
+        ]
+      },
+      {
+        title: "Appetite Control",
+        paragraphs: [
+          "Feel satisfied longer, making it easier to stick with healthy choices."
+        ]
+      },
+      {
+        title: "Metabolic Support",
+        paragraphs: [
+          "Boost your metabolism and maintain healthy blood sugar levels for optimal wellness."
+        ]
+      }
+    ]
+  },
+  ctaBanner: {
+    heading: "Join Our Program Today starting at only $229/Month!",
+    body: `When you start with us, you’re not just getting Semaglutide; you’re gaining a supportive, expert-led team dedicated to your success. At Pure Health & Wellness, our team will guide you with:
+
+• Personalized Plans
+• Compassionate Support
+• Ensuring You Achieve The Results You Deserve
+
+Start your journey toward a healthier you!
+
+Starting $229/Month includes medication up to 1mg dosage, supplies, and access to wellness provider. Dosage of 1.75mg and up is an additional $70. Shipping not included.`,
+    buttonText: "Book an Appointment",
+    buttonLink: "/book-appointment"
+  },
+  journey: {
+    ctaHeading: "Start Your Journey Toward Lasting Weight Loss",
+    ctaText: "Book an Appointment",
+    ctaLink: "/book-appointment",
+    introHeading: "How It Works",
+    introText: "Our process is simple, personalized, and designed to help you succeed with medically guided Semaglutide treatment.",
+    steps: [
+      {
+        number: 1,
+        title: "Medical History",
+        icon: "https://res.cloudinary.com/djtsuktwb/image/upload/v1749869037/iStock-1387200057_5_uxdsyl.jpg",
+        description: "Fill out a simple medical history questionnaire to help your provider create a personalized treatment plan tailored to your needs. The process is quick, straightforward, and entirely free."
+      },
+      {
+        number: 2,
+        title: "Online Consultation",
+        icon: "https://res.cloudinary.com/djtsuktwb/image/upload/v1749869099/iStock-1487309111_1_1_kpij8z.jpg",
+        description: "Connect with a licensed physician or nurse practitioner to discuss your condition. Conveniently meet online, on your schedule, without leaving the comfort of your home."
+      },
+      {
+        number: 3,
+        title: "Receive Your Medication",
+        icon: "https://res.cloudinary.com/djtsuktwb/image/upload/v1749869071/iStock-1387200057_6_xw7ytr.jpg",
+        description: "Your prescribed medication will be delivered straight to your doorstep with free shipping included in all plans. Reach out to your provider anytime for follow-ups or additional support."
+      }
+    ]
+  }
+}
 
 };
 
