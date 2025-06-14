@@ -98,6 +98,33 @@ const SingleLocation = ({ office, slug }) => {
         <script type="application/ld+json">
           {JSON.stringify(richSnippet, null, 2)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": `https://purehealthdx.com/locations/${safeSlug}/#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://purehealthdx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Locations",
+                "item": "https://purehealthdx.com/locations/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": office.name,
+                "item": canonicalUrl
+              }
+            ]
+          }, null, 2)}
+        </script>
       </Helmet>
       <div className="sl-location-card">
         {/* Office Card Row */}
