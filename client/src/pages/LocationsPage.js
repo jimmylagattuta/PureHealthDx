@@ -181,35 +181,126 @@ function LocationsPage() {
       </>
     );
   }
-
+  
   return (
     <div>
-      {!isSingle && richSnippet && (
-        <Helmet>
-          <link rel="canonical" href={canonicalUrl} />
-          <title>
-            {isSingle
+      <Helmet>
+        <link rel="canonical" href={canonicalUrl} />
+        <title>
+          {isSingle
+            ? `${locationsData[locationId]?.name || "Clinic Not Found"} | Pure Health & Wellness`
+            : "Our California Clinics | Pure Health & Wellness"}
+        </title>
+        <meta
+          name="description"
+          content={
+            isSingle
+              ? locationsData[locationId]?.description ||
+                "Visit our local Pure Health & Wellness clinic."
+              : "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more."
+          }
+        />
+
+        {/* Open Graph Meta */}
+        <meta
+          property="og:title"
+          content={
+            isSingle
               ? `${locationsData[locationId]?.name || "Clinic Not Found"} | Pure Health & Wellness`
-              : "Our California Clinics | Pure Health & Wellness"}
-          </title>
-          <meta
-            name="description"
-            content={
-              isSingle
-                ? locationsData[locationId]?.description ||
-                  "Visit our local Pure Health & Wellness clinic."
-                : "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more."
-            }
-          />
-          {!isSingle && (
+              : "Our California Clinics | Pure Health & Wellness"
+          }
+        />
+        <meta
+          property="og:description"
+          content={
+            isSingle
+              ? locationsData[locationId]?.description ||
+                "Visit our local Pure Health & Wellness clinic."
+              : "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more."
+          }
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
+        />
+        <meta property="og:url" content={canonicalUrl} />
+
+        {/* Schema.org JSON-LD */}
+        {!isSingle && (
+          <>
             <script type="application/ld+json">
               {JSON.stringify(richSnippet, null, 2)}
             </script>
-          )}
-        </Helmet>
 
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": canonicalUrl,
+                "url": canonicalUrl,
+                "name": "Our California Clinics | Pure Health & Wellness",
+                "description":
+                  "Explore Pure Health & Wellness clinics across California. We offer hormone therapy, weight loss programs, pain management, and more.",
+                "breadcrumb": {
+                  "@id": `${canonicalUrl}#breadcrumb`
+                }
+              }, null, 2)}
+            </script>
 
-      )}
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "@id": `${canonicalUrl}#breadcrumb`,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://purehealthdx.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Locations",
+                    "item": "https://purehealthdx.com/locations/"
+                  }
+                ]
+              }, null, 2)}
+            </script>
+          </>
+        )}
+
+        {isSingle && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "@id": `${canonicalUrl}#breadcrumb`,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://purehealthdx.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Locations",
+                  "item": "https://purehealthdx.com/locations/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": locationsData[locationId]?.name || "Clinic",
+                  "item": canonicalUrl
+                }
+              ]
+            }, null, 2)}
+          </script>
+        )}
+      </Helmet>
 
       <div className="locations-page-container">
         <div className="contact-header">
@@ -221,11 +312,13 @@ function LocationsPage() {
         </div>
         {content}
       </div>
+
       <PricingBanner />
       <Testimonials />
       <FooterComponent />
     </div>
   );
+
 }
 
 export default LocationsPage;
