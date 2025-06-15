@@ -26,21 +26,23 @@ const Services = () => {
   const servicesBreadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
+    "@id": "https://purehealthdx.com/services/#breadcrumb",
+    "itemListElement": [
       {
         "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://purehealthdx.com/"
+        "position": 1,
+        "name": "Home",
+        "item": "https://purehealthdx.com/"
       },
       {
         "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://purehealthdx.com/services/"
+        "position": 2,
+        "name": "Services",
+        "item": "https://purehealthdx.com/services/"
       }
     ]
   };
+
   if (!serviceId) {
     // Build an ItemList schema for all services
     const allServicesItemList = {
@@ -163,32 +165,31 @@ const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
   };
 });
 
-  // Dynamic breadcrumbList for services
-  const serviceBreadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://purehealthdx.com/"
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://purehealthdx.com/services/"
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: service.title,
-        item: canonicalUrl
-      }
-    ]
-  };
-
+const serviceBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${canonicalUrl}#breadcrumb`,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purehealthdx.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://purehealthdx.com/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": service?.title || "Service",
+      "item": canonicalUrl
+    }
+  ]
+};
 
 
     // Combine into one graph

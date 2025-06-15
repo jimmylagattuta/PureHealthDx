@@ -28,15 +28,20 @@ const Home = ({ scrollToContact, reviews }) => {
   const homeBreadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://purehealthdx.com/#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://purehealthdx.com/"
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://purehealthdx.com/"
+        }
       }
     ]
   };
+
 
   // Rich snippet updated for LightningSEO.dev digital services
   const richSnippetGraph = {

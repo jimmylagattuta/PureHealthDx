@@ -108,19 +108,28 @@ const SingleLocation = ({ office, slug }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://purehealthdx.com/"
+                "item": {
+                  "@type": "WebPage",
+                  "@id": "https://purehealthdx.com/"
+                }
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Locations",
-                "item": "https://purehealthdx.com/locations/"
+                "item": {
+                  "@type": "WebPage",
+                  "@id": "https://purehealthdx.com/locations/"
+                }
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": office.name,
-                "item": canonicalUrl
+                "item": {
+                  "@type": "WebPage",
+                  "@id": canonicalUrl
+                }
               }
             ]
           }, null, 2)}
