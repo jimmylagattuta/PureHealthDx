@@ -242,7 +242,11 @@ const richSnippet = {
       >
         <div className="hero-overlay">
           <div className="hero-content">
-            <h2>PURE HEALTH &amp; WELLNESS</h2>
+            <div className="hero-content-title">
+              <div style={{ color: "#6d8d86 !important" }} className="line"></div>
+              <h2>PURE HEALTH &amp; WELLNESS</h2>
+              <div style={{ color: "#6d8d86 !important" }} className="line"></div>
+            </div>
             <h1>{service.title}</h1>
             {service.heroSubtitle && (
               <p className="hero-subtitle">{service.heroSubtitle}</p>
