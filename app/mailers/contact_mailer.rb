@@ -1,6 +1,6 @@
 # app/mailers/contact_mailer.rb
 class ContactMailer < ApplicationMailer
-  default from: 'jimmy.lagattuta@gmail.com'
+  default from: 'kenneth@purehealthdx.com'
 
 def full_submission_email(appointment)
   puts "📬 Entered full_submission_email"
@@ -42,8 +42,8 @@ def full_submission_email(appointment)
   end
 
   mail(
-    to: 'jimmy.lagattuta@gmail.com',
-    cc: 'kenneth@purehealthdx.com',
+    to: 'kenneth@purehealthdx.com',
+    cc: 'jimmy.lagattuta@gmail.com',
     subject: "Pure Health: New Appointment Submission"
   )
 end

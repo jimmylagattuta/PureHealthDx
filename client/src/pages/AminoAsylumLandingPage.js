@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./AminoAsylumLandingPage.css";
 
 export default function AminoAsylumLandingPage() {
-  const demoMode = false;
+  const demoMode = true;
   const navigate = useNavigate();
 
   const stored = localStorage.getItem("appointmentFormData");
