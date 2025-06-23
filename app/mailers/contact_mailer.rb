@@ -43,7 +43,6 @@ def full_submission_email(appointment)
 
   mail(
     to: 'kenneth@purehealthdx.com',
-    cc: 'jimmy.lagattuta@gmail.com',
     subject: "Pure Health: New Appointment Submission"
   )
 end

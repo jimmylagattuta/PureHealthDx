@@ -6,7 +6,7 @@ import "./BookAppointmentPage.css";
 
 const BookAppointmentStep2 = () => {
   // Enable demo mode – auto-fill non–signature fields for demo purposes.
-  const demoMode = true;
+  const demoMode = false;
   const navigate = useNavigate();
 
   // Setup react-hook-form with demo defaults.
