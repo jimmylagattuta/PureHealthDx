@@ -147,6 +147,7 @@ const BookAppointmentStep2 = () => {
     "Erectile Dysfunction Treatment",
     "Peptide Therapy",
     "Platelet Rich Plasma Treatment",
+    "Semaglutide Weight Loss"
   ];
 
   // Helper to get CSS class for required fields.
