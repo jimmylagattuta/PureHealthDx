@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
-import PricingBanner from "../components/PricingBanner"; 
+import PricingBanner from "./PricingBanner"; 
 import Testimonials from "../components/Testimonials"; 
 import "./SingleLocation.css";
 
@@ -77,12 +77,14 @@ export default function SingleLocation({ office, slug }) {
         <meta name="description" content={office.description} />
         <link rel="canonical" href={canonicalUrl} />
 
-        <script type="application/ld+json">
+        <script key="clinic-snippet" type="application/ld+json">
           {JSON.stringify(clinicSnippet, null, 2)}
         </script>
-        <script type="application/ld+json">
+
+        <script key="clinic-breadcrumb" type="application/ld+json">
           {JSON.stringify(clinicBreadcrumb, null, 2)}
         </script>
+
       </Helmet>
 
       <div className="sl-location-card">
