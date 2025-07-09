@@ -152,10 +152,22 @@ const serviceBreadcrumb = {
                 "description": service.shortDescription,
                 "url": canonicalUrl,
                 "provider": { "@id": "https://purehealthdx.com/#org" },
-                "availableAtOrFrom": Object.keys(locationsData).map(slug => ({
-                  "@type": "Place",
-                  "@id": `https://purehealthdx.com/locations/${slug}/#loc`
-                }))
+                // <-- new "offers" block:
+                "offers": {
+                  "@type": "OfferCatalog",
+                  "name": "Locations Offering This Service",
+                  "itemListElement": Object.keys(locationsData).map((slug, idx) => ({
+                    "@type": "ListItem",
+                    "position": idx + 1,
+                    "item": {
+                      "@type": "Offer",
+                      "availableAtOrFrom": {
+                        "@type": "Place",
+                        "@id": `https://purehealthdx.com/locations/${slug}/#loc`
+                      }
+                    }
+                  }))
+                }
               },
               {
                 "@type": "BreadcrumbList",
@@ -170,6 +182,7 @@ const serviceBreadcrumb = {
           }, null, 2)}
         </script>
       </Helmet>
+
 
 
       {/* — Hero — */}
