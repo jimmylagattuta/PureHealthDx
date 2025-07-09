@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
-import PricingBanner from "./PricingBanner"; // adjust path if needed
-import Testimonials from "../components/Testimonials"; // adjust path if needed
+import PricingBanner from "./PricingBanner"; 
+import Testimonials from "../components/Testimonials"; 
 import "./SingleLocation.css";
 
-const SingleLocation = ({ office, slug }) => {
-  // Determine if the screen width is 769px or wider.
+export default function SingleLocation({ office, slug }) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
 
   useEffect(() => {
@@ -16,51 +15,27 @@ const SingleLocation = ({ office, slug }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Convert servicesData into an array for mapping.
-  const servicesArray = Object.entries(servicesData).map(([key, service]) => ({
-    ...service,
-    id: key,
-  }));
-
-  // Use desktop image if available and on desktop; else fallback to hero image.
-  const locationImage =
-    isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
-  // const slug = office?.slug || office?.name.toLowerCase().replace(/\s+/g, "-"); // fallback if needed
-  // Use passed-in slug from route, fallback to computed if ever needed
   const safeSlug = slug || office?.name.toLowerCase().replace(/\s+/g, "-");
-  // const canonicalUrl = `https://purehealthdx.com/locations/${slug}/`;
   const canonicalUrl = `https://purehealthdx.com/locations/${safeSlug}/`;
+
   const addressParts = office.address?.split(",").map(part => part.trim()) || [];
   const street = addressParts[0] || "";
   const city = addressParts[1] || "";
   const [region, ...postal] = (addressParts[2] || "").split(" ");
   const postalCode = postal.join(" ");
-  // Build service snippets from servicesArray
-  const servicesSnippets = servicesArray.map((service) => {
-    const serviceImage = isDesktop ? service.images.desktopHero : service.images.hero;
-    return {
-      "@type": "Service",
-      name: service.title,
-      description: service.shortDescription,
-      url: `https://purehealthdx.com/services/${service.id}/`,
-      image: serviceImage,
-      provider: {
-        "@type": "Organization",
-        name: "Pure Health & Wellness",
-        url: "https://purehealthdx.com",
-        logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
-      }
-    };
-  });
 
-  // Build the office snippet (LocalBusiness) and attach all services
-  const officeSnippet = {
-    "@type": "Organization",
+  const locationImage =
+    isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
+
+  // Build a lightweight OfferCatalog referencing each service by ID
+  const clinicSnippet = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "@id": `${canonicalUrl}#clinic`,
     name: office.name,
     description: office.description,
-    url: window.location.href,
     image: locationImage,
-    email: office.email,
+    url: canonicalUrl,
     telephone: office.phone,
     address: {
       "@type": "PostalAddress",
@@ -72,20 +47,26 @@ const SingleLocation = ({ office, slug }) => {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Health Services",
-      itemListElement: servicesSnippets.map(service => ({
+      name: "Services Offered",
+      itemListElement: Object.keys(servicesData).map((svcId) => ({
         "@type": "Offer",
-        itemOffered: service
+        itemOffered: {
+          "@type": "Service",
+          "@id": `https://purehealthdx.com/services/${svcId}/#service`
+        }
       }))
-    }
+    },
+    parentOrganization: { "@id": "https://purehealthdx.com/#org" }
   };
 
-
-  // Wrap it in @graph
-  const richSnippet = {
+  const clinicBreadcrumb = {
     "@context": "https://schema.org",
-    "@graph": [
-      officeSnippet
+    "@type": "BreadcrumbList",
+    "@id": `${canonicalUrl}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://purehealthdx.com/" },
+      { "@type": "ListItem", position: 2, name: "Locations", item: "https://purehealthdx.com/locations/" },
+      { "@type": "ListItem", position: 3, name: office.name, item: canonicalUrl }
     ]
   };
 
@@ -95,46 +76,15 @@ const SingleLocation = ({ office, slug }) => {
         <title>{office.name} | Pure Health & Wellness</title>
         <meta name="description" content={office.description} />
         <link rel="canonical" href={canonicalUrl} />
+
         <script type="application/ld+json">
-          {JSON.stringify(richSnippet, null, 2)}
+          {JSON.stringify(clinicSnippet, null, 2)}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "@id": `https://purehealthdx.com/locations/${safeSlug}/#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": {
-                  "@type": "WebPage",
-                  "@id": "https://purehealthdx.com/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Locations",
-                "item": {
-                  "@type": "WebPage",
-                  "@id": "https://purehealthdx.com/locations/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": office.name,
-                "item": {
-                  "@type": "WebPage",
-                  "@id": canonicalUrl
-                }
-              }
-            ]
-          }, null, 2)}
+          {JSON.stringify(clinicBreadcrumb, null, 2)}
         </script>
       </Helmet>
+
       <div className="sl-location-card">
         {/* Office Card Row */}
         <div className="sl-location-cardrow">
@@ -144,32 +94,31 @@ const SingleLocation = ({ office, slug }) => {
           >
             <h2 className="sl-location-name">{office.name}</h2>
           </div>
-<div className="sl-location-info">
-  {office.address ? (
-    <p
-      className="sl-location-address"
-      onClick={() =>
-        window.open(
-          `https://www.google.com/maps/search/?api=1&query=${office.address.replace(/ /g, "+")}`,
-          "_blank"
-        )
-      }
-      style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "8px" }}
-    >
-      <img
-        src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
-        alt="Map pin"
-        className="map-icon"
-        width="16"
-        height="16"
-      />
-      {office.address}
-    </p>
-  ) : (
-    <p className="sl-location-address">Address coming soon</p>
-  )}
-</div>
-
+          <div className="sl-location-info">
+            {office.address ? (
+              <p
+                className="sl-location-address"
+                onClick={() =>
+                  window.open(
+                    `https://www.google.com/maps/search/?api=1&query=${office.address.replace(/ /g, "+")}`,
+                    "_blank"
+                  )
+                }
+                style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "8px" }}
+              >
+                <img
+                  src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
+                  alt="Map pin"
+                  className="map-icon"
+                  width="16"
+                  height="16"
+                />
+                {office.address}
+              </p>
+            ) : (
+              <p className="sl-location-address">Address coming soon</p>
+            )}
+          </div>
         </div>
 
         {/* Redesigned Contact Info Section */}
@@ -178,9 +127,7 @@ const SingleLocation = ({ office, slug }) => {
             {office.phone && (
               <li className="sl-contact-item">
                 <strong>Phone:&nbsp;</strong>
-                <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
-                  {office.phone}
-                </a>
+                <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>{office.phone}</a>
               </li>
             )}
             {office.fax && (
@@ -217,7 +164,8 @@ const SingleLocation = ({ office, slug }) => {
           <div className="sl-services-overlay">
             <h2 className="sl-services-title">Our Services</h2>
             <div className="sl-services-grid">
-              {servicesArray
+              {Object.entries(servicesData)
+                .map(([key, service]) => ({ ...service, id: key }))
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map((service) => (
                   <Link
@@ -228,7 +176,7 @@ const SingleLocation = ({ office, slug }) => {
                     <div
                       className="sl-service-image"
                       style={{ backgroundImage: `url(${service.images.hero})` }}
-                    ></div>
+                    />
                     <div className="sl-service-info">
                       <h3 className="sl-service-name">{service.title}</h3>
                       <p className="sl-service-short">{service.shortDescription}</p>
@@ -241,6 +189,4 @@ const SingleLocation = ({ office, slug }) => {
       </div>
     </>
   );
-};
-
-export default SingleLocation;
+}

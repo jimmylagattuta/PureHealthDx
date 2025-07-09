@@ -96,74 +96,8 @@ const Services = () => {
     ? service.images.desktopHero
     : service.images.hero;
 
-  const serviceSnippet = {
-    "@type": "Service",
-    name: service.title,
-    description: service.shortDescription,
-    image: serviceImage,
-    url: window.location.href,
-    provider: {
-      "@type": "Organization",
-      name: "Pure Health & Wellness",
-      url: "https://purehealthdx.com/",
-      logo: "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
-    }
-  };
-const globalServiceSnippet = {
-  "@type": "Service",
-  "@id": `https://purehealthdx.com/services/${serviceId}/#service`,
-  serviceType: service.title,
-  description: service.shortDescription,
-  image: isDesktop && service.images.desktopHero
-    ? service.images.desktopHero
-    : service.images.hero,
-  url: window.location.href,
-  provider: {
-    "@type": "Organization",
-    name: "Pure Health & Wellness",
-    url: "https://purehealthdx.com/",
-    logo: "https://i.postimg.cc/tTy4LRpb/footer-logo-1-1.webp"
-  }
-};
-const perLocationServiceSnippets = Object.entries(locationsData).map(
-  ([slug, office]) => ({
-    "@type": "Service",
-    "@id": `https://purehealthdx.com/services/${serviceId}/#${slug}-service`,
-    serviceType: service.title,
-    description: service.shortDescription,
-    image: isDesktop && service.images.desktopHero
-      ? service.images.desktopHero
-      : service.images.hero,
-    url: `https://purehealthdx.com/services/${serviceId}/`, 
-    provider: { "@id": `https://purehealthdx.com/locations/${slug}/#loc` }
-  })
-);
 
-  // Build a snippet per location, connecting to this service
-const locationSnippets = Object.entries(locationsData).map(([slug, office]) => {
-  const id = `https://purehealthdx.com/locations/${slug}/#loc`;
-  const [street, locality, regionPostal] = office.address.split(",");
-  const [region, postalCode] = regionPostal.trim().split(" ");
 
-  return {
-    "@type": ["Place", "LocalBusiness"],
-    "@id": id,
-    name: office.name,
-    description: office.description,
-    telephone: office.phone,
-    url: `https://purehealthdx.com/locations/${slug}/`,
-    image: office.desktopImage || office.heroImage,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: street.trim(),
-      addressLocality: locality.trim(),
-      addressRegion: region,
-      postalCode,
-      addressCountry: "US"
-    },
-    openingHours: office.hours // e.g. "Mon - Fri: 08:00 AM - 05:00 PM"
-  };
-});
 
 const serviceBreadcrumb = {
   "@context": "https://schema.org",
@@ -213,24 +147,36 @@ const richSnippet = {
   return (
     <>
       <Helmet>
-        <title>
-          {service
-            ? `${service.title} | Pure Health & Wellness`
-            : "Our Services | Pure Health & Wellness"}
-        </title>
+        <title>{service.title} | Pure Health & Wellness</title>
+        <link rel="canonical" href={canonicalUrl} />
 
-        {/* Preferred canonical with trailing slash */}
-        <link
-          rel="canonical"
-          href={`https://purehealthdx.com/services/${serviceId}/`}
-        />
-
-        {/* Structured data */}
         <script type="application/ld+json">
-          {JSON.stringify(richSnippet, null, 2)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(serviceBreadcrumb, null, 2)}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "@id": `${canonicalUrl}#service`,
+                "name": service.title,
+                "description": service.shortDescription,
+                "url": canonicalUrl,
+                "provider": { "@id": "https://purehealthdx.com/#org" },
+                "availableAtOrFrom": Object.keys(locationsData).map(slug => ({
+                  "@type": "Place",
+                  "@id": `https://purehealthdx.com/locations/${slug}/#loc`
+                }))
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${canonicalUrl}#breadcrumb`,
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://purehealthdx.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://purehealthdx.com/services/" },
+                  { "@type": "ListItem", "position": 3, "name": service.title, "item": canonicalUrl }
+                ]
+              }
+            ]
+          }, null, 2)}
         </script>
       </Helmet>
 

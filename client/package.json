@@ -37,7 +37,7 @@
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -60,6 +60,32 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.22.5"
+    "@babel/preset-react": "^7.22.5",
+    "react-snap": "^1.23.0"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/services/",
+      "/services/testosterone-replacement-therapy/",
+      "/services/hormone-therapy-for-women/",
+      "/services/erectile-dysfunction-treatment/",
+      "/services/benefits-of-peptide-therapy/",
+      "/services/platelet-rich-plasma-treatment/",
+      "/services/pain-management/",
+      "/services/semaglutide-weight-loss-program/",
+      "/locations/",
+      "/locations/santa-rosa/",
+      "/locations/sacramento/",
+      "/locations/stockton/",
+      "/locations/modesto/",
+      "/locations/hayward/",
+      "/locations/salinas/",
+      "/locations/san-jose/",
+      "/locations/fresno/",
+      "/locations/hanford/",
+      "/locations/bakersfield/"
+    ],
+    "crawl": false
   }
 }
