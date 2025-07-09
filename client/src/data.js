@@ -59,13 +59,13 @@ export const servicesData = {
   title: "Testosterone Replacement Therapy",
   heroSubtitle: "Learn how we can help you get your energy, motivation, and sex drive back!",
   titleAbr: "TRT",
-  shortDescription: `Testosterone is a hormone primarily produced in the testicles once males begin puberty. Production naturally declines about 1% per year after 30, but some men experience far more rapid drops, leading to symptoms like low libido, fatigue, and muscle loss.`,
+  shortDescription: `Testosterone is a hormone primarily produced in the testicles once males begin puberty. Production naturally declines about 1% per year after 30, but some men experience far more rapid drops, leading to symptoms like low libido, fatigue, and muscle loss. Pure Health & Wellness offers expert testosterone replacement therapy across California, including Fresno, Los Angeles, Bakersfield, and more.`,
   images: {
     hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747966750/iStock-2135022914_icxnzb.jpg",
     desktopHero: "https://i.postimg.cc/T340Xpdq/i-Stock-2201828485.webp"
   },
   collageImage: collageTRTCombined,
-  introTitle: "Testosterone Replacement Therapy",
+  introTitle: "(TRT)Testosterone Replacement Therapy",
   introText: `Testosterone is a hormone that is primarily produced in the testicles of males once they begin puberty, and that production continues throughout the majority of their adult life. Most men naturally begin to produce roughly 1% less testosterone every year after they turn 30, however, some men lose testosterone at a much more rapid rate. For these men who are experiencing low testosterone, also known as hypogonadism, the condition can be exacerbated by conditions such as diabetes or obesity.`,
   extendedIntroText: `It is important to determine if a patient’s low testosterone is due to normal aging or if it is due to hypogonadism before beginning treatment. Men with hypogonadism can greatly benefit from testosterone replacement therapy and many will begin to see results in as little as 3 to 6 weeks. If you think this hormone replacement therapy might work for you, reach out to our team today to see if you qualify for testosterone replacement therapy and learn how we can help you get your energy, motivation, and sex drive back!`,
   causes: [
@@ -109,7 +109,7 @@ export const servicesData = {
   ],
   treatment: {
     heading: "Individualized Treatment for Best Results",
-    body: `Every man is different, so no two treatment paths are going to be exactly the same. We take the time to understand your unique situation and the underlying conditions that are contributing to your low testosterone. By working with you one-on-one at our men’s testosterone clinic, we can help create the perfect treatment plan for you that will have you feeling young, strong, healthy, and virile again in no time. We’ll get you scheduled for labs at your earliest convenience.`,
+    body: `Every man is different, so no two treatment paths are going to be exactly the same. We take the time to understand your unique situation and the underlying conditions that are contributing to your low testosterone. By working with you one-on-one at our men’s (TRT)testosterone clinic, we can help create the perfect treatment plan for you that will have you feeling young, strong, healthy, and virile again in no time. We’ll get you scheduled for labs at your earliest convenience.`,
     image: treatmentTRT
   },
   ctaText: "Book an Appointment",
@@ -502,7 +502,7 @@ export const serviceExtras = {
     // — Symptoms —
     symptomsBackground: "https://i.postimg.cc/ZnHxYgqk/i-Stock-2058023631.webp",
     symptomsIntroTitle: "What Are the Symptoms of Low Testosterone?",
-    symptomsIntroText: `While testosterone levels gradually decline as men age, for some men these levels can become abnormally and extremely low. Not all men with low testosterone (also known as “low T”) will exhibit symptoms, but for those that do, testosterone replacement therapy can be an option. The most common symptoms of low testosterone levels are:`,
+    symptomsIntroText: `While testosterone levels gradually decline as men age, for some men these levels can become abnormally and extremely low. Not all men with low testosterone (also known as “low T”) will exhibit symptoms, but for those that do, (TRT)testosterone replacement therapy can be an option. The most common symptoms of low testosterone levels are:`,
     symptoms: [
       "Low libido (low sex drive)",
       "Erectile dysfunction",
@@ -520,10 +520,10 @@ export const serviceExtras = {
 
     // — Dynamic conclusion pulled straight from data.js! —
     symptomsConclusion: `
-      Frequently, the first things that men notice are a lack of energy and a low sex drive. In more severe cases of low testosterone, men may experience erectile dysfunction which can severely hinder their self‐esteem and sex life. With our telehealth testosterone replacement therapy services, we strive to restore hormone levels, erectile function, and sexual performance, which sometimes also results in weight loss and improvement in other health conditions.
+      Frequently, the first things that men notice are a lack of energy and a low sex drive. In more severe cases of low testosterone, men may experience erectile dysfunction which can severely hinder their self‐esteem and sex life. With our telehealth (TRT)testosterone replacement therapy services, we strive to restore hormone levels, erectile function, and sexual performance, which sometimes also results in weight loss and improvement in other health conditions.
     `,
     treatment: {
-      heading: "Individualized Treatment for Best Results",
+      heading: "Individualized TRT Treatment for Best Results",
       image:
         "https://i.postimg.cc/jdT9hwn2/i-Stock-1213130178.webp",
       body: `Every man is different, so no two treatment paths are going to be exactly the same. We take the time to understand your unique situation and the underlying conditions that are contributing to your low testosterone.
@@ -577,9 +577,9 @@ By working with you one on one at our men’s testosterone clinic, we can help c
       // each card gets a title + array of paragraphs
       cards: [
         {
-          title: "Benefits of the Treatment",
+          title: "Benefits of the TRT Treatment",
           paragraphs: [
-            "The benefits that a man can expect to receive at low testosterone treatment clinics include a reduction of low T symptoms: heightened libido, improved energy levels, increased happiness, and overall better moods. Some men may also experience other physical benefits from a boost to their testosterone including muscle mass, insulin sensitivity, and bone density.",
+            "The benefits that a man can expect to receive at low testosterone treatment clinics(TRT) include a reduction of low T symptoms: heightened libido, improved energy levels, increased happiness, and overall better moods. Some men may also experience other physical benefits from a boost to their testosterone including muscle mass, insulin sensitivity, and bone density.",
             "Although most men will experience some combination of these benefits, not all men experience the same benefits from testosterone replacement therapy. Depending on your current testosterone levels as well as a variety of other considerations, you may experience anything from a slight boost to a massive change.",
             "It is important to remember that it takes time for testosterone replacement therapy to build up the testosterone levels in your body. Most men will begin seeing results within 3 to 6 weeks of starting treatment but the biggest results will happen around the 3-month mark."
           ]
@@ -599,13 +599,13 @@ By working with you one on one at our men’s testosterone clinic, we can help c
     // — Journey / How It Works —
     journey: {
       // CTA banner
-      ctaHeading: "Start Your Wellness Journey Today",
+      ctaHeading: "Start Your (TRT)Wellness Journey Today",
       ctaText: "Book an Appointment",
       ctaLink: "/book-appointment/",
 
       // Intro under the banner
       introHeading: "How It Works",
-      introText: `Testosterone replacement therapy, also known as androgen replacement therapy is a medically approved treatment option for patients that are experiencing hypogonadism, or low testosterone.`,
+      introText: `(TRT)Testosterone replacement therapy, also known as androgen replacement therapy is a medically approved treatment option for patients that are experiencing hypogonadism, or low testosterone.`,
 
       // The 3 steps
       steps: [
@@ -665,10 +665,10 @@ Another potential risk is blood clots that can be caused by polycythemia, or a d
 
 Additionally, men should avoid testosterone replacement therapy if they are actively trying to have children or plan to have children naturally in the future. TRT can reduce sperm counts significantly and in rare cases may cause infertility.
 
-While this condition is typically reversible, it requires stopping testosterone replacement therapy which can cause previous low-T symptoms to come back.`
+While this condition is typically reversible, it requires stopping (TRT)testosterone replacement therapy which can cause previous low-T symptoms to come back.`
       },
       {
-        question: "When Will I See Results From Testosterone Replacement Therapy?",
+        question: "When Will I See Results From (TRT)Testosterone Replacement Therapy?",
         answer: `It is natural to feel impatient when you begin testosterone replacement therapy. After all, you’ve spent months or years feeling tired and lethargic so of course, you’re ready to feel better now!
 
 Unfortunately, testosterone replacement isn’t an overnight fix. It took years to develop low testosterone, and it takes time to rebuild it. Each person will have a different reaction to the therapy as well depending on their unique situation.
@@ -680,7 +680,7 @@ That said, most patients will begin to notice some improvements in their symptom
 • **6–12 Months:** Lipid counts decrease, bone density increases, and insulin sensitivity increases.`
       },
       {
-        question: "How Long Should I Stay on Testosterone Therapy?",
+        question: "How Long Should I Stay on (TRT)Testosterone Therapy?",
         answer: `The answer is different for everyone and it can only be determined on a case-by-case basis by your doctor. For most men, however, testosterone replacement therapy is a long-term, and in some cases indefinite process.
 
 This is because it is often extremely difficult to treat the underlying cause of hypogonadism without testosterone replacement therapy. Men who abruptly stop treatment may begin to experience symptoms of Low-T again.
@@ -694,7 +694,7 @@ The good news is that treatment can become more of a maintenance plan once your 
       heading: "Don’t Wait to Get Relief From Your Low Testosterone Symptoms",
       body: `It takes time to get results from testosterone replacement therapy, but there’s no point in waiting for your symptoms to get worse before you seek treatment. If you are struggling with depression, lethargy, lack of motivation, a low sex drive, low muscle strength, or erectile dysfunction don’t wait any longer!
   
-  Reach out to our testosterone replacement therapy clinic team today to learn how we can help you get back to your old self. The sooner that you start testosterone replacement therapy, the sooner that you will get that boost to your energy, libido, and mood and you’ll be able to get back to doing the things you love.`,
+  Reach out to our (TRT)testosterone replacement therapy clinic team today to learn how we can help you get back to your old self. The sooner that you start testosterone replacement therapy, the sooner that you will get that boost to your energy, libido, and mood and you’ll be able to get back to doing the things you love.`,
       buttonText: "Book an Appointment",
       buttonLink: "/book-appointment/"
     },
