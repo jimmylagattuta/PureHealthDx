@@ -62,8 +62,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.22.5",
-    "react-snap": "^1.23.0"
+    "@babel/preset-react": "^7.22.5"
   },
   "reactSnap": {
     "include": [
