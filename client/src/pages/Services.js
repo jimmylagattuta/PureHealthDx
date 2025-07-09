@@ -194,7 +194,7 @@ const serviceBreadcrumb = {
           <div className="hero-content">
             <div className="hero-content-title">
               <div style={{ color: "#6d8d86 !important" }} className="line"></div>
-              <h1>PURE HEALTH &amp; WELLNESS</h1>
+              <h2>PURE HEALTH &amp; WELLNESS</h2>
               <div style={{ color: "#6d8d86 !important" }} className="line"></div>
             </div>
             <h1>{service.title}</h1>
