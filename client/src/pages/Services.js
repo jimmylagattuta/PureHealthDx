@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
-import PricingBanner from "./PricingBanner"; 
+import PricingBanner from "../components/PricingBanner"; 
 import Testimonials from "../components/Testimonials"; 
 import "./SingleLocation.css";
 
