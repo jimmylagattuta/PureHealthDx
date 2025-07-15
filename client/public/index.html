@@ -47,22 +47,25 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://purehealthdx.com/#org",
+      "@id": "https://purehealthdx.com/#organization",
       "name": "Pure Health & Wellness",
       "url": "https://purehealthdx.com",
-      "logo": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp"
+      },
+      "sameAs": [
+        "https://www.facebook.com/PureHealthDx",
+        "https://www.instagram.com/purehealthdx/"
+      ],
       "contactPoint": [
         {
           "@type": "ContactPoint",
           "telephone": "+1-877-271-0203",
           "contactType": "Customer Service",
           "areaServed": "US",
-          "availableLanguage": [ "English", "Spanish" ]
+          "availableLanguage": ["English", "Spanish"]
         }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/PureHealthDx",
-        "https://www.instagram.com/purehealthdx/"
       ]
     },
     {
@@ -71,16 +74,49 @@
       "url": "https://purehealthdx.com",
       "name": "Pure Health & Wellness",
       "description": "Pure Health & Wellness is a leading telehealth clinic specializing in hormone replacement therapy, regenerative treatments, and pain management across multiple California locations.",
-      "publisher": { "@id": "https://purehealthdx.com/#org" },
+      "publisher": {
+        "@id": "https://purehealthdx.com/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://purehealthdx.com/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://purehealthdx.com/#clinic",
+      "name": "Pure Health & Wellness",
+      "url": "https://purehealthdx.com",
+      "image": "https://res.cloudinary.com/djtsuktwb/image/upload/v1742936866/nav-logo_tersen.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "medicalSpecialty": [
+        "Endocrinology",
+        "PainManagement",
+        "ReproductiveHealth"
+      ],
+      "availableService": {
+        "@type": "MedicalProcedure",
+        "name": "Testosterone Replacement Therapy"
+      },
+      "parentOrganization": {
+        "@id": "https://purehealthdx.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://purehealthdx.com"
+      }
     }
   ]
 }
 </script>
+
 
 </head>
 
