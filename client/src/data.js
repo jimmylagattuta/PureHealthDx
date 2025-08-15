@@ -1288,90 +1288,6 @@ Starting $229/Month includes medication up to 1mg dosage, supplies, and access t
 
 
 export const locationsData = {
-  "santa-rosa": {
-    name: "Santa Rosa Clinic",
-    address: "864 2nd Street Suite B, Santa Rosa, CA 95404",
-    addressMaps: "https://www.google.com/maps/place/864+2nd+St,+Santa+Rosa,+CA+95404",
-    heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
-    desktopImage: "https://i.postimg.cc/jqLZztZC/i-Stock-1878629507-6.webp",
-    description: "Our Santa Rosa clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "sacramento": {
-    name: "Sacramento Clinic",
-    address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
-    addressMaps: "https://www.google.com/maps/place/7275+E+Southgate+Dr+Suite+306,+Sacramento,+CA+95823",
-    heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
-    desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp",
-    description: "Our Sacramento clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "stockton": {
-    name: "Stockton Clinic",
-    address: "420 Acacia Street Suite 19, Stockton, CA 95203",
-    addressMaps: "https://www.google.com/maps/place/420+Acacia+St+Suite+19,+Stockton,+CA+95203",
-    heroImage: "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
-    desktopImage: "https://i.postimg.cc/J7YhYyS3/i-Stock-1357814327-2.webp",
-    description: "Our Stockton clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "modesto": {
-    name: "Modesto Clinic",
-    address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
-    addressMaps: "https://www.google.com/maps/place/1130+Coffee+Rd+BLDG+2B,+Modesto,+CA+95355",
-    heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
-    desktopImage: "https://i.postimg.cc/qRspJq7R/i-Stock-1343463188-2.webp",
-    description: "Our Modesto clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "hayward": {
-    name: "Hayward Clinic",
-    address: "24700 Calaroga Ave Suite 103, Hayward, CA 94545",
-    addressMaps: "https://www.google.com/maps/place/24700+Calaroga+Ave+Suite+103,+Hayward,+CA+94545",
-    heroImage: "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
-    desktopImage: "https://i.postimg.cc/6QwXHwcx/i-Stock-1135194294-2.webp",
-    description: "Our Hayward clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "salinas": {
-    name: "Salinas Clinic",
-    address: "945 N. Blanco Suite A, Salinas, CA 93901",
-    addressMaps: "https://www.google.com/maps/place/945+N+Blanco+Suite+A,+Salinas,+CA+93901",
-    heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
-    desktopImage: "https://i.postimg.cc/KzxtvK5p/i-Stock-1176374269-2.webp",
-    description: "Our Salinas clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "san-jose": {
-    name: "San Jose Clinic",
-    address: "2375 Montpelier Drive Suite 10, San Jose, CA 95116",
-    addressMaps: "https://www.google.com/maps/place/2375+Montpelier+Dr+Suite+10,+San+Jose,+CA+95116",
-    heroImage: "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
-    desktopImage: "https://i.postimg.cc/kXLCrWJC/i-Stock-465837688-2.webp",
-    description: "Our San Jose clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
   "fresno": {
     name: "Fresno Clinic",
     address: "349 E. Bullard Ave Suite 105, Fresno, CA 93710",
@@ -1379,30 +1295,6 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
     desktopImage: "https://i.postimg.cc/8kXQW90w/i-Stock-588965234-2.webp",
     description: "Our Fresno clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "hanford": {
-    name: "Hanford Clinic",
-    address: "1004 N. Douty Street, Hanford, CA 93230",
-    addressMaps: "https://www.google.com/maps/place/1004+N+Douty+St,+Hanford,+CA+93230",
-    heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
-    desktopImage: "https://i.postimg.cc/ZK5Qfn6S/i-Stock-2198440524-2.webp",
-    description: "Our Hanford clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed"
-  },
-  "bakersfield": {
-    name: "Bakersfield Clinic",
-    address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
-    addressMaps: "https://www.google.com/maps/place/3550+Q+St+Suite+105,+Bakersfield,+CA+93301",
-    heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
-    desktopImage: "https://i.postimg.cc/pL8p3Wt0/i-Stock-2178001181-2.webp",
-    description: "Our Bakersfield clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
