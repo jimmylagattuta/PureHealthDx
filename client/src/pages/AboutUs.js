@@ -17,7 +17,7 @@ const richSnippet = {
       "url": "https://purehealthdx.com/",
       "logo": "https://i.postimg.cc/FsjJMwWQ/footer-logo.webp",
       "image": "https://i.postimg.cc/SK6KjGDy/i-Stock-493796666.webp",
-      "description": "Pure Health & Wellness provides customized care in hormone therapy, erectile dysfunction treatment, weight loss, pain management, and peptide therapy. We offer expert, compassionate care across multiple California locations.",
+      "description": "Pure Health & Wellness provides customized care in hormone therapy, erectile dysfunction treatment, weight loss, pain management, and peptide therapy. We offer expert, compassionate based in Fresno, California.",
       "telephone": "+1-877-271-0203",
       "email": "info@purehealthdx.com",
       "contactPoint": {
@@ -76,96 +76,6 @@ const richSnippet = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/sacramento/#loc",
-      "name": "Sacramento Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "7275 E. Southgate Drive Suite 306",
-        "addressLocality": "Sacramento",
-        "addressRegion": "CA",
-        "postalCode": "95823",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/sacramento/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/modesto/#loc",
-      "name": "Modesto Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1130 Coffee Road BLDG 2B",
-        "addressLocality": "Modesto",
-        "addressRegion": "CA",
-        "postalCode": "95355",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/modesto/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/stockton/#loc",
-      "name": "Stockton Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "420 Acacia Street Suite 19",
-        "addressLocality": "Stockton",
-        "addressRegion": "CA",
-        "postalCode": "95203",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/stockton/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/hayward/#loc",
-      "name": "Hayward Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "24700 Calaroga Ave Suite 103",
-        "addressLocality": "Hayward",
-        "addressRegion": "CA",
-        "postalCode": "94545",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/hayward/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/salinas/#loc",
-      "name": "Salinas Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "945 N. Blanco Suite A",
-        "addressLocality": "Salinas",
-        "addressRegion": "CA",
-        "postalCode": "93901",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/salinas/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/san-jose/#loc",
-      "name": "San Jose Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2375 Montpelier Drive Suite 10",
-        "addressLocality": "San Jose",
-        "addressRegion": "CA",
-        "postalCode": "95116",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/san-jose/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
       "@id": "https://purehealthdx.com/locations/fresno/#loc",
       "name": "Fresno Clinic",
       "address": {
@@ -177,51 +87,6 @@ const richSnippet = {
         "addressCountry": "US"
       },
       "url": "https://purehealthdx.com/locations/fresno/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/hanford/#loc",
-      "name": "Hanford Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1004 N. Douty Street",
-        "addressLocality": "Hanford",
-        "addressRegion": "CA",
-        "postalCode": "93230",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/hanford/",
-      "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/bakersfield/#loc",
-      "name": "Bakersfield Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3550 Q. Street Suite 105",
-        "addressLocality": "Bakersfield",
-        "addressRegion": "CA",
-        "postalCode": "93301",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/bakersfield/",
-      "parentOrganization": { "@id": "https://purehealthdx.com#organization" }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://purehealthdx.com/locations/santa-rosa/#loc",
-      "name": "Santa Rosa Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "864 2nd Street Suite B",
-        "addressLocality": "Santa Rosa",
-        "addressRegion": "CA",
-        "postalCode": "95404",
-        "addressCountry": "US"
-      },
-      "url": "https://purehealthdx.com/locations/santa-rosa/",
       "parentOrganization": { "@id": "https://purehealthdx.com/#organization" }
     }
   ]

@@ -71,64 +71,9 @@
 
   <!-- Individual Locations -->
   <url>
-    <loc>https://purehealthdx.com/locations/santa-rosa/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/sacramento/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/stockton/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/modesto/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/hayward/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/salinas/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/san-jose/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://purehealthdx.com/locations/fresno/</loc>
     <lastmod>2025-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/hanford/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://purehealthdx.com/locations/bakersfield/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>
