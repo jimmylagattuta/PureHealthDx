@@ -82,9 +82,9 @@ function Contact() {
     <>
       <div className="contact-section">
         <div className="contact-section-header">
-          <h2>Contact LightningSEO.dev</h2>
+          <h2>Contact Pure Health & Wellness</h2>
           <p>
-            If you have any inquiries about our SEO, web development, mobile app, or Apple Watch app services, please fill out the short contact form below.
+            If you have any questions please fill out the short contact form below.
           </p>
         </div>
         {!submitted ? (
@@ -165,7 +165,7 @@ function Contact() {
                 required
               />
               <label htmlFor="agreement">
-                By submitting this form, I consent to having LightningSEO.dev contact me regarding my inquiry.
+                By submitting this form, I consent to having Pure Health & Wellness contact me regarding my inquiry.
               </label>
               {errors.agreement && <span className="error-message">{errors.agreement}</span>}
             </div>
