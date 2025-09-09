@@ -57,7 +57,6 @@ function FooterComponent() {
             <li><a href="/services/hormone-therapy-for-women/">HRT Treatment for Women</a></li>
             <li><a href="/services/benefits-of-peptide-therapy/">Peptide Therapy</a></li>
             <li><a href="/services/platelet-rich-plasma-treatment/">Platelet Rich Plasma Therapy</a></li>
-            <li><a href="/services/pain-management/">Pain Management</a></li>
             <li><a href="/services/semaglutide-weight-loss-program/">Semaglutide Weight Loss Program</a></li>
 
           </ul>

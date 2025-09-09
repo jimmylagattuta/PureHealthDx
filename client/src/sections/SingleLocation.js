@@ -96,47 +96,13 @@ export default function SingleLocation({ office, slug }) {
           >
             <h2 className="sl-location-name">{office.name}</h2>
           </div>
-          <div className="sl-location-info">
-            {office.address ? (
-              <p
-                className="sl-location-address"
-                onClick={() =>
-                  window.open(
-                    `https://www.google.com/maps/search/?api=1&query=${office.address.replace(/ /g, "+")}`,
-                    "_blank"
-                  )
-                }
-                style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "8px" }}
-              >
-                <img
-                  src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
-                  alt="Map pin"
-                  className="map-icon"
-                  width="16"
-                  height="16"
-                />
-                {office.address}
-              </p>
-            ) : (
-              <p className="sl-location-address">Address coming soon</p>
-            )}
-          </div>
+          
         </div>
 
         {/* Redesigned Contact Info Section */}
         <div className="sl-contact-info">
           <ul className="sl-contact-list">
-            {office.phone && (
-              <li className="sl-contact-item">
-                <strong>Phone:&nbsp;</strong>
-                <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>{office.phone}</a>
-              </li>
-            )}
-            {office.fax && (
-              <li className="sl-contact-item">
-                <strong>Fax:&nbsp;</strong> {office.fax}
-              </li>
-            )}
+           
             {office.email && (
               <li className="sl-contact-item">
                 <a href={`mailto:${office.email}`}>Email us</a>

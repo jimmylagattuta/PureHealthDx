@@ -324,56 +324,7 @@ By using a concentrated dose of platelets from your own body, PRP stimulates nat
 
 
 
-"pain-management": {
-  title: "Pain Management",
-  heroSubtitle: "Pure Health & Wellness is an innovative clinic that treats acute and chronic pain with image guided injections using PRP.",
-  titleAbr: "Pain Mgmt",
-  shortDescription: `Comprehensive pain management plans combining injections, therapies, and referrals to give you lasting relief.`,
-  images: {
-    hero: "https://res.cloudinary.com/djtsuktwb/image/upload/f_auto,q_auto,w_600/v1747966659/iStock-467842612_1_1_1_1_yjteqt.jpg",
-    desktopHero: "https://i.postimg.cc/5yYrT0R6/i-Stock-2192512090.webp"
-  },
-  collageImage: collagePMCombined,
-  introTitle: "What this can do for you.",
-  introText: `The results have been outstanding and have very little side effects. Pain management can treat neck and back injuries. As well as treating joint injuries including shoulders, elbows, wrists, hands, and carpal tunnel in the upper limbs.`,
-  extendedIntroText: `It treats the lower limbs helping your hips, knees, ankles, and feet. If PRP is not needed, epidurals with steroids are available. Nitric oxide is provided as anesthesia so a driver for your procedure is not needed.`,
-  causes: [
-    {
-      title: "Common Causes of Chronic Pain",
-      items: [
-        "Arthritis and joint degeneration",
-        "Nerve impingement or neuropathy",
-        "Soft tissue injuries",
-        "Lower back and neck strain",
-        "Post-surgical pain",
-        "Myofascial trigger points"
-      ]
-    }
-  ],
-  symptoms: [
-    "Persistent aching or throbbing",
-    "Joint stiffness or inflammation",
-    "Sharp or shooting nerve pain",
-    "Limited range of motion",
-    "Discomfort that worsens with movement",
-    "Tingling or numbness"
-  ],
-  treatment: {
-    heading: "Comprehensive Pain Solutions",
-    body: `We take a multidisciplinary approach to treating pain. Your customized plan may include:
 
-- ✅ Image-guided PRP injections
-- ✅ Trigger point therapy
-- ✅ Non-opioid anti-inflammatory strategies
-- ✅ Physical therapy referrals
-- ✅ Lifestyle and posture coaching
-
-Our goal is to address the root of your pain while minimizing your dependence on medication and maximizing your mobility.`,
-    image: "https://via.placeholder.com/600x400?text=Pain+Treatment"
-  },
-  ctaText: "Book an Appointment",
-  ctaLink: "/book-appointment/"
-},
 
 
 "semaglutide-weight-loss-program": {

@@ -84,38 +84,7 @@ function LocationsSection({ showButton = true }) {
               ></div>
               <div className="location-info">
                 <h2 className="location-city">{location.name}</h2>
-                <p className="location-address">
-                  {location.address ? (
-                    <span
-                      onClick={(e) => openMap(location.address, e)}
-                      className="map-link"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <img
-                        src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
-                        alt="Map icon"
-                        className="map-icon"
-                        height="16"
-                        width="16"
-                      />
-                      {location.address}
-                    </span>
-                  ) : (
-                    "Address coming soon"
-                  )}
-                </p>
-                {location.phone && (
-                  <p className="location-address">
-                    <strong>Phone:</strong>
-                    <span
-                      onClick={(e) => callPhone(location.phone, e)}
-                      className="phone-link"
-                      style={{ cursor: "pointer", marginLeft: "5px" }}
-                    >
-                      {location.phone}
-                    </span>
-                  </p>
-                )}
+
               </div>
             </div>
           </Link>
@@ -126,9 +95,7 @@ function LocationsSection({ showButton = true }) {
           className="button-container"
           style={{ textAlign: "center", marginTop: "20px" }}
         >
-          <Link to="/locations/" className="location-section-button">
-            View All Locations
-          </Link>
+
         </div>
       )}
     </section>
