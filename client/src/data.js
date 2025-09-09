@@ -1245,7 +1245,7 @@ export const locationsData = {
     addressMaps: "https://www.google.com/maps/place/349+E+Bullard+Ave+Suite+105,+Fresno,+CA+93710",
     heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
     desktopImage: "https://i.postimg.cc/8kXQW90w/i-Stock-588965234-2.webp",
-    description: "Our Fresno clinic offers personalized pain management and comprehensive care, including testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
+    description: "Our Fresno clinic offers testosterone replacement therapy (TRT), hormone therapy for women, erectile dysfunction treatment, peptide therapy, PRP (platelet-rich plasma) therapy, Semaglutide weight-loss program, and a full range of advanced pain treatments.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
